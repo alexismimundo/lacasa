@@ -1,0 +1,122 @@
+/* La Casa — etapa 2: segunda casa, Gabriela Mistral 4860 (pantallas 8 a 11). */
+
+/* Pantalla 8: la ventana de roble. El cielo sigue el azul de Mamá y aclara hacia la vereda. */
+#p8{background:linear-gradient(#22365a,#8d8fb5 22%,#e9edf2 44%,#e9edf2 86%,transparent)}
+.p8-fachada{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.p8-chapa{position:absolute;left:15%;top:23%;margin:0;padding:6px 12px;background:#f4f1e9;color:var(--azul);font:italic clamp(13px,1.3vw,19px) Georgia,serif;box-shadow:2px 3px 4px #3353861f;transform:rotate(-2deg)}
+.p8-ventana{position:absolute;left:36%;top:10%;width:28%;aspect-ratio:1}
+.p8-ventana img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;pointer-events:none}
+#p8-interior{position:absolute;left:21%;right:21%;top:22%;bottom:18%;background:radial-gradient(ellipse at 50% 60%,#3a4a6a,#141c2c)}
+#p8-repisa{position:absolute;left:58%;top:86%;width:20%;height:2px}
+.p8-nino{position:absolute;left:44%;top:60%;width:15%;aspect-ratio:1;padding:0;border:0;background:none;--sube:0;transform:translateY(calc(var(--sube) * -165%)) scale(calc(1 - var(--sube) * .45));transition:transform .06s linear,opacity .6s;touch-action:none;z-index:3}
+.p8-nino img{width:100%;height:100%;object-fit:contain;pointer-events:none}
+.p8-nino.cae{transition:transform .55s cubic-bezier(.5,0,.8,.6);animation:cae-nino .55s}
+@keyframes cae-nino{40%{rotate:-8deg}100%{rotate:0deg}}
+.p8-nino.adentro{opacity:0;pointer-events:none;transform:translateY(-170%) scale(.5)}
+#p8-pista{opacity:0;transition:opacity .8s;bottom:13vh}
+#radio.en-ventana{transition:left .7s cubic-bezier(.3,1.3,.5,1),top .7s cubic-bezier(.3,1.3,.5,1)}
+
+/* Pantalla 9: recorrido horizontal en tres capas. */
+#p9{background:#dfe8f2;overflow:hidden}
+.p9-capa{position:absolute;top:0;bottom:0;left:0;width:400vw;will-change:transform}
+#p9-fondo{width:210vw}#p9-fondo img{width:100%;height:100%;object-fit:cover}
+.p9-pasillo{position:absolute;left:0;top:0;width:100vw;height:100%;object-fit:fill}
+.p9-casa-vecina{position:absolute;left:216vw;bottom:24vh;width:30vw}
+.p9-vecina{position:absolute;left:255vw;bottom:15vh;height:30vh;opacity:0;transition:opacity 1.2s}
+.p9-vecina.aparece{opacity:1}
+.p9-alambrado{position:absolute;left:200vw;bottom:9vh;width:100vw;height:46vh;padding:0;border:0;background:none}
+.p9-alambrado img{width:100%;height:100%;object-fit:fill;pointer-events:none}
+.p9-vias{position:absolute;left:300vw;bottom:5vh;width:100vw;height:12vh;object-fit:fill}
+#p9-frente{pointer-events:none}
+#p9-frente>*{position:absolute;pointer-events:auto}
+#p9-frente>#p9-glicinas,#p9-frente>#p9-petalos,#p9-frente>.p9-vacas,#p9-frente>.p9-laurel{pointer-events:none}
+#p9-glicinas{inset:0;pointer-events:none}
+.p9-glicina{position:absolute;top:11vh;width:7vw;padding:0;border:0;background:none;pointer-events:auto;touch-action:none}
+.p9-glicina img{width:100%;height:100%;object-fit:contain;object-position:top;pointer-events:none}
+.p9-glicina .aroma{position:absolute;left:25%;bottom:92%;width:50%;height:10vh;fill:none;stroke:#9b83b2;stroke-width:2;stroke-dasharray:320;stroke-dashoffset:320;opacity:0;pointer-events:none;overflow:visible}
+.p9-glicina.aromando .aroma{animation:aroma 1.6s ease-out}
+@keyframes aroma{0%{opacity:.85;stroke-dashoffset:320}100%{opacity:0;stroke-dashoffset:0;transform:translateY(-3vh)}}
+#p9-petalos{inset:0;pointer-events:none}
+.petalo{position:absolute;width:1.3vw;animation:petalo-cae 2.5s ease-in forwards;pointer-events:none}
+@keyframes petalo-cae{to{transform:translate(var(--dx),58vh) rotate(var(--r));opacity:.2}}
+.p9-laurel{left:103vw;bottom:12vh;height:64vh}
+.p9-hoja{left:121vw;bottom:9vh;width:4vw;height:2.5vw;padding:0;border:0;background:none;transform:rotate(-14deg)}
+.p9-hoja img,.p9-bowl img,#p9-agua img,.p9-leche img,.p9-tranquera img{width:100%;height:100%;object-fit:contain;pointer-events:none}
+.p9-moral{left:128vw;bottom:12vh;width:28vw;height:66vh}
+.p9-moral>img{width:100%;height:100%;object-fit:contain;pointer-events:none}
+#p9-moras{position:absolute;left:12%;top:6%;width:76%;height:46%}
+.p9-mora{position:absolute;width:2.2vw;height:2.6vw;padding:0;border:0;background:none;transition:transform .5s ease-in,opacity .5s}
+.p9-mora img{width:100%;height:100%;pointer-events:none}
+.p9-mora.cosechada{transform:translateY(30vh);opacity:0}
+.p9-bowl{left:150vw;bottom:8vh;width:8vw;height:5vw;padding:0;border:0;background:none}
+.p9-arbol{left:160vw;bottom:10vh;width:24vw;height:68vh;padding:0;border:0;background:none}
+.p9-arbol img{position:absolute;pointer-events:none}
+.arbol-img{inset:0;width:100%;height:100%;object-fit:contain;transition:opacity 2.5s}
+.arbol-nino{left:40%;top:18%;width:28%;opacity:0;transform:rotate(-10deg);transition:opacity .6s}
+.arbol-tocon{left:38%;bottom:0;width:24%;opacity:0;transition:opacity 1.5s 1s}
+.p9-arbol.trepado .arbol-nino{opacity:1}
+.p9-arbol.arrancado .arbol-img,.p9-arbol.arrancado .arbol-nino{opacity:0}
+.p9-arbol.arrancado .arbol-tocon{opacity:1}
+.p9-bomba{left:186vw;bottom:9vh;width:9vw;height:34vh}
+#p9-bomba{position:absolute;inset:0;padding:0;border:0;background:none;touch-action:none}
+#p9-bomba img{width:100%;height:100%;object-fit:contain;pointer-events:none}
+#p9-chorro{position:absolute;left:82%;top:50%;width:7px;height:42%;--claridad:0;border-radius:3px;background:linear-gradient(rgba(122,90,60,calc(.9 - var(--claridad) * .65)),rgba(150,190,220,calc(.35 + var(--claridad) * .45)));opacity:0;transform-origin:top;transform:scaleY(.2);transition:opacity .3s,transform .3s}
+#p9-chorro.sale{opacity:1;transform:none}
+#p9-agua{position:absolute;left:100%;bottom:0;width:40%;height:28%;padding:0;border:0;background:none}
+.p9-basural{left:278vw;bottom:7vh;width:16vw;height:9vw}
+.p9-basural>img:first-child{width:100%;height:100%;object-fit:contain;pointer-events:none}
+.hallazgo{position:absolute;opacity:0;transform:translateY(20px);transition:opacity .6s,transform .6s;pointer-events:none;padding:0;border:0;background:none}
+.hallazgo.h1{left:12%;top:8%;width:22%}.hallazgo.h2{left:50%;top:-6%;width:18%}.hallazgo.h3{left:72%;top:16%;width:14%;height:auto}
+.hallazgo.h3 img{width:100%}
+.p9-basural[data-nivel="1"] .h1,.p9-basural[data-nivel="2"] .h1,.p9-basural[data-nivel="3"] .h1,.p9-basural[data-nivel="2"] .h2,.p9-basural[data-nivel="3"] .h2,.p9-basural[data-nivel="3"] .h3{opacity:1;transform:none}
+.p9-basural[data-nivel="3"] .h3{pointer-events:auto}
+.p9-leche{left:298vw;bottom:7vh;width:2.6vw;height:11vh;padding:0;border:0;background:none;touch-action:none}
+.p9-leche.rota{width:7vw;height:5vh;bottom:6vh;pointer-events:none}
+.p9-tranquera{left:310vw;bottom:7vh;width:14vw;height:16vh;padding:0;border:0;background:none}
+.p9-vacas{left:300vw;bottom:9vh;width:100vw;height:18vh;pointer-events:none}
+.vaca{position:absolute;bottom:0;width:9vw;left:90vw;animation:vacas 30s linear infinite}
+.vaca.v2{animation-delay:-9s;width:8vw;bottom:1vh}
+@keyframes vacas{0%{left:96vw;opacity:0}6%{opacity:1}80%{left:24vw;opacity:1}100%{left:16vw;opacity:0}}
+.p9-vacas.entran .vaca{animation:vacas-entran 14s ease-in-out forwards}
+.p9-vacas.entran .vaca.v2{animation-delay:1.5s}
+@keyframes vacas-entran{0%{left:96vw}100%{left:-40vw}}
+.p9-mazo{position:absolute;right:4vw;top:8vh;width:12vw;height:22vh;z-index:6}
+#p9 .escondite{z-index:2}
+
+/* Pantalla 10: las versiones. Reutiliza la tira de la v44 y suma los objetos de la caja. */
+#p10{background:linear-gradient(#b8c5a0,transparent 16%)}
+#p10 #second-scene{display:block!important;visibility:inherit!important;opacity:1!important;pointer-events:auto!important}
+#p10 .second-extra{opacity:1}
+#p10 #second-radio{left:22vw;top:76vh;width:12vw}
+#p10 #second-radio-shadow{left:23vw;opacity:.5}
+#p10 #second-wall-marks{opacity:.55}
+.p10-album{position:absolute;left:3vw;top:31vh;width:20vw;transform:rotate(-4deg);z-index:2;filter:drop-shadow(2px 4px 4px #33538622)}
+#p10-objetos{position:absolute;left:0;right:0;bottom:3%;height:26%;pointer-events:none;z-index:3}
+.p10-objeto{position:absolute;bottom:0;width:9%;height:100%;transform:rotate(var(--r))}
+.p10-objeto .version{position:absolute;inset:0}
+.p10-objeto .version img{width:100%;height:100%;object-fit:contain}
+.p10-objeto .v0 img{filter:drop-shadow(2px 3px 2px #0004)}
+.p10-objeto .v1 img{filter:grayscale(1) contrast(2.2) brightness(1.25) sepia(.4) hue-rotate(180deg) saturate(2)}
+.p10-objeto .v2{-webkit-mask-size:contain;mask-size:contain;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-position:center;mask-position:center;background:repeating-linear-gradient(45deg,#f4f1e9 0 5px,#e4ddcd 5px 10px)}
+#p10-eleccion{margin-top:6px;font:300 11px/1.5 MonumentMono,monospace;color:var(--azul)}
+#p10-eleccion button{border:0;border-bottom:1px solid #33538666;background:none;color:inherit;font:400 11px MonumentMono,monospace;padding:4px 0}
+#p10-eleccion button:disabled{opacity:.4}
+#p10-elegida{margin:4px 0 0;font:italic 13px Georgia,serif}
+
+/* Pantalla 11: en la oscuridad, con la linterna. */
+#p11{background:linear-gradient(transparent,#050608 18%)}
+#p11.luz-vuelve{background:linear-gradient(transparent,#d9d2c4 10%,#d9d2c4 92%,#e9dcc6)}
+#p11-restos{position:absolute;inset:0}
+.p11-ventana{position:absolute;left:58%;top:6%;width:24%;filter:brightness(.75)}
+.p11-sillon{position:absolute;left:14%;top:44%;width:30%}
+.p11-pared{position:absolute;left:52%;top:64%;margin:0;font:italic clamp(16px,1.6vw,24px) Georgia,serif;color:#d9d2c4;transform:rotate(-3deg);outline:0}
+.p11-radio{position:absolute;left:40%;top:74%;width:8%;transform:rotate(24deg);filter:grayscale(.6) brightness(.7)}
+.p11-hoja{position:absolute;left:71%;top:84%;width:5%;opacity:.7}
+.p11-baldio{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;pointer-events:none}
+#p11-oscuro{position:absolute;inset:0;pointer-events:none;background:linear-gradient(transparent,#050608 18%);--lx:50%;--ly:55%;-webkit-mask-image:radial-gradient(circle 175px at var(--lx) var(--ly),transparent 0,transparent 45%,#000 100%);mask-image:radial-gradient(circle 175px at var(--lx) var(--ly),transparent 0,transparent 45%,#000 100%)}
+#p11-restos::after{content:'';position:absolute;inset:-50%;pointer-events:none;background:radial-gradient(circle 180px at var(--lx) var(--ly),#f2e6a02e,transparent 70%)}
+#p11-restos img{filter:brightness(1.15)}
+#p11.luz-vuelve{background:#d9d2c4}
+#p11.luz-vuelve #p11-oscuro,#p11.luz-vuelve #p11-restos{display:none}
+#p11.luz-vuelve .p11-baldio{opacity:1}
+#casa-layers.apagon #radio,#casa-layers.apagon #caja{opacity:.1}
