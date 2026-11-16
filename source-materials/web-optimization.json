@@ -1,0 +1,578 @@
+{
+  "source_commit": "4b4e4e633d9819e426e0057b3ab3767f6ebc4b9d",
+  "before_bytes": 121502510,
+  "after_bytes": 48541706,
+  "reduction_percent": 60.05,
+  "images": [
+    {
+      "original": "box-base.png",
+      "replacement": "box-base.webp",
+      "before": 2515836,
+      "after": 439630,
+      "width": 1536,
+      "height": 1024,
+      "lossless": false,
+      "mean_rgb_error": [
+        1.450827916463216,
+        1.2011617024739583,
+        1.703945795694987
+      ]
+    },
+    {
+      "original": "box-key.png",
+      "replacement": "box-key.webp",
+      "before": 1652115,
+      "after": 230174,
+      "width": 1536,
+      "height": 1024,
+      "lossless": false,
+      "mean_rgb_error": [
+        0.8810984293619791,
+        0.624047597249349,
+        1.1233863830566406
+      ]
+    },
+    {
+      "original": "box-lid.png",
+      "replacement": "box-lid.webp",
+      "before": 2234954,
+      "after": 327240,
+      "width": 1536,
+      "height": 1024,
+      "lossless": false,
+      "mean_rgb_error": [
+        1.2396736145019531,
+        1.051553726196289,
+        1.480155309041341
+      ]
+    },
+    {
+      "original": "box-spoon.png",
+      "replacement": "box-spoon.webp",
+      "before": 1389588,
+      "after": 152644,
+      "width": 1024,
+      "height": 1536,
+      "lossless": false,
+      "mean_rgb_error": [
+        0.8098157246907552,
+        0.5504474639892578,
+        0.8934065500895182
+      ]
+    },
+    {
+      "original": "bridge-tape.png",
+      "replacement": "bridge-tape.webp",
+      "before": 935157,
+      "after": 177754,
+      "width": 2172,
+      "height": 724,
+      "lossless": false,
+      "mean_rgb_error": [
+        0.492541945199068,
+        0.46555037493768,
+        0.7052217830143565
+      ]
+    },
+    {
+      "original": "bridge-wall.png",
+      "replacement": "bridge-wall.webp",
+      "before": 3249367,
+      "after": 670450,
+      "width": 1536,
+      "height": 1024,
+      "lossless": false,
+      "mean_rgb_error": [
+        1.7667757670084636,
+        1.3147468566894531,
+        2.2847652435302734
+      ]
+    },
+    {
+      "original": "casa-interior-poster.jpg",
+      "replacement": "casa-interior-poster.jpg",
+      "before": 223717,
+      "after": 223717,
+      "width": 1920,
+      "height": 1080,
+      "lossless": false,
+      "mean_rgb_error": [
+        0.7447477816358025,
+        0.7322236689814815,
+        0.7483733603395062
+      ]
+    },
+    {
+      "original": "collage-atlas.png",
+      "replacement": "collage-atlas.webp",
+      "before": 2019864,
+      "after": 532986,
+      "width": 1254,
+      "height": 1254,
+      "lossless": false,
+      "mean_rgb_error": [
+        1.8507010421515584,
+        1.089981914333463,
+        2.1046113362280576
+      ]
+    },
+    {
+      "original": "cut-ash.png",
+      "replacement": "cut-ash.webp",
+      "before": 1846734,
+      "after": 382974,
+      "width": 1254,
+      "height": 1254,
+      "lossless": false,
+      "mean_rgb_error": [
+        1.0314406975827273,
+        0.7714566974199308,
+        1.2622027375238154
+      ]
+    },
+    {
+      "original": "daily-burger.png",
+      "replacement": "daily-burger.webp",
+      "before": 1976297,
+      "after": 284784,
+      "width": 1536,
+      "height": 1024,
+      "lossless": false,
+      "mean_rgb_error": [
+        1.1130015055338542,
+        0.9316635131835938,
+        1.4116706848144531
+      ]
+    },
+    {
+      "original": "daily-chair.png",
+      "replacement": "daily-chair.webp",
+      "before": 1212571,
+      "after": 312516,
+      "width": 1254,
+      "height": 1254,
+      "lossless": false,
+      "mean_rgb_error": [
+        0.8837162865115522,
+        0.6796395076425296,
+        1.7827863118721845
+      ]
+    },
+    {
+      "original": "daily-door.png",
+      "replacement": "daily-door.webp",
+      "before": 3212435,
+      "after": 631534,
+      "width": 1024,
+      "height": 1536,
+      "lossless": false,
+      "mean_rgb_error": [
+        1.6909923553466797,
+        1.3042373657226562,
+        2.224874496459961
+      ]
+    },
+    {
+      "original": "daily-photo.png",
+      "replacement": "daily-photo.webp",
+      "before": 2540564,
+      "after": 414196,
+      "width": 1536,
+      "height": 1024,
+      "lossless": false,
+      "mean_rgb_error": [
+        1.4444637298583984,
+        1.3588860829671223,
+        1.6951859792073567
+      ]
+    },
+    {
+      "original": "daily-place-alt.png",
+      "replacement": "daily-place-alt.webp",
+      "before": 2341713,
+      "after": 380336,
+      "width": 1536,
+      "height": 1024,
+      "lossless": false,
+      "mean_rgb_error": [
+        1.2364126841227214,
+        0.9886322021484375,
+        1.5008290608723958
+      ]
+    },
+    {
+      "original": "daily-place.png",
+      "replacement": "daily-place.webp",
+      "before": 2356280,
+      "after": 354622,
+      "width": 1536,
+      "height": 1024,
+      "lossless": false,
+      "mean_rgb_error": [
+        1.1876328786214192,
+        1.006034215291341,
+        1.5188090006510417
+      ]
+    },
+    {
+      "original": "daily-table.png",
+      "replacement": "daily-table.webp",
+      "before": 2107191,
+      "after": 355472,
+      "width": 2048,
+      "height": 768,
+      "lossless": false,
+      "mean_rgb_error": [
+        1.2907047271728516,
+        1.047472635904948,
+        1.6086463928222656
+      ]
+    },
+    {
+      "original": "entrada-final-hq.jpg",
+      "replacement": "entrada-final-hq.jpg",
+      "before": 816624,
+      "after": 816624,
+      "width": 1920,
+      "height": 1080,
+      "lossless": false,
+      "mean_rgb_error": [
+        0.9488903356481482,
+        0.9037056327160494,
+        0.9230705054012346
+      ]
+    },
+    {
+      "original": "entrada-final.jpg",
+      "replacement": "entrada-final.jpg",
+      "before": 53827,
+      "after": 53827,
+      "width": 1280,
+      "height": 720,
+      "lossless": false,
+      "mean_rgb_error": [
+        0.6706011284722222,
+        0.66240234375,
+        0.6657703993055556
+      ]
+    },
+    {
+      "original": "entrada-inicial-hq.jpg",
+      "replacement": "entrada-inicial-hq.jpg",
+      "before": 828486,
+      "after": 828486,
+      "width": 1920,
+      "height": 1080,
+      "lossless": false,
+      "mean_rgb_error": [
+        0.9613594714506173,
+        0.912485050154321,
+        0.9454523533950617
+      ]
+    },
+    {
+      "original": "fondo-papel.png",
+      "replacement": "fondo-papel.webp",
+      "before": 9409142,
+      "after": 1749728,
+      "width": 2000,
+      "height": 2000,
+      "lossless": false,
+      "mean_rgb_error": [
+        1.086228,
+        0.93420075,
+        1.218865
+      ]
+    },
+    {
+      "original": "ladrillos.png",
+      "replacement": "ladrillos.webp",
+      "before": 11105961,
+      "after": 2109710,
+      "width": 2000,
+      "height": 2000,
+      "lossless": false,
+      "mean_rgb_error": [
+        1.67159825,
+        1.3508845,
+        1.85330125
+      ]
+    },
+    {
+      "original": "logo-la-casa.png",
+      "replacement": "logo-la-casa.webp",
+      "before": 512791,
+      "after": 170338,
+      "width": 2000,
+      "height": 2000,
+      "lossless": true,
+      "mean_rgb_error": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "original": "low-cloth.png",
+      "replacement": "low-cloth.webp",
+      "before": 2154840,
+      "after": 434056,
+      "width": 1774,
+      "height": 887,
+      "lossless": false,
+      "mean_rgb_error": [
+        1.0373565811566037,
+        0.8846249661590632,
+        1.6239016788917713
+      ]
+    },
+    {
+      "original": "low-cupboard.png",
+      "replacement": "low-cupboard.webp",
+      "before": 2399109,
+      "after": 403154,
+      "width": 1024,
+      "height": 1536,
+      "lossless": false,
+      "mean_rgb_error": [
+        1.3720022837320964,
+        1.0562057495117188,
+        1.6567808787027996
+      ]
+    },
+    {
+      "original": "low-robot.png",
+      "replacement": "low-robot.webp",
+      "before": 1479132,
+      "after": 362278,
+      "width": 1254,
+      "height": 1254,
+      "lossless": false,
+      "mean_rgb_error": [
+        1.4269005847953216,
+        0.8150002925248455,
+        1.8342128156406676
+      ]
+    },
+    {
+      "original": "low-table.png",
+      "replacement": "low-table.webp",
+      "before": 2265879,
+      "after": 387388,
+      "width": 1024,
+      "height": 1536,
+      "lossless": false,
+      "mean_rgb_error": [
+        1.2087688446044922,
+        0.9510459899902344,
+        1.4331200917561848
+      ]
+    },
+    {
+      "original": "low-tv.png",
+      "replacement": "low-tv.webp",
+      "before": 2186374,
+      "after": 355664,
+      "width": 1254,
+      "height": 1254,
+      "lossless": false,
+      "mean_rgb_error": [
+        1.131430141251345,
+        0.975803743809284,
+        1.411232699699081
+      ]
+    },
+    {
+      "original": "low-wrapper.png",
+      "replacement": "low-wrapper.webp",
+      "before": 864656,
+      "after": 175670,
+      "width": 1254,
+      "height": 1254,
+      "lossless": false,
+      "mean_rgb_error": [
+        0.5182319289597054,
+        0.3990484039590058,
+        0.6456004263231662
+      ]
+    },
+    {
+      "original": "marco-ventana.png",
+      "replacement": "marco-ventana.webp",
+      "before": 2015689,
+      "after": 998676,
+      "width": 2000,
+      "height": 2000,
+      "lossless": true,
+      "mean_rgb_error": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "original": "nino.png",
+      "replacement": "nino.webp",
+      "before": 2476875,
+      "after": 453598,
+      "width": 2000,
+      "height": 2000,
+      "lossless": false,
+      "mean_rgb_error": [
+        0.42239525,
+        0.37298475,
+        0.45104175
+      ]
+    },
+    {
+      "original": "second-base.png",
+      "replacement": "second-base.webp",
+      "before": 2698483,
+      "after": 408456,
+      "width": 1536,
+      "height": 1024,
+      "lossless": false,
+      "mean_rgb_error": [
+        1.6453189849853516,
+        1.3903477986653645,
+        1.8703206380208333
+      ]
+    },
+    {
+      "original": "second-drawing.png",
+      "replacement": "second-drawing.webp",
+      "before": 2884033,
+      "after": 529720,
+      "width": 1536,
+      "height": 1024,
+      "lossless": false,
+      "mean_rgb_error": [
+        1.7221285502115886,
+        1.2459055582682292,
+        2.4451732635498047
+      ]
+    },
+    {
+      "original": "second-memory.png",
+      "replacement": "second-memory.webp",
+      "before": 3079898,
+      "after": 557476,
+      "width": 1536,
+      "height": 1024,
+      "lossless": false,
+      "mean_rgb_error": [
+        1.982897440592448,
+        1.4983126322428386,
+        2.476567586263021
+      ]
+    },
+    {
+      "original": "second-missing.png",
+      "replacement": "second-missing.webp",
+      "before": 2805510,
+      "after": 452952,
+      "width": 1536,
+      "height": 1024,
+      "lossless": false,
+      "mean_rgb_error": [
+        1.7345504760742188,
+        1.4337310791015625,
+        2.1170425415039062
+      ]
+    },
+    {
+      "original": "second-radio.png",
+      "replacement": "second-radio.webp",
+      "before": 2683913,
+      "after": 447934,
+      "width": 1536,
+      "height": 1024,
+      "lossless": false,
+      "mean_rgb_error": [
+        1.4954369862874348,
+        1.3301283518473308,
+        1.7162984212239583
+      ]
+    },
+    {
+      "original": "second-water.png",
+      "replacement": "second-water.webp",
+      "before": 2144426,
+      "after": 282644,
+      "width": 1536,
+      "height": 1024,
+      "lossless": false,
+      "mean_rgb_error": [
+        1.1337623596191406,
+        0.9429537455240885,
+        1.4011414845784504
+      ]
+    },
+    {
+      "original": "umbral-materials.png",
+      "replacement": "umbral-materials.webp",
+      "before": 2347692,
+      "after": 537052,
+      "width": 2172,
+      "height": 724,
+      "lossless": false,
+      "mean_rgb_error": [
+        1.3046025253604387,
+        0.9760926355524353,
+        1.8599573425719607
+      ]
+    }
+  ],
+  "mapping": {
+    "assets/box-base.png": "assets/box-base.webp",
+    "assets/box-key.png": "assets/box-key.webp",
+    "assets/box-lid.png": "assets/box-lid.webp",
+    "assets/box-spoon.png": "assets/box-spoon.webp",
+    "assets/bridge-tape.png": "assets/bridge-tape.webp",
+    "assets/bridge-wall.png": "assets/bridge-wall.webp",
+    "assets/collage-atlas.png": "assets/collage-atlas.webp",
+    "assets/cut-ash.png": "assets/cut-ash.webp",
+    "assets/daily-burger.png": "assets/daily-burger.webp",
+    "assets/daily-chair.png": "assets/daily-chair.webp",
+    "assets/daily-door.png": "assets/daily-door.webp",
+    "assets/daily-photo.png": "assets/daily-photo.webp",
+    "assets/daily-place-alt.png": "assets/daily-place-alt.webp",
+    "assets/daily-place.png": "assets/daily-place.webp",
+    "assets/daily-table.png": "assets/daily-table.webp",
+    "assets/fondo-papel.png": "assets/fondo-papel.webp",
+    "assets/ladrillos.png": "assets/ladrillos.webp",
+    "assets/logo-la-casa.png": "assets/logo-la-casa.webp",
+    "assets/low-cloth.png": "assets/low-cloth.webp",
+    "assets/low-cupboard.png": "assets/low-cupboard.webp",
+    "assets/low-robot.png": "assets/low-robot.webp",
+    "assets/low-table.png": "assets/low-table.webp",
+    "assets/low-tv.png": "assets/low-tv.webp",
+    "assets/low-wrapper.png": "assets/low-wrapper.webp",
+    "assets/marco-ventana.png": "assets/marco-ventana.webp",
+    "assets/nino.png": "assets/nino.webp",
+    "assets/second-base.png": "assets/second-base.webp",
+    "assets/second-drawing.png": "assets/second-drawing.webp",
+    "assets/second-memory.png": "assets/second-memory.webp",
+    "assets/second-missing.png": "assets/second-missing.webp",
+    "assets/second-radio.png": "assets/second-radio.webp",
+    "assets/second-water.png": "assets/second-water.webp",
+    "assets/umbral-materials.png": "assets/umbral-materials.webp"
+  },
+  "video": {
+    "name": "entrada-video.mp4",
+    "before": 11072436,
+    "after": 8752895,
+    "crf": 19,
+    "ssim": 0.974009,
+    "dimensions": "1280x720",
+    "fps": 24,
+    "duration_seconds": 4.208333
+  },
+  "interior_video": "Original retained: recompression increased size. Fast-start already present.",
+  "notes": [
+    "Image dimensions unchanged. Alpha channels preserved exactly. Logo and window frame encoded losslessly.",
+    "Original assets retained in source-materials/web-originals, outside the served directory.",
+    "Final-collage assets and sprite trimming deferred to phase >20.",
+    "No browser QA available; JavaScript syntax, resource paths, decoded images and sample crops checked."
+  ]
+}

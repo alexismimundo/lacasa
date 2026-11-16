@@ -1,0 +1,17 @@
+const fs=require('fs'),path=require('path'),vm=require('vm'),root=path.resolve(__dirname,'..');
+for(const n of ['first-house','casa2-oscuridad','casa3-terrero','escenas-resto','floor-plan','house-route','fondo'])new vm.Script(fs.readFileSync(path.join(root,'dist/continuous',n+'.js'),'utf8'));
+const test=String.raw`<script>window.ready=(async()=>{try{
+ const a=(v,m)=>{if(!v)throw Error(m)},wait=ms=>new Promise(r=>setTimeout(r,ms));await wait(2500);reachInside();const step=p=>{target=current=p;casaRender(performance.now(),.016)},tick=n=>{for(let i=0;i<n;i++)casaRender(performance.now(),.05)};
+ step(8);step(8.1);const early=casaLinterna.ignition;a(early<.1,'beam starts small and dim');tick(14);const mid=casaLinterna.ignition;a(mid>early&&mid<1,'beam grows gradually');tick(20);a(casaLinterna.ignition===1,'beam fully lit');tick(75);a(current===8.2,'five seconds to explore after ignition');tick(50);a(current===8.6,'same-screen video transition');
+ a(document.querySelector('.c2-running-lyrics'),'approved video lyrics retained');
+ const b=document.querySelector('[data-escena="madrugada"]'),screen=document.querySelector('#fh-next-house'),seam=document.querySelector('#house-floor-plan'),addr=b.querySelector('h2'),old=document.querySelector('#fh-next-house h2');
+ a(!b.querySelector('.c2-child,.c2-horizon,.c2-memory'),'next screen contains no provisional scenery');
+ const y=el=>new DOMMatrix(getComputedStyle(el).transform).m42;
+ const dir=matchMedia('(prefers-reduced-motion:reduce)').matches?-1:1;
+ step(9.6);a(Math.abs(y(screen))<1,'departure begins at rest');step(9.61);a(Math.abs(y(screen))<innerHeight*.002,'soft start');step(10.1);a(Math.abs(y(screen)-dir*innerHeight*.5)<1,'halfway departure');a(Math.abs(y(b)+dir*innerHeight*.5)<1,'adjacent incoming screen');a(!seam.hidden&&Number(seam.style.zIndex)>40,'living seam above scenes');
+ step(10.6);a(getComputedStyle(b).backgroundColor==='rgb(11, 11, 13)','pure black textured entry');a(getComputedStyle(b.firstElementChild).backgroundImage.includes('fondo-papel'),'existing texture');
+ step(11.9);a(getComputedStyle(b).backgroundColor==='rgb(44, 72, 119)','blue reached');a(addr.textContent.trim()==='Terrero 3231','correct new address');const s=getComputedStyle(addr),o=getComputedStyle(old);for(const k of ['fontFamily','fontSize','fontWeight','letterSpacing','lineHeight'])a(s[k]===o[k],'same address '+k);a(s.color==='rgb(185, 163, 222)','lilac address');a(addr.querySelectorAll('.ink-letter').length===11,'same living ink letters');a(Number(addr.style.opacity)>.9,'address visible');
+ step(12.3);a(houseRoute.heading(12.6).x===0,'next passage vertical');a(!seam.hidden,'next living seam');step(12.65);a(getComputedStyle(document.querySelector('.c3-address')).display==='none','no duplicate old-style address');step(11.9);
+ return 'PASS gradual flashlight ignition / five-second exploration / original video lyrics / eased long vertical transition / textured black to blue / living seams / matching lilac Terrero address / reverse; '+innerWidth+'x'+innerHeight;
+ }catch(e){return 'FAIL '+e.stack}})();</script>`;
+fs.writeFileSync(path.join(__dirname,'linterna-terrero-suave-browser.html'),fs.readFileSync(path.join(root,'dist/index.html'),'utf8').replace('<head>','<head><base href="../dist/">').replace('</body>',test+'</body>'));

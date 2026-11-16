@@ -1,0 +1,15 @@
+{
+  "result": {
+    "result": {
+      "type": "string",
+      "value": "PASS: no click startup; first-scroll zero gain; playback; progress fade and reversal; stable entry gain; full-volume latch; player pause/resume and no scroll restart"
+    }
+  },
+  "info": {
+    "result": {
+      "type": "string",
+      "value": "PASS: no click startup; first-scroll zero gain; playback; progress fade and reversal; stable entry gain; full-volume latch; player pause/resume and no scroll restart"
+    }
+  },
+  "errors": []
+}

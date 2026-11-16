@@ -1,0 +1,1 @@
+﻿PASS: first-house loaded; original panorama with 24 houses; memory dialog; drawing, local save and escaped names; click and missed drop do not collect; drop collects; widget opens inventory without rewinding; continuation, closing and exterior archive.

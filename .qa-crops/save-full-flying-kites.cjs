@@ -1,0 +1,10 @@
+const fs=require('fs'),path=require('path'),crypto=require('crypto');
+const report=JSON.parse(fs.readFileSync(path.join(__dirname,'full-flying-kites-export.json'),'utf8')),value=report.result?.result?.value;
+if(report.errors.length||!value?.png||!value.transparentBackground||value.kites<6||value.kites>8)throw Error(JSON.stringify(report));
+const original=path.join(__dirname,'../barriletes-volando-transparente.png');
+const unchanged=crypto.createHash('sha256').update(fs.readFileSync(original)).digest('hex')===fs.readFileSync(path.join(__dirname,'full-kites-original-hash.txt'),'utf8');
+if(!unchanged)throw Error('Original export changed');
+const output=path.join(__dirname,'../barriletes-volando-imagen-completa-transparente.png'),png=Buffer.from(value.png.split(',')[1],'base64');
+if(png.readUInt32BE(16)!==2048||png.readUInt32BE(20)!==2048||png[25]!==6)throw Error('Expected square RGBA PNG');
+fs.writeFileSync(output,png);delete value.png;
+fs.writeFileSync(path.join(__dirname,'full-flying-kites-validation.json'),JSON.stringify({result:'PASS',output,originalUnchanged:unchanged,bytes:png.length,...value},null,2));

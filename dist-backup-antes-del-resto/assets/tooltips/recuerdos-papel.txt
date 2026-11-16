@@ -1,0 +1,4 @@
+Recorte de tooltips-blanco.png (original preservado).
+Rectángulo superior izquierdo: x=26, y=20, ancho=530, alto=140 píxeles.
+Conserva transparencia y bordes del papel; no contiene el resto del catálogo.
+Uso: base del texto RECUERDOS en la cara exterior de la tapa de la caja 3D.

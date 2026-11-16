@@ -1,0 +1,1 @@
+PASS: first-house and casa syntax; browser fixture generated.

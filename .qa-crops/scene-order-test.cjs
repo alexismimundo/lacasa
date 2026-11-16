@@ -1,0 +1,17 @@
+const fs=require('fs'),path=require('path'),vm=require('vm');const root=path.resolve(__dirname,'..');
+for(const name of ['rooms','house-route','first-house'])new vm.Script(fs.readFileSync(path.join(root,'dist/continuous/'+name+'.js'),'utf8'));
+const test=`<script>window.ready=(async()=>{try{const a=(v,m)=>{if(!v)throw Error(m)},sleep=ms=>new Promise(r=>setTimeout(r,ms));await sleep(1600);document.body.classList.add('inhabited');document.body.classList.remove('closing-outside','reentering');
+ const film=document.querySelector('#kitchen-teaser-room'),box=document.querySelector('#fh-model-box'),kitchen=document.querySelector('.kitchen-scene');
+ async function phase(p){target=current=p;window.casaRender(performance.now(),.016);await sleep(70);target=current=p;window.casaRender(performance.now(),.016)}
+ await phase(1.6);a(getComputedStyle(film).visibility==='hidden','film absent in kitchen');
+ await phase(1.85);a(getComputedStyle(box).visibility==='visible','box follows kitchen');a(getComputedStyle(film).visibility==='hidden','film not before box');a(Math.abs(box.getBoundingClientRect().left-(innerWidth-box.getBoundingClientRect().width)/2)<3,'box centered');a(kitchen.getBoundingClientRect().right<=1,'kitchen exited');
+ const question=document.querySelector('#paper-box-question');a(getComputedStyle(question).visibility==='visible'&&Number(getComputedStyle(question).opacity)>.99,'question visible with centered box');a([...question.querySelectorAll('.ink-word')].every(el=>Number(getComputedStyle(el).opacity)>.99),'all question words visible on box screen');
+ await phase(2.1);a(getComputedStyle(film).visibility==='visible','film follows box');a(Math.abs(film.getBoundingClientRect().left)<2&&Math.abs(film.getBoundingClientRect().top)<2,'film fills screen');a(box.getBoundingClientRect().width<=281,'box docked before film');a(getComputedStyle(question).visibility==='hidden','question absent on film screen');
+ const clip=film.querySelector('video');await sleep(2500);a(!clip.error,'video loads');a(clip.duration>2.6&&clip.duration<2.8,'black tail removed');await clip.play();const canvas=document.createElement('canvas');canvas.width=96;canvas.height=54;const ctx=canvas.getContext('2d');let darkest=255;
+ for(let i=0;i<30;i++){await sleep(100);ctx.drawImage(clip,0,0,96,54);const pixels=ctx.getImageData(0,0,96,54).data;let light=0;for(let j=0;j<pixels.length;j+=4)light+=(pixels[j]+pixels[j+1]+pixels[j+2])/3;darkest=Math.min(darkest,light/(96*54))}a(darkest>12,'no black during playback across loop');
+ await phase(2.55);a(film.getBoundingClientRect().top<0,'film leaves toward salon');
+ await phase(3);a(getComputedStyle(film).visibility==='hidden','film hidden in salon');
+ await phase(1.85);a(getComputedStyle(film).visibility==='hidden','reverse returns to box');a(box.getBoundingClientRect().width>innerWidth*.7,'reverse restores full box');
+ return 'PASS: box question fully visible on box screen only; trimmed video plays across loop without black; kitchen -> box -> video -> salon; reversible geometry '+innerWidth+'x'+innerHeight;
+ }catch(e){return 'FAIL: '+e.stack}})();</script>`;
+fs.writeFileSync(path.join(__dirname,'scene-order-browser.html'),fs.readFileSync(path.join(root,'dist/index.html'),'utf8').replace('<head>','<head><base href="../dist/">').replace('</body>',test+'</body>'));

@@ -1,0 +1,1 @@
+PASS: production syntax; silent window click; wheel-driven browser fixture generated.

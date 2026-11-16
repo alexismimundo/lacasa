@@ -1,0 +1,13 @@
+C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\dist\index.html:88:@font-face{font-family:MonumentMono;src:url('assets/fonts/monument-mono-light.otf') format('opentype');font-style:normal;font-weight:300;font-display:swap}@font-face{font-family:MonumentMono;src:url('assets/fonts/monument-mono-regular.otf') format('opentype');font-style:normal;font-weight:400;font-display:swap}
+C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\source-materials\pre-continuous-v53.html:88:@font-face{font-family:MonumentMono;src:url('assets/fonts/monument-mono-light.otf') format('opentype');font-style:normal;font-weight:300;font-display:swap}@font-face{font-family:MonumentMono;src:url('assets/fonts/monument-mono-regular.otf') format('opentype');font-style:normal;font-weight:400;font-display:swap}
+FILES
+C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\dist\continuous\casa.css
+C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\dist\continuous\casa2.css
+C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\dist\continuous\casa3.css
+C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\dist\continuous\casa3.js
+C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\dist\continuous\community.css
+C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\dist\continuous\first-house.css
+C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\dist\continuous\rooms.css
+C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\dist\index.html
+C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\MANIFIESTO.json
+C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\source-materials\pre-continuous-v53.html

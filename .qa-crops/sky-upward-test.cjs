@@ -1,0 +1,11 @@
+const fs=require('fs'),path=require('path'),vm=require('vm'),assert=require('assert');
+const root=path.resolve(__dirname,'..');for(const name of ['house-route','first-house','floor-plan'])new vm.Script(fs.readFileSync(path.join(root,'dist/continuous/'+name+'.js'),'utf8'));
+const c={window:{},innerWidth:1280,innerHeight:900};vm.createContext(c);vm.runInContext(fs.readFileSync(path.join(root,'dist/continuous/house-route.js'),'utf8'),c);const r=c.window.houseRoute;assert.equal(r.heading(5.28).y,-1);assert.equal(r.heading(2.4).y,1);assert.equal(r.heading(7.6).y,1);
+const html=fs.readFileSync(path.join(root,'dist/index.html'),'utf8'),test=`<script>window.ready=new Promise(resolve=>setTimeout(()=>{try{
+ const a=(v,m)=>{if(!v)throw Error(m)};document.body.classList.add('inhabited');const sample=p=>{current=target=p;casaRender(performance.now(),0);return ['.fh-sky','.fh-salon-viewport'].map(sel=>new DOMMatrix(document.querySelector(sel).style.transform).m42)};
+ let previous=-innerHeight;for(let i=0;i<=84;i++){const p=5.28+i*.005,[sky,salon]=sample(p);a(Math.abs(salon-sky-innerHeight)<.15,'joined upward edges');a(sky>=previous-.01,'sky arrives from above');previous=sky;if(i===42)a(Math.abs(sky+innerHeight*.5)<.15,'midpoint above');}
+ a(Math.abs(previous)<.01,'sky fully arrives');const [sky,salon]=sample(5.28);a(Math.abs(sky+innerHeight)<.01&&Math.abs(salon)<.01,'original salon starts in place');sample(5.49);const forward=sample(5.4);sample(5.6);const reverse=sample(5.4);a(forward.every((v,i)=>v===reverse[i]),'reversible exact positions');
+ a(houseRoute.heading(2.4).y===1,'box passage unchanged');a(houseRoute.heading(7.6).y===1,'later passage unchanged');
+ resolve('PASS: upward sky arrival; 85 joined-edge samples; midpoint; final arrival; reverse; box and later headings unchanged; '+innerWidth+'x'+innerHeight);
+ }catch(e){resolve('FAIL: '+e.stack)}},1800));</script>`;
+fs.writeFileSync(path.join(__dirname,'sky-upward-browser.html'),html.replace('<head>','<head><base href="../dist/">').replace('</body>',test+'</body>'));

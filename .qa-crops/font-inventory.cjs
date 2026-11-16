@@ -1,0 +1,5 @@
+const fs=require('fs'),path=require('path');const root=path.resolve(__dirname,'..'),out=[];
+out.push(fs.readdirSync(root).join('\n'));
+function scan(dir){for(const e of fs.readdirSync(dir,{withFileTypes:true})){const p=path.join(dir,e.name);if(e.isDirectory()){if(!['.git','node_modules','.qa-crops'].includes(e.name))scan(p)}else if(/\.(html|css|js|json)$/.test(e.name)){const text=fs.readFileSync(p,'utf8');text.split('\n').forEach((s,i)=>{if(/monument|font-variation-settings/i.test(s))out.push(p+':'+(i+1)+':'+s)})}}}
+scan(root);fs.writeFileSync(path.join(__dirname,'font-inventory.txt'),out.join('\n'));
+fs.writeFileSync(path.join(__dirname,'font-summary.txt'),out.filter(s=>/@font-face|font-variation-settings/.test(s)).join('\n')+'\nFILES\n'+[...new Set(out.slice(1).map(s=>s.split(/:\d+:/)[0]))].join('\n'));

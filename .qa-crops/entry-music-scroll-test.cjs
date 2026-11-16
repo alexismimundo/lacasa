@@ -1,0 +1,20 @@
+const fs=require('fs'),path=require('path'),vm=require('vm'),assert=require('assert'),root=path.resolve(__dirname,'..');
+const html=fs.readFileSync(path.join(root,'dist/index.html'),'utf8');
+for(const m of html.matchAll(/<script([^>]*)>([\s\S]*?)<\/script>/g))if(!/type=["'](?:importmap|module)/.test(m[1]))new vm.Script(m[2]);
+new vm.Script(fs.readFileSync(path.join(root,'dist/continuous/first-house.js'),'utf8'));
+assert(!html.slice(html.indexOf('async function startWindowEntry'),html.indexOf("$('replay').onclick")).includes('startMusic()'));
+const test=`<script>window.ready=new Promise(resolve=>setTimeout(async()=>{try{
+ const a=(v,m)=>{if(!v)throw Error(m)},wait=ms=>new Promise(r=>setTimeout(r,ms)),rows=[];
+ music.pause();sounding=false;musicChosen=false;entryMusicComplete=false;entryMusicPending=false;fadeId++;cameraCurrent=cameraTarget=0;current=target=0;state.opened=true;busy=false;document.body.classList.remove('inhabited','closing-outside');filmUnavailable=true;
+ a(getComputedStyle(document.querySelector('#sound')).display==='none','landing toggle hidden');
+ const wheel=async(delta)=>{document.body.dispatchEvent(new WheelEvent('wheel',{deltaY:delta,cancelable:true,bubbles:true}));await wait(1100);rows.push({delta,camera:cameraCurrent,volume:music.volume,inside:document.body.classList.contains('inhabited')});return music.volume};
+ document.body.dispatchEvent(new WheelEvent('wheel',{deltaY:400,cancelable:true,bubbles:true}));a(music.volume===0,'first frame zero');await wait(1100);a(sounding&&!music.paused,'real playback');a(music.volume>0&&music.volume<.012,'slow quarter gain');
+ const quarter=music.volume,half=await wheel(400);a(half>quarter&&half<.075,'slow half gain');const back=await wheel(-400);a(back<half*.2&&Math.abs(back-quarter)<.002,'wheel reverses before entry');a(await wheel(-400)===0,'zero on exterior');
+ await wheel(800);await wheel(800);a(document.body.classList.contains('inhabited'),'wheel reaches teaser '+JSON.stringify(rows));a(Math.abs(music.volume-.55)<.001,'normal volume inside');
+ const retreat=await wheel(-1600);a(!document.body.classList.contains('inhabited'),'wheel leaves teaser');a(retreat<.55&&retreat>.1,'fade after crossing back outside');await wheel(-1600);a(music.volume===0,'silence after full retreat');
+ await wheel(800);await wheel(800);a(Math.abs(music.volume-.55)<.001,'normal after second entry');
+ document.querySelector('#player-play').click();a(music.paused&&!sounding,'player pause');await wheel(100);a(music.paused&&!sounding,'scroll does not restart');
+ window.musicScrollSamples=rows;const text='PASS: real wheel forward/back; slow cubic fade; silence at exterior; full volume at teaser; reverse after completed entry; player pause respected; landing toggle hidden. '+JSON.stringify(rows);document.querySelector('#info').textContent=text;resolve(text);
+ }catch(e){resolve('FAIL: '+e.stack)}},1800));</script>`;
+fs.writeFileSync(path.join(__dirname,'entry-music-scroll-browser.html'),html.replace('<head>','<head><base href="../dist/">').replace('</body>',test+'</body>'));
+fs.writeFileSync(path.join(__dirname,'entry-music-scroll-result.txt'),'PASS: production syntax; silent window click; wheel-driven browser fixture generated.');

@@ -1,0 +1,8 @@
+const fs=require('fs'),path=require('path');
+require('./memory-card-3d-test.cjs');
+const file=path.join(__dirname,'memory-card-3d-browser.html');let html=fs.readFileSync(file,'utf8');
+html=html.replace("a(hint.top>=rect.bottom,'hint below canvas on white')","a(hint.top<rect.bottom&&hint.top>rect.top+rect.height*.9,'hint raised slightly')");
+const marker="box.click();step(15);a(card.progress>0&&window.__cardQA().openAnim>.8";
+const extra=`const original=rig.rotation.y;target=current=1.9;rig.rotation.y=Math.PI;step(3);a(Math.abs(rig.rotation.y-Math.PI)<.001,'open box rotation not reset while docking');const expected=rig.quaternion.clone();a(Math.abs(card.group.quaternion.dot(expected))>.999,'card follows box rotation');const frontNormal=new THREE.Vector3(0,0,1).applyQuaternion(card.group.quaternion);a(frontNormal.dot(camera.position.clone().sub(card.group.position))<0,'back visible after half turn');rig.rotation.y=Math.PI*2;step(3);a(Math.abs(rig.rotation.y-Math.PI*2)<.001,'full 360 rotation retained');a(Math.abs(card.group.quaternion.dot(rig.quaternion))>.999,'front visible after full turn');target=current=1.85;rig.rotation.y=original;step(3);`;
+if(!html.includes(marker))throw Error('Rotation test insertion not found');html=html.replace(marker,extra+marker).replace('PASS: true 3D card, two depth-tested faces, full turn ending front, fixed scale, fits canvas, return before lid closure','PASS: raised hint, click zoom retained, open box rotates 360 without reset, card follows box and reveals back, return before closure');
+fs.writeFileSync(path.join(__dirname,'memory-card-rotation-browser.html'),html);

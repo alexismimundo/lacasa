@@ -1,0 +1,1 @@
+﻿PASS: closed/open strokes, evenodd holes, 24 houses, memory dialog, drawing step, local save, escaped names, continuation, closing and exterior archive.

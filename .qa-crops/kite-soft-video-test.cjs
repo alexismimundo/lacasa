@@ -1,0 +1,15 @@
+const fs=require('fs'),path=require('path'),assert=require('assert'),{spawnSync}=require('child_process');
+const root=path.resolve(__dirname,'..'),file=path.join(root,'dist/index.html');let html=fs.readFileSync(file,'utf8');
+const old='current+=(target-current)*(1-Math.exp(-9*dt));renderJourney();',next='const cameraSoftness=lowEase(3.25,3.5,current)*(1-lowEase(5.7,6,current));current+=(target-current)*(1-Math.exp(-(9-3.5*cameraSoftness)*dt));renderJourney();';
+assert(html.includes(old)||html.includes(next));html=html.replace(old,next);fs.writeFileSync(file,html);
+const encoded=spawnSync('C:\\Users\\alexismimundo\\AppData\\Local\\Programs\\Stremio\\ffmpeg.exe',['-hide_banner','-y','-i',path.join(root,'dist/assets/videos/Video-2.mp4'),'-frames:v','1','-q:v','2',path.join(root,'dist/assets/videos/Video-2-poster.jpg')],{encoding:'utf8',timeout:60000});assert.equal(encoded.status,0,encoded.stderr);
+const test=`<script>window.ready=(async()=>{try{
+ const a=(v,m)=>{if(!v)throw Error(m)},video=document.querySelector('#kitchen-teaser-room video');
+ a(video.getAttribute('src')==='assets/videos/Video-2.mp4','correct second video');a(video.poster.includes('Video-2-poster.jpg'),'matching poster');a(document.querySelector('#house-film').getAttribute('src')==='assets/videos/Video-1.mp4','first video retained');
+ if(video.readyState<2)await new Promise((resolve,reject)=>{video.addEventListener('loadeddata',resolve,{once:true});video.addEventListener('error',reject,{once:true})});await video.play();await new Promise(r=>setTimeout(r,250));a(video.currentTime>0,'new video plays');video.pause();
+ document.body.classList.add('inhabited');const sample=p=>{current=target=p;casaRender(performance.now(),0)},y=el=>new DOMMatrix(el.style.transform).m42;
+ let previous=null;for(let i=0;i<=38;i++){sample(5.32+i*.01);const sky=document.querySelector('.fh-sky'),salon=document.querySelector('.fh-salon-viewport');a(Math.abs(y(sky)-y(salon)-innerHeight)<.2,'paired sky edge');if(previous!==null)a(y(sky)<=previous+.1,'continuous sky travel');previous=y(sky)}
+ const sensitivity=p=>.35+.61*lowEase(3.3,3.5,p)*(1-lowEase(5.08,5.32,p))-.15*lowEase(5.08,5.32,p)*(1-lowEase(5.7,5.95,p));a(Math.abs(sensitivity(4)-.96)<.001,'short zoom retained');a(Math.abs(sensitivity(5.4)-.2)<.001,'gentle kite passage');a(tick.toString().includes('9-3.5*cameraSoftness'),'softer camera following');
+ sample(5.5);const result='PASS: Video-2 '+video.videoWidth+'x'+video.videoHeight+' plays; first video unchanged; softer camera tracking; short child zoom; gentle paired kite passage; '+innerWidth+'x'+innerHeight;document.querySelector('#info').textContent=result;return result;
+ }catch(e){return 'FAIL: '+e.stack}})();</script>`;
+fs.writeFileSync(path.join(__dirname,'kite-soft-video-browser.html'),html.replace('<head>','<head><base href="../dist/">').replace('</body>',test+'</body>'));

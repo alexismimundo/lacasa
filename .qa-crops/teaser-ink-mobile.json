@@ -1,0 +1,15 @@
+{
+  "result": {
+    "result": {
+      "type": "string",
+      "value": "PASS: integrated teaser; 4 stages; video loaded; matching grain; locked entry; seven-day completion; landing reveal; session persistence; 390x844"
+    }
+  },
+  "info": {
+    "result": {
+      "type": "string",
+      "value": "PASS: integrated teaser; 4 stages; video loaded; matching grain; locked entry; seven-day completion; landing reveal; session persistence; 390x844"
+    }
+  },
+  "errors": []
+}

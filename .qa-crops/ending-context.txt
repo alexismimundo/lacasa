@@ -1,0 +1,7 @@
+﻿C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\dist\continuous\casa.js:70: {casa:'Gabriela Mistral 4860',titulos:['El niño','Daiana','En la oscuridad']},
+C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\dist\continuous\casa.js:226:function guardar(id,{desde=null,texto='',forzar=false,silencioso=false}={}){
+C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\dist\continuous\casa.js:247:function hacerGuardable(el,id,opciones={}){
+C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\dist\continuous\casa2.js:1:// La Casa — etapa 2 del storyboard: segunda casa, Gabriela Mistral 4860 (pantallas 8 a 11).
+C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\dist\continuous\casa2.js:17:RECURSOS.cursores.linterna='assets/provisional/cursor-linterna.svg';PUNTA.linterna=[24,8];
+C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\dist\continuous\casa2.js:152:   PANTALLA 11: EN LA OSCURIDAD (opción A: la linterna)
+C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\dist\continuous\casa2.js:175: const v=fase();if(enApagon(v))return 'linterna';

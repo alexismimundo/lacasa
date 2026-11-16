@@ -1,0 +1,15 @@
+﻿first-house.js:194:  const kitchenMemories=[1.55].map((start,i)=>{
+first-house.js:203:  function renderKitchenMemories(inside,p,dt){kitchenMemories.forEach(memory=>{
+first-house.js:221: window.casaBoxDropHover=(x,y)=>{const r=boxCanvas.getBoundingClientRect(),visible=getComputedStyle(boxCanvas).visibility!=='hidden';boxDropHover=current>=.98&&visible&&Number.isFinite(x)&&Number.isFinite(y)&&x>=r.left-45&&x<=r.right+45&&y>=r.top-45&&y<=r.bottom+45;boxCanvas.classList.toggle('drop-opening',boxDropHover)};
+first-house.js:328: function positionModelBox(p,dt){
+first-house.js:333:  const mvActive=p>=.98;
+first-house.js:568:  const x=rect.left+s*(m.e+m.a*kite.offsetWidth*.5+m.c*kite.offsetHeight*.98);
+first-house.js:569:  const y=rect.top+s*(m.f+m.b*kite.offsetWidth*.5+m.d*kite.offsetHeight*.98);
+first-house.js:657:  const depth=flying&&!still?1+launch*(Math.sin(t/2.2)*.43+Math.sin(t/4.6)*.12-.16):f.phase==='fallen'?(f.lastDepth||1)+(.98-(f.lastDepth||1))*ease(0,1,fallProgress):1;
+first-house.js:754:  if(inside)positionModelBox(p,dt);else boxCanvas.style.visibility='hidden';
+first-house.js:756:  renderMemoryCard(inside,p,dt);renderKitchenMemories(inside,p,dt);
+index.html:608: <div id="box-object"><img class="box-base" src="assets/box-base.webp" alt="Caja de zapatillas de cartón gastado"><div id="box-drop" aria-label="Interior de la caja"><img id="box-kept-object" alt="" hidden><p id="box-kept-paper" hidden></p></div><img class="box-front" src="assets/box-base.webp" alt="" aria-hidden="true"><img id="box-lid" src="assets/box-lid.webp" alt="Tapa de la caja"></div>
+index.html:612: <form id="box-form" hidden><label for="box-text">Ponerlo en palabras <span id="box-draft-state"></span></label><textarea id="box-text" maxlength="180" rows="2" placeholder="El ruido de una puerta, una sobremesa, una voz…"></textarea><div><button type="submit">Guardar en la caja</button><button id="box-cancel-edit" type="button">Volver</button><span id="box-count" aria-hidden="true">0 / 180</span></div></form>
+index.html:643:   <button type="button" id="caja-abrir" aria-expanded="false" aria-controls="caja-panel" aria-label="La caja: ver lo que guardaste"><img class="caja-base" src="assets/box-base.webp" alt=""><img class="caja-tapa" src="assets/box-lid.webp" alt=""><img class="caja-quemada" src="assets/textural/fragment-38.webp" alt=""><span id="caja-cuenta" aria-hidden="true"></span></button>
+index.html:644:   <div id="caja-panel" hidden role="region" aria-label="Lo que guardaste"><p id="caja-titulo">Lo que guardaste</p><p id="caja-vacia">Todavía no guardaste nada.</p><ul id="caja-lista"></ul><p id="caja-aviso" role="status"></p><p id="caja-anterior" hidden></p></div>
+index.html:1431:  if(zoom<.98&&closingPlaying){closingFilm.pause();closingPlaying=false}

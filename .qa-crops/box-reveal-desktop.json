@@ -1,0 +1,15 @@
+{
+  "result": {
+    "result": {
+      "type": "string",
+      "value": "PASS: visible scroll-driven box fade and staggered text; no offscreen completion; reversible appearance; softer continuous strip; 49 phases; paired edges; preserved box; 1280x900"
+    }
+  },
+  "info": {
+    "result": {
+      "type": "string",
+      "value": "PASS: visible scroll-driven box fade and staggered text; no offscreen completion; reversible appearance; softer continuous strip; 49 phases; paired edges; preserved box; 1280x900"
+    }
+  },
+  "errors": []
+}

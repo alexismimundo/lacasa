@@ -1,0 +1,13 @@
+<!doctype html><script>
+window.ready=(async()=>{const assets=[];for(let n=1;n<=38;n++){
+ const name='casa-'+String(n).padStart(2,'0')+'.png',im=new Image();im.src='../dist/assets/casas-comunidad/recortes/'+name;await im.decode();
+ const c=document.createElement('canvas');c.width=im.width;c.height=im.height;const x=c.getContext('2d');x.drawImage(im,0,0);const image=x.getImageData(0,0,c.width,c.height),d=image.data,w=c.width,h=c.height,seen=new Uint8Array(w*h);let largest=[];
+ // Retain the primary connected paper silhouette, not isolated scan specks.
+ for(let k=0;k<w*h;k++){if(seen[k]||d[k*4+3]<48)continue;const group=[k];seen[k]=1;for(let p=0;p<group.length;p++){const i=group[p],xx=i%w,yy=Math.floor(i/w);for(let dy=-1;dy<=1;dy++)for(let dx=-1;dx<=1;dx++){const nx=xx+dx,ny=yy+dy,j=ny*w+nx;if(nx<0||nx>=w||ny<0||ny>=h||seen[j]||d[j*4+3]<48)continue;seen[j]=1;group.push(j)}}if(group.length>largest.length)largest=group}
+ const keep=new Uint8Array(w*h);for(const i of largest)keep[i]=1;
+ // One-pixel antialiased fringe, without filling internal architectural holes.
+ let left=w,top=h,right=0,bottom=0;for(let i=0;i<w*h;i++){const xx=i%w,yy=Math.floor(i/w);let near=keep[i];if(!near&&d[i*4+3]>=12){for(let dy=-1;dy<=1;dy++)for(let dx=-1;dx<=1;dx++){const nx=xx+dx,ny=yy+dy;if(nx>=0&&nx<w&&ny>=0&&ny<h&&keep[ny*w+nx])near=1}}
+ d[i*4]=d[i*4+1]=d[i*4+2]=255;if(!near)d[i*4+3]=0;if(d[i*4+3]){left=Math.min(left,xx);right=Math.max(right,xx);top=Math.min(top,yy);bottom=Math.max(bottom,yy)}}
+ x.putImageData(image,0,0);const out=document.createElement('canvas');out.width=right-left+5;out.height=bottom-top+5;out.getContext('2d').drawImage(c,left,top,right-left+1,bottom-top+1,2,2,right-left+1,bottom-top+1);assets.push({name,data:out.toDataURL('image/png').split(',')[1]});
+ }return JSON.stringify(assets)})();
+</script>

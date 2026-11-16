@@ -1,0 +1,1 @@
+PASS: JS syntax; rear-facing label; existing tooltip paper and graffiti font assets; six arbitrary rotations converge monotonically to identical frontal widget pose.

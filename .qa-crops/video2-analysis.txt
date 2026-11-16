@@ -1,0 +1,31 @@
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\dist\assets\videos\Video-2.mp4':
+  Metadata:
+    major_brand     : mp42
+    minor_version   : 0
+    compatible_brands: mp42mp41
+    creation_time   : 2026-11-15T14:11:26.000000Z
+  Duration: 00:00:05.00, start: 0.000000, bitrate: 10708 kb/s
+  Stream #0:0(eng): Video: h264 (Main) (avc1 / 0x31637661), yuv420p, 1920x1080 [SAR 1:1 DAR 16:9], 10443 kb/s, 25 fps, 25 tbr, 25k tbn, 50 tbc (default)
+    Metadata:
+      creation_time   : 2026-11-15T14:11:26.000000Z
+      handler_name    : ?Mainconcept Video Media Handler
+      vendor_id       : [0][0][0][0]
+      encoder         : AVC Coding
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 (native) -> wrapped_avframe (native))
+Press [q] to stop, [?] for help
+Output #0, null, to 'pipe:':
+  Metadata:
+    major_brand     : mp42
+    minor_version   : 0
+    compatible_brands: mp42mp41
+    encoder         : Lavf58.76.100
+  Stream #0:0(eng): Video: wrapped_avframe, yuv420p(progressive), 1920x1080 [SAR 1:1 DAR 16:9], q=2-31, 200 kb/s, 25 fps, 25 tbn (default)
+    Metadata:
+      creation_time   : 2026-11-15T14:11:26.000000Z
+      handler_name    : ?Mainconcept Video Media Handler
+      vendor_id       : [0][0][0][0]
+      encoder         : Lavc58.134.100 wrapped_avframe
+frame=    1 fps=0.0 q=-0.0 size=N/A time=00:00:00.04 bitrate=N/A speed=2.49x    frame=  125 fps=0.0 q=-0.0 Lsize=N/A time=00:00:05.00 bitrate=N/A speed=52.9x    
+video:65kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown
+[blackdetect @ 00000215870def40] black_start:2.72 black_end:4.96 black_duration:2.24

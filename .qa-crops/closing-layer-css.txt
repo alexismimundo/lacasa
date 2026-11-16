@@ -1,0 +1,2 @@
+#salida-personal{position:absolute;z-index:3;pointer-events:none;transform-origin:center}
+#salida-personal[hidden],#salida-personal [hidden],#salida-menu[hidden]{display:none!important}

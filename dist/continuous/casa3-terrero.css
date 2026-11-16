@@ -1,0 +1,23 @@
+.resto-asset-image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none}
+.c3-scene{position:absolute;inset:0;overflow:hidden;pointer-events:none}
+.c3-scene [hidden]{display:none!important}
+.c3-rain{position:absolute;inset:0;width:100%;height:100%;z-index:3;pointer-events:none}
+.c3-pot-catcher{position:absolute;z-index:2;left:7%;bottom:10%;width:min(clamp(160px,24vw,340px),33vh);aspect-ratio:3/2;pointer-events:auto;touch-action:none;cursor:grab;user-select:none}
+.c3-pot-catcher.dragging{cursor:grabbing}
+.c3-pot-catcher:focus-visible{outline:2px dashed #335386;outline-offset:4px}
+.c3-pot-catcher .c3-rain-pot{display:block;width:100%;height:100%;mix-blend-mode:multiply;pointer-events:none;user-select:none}
+.c3-scene .c3-rain-display{position:absolute;z-index:2;left:50%;top:50%;width:min(900px,88vw);max-width:none;margin:0;opacity:1;transform:translate(-50%,-50%);font:400 clamp(26px,3.5vw,52px)/1.12 Georgia,serif;text-align:center;transition:none;pointer-events:none}
+.c3-rain-display,.c3-rain-display *{color:#283b73!important;box-shadow:none!important}
+.c3-rain-display .ink-letter{text-shadow:var(--ink-shadow,none)}
+.c3-word-slot{display:inline-grid;vertical-align:baseline;white-space:nowrap;padding-inline:10px}
+.c3-word-ghost,.c3-display-word{grid-area:1/1}
+.c3-word-ghost{opacity:0;pointer-events:none}
+.c3-word-changed .c3-word-ghost,.c3-word-origin .c3-word-ghost{opacity:.16}
+.c3-display-word{display:inline-block;white-space:nowrap;letter-spacing:0;will-change:transform;pointer-events:auto;touch-action:none;cursor:grab;user-select:none}
+.c3-display-word:focus-visible{outline:1px dashed #335386;outline-offset:3px}
+.c3-display-word.c3-word-dragging{position:absolute;z-index:6;cursor:grabbing;transform:none!important}
+.c3-word-target{border-bottom:1px dashed #335386}
+.c3-rain-display .ink-letter:nth-child(3n){position:relative;top:.025em;margin-right:-.025em}
+.c3-rain-display .ink-letter:nth-child(4n){position:relative;top:-.02em;margin-left:.035em}
+.c3-scene .c2-memory{z-index:4;top:auto;bottom:8%;right:4%}
+@media(prefers-reduced-motion:reduce){.c3-display-word{transform:none!important;will-change:auto}}

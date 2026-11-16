@@ -1,0 +1,28 @@
+{
+  "result": {
+    "result": {
+      "type": "object",
+      "value": {
+        "status": "PASS",
+        "phase": 6.9,
+        "kite": {
+          "x": 619.6699829101562,
+          "y": 418.889404296875,
+          "width": 373.4412841796875,
+          "height": 350.22119140625,
+          "top": 418.889404296875,
+          "right": 993.1112670898438,
+          "bottom": 769.110595703125,
+          "left": 619.6699829101562
+        }
+      }
+    }
+  },
+  "info": {
+    "result": {
+      "type": "string",
+      "value": "La Casa · prueba 02. El muro se abre, atravesás la ventana y el hueco permanece. Marco, niño, logo y ladrillos usan los PNG originales separados, con sus transparencias y colores intactos. La entrada reproduce el video del niño atravesando la ventana. Antes de entrar, la ventana tapiada espera inmóvil. Podés repetir el cruce sin borrar el papel ni la luz.Las huellas se conservan en este navegador. Suena «Sirens». Podés silenciarla desde el botón de música.VOLVER ↗"
+    }
+  },
+  "errors": []
+}

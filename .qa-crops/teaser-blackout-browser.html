@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="es">
+<head><base href="../dist/assets/coming-soon/"><script>
+window.blackoutDelays=[];const originalTimeout=window.setTimeout.bind(window);window.setTimeout=(fn,delay,...args)=>{if(delay>=14000&&delay<=36000){blackoutDelays.push(delay);return originalTimeout(fn,100,...args)}return originalTimeout(fn,delay,...args)};
+const originalMedia=window.matchMedia.bind(window);window.testReduced=new EventTarget();testReduced.matches=false;window.matchMedia=q=>q==='(prefers-reduced-motion: reduce)'?testReduced:originalMedia(q);
+const originalAnimate=Element.prototype.animate;Element.prototype.animate=function(...args){const motion=originalAnimate.apply(this,args);if(this.matches('.escena,.interfaz'))motion.pause();return motion};
+</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>La Casa — Próximamente</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <svg width="0" height="0" aria-hidden="true" style="position:absolute;pointer-events:none"><defs>
+    <filter id="teaser-ink-edge" x="-2%" y="-2%" width="104%" height="104%" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency=".42 .58" numOctaves="3" seed="23" result="paper"/>
+      <feDisplacementMap in="SourceGraphic" in2="paper" scale="1.5" xChannelSelector="R" yChannelSelector="G"/>
+      <feGaussianBlur stdDeviation=".7"/>
+    </filter>
+  </defs></svg>
+  <canvas id="living-grain" aria-hidden="true"></canvas>
+  <audio id="teaser-music" loop preload="metadata" src="../Silvana Estrada - La Enfermedad del Siglo - (original Kbps).mp3"></audio>
+  <!-- Fondo con la textura negra -->
+  <div class="fondo" aria-hidden="true"></div>
+
+  <!-- Escena: la casa (video base) y encima los loops de fuego y humo -->
+  <main class="escena" aria-label="La casa incendiándose">
+    <video class="capa base" id="base" muted playsinline preload="auto">
+      <source src="media/casa-base.webm" type="video/webm">
+      <source src="media/casa-base.mp4"  type="video/mp4">
+    </video>
+
+    <!-- Un loop por etapa. Cada uno tiene dos copias (a/b) para encadenarlo sin cortes -->
+    <div class="loop" data-desde="0" data-hasta="2" data-src="media/loop-dias-1-2"></div>
+    <div class="loop" data-desde="2" data-hasta="4" data-src="media/loop-dias-3-4"></div>
+    <div class="loop" data-desde="4" data-hasta="5" data-src="media/loop-dia-5"></div>
+    <div class="loop" data-desde="5" data-hasta="7" data-src="media/loop-dias-6-7"></div>
+  </main>
+
+  <!-- Contador -->
+  <footer class="interfaz">
+    <p class="contador" id="contador" aria-live="polite">
+      <span id="dd">07</span><i>d</i>
+      <span id="hh">00</span><i>h</i>
+      <span id="mm">00</span><i>m</i>
+      <span id="ss">00</span><i>s</i>
+    </p>
+  </footer>
+
+  <!-- Aparece cuando termina la semana -->
+  <a class="entrar" id="entrar" href="#" hidden>Entrar</a>
+
+  <script src="coming-soon.js"></script>
+  <script src="teaser-atmosphere.js"></script>
+<pre id="info"></pre><script>window.ready=(async()=>{const wait=ms=>new Promise(r=>setTimeout(r,ms)),a=(v,m)=>{if(!v)throw Error(m)};try{
+const targets=[document.querySelector('.escena'),document.querySelector('.interfaz')],background=document.querySelector('.fondo');
+for(const count of [1,3,5]){
+testReduced.matches=true;testReduced.dispatchEvent(new Event('change'));
+// Deterministic burst lengths; production remains random.
+const random=Math.random;Math.random=()=>((count-.5)/5);testReduced.matches=false;testReduced.dispatchEvent(new Event('change'));await wait(130);Math.random=random;
+const motions=targets.map(t=>t.getAnimations()[0]);a(motions.every(Boolean),'scene and counter cut together');motions.forEach(m=>m.pause());const motion=motions[0],frames=motion.effect.getKeyframes();a(frames.length===count*2,'variable burst length');a(frames.every(f=>f.easing.replaceAll(' ','')==='steps(1)'||f.easing.replaceAll(' ','')==='steps(1,end)'),'instant cuts without fades');
+const duration=motion.effect.getTiming().duration,firstCut=frames[1].offset*duration;a(firstCut>=20&&firstCut<=85,'brief abrupt cut');
+motions.forEach(m=>m.currentTime=firstCut/2);a(targets.every(t=>Math.abs(Number(getComputedStyle(t).opacity)-Number(frames[0].opacity))<.001),'variable light loss');a(getComputedStyle(background).opacity==='1','textured background stays visible');a(!document.querySelector('#teaser-blackout'),'no flat black overlay');
+const gaps=[],depths=[];
+for(let i=0;i<frames.length-1;i++){const interval=(frames[i+1].offset-frames[i].offset)*duration;if(i%2){gaps.push(interval);a((interval>=44.9&&interval<=140.1)||(interval>=239.9&&interval<=700.1),'mixed short and long pauses')}else{depths.push(Number(frames[i].opacity));a(interval>=19.9&&interval<=85.1,'variable cut durations')}motions.forEach(m=>m.currentTime=(frames[i].offset+frames[i+1].offset)*duration/2);a(targets.every(t=>Math.abs(Number(getComputedStyle(t).opacity)-Number(frames[i].opacity))<.001),'hard cuts at selected intensity')}
+if(count>1)a(depths.every((depth,i)=>!i||Math.abs(depth-depths[i-1])>=.179),'successive cuts have distinct intensity');if(count>=3)a(Math.max(...gaps)-Math.min(...gaps)>99,'unequal pauses within one burst');
+testReduced.matches=true;testReduced.dispatchEvent(new Event('change'));a(targets.every(t=>t.getAnimations().length===0&&getComputedStyle(t).opacity==='1'),'reduced motion restores light');
+}
+a(blackoutDelays.every(d=>d>=14000&&d<=36000),'irregular long intervals');testReduced.matches=false;testReduced.dispatchEvent(new Event('change'));await wait(110);window.dispatchEvent(new Event('la-casa:teaser-fade'));a(targets.every(t=>t.getAnimations().length===0),'exit cancels cuts');
+return document.querySelector('#info').textContent='PASS: variable intensities within bursts; mixed short/long gaps; hard cuts; texture preserved; reduced motion and exit cleanup; '+innerWidth+'x'+innerHeight;
+}catch(e){return document.querySelector('#info').textContent='FAIL: '+e.stack}})();</script></body>
+</html>

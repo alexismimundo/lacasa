@@ -1,0 +1,3 @@
+﻿C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\dist\index.html:1130:  lowRobotMotion=$('robot-arm').animate(frames,{duration:click?1100:950,easing:'steps(1,end)'});
+C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\dist\continuous\casa.js:97: function guardarEstado(){try{sessionStorage.setItem(CLAVE,JSON.stringify(E))}catch{}}
+C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\dist\continuous\casa.js:226: function guardar(id,{desde=null,texto='',forzar=false,silencioso=false}={}){

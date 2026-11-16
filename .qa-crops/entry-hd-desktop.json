@@ -1,0 +1,15 @@
+{
+  "result": {
+    "result": {
+      "type": "string",
+      "value": "PASS: HD entrance integration; 1920x1080; 5 seconds; Chrome playback; original HQ stills retained; 1280x900"
+    }
+  },
+  "info": {
+    "result": {
+      "type": "string",
+      "value": "PASS: HD entrance integration; 1920x1080; 5 seconds; Chrome playback; original HQ stills retained; 1280x900"
+    }
+  },
+  "errors": []
+}

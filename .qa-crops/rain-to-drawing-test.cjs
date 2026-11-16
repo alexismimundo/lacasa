@@ -1,0 +1,14 @@
+const fs=require('fs'),path=require('path'),vm=require('vm'),root=path.resolve(__dirname,'..');
+for(const name of ['house-route','tu-casa','escenas-resto'])new vm.Script(fs.readFileSync(path.join(root,'dist/continuous',name+'.js'),'utf8'));
+const test=String.raw`<script>window.ready=(async()=>{try{
+ const a=(v,m)=>{if(!v)throw Error(m)},wait=ms=>new Promise(r=>setTimeout(r,ms));await wait(2700);reachInside();
+ const rain=document.querySelector('[data-escena="terrero"]'),drawing=document.querySelector('[data-escena="tu-casa"]'),editor=document.getElementById('community-journey'),step=document.getElementById('tu-casa-editor'),set=p=>{target=current=p;casaRender(performance.now(),.016)},frames=n=>{for(let i=0;i<n;i++){current+=(target-current)*(1-Math.exp(-9*.016));casaRender(performance.now(),.016)}};
+ a(editor.parentElement===drawing,'editor belongs to incoming room');
+ const samples=[];for(const phase of [14.8,14.9,15,15.3,15.5,15.7,15.79]){set(phase);const r=rain.getBoundingClientRect(),d=drawing.getBoundingClientRect();a(!drawing.hidden&&!rain.hidden,'both rooms rendered during passage');a(Math.abs(r.right-d.left)<2,'no exposed gap between rooms');a(Math.abs(r.top)<2&&Math.abs(d.top)<2,'horizontal movement');a(r.left<=0&&d.left>=0,'content travels left');a(getComputedStyle(editor).opacity==='1','incoming room fully opaque');a(editor.inert,'drawing cannot capture scroll mid passage');samples.push({phase,rainLeft:r.left,drawingLeft:d.left});}
+ set(15.5);const before=target;step.dispatchEvent(new WheelEvent('wheel',{deltaY:180,bubbles:true,cancelable:true}));a(target>before,'wheel over incoming editor advances');frames(80);step.dispatchEvent(new WheelEvent('wheel',{deltaY:180,bubbles:true,cancelable:true}));frames(80);a(current>=15.8,'wheel finishes passage');
+ set(15.8);a(rain.hidden&&!drawing.hidden&&!editor.inert,'rain retired and editor interactive');a(Math.abs(drawing.getBoundingClientRect().left)<2,'drawing fills screen');
+ const pad=document.getElementById('community-pad');pad.setAttribute('tabindex','0');pad.focus();a(!window.casaBlocksScroll(),'idle pad focus does not lock clock');pad.blur();
+ set(16);navigateScroll(-350);frames(80);a(current<15.8,'reverse returns through passage');
+ set(15.3);return {result:'PASS contiguous opaque horizontal rooms / wheel crosses incoming editor / no idle-focus lock / reverse navigation',samples};
+ }catch(e){return 'FAIL '+e.stack}})();</script>`;
+fs.writeFileSync(path.join(__dirname,'rain-to-drawing-browser.html'),fs.readFileSync(path.join(root,'dist/index.html'),'utf8').replace('<head>','<head><base href="../dist/">').replace('</body>',test+'</body>'));

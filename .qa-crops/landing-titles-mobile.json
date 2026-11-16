@@ -1,0 +1,15 @@
+{
+  "result": {
+    "result": {
+      "type": "string",
+      "value": "PASS: landing drift, desktop bounds/hover targets, blue ink bleed and reset, journey pause, reduced-motion fallback; 390x844 (existing portrait cover crop retained; titles offscreen)"
+    }
+  },
+  "info": {
+    "result": {
+      "type": "string",
+      "value": "PASS: landing drift, desktop bounds/hover targets, blue ink bleed and reset, journey pause, reduced-motion fallback; 390x844 (existing portrait cover crop retained; titles offscreen)"
+    }
+  },
+  "errors": []
+}

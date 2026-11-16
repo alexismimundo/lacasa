@@ -1,0 +1,12 @@
+﻿[
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "78ADE1E038B0508DB629C04B17AC0561DF079B00EB7133D7806679B749639F3A",
+        "Path":  "C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\assets\\entrada-inicial-hq.jpg"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "8CB3CCF50AD49702968EFDF75F1BA704C700E21CF0F0AE72597EF3158B395666",
+        "Path":  "C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\assets\\entrada-final-hq.jpg"
+    }
+]

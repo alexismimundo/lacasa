@@ -1,0 +1,11 @@
+const fs=require('fs'),path=require('path'),vm=require('vm'),assert=require('assert');
+const root=path.resolve(__dirname,'..'),source=fs.readFileSync(path.join(root,'dist/continuous/first-house.js'),'utf8');new vm.Script(source);
+const controller=source.slice(source.indexOf('let childDolly=null'),source.indexOf('window.firstHouseScrollLimit='));
+let now=0;const c={window:{},current:3.53,target:3.53,performance:{now:()=>now},document:{hidden:false,body:{classList:{contains:()=>false}},querySelector:()=>false},dialog:{open:false},adentro:()=>true,reduced:()=>false,clamp:x=>Math.max(0,Math.min(1,x)),storeTravel:()=>{}};vm.createContext(c);vm.runInContext(controller,c);
+const input=d=>c.window.firstHouseNavigate(d),step=()=>c.window.firstHouseAdvanceCamera(.05);
+assert(input(120));c.window.firstHouseAdvanceCamera(1/60);assert(c.current>3.6,'visible movement on first frame');for(let i=0;i<13;i++)step();assert.equal(c.current,5.28);assert(input(-120));for(let i=0;i<13;i++)step();assert.equal(c.current,3.53);assert(input(-120));now+=300;assert.equal(input(-120),false);
+assert(input(120));step();assert(input(-120));for(let i=0;i<13;i++)step();assert.equal(c.current,3.53);
+fs.writeFileSync(path.join(__dirname,'child-bidirectional-unit.json'),JSON.stringify({status:'PASS',checks:'earlier trigger 3.53; first-frame response; 650 ms approach and retreat; reverse mid-flight; momentum guard; normal scroll beyond endpoint'}));
+const html=fs.readFileSync(path.join(root,'dist/index.html'),'utf8');
+const test=`<script>window.ready=(async()=>{try{await new Promise(r=>setTimeout(r,1800));document.body.classList.add('inhabited');const a=(v,m)=>{if(!v)throw Error(m)};current=target=3.53;casaRender(performance.now(),0);navigateScroll(120);const wait=async goal=>{const start=performance.now();while(Math.abs(current-goal)>.00001&&performance.now()-start<8000)await new Promise(requestAnimationFrame);a(Math.abs(current-goal)<.00001,'complete dolly '+goal)};await wait(5.28);navigateScroll(-120);await wait(3.53);return 'PASS: earlier single-scroll approach and single-scroll retreat; original child endpoint; '+innerWidth+'x'+innerHeight}catch(e){return 'FAIL: '+e.stack}})();</script>`;
+fs.writeFileSync(path.join(__dirname,'child-bidirectional-browser.html'),html.replace('<head>','<head><base href="../dist/">').replace('</body>',test+'</body>'));

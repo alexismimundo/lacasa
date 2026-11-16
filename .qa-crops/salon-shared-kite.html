@@ -1,0 +1,21 @@
+<!doctype html><meta charset="utf-8"><script>
+// Bake a perspective overlay from the actual flying assets; preserve the original photo.
+window.ready=(async()=>{
+ const load=async name=>{const i=new Image();i.src='../dist/assets/'+name;await i.decode();return i};
+ const [photo,kite,tail]=await Promise.all([load('first-house/salon/salon-03.webp'),load('barrilete/volador-usuario.png'),load('barrilete/cola-rosa.png')]);
+ const c=document.createElement('canvas');c.width=3072;c.height=2048;const ctx=c.getContext('2d');ctx.drawImage(photo,0,0);
+ ctx.save();ctx.globalCompositeOperation='destination-out';ctx.beginPath();
+ [[1785,1470],[1990,1630],[2240,1760],[2240,1800],[2100,1800],[1920,1720],[1840,1690],[1590,1650],[1625,1550],[1655,1540]].forEach(([x,y],i)=>i?ctx.lineTo(x,y):ctx.moveTo(x,y));ctx.closePath();ctx.fill();ctx.restore();
+ // Warp the same rectangular flight texture onto the four corners of the held kite.
+ function warp(image,corners){
+  const point=(u,v)=>({x:(1-v)*((1-u)*corners[0][0]+u*corners[1][0])+v*((1-u)*corners[3][0]+u*corners[2][0]),y:(1-v)*((1-u)*corners[0][1]+u*corners[1][1])+v*((1-u)*corners[3][1]+u*corners[2][1])});
+  const n=24;for(let j=0;j<n;j++)for(let i=0;i<n;i++){
+   const u=i/n,v=j/n,w=1/n,p=point(u,v),q=point(u+w,v),r=point(u,v+w);
+   ctx.save();ctx.beginPath();ctx.moveTo(p.x,p.y);ctx.lineTo(q.x,q.y);const t=point(u+w,v+w);ctx.lineTo(t.x,t.y);ctx.lineTo(r.x,r.y);ctx.closePath();ctx.clip();
+   ctx.setTransform((q.x-p.x)/(w*image.width),(q.y-p.y)/(w*image.width),(r.x-p.x)/(w*image.height),(r.y-p.y)/(w*image.height),p.x-(q.x-p.x)*i-(r.x-p.x)*j,p.y-(q.y-p.y)*i-(r.y-p.y)*j);ctx.drawImage(image,0,0);ctx.restore();
+  }
+ }
+ warp(kite,[[1610,1370],[1948,1638],[1900,1710],[1495,1635]]);
+ ctx.drawImage(tail,1865,1630,340,150);
+ return c.toDataURL('image/png');
+})();</script>

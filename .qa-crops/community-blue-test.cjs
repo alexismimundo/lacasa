@@ -1,0 +1,22 @@
+const fs=require('fs'),path=require('path'),vm=require('vm');
+const root=path.resolve(__dirname,'..');
+new vm.Script(fs.readFileSync(path.join(root,'dist/continuous/community.js'),'utf8'));
+const test=`<script>window.ready=(async()=>{try{
+ const sleep=ms=>new Promise(r=>setTimeout(r,ms)),a=(v,m)=>{if(!v)throw Error(m)};
+ await sleep(1600);document.body.classList.add('closing-outside');const before=current;openMenuSection('others');await sleep(100);
+ const atlas=document.querySelector('#community-atlas'),view=atlas.querySelector('.atlas-viewport'),world=atlas.querySelector('.atlas-world');
+ a(atlas.open,'open');a(atlas.innerText.trim().replace(/\\s+/g,' ')==='Volver Otras casas','only minimal navigation text');
+ a(getComputedStyle(view).backgroundColor==='rgb(51, 83, 134)','blue background');a(getComputedStyle(view).backgroundImage==='none','no paper texture');
+ const first=world.style.transform;await sleep(2200);a(first!==world.style.transform,'idle drift');
+ view.dispatchEvent(new WheelEvent('wheel',{deltaX:500,deltaY:300,bubbles:true,cancelable:true}));await sleep(100);const paused=world.style.transform;
+ await sleep(900);a(world.style.transform===paused,'interaction pauses drift');a(first!==paused,'wheel pans');
+ view.dispatchEvent(new KeyboardEvent('keydown',{key:'+',bubbles:true,cancelable:true}));await sleep(100);a(world.style.transform.includes('scale(1.2)'),'keyboard zoom');
+ view.dispatchEvent(new KeyboardEvent('keydown',{key:'Home',bubbles:true,cancelable:true}));await sleep(100);
+ a(atlas.querySelectorAll('.atlas-house').length<160,'bounded DOM');
+ atlas.querySelector('.atlas-house').click();a(document.querySelector('#community-memory').open,'memory retained');document.querySelector('#community-memory').close();await sleep(100);
+ await sleep(3400);a(world.style.transform!==paused,'drift resumes');a(current===before,'journey isolated');
+ view.focus();view.dispatchEvent(new KeyboardEvent('keydown',{key:' ',code:'Space',bubbles:true,cancelable:true}));await sleep(100);const stopped=world.style.transform;await sleep(3500);a(stopped===world.style.transform,'space pauses motion');
+ atlas.querySelector('.atlas-close').click();await sleep(100);a(!atlas.open,'close');document.body.classList.add('closing-outside');openMenuSection('others');await sleep(100);a(atlas.open,'reopen');
+ return 'PASS: blue minimal atlas, idle drift, interaction pause/resume, motion toggle, pan, zoom, memories, bounded DOM, close/reopen, isolated journey '+innerWidth+'x'+innerHeight;
+ }catch(e){return 'FAIL: '+e.stack}})();</script>`;
+fs.writeFileSync(path.join(__dirname,'community-blue-browser.html'),fs.readFileSync(path.join(root,'dist/index.html'),'utf8').replace('<head>','<head><base href="../dist/">').replace('</body>',test+'</body>'));

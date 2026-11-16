@@ -1,0 +1,15 @@
+{
+  "result": {
+    "result": {
+      "type": "string",
+      "value": "PASS: scroll launches; smooth hover steering; clicks retain impulse; continuous mouse movement sustains 6 seconds without clicks; stationary pointer loses lift and falls; salon coloured lighting disabled"
+    }
+  },
+  "info": {
+    "result": {
+      "type": "string",
+      "value": "PASS: scroll launches; smooth hover steering; clicks retain impulse; continuous mouse movement sustains 6 seconds without clicks; stationary pointer loses lift and falls; salon coloured lighting disabled"
+    }
+  },
+  "errors": []
+}

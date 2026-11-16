@@ -1,0 +1,15 @@
+{
+  "result": {
+    "result": {
+      "type": "string",
+      "value": "FAIL Error: drag does not sustain flight without clicks\n    at a (http://127.0.0.1:9871/.qa-crops/kite-steering-browser.html:1509:29)\n    at http://127.0.0.1:9871/.qa-crops/kite-steering-browser.html:1517:95"
+    }
+  },
+  "info": {
+    "result": {
+      "type": "string",
+      "value": "FAIL Error: drag does not sustain flight without clicks\n    at a (http://127.0.0.1:9871/.qa-crops/kite-steering-browser.html:1509:29)\n    at http://127.0.0.1:9871/.qa-crops/kite-steering-browser.html:1517:95"
+    }
+  },
+  "errors": []
+}

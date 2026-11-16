@@ -1,0 +1,32 @@
+{
+  "changes": [
+    "dist/continuous/casa.css",
+    "dist/continuous/casa2.css",
+    "dist/continuous/casa3.css",
+    "dist/continuous/casa3.js",
+    "dist/continuous/community.css",
+    "dist/continuous/first-house.css",
+    "dist/continuous/rooms.css",
+    "dist/index.html",
+    "source-materials/pre-continuous-v53.html"
+  ],
+  "copied": [
+    "IBMPlexMono-Thin.ttf",
+    "IBMPlexMono-ThinItalic.ttf",
+    "IBMPlexMono-ExtraLight.ttf",
+    "IBMPlexMono-ExtraLightItalic.ttf",
+    "IBMPlexMono-Light.ttf",
+    "IBMPlexMono-LightItalic.ttf",
+    "IBMPlexMono-Regular.ttf",
+    "IBMPlexMono-Italic.ttf",
+    "IBMPlexMono-Medium.ttf",
+    "IBMPlexMono-MediumItalic.ttf",
+    "IBMPlexMono-SemiBold.ttf",
+    "IBMPlexMono-SemiBoldItalic.ttf",
+    "IBMPlexMono-Bold.ttf",
+    "IBMPlexMono-BoldItalic.ttf",
+    "OFL.txt"
+  ],
+  "source": "C:\\Users\\alexismimundo\\Documents\\Fonts\\PULSO REVISTA\\IBM_Plex_Mono",
+  "faces": 14
+}

@@ -1,0 +1,14 @@
+const fs=require('fs'),path=require('path'),vm=require('vm'),root=path.resolve(__dirname,'..');
+new vm.Script(fs.readFileSync(path.join(root,'dist/continuous/casa2-oscuridad.js'),'utf8'));
+const test=String.raw`<script>window.ready=(async()=>{try{
+ const wait=ms=>new Promise(r=>setTimeout(r,ms)),a=(v,m)=>{if(!v)throw Error(m)};await wait(2600);await document.fonts.ready;reachInside();target=current=8;casaRender(performance.now(),.016);target=current=8.1;for(let i=0;i<130;i++)casaRender(performance.now(),.05);
+ const lyrics=document.querySelector('.c2-running-lyrics'),film=document.querySelector('.c2-running-film'),lines=[...lyrics.querySelectorAll('span')],style=getComputedStyle(lyrics),menu=getComputedStyle(document.querySelector('.threshold-copy'));
+ a(lyrics.parentElement===film.parentElement,'lyrics over same video');a(lines.length===6,'all six lyric lines');a(lyrics.querySelectorAll('p').length===2,'two stanzas');
+ a(lines.map(l=>l.textContent).join(' ')==='Ay, devuelveme el tiempo, cuentame los cuentos. Salvame de mi. Vi en otro una fortuna y yo que ni tengo cuna, de fé estoy ahí.','exact requested words');
+ a(style.fontFamily===menu.fontFamily&&style.fontWeight===menu.fontWeight&&style.fontSize===menu.fontSize,'same menu typography');a(style.color===getComputedStyle(document.querySelector('#threshold-menu')).color,'same gray');a(style.pointerEvents==='none','lyrics do not block flashlight');
+ const r=lyrics.getBoundingClientRect();a(Math.abs(r.left+r.width/2-innerWidth/2)<1&&Math.abs(r.top+r.height/2-innerHeight/2)<1,'centered in video');a(r.left>=0&&r.right<=innerWidth,'fits viewport');
+ if(matchMedia('(prefers-reduced-motion:reduce)').matches)a(lines.every(l=>getComputedStyle(l).animationName==='none'),'reduced motion respected');else {a(new Set(lines.map(l=>getComputedStyle(l).animationDuration)).size===6,'independent line timing');const before=lines.map(l=>getComputedStyle(l).transform);await wait(250);a(lines.some((l,i)=>getComputedStyle(l).transform!==before[i]),'lines move subtly')}
+ target=current=10.7;casaRender(performance.now(),.016);a(document.querySelector('#fh-next-house').hidden,'lyrics exit with video');target=current=9.2;casaRender(performance.now(),.016);
+ return 'PASS requested lyrics / centered video overlay / exact exit-menu IBM Plex Mono size weight gray / independent subtle line motion / reduced motion / clean scene exit; '+innerWidth+'x'+innerHeight;
+ }catch(e){return 'FAIL '+e.stack}})();</script>`;
+fs.writeFileSync(path.join(__dirname,'nino-letra-browser.html'),fs.readFileSync(path.join(root,'dist/index.html'),'utf8').replace('<head>','<head><base href="../dist/">').replace('</body>',test+'</body>'));

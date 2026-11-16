@@ -1,0 +1,15 @@
+{
+  "result": {
+    "result": {
+      "type": "string",
+      "value": "PASS: real wheel forward/back; slow cubic fade; silence at exterior; full volume at teaser; reverse after completed entry; player pause respected; landing toggle hidden. [{\"delta\":400,\"camera\":0.5,\"volume\":0.06875,\"inside\":false},{\"delta\":-400,\"camera\":0.25,\"volume\":0.00859375,\"inside\":false},{\"delta\":-400,\"camera\":0,\"volume\":0,\"inside\":false},{\"delta\":800,\"camera\":0.5,\"volume\":0.06875,\"inside\":false},{\"delta\":800,\"camera\":1,\"volume\":0.55,\"inside\":true},{\"delta\":-1600,\"camera\":0.73,\"volume\":0.21395935,\"inside\":false},{\"delta\":-1600,\"camera\":0,\"volume\":0,\"inside\":false},{\"delta\":800,\"camera\":0.5,\"volume\":0.06875,\"inside\":false},{\"delta\":800,\"camera\":1,\"volume\":0.55,\"inside\":true},{\"delta\":100,\"camera\":1,\"volume\":0.55,\"inside\":true}]"
+    }
+  },
+  "info": {
+    "result": {
+      "type": "string",
+      "value": "PASS: real wheel forward/back; slow cubic fade; silence at exterior; full volume at teaser; reverse after completed entry; player pause respected; landing toggle hidden. [{\"delta\":400,\"camera\":0.5,\"volume\":0.06875,\"inside\":false},{\"delta\":-400,\"camera\":0.25,\"volume\":0.00859375,\"inside\":false},{\"delta\":-400,\"camera\":0,\"volume\":0,\"inside\":false},{\"delta\":800,\"camera\":0.5,\"volume\":0.06875,\"inside\":false},{\"delta\":800,\"camera\":1,\"volume\":0.55,\"inside\":true},{\"delta\":-1600,\"camera\":0.73,\"volume\":0.21395935,\"inside\":false},{\"delta\":-1600,\"camera\":0,\"volume\":0,\"inside\":false},{\"delta\":800,\"camera\":0.5,\"volume\":0.06875,\"inside\":false},{\"delta\":800,\"camera\":1,\"volume\":0.55,\"inside\":true},{\"delta\":100,\"camera\":1,\"volume\":0.55,\"inside\":true}]"
+    }
+  },
+  "errors": []
+}

@@ -1,0 +1,15 @@
+{
+  "result": {
+    "result": {
+      "type": "string",
+      "value": "PASS: approach opens, leaving closes, drop saves and closes, cancel closes"
+    }
+  },
+  "info": {
+    "result": {
+      "type": "string",
+      "value": "PASS: approach opens, leaving closes, drop saves and closes, cancel closes"
+    }
+  },
+  "errors": []
+}

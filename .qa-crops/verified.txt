@@ -1,0 +1,1 @@
+PASS: 12 modified WebP images decoded in Chrome; no visible pixels remain in the neighbour-fragment regions; dimensions preserved. All 56 individual crops reviewed in contact sheets.

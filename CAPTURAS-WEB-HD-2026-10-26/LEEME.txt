@@ -1,0 +1,31 @@
+LA CASA — CAPTURAS WEB EN ALTA DEFINICIÓN
+24 capturas PNG 4K: 3840 × 2160 píxeles, sin compresión con pérdida.
+Abrir INDICE.html para recorrerlas visualmente.
+Capturadas desde la web local. Las fases se posicionaron con el navegador; no se modificó producción.
+El inventario tiene objetos de ejemplo recogidos para las capturas.
+La caja utiliza la imagen de reemplazo cuando el modelo 3D no está disponible.
+
+01-entrada-ventana.png
+02-cocina.png
+03-caja-primer-plano.png
+04-primera-casa-persiana.png
+05-salon.png
+06-salon-recuerdo.png
+07-barriletes.png
+08-objetos-antes-del-fuego.png
+09-segunda-casa.png
+10-pasillo.png
+11-patio-campo.png
+12-versiones-recuerdo.png
+13-terrero-ceramica.png
+14-mesa.png
+15-cuaderno.png
+16-casas-horizontal-inicio.png
+17-casas-horizontal-medio.png
+18-casas-horizontal-final.png
+19-dibujar-casa.png
+20-cierre-interior.png
+21-cierre-ventana.png
+22-memoria-de-una-casa.png
+23-inventario-caja.png
+24-cierre-exterior.png

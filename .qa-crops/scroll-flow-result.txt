@@ -1,0 +1,1 @@
+PASS: syntax, integration, 300 monotonic frames, one gesture finishes zoom, reversal, blocking, reduced motion, trackpad accumulation, gallery manual control and bounded input.

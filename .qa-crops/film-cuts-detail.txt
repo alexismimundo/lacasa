@@ -1,0 +1,48 @@
+﻿Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\dist\assets\videos\Video-1.mp4':
+  Metadata:
+    major_brand     : mp42
+    minor_version   : 0
+    compatible_brands: mp42mp41
+    creation_time   : 2026-11-14T23:59:34.000000Z
+  Duration: 00:00:09.19, start: 0.000000, bitrate: 17915 kb/s
+  Stream #0:0(eng): Video: h264 (Main) (avc1 / 0x31637661), yuv420p, 1920x1080 [SAR 1:1 DAR 16:9], 17688 kb/s, 25 fps, 25 tbr, 25k tbn, 50 tbc (default)
+    Metadata:
+      creation_time   : 2026-11-14T23:59:34.000000Z
+      handler_name    : ?Mainconcept Video Media Handler
+      vendor_id       : [0][0][0][0]
+      encoder         : AVC Coding
+  Stream #0:1(eng): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 189 kb/s (default)
+    Metadata:
+      creation_time   : 2026-11-14T23:59:34.000000Z
+      handler_name    : #Mainconcept MP4 Sound Media Handler
+      vendor_id       : [0][0][0][0]
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 (native) -> wrapped_avframe (native))
+Press [q] to stop, [?] for help
+[Parsed_showinfo_1 @ 0000026020bf9980] config in time_base: 1/25000, frame_rate: 25/1
+[Parsed_showinfo_1 @ 0000026020bf9980] config out time_base: 0/0, frame_rate: 0/0
+[Parsed_showinfo_1 @ 0000026020bf9980] n:   0 pts:  92000 pts_time:3.68    pos:  8828395 fmt:yuv420p sar:1/1 s:1920x1080 i:P iskey:0 type:P checksum:9B2B299E plane_checksum:[0536AA4B 66589F09 D9CAE02C] mean:[180 128 128 ] stdev:[44.5 0.8 0.4 ]
+[Parsed_showinfo_1 @ 0000026020bf9980] color_range:unknown color_space:unknown color_primaries:unknown color_trc:unknown
+Output #0, null, to 'NUL':
+  Metadata:
+    major_brand     : mp42
+    minor_version   : 0
+    compatible_brands: mp42mp41
+    encoder         : Lavf58.76.100
+  Stream #0:0(eng): Video: wrapped_avframe, yuv420p(progressive), 1920x1080 [SAR 1:1 DAR 16:9], q=2-31, 200 kb/s, 25 fps, 25 tbn (default)
+    Metadata:
+      creation_time   : 2026-11-14T23:59:34.000000Z
+      handler_name    : ?Mainconcept Video Media Handler
+      vendor_id       : [0][0][0][0]
+      encoder         : Lavc58.134.100 wrapped_avframe
+frame=    1 fps=0.0 q=-0.0 size=N/A time=00:00:03.72 bitrate=N/A speed=27.9x    
+[Parsed_showinfo_1 @ 0000026020bf9980] n:   1 pts: 126000 pts_time:5.04    pos: 11677821 fmt:yuv420p sar:1/1 s:1920x1080 i:P iskey:0 type:P checksum:DB6BBC0C plane_checksum:[8BCA914D 4AE35A3B 9AC0D075] mean:[163 123 129 ] stdev:[39.0 13.0 2.0 ]
+[Parsed_showinfo_1 @ 0000026020bf9980] color_range:unknown color_space:unknown color_primaries:unknown color_trc:unknown
+[Parsed_showinfo_1 @ 0000026020bf9980] n:   2 pts: 187000 pts_time:7.48    pos: 17072138 fmt:yuv420p sar:1/1 s:1920x1080 i:P iskey:0 type:P checksum:869E7FB8 plane_checksum:[F9505A19 C9536CCD B2F4B8C3] mean:[181 128 128 ] stdev:[43.2 0.8 0.5 ]
+[Parsed_showinfo_1 @ 0000026020bf9980] color_range:unknown color_space:unknown color_primaries:unknown color_trc:unknown
+[Parsed_showinfo_1 @ 0000026020bf9980] n:   3 pts: 188000 pts_time:7.52    pos: 17145526 fmt:yuv420p sar:1/1 s:1920x1080 i:P iskey:0 type:P checksum:4170F195 plane_checksum:[C4C1D417 CCF86AB9 5164B2B6] mean:[180 128 128 ] stdev:[43.6 0.8 0.5 ]
+[Parsed_showinfo_1 @ 0000026020bf9980] color_range:unknown color_space:unknown color_primaries:unknown color_trc:unknown
+[Parsed_showinfo_1 @ 0000026020bf9980] n:   4 pts: 204000 pts_time:8.16    pos: 18355486 fmt:yuv420p sar:1/1 s:1920x1080 i:P iskey:0 type:P checksum:CFE533D4 plane_checksum:[33E6A368 17ACE5FE E4FFAA50] mean:[163 123 129 ] stdev:[40.4 12.6 1.9 ]
+[Parsed_showinfo_1 @ 0000026020bf9980] color_range:unknown color_space:unknown color_primaries:unknown color_trc:unknown
+frame=    5 fps=0.0 q=-0.0 Lsize=N/A time=00:00:08.20 bitrate=N/A speed=30.6x    
+video:3kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown

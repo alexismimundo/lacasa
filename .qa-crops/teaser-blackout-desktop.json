@@ -1,0 +1,15 @@
+{
+  "result": {
+    "result": {
+      "type": "string",
+      "value": "PASS: irregular 14–36s scheduling; paired dark dips; no gesture blocking; reduced motion and exit cleanup; 1280x900"
+    }
+  },
+  "info": {
+    "result": {
+      "type": "string",
+      "value": "PASS: irregular 14–36s scheduling; paired dark dips; no gesture blocking; reduced motion and exit cleanup; 1280x900"
+    }
+  },
+  "errors": []
+}

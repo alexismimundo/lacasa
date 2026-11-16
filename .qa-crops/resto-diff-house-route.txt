@@ -1,0 +1,28 @@
+﻿diff --git "a/C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist-backup-antes-del-resto\\continuous\\house-route.js" "b/C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\continuous\\house-route.js"
+index ce02ea7..58fd7d6 100644
+--- "a/C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist-backup-antes-del-resto\\continuous\\house-route.js"
++++ "b/C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\continuous\\house-route.js"
+@@ -7,11 +7,9 @@
+   {at:5.28,x:0,y:-1,name:'Subida hacia los barriletes'},
+   {at:7.6,x:0,y:1,name:'Otra casa'},
+   {at:8.6,x:-1,y:0,name:'Hacia los recuerdos'},
+-  {at:12.6,x:0,y:-1,name:'Hacia la luz'},
+-  {at:13.6,x:1,y:0,name:'Al otro lado'},
+-  {at:14.6,x:0,y:1,name:'El siguiente ambiente'},
+-  {at:15.6,x:-1,y:0,name:'Hacia el patio'},
+-  {at:16.6,x:0,y:-1,name:'Hacia afuera'},
++  {at:10.6,x:0,y:-1,name:'El ni├▒o y la madrugada'},
++  {at:12.6,x:1,y:0,name:'Terrero: lluvia y mesa'},
++  {at:15.8,x:0,y:1,name:'Tu casa'},
+   {at:17.6,x:1,y:0,name:'El camino de la bicicleta'},
+   {at:22,x:0,y:1,name:'Otras casas'}
+  ].map(Object.freeze));
+@@ -30,7 +28,7 @@
+  }
+   // Retain the reusable house panorama and the window ending; retired scenes
+   // remain dormant so their shared resources can still be reused later.
+-  const retired=Object.freeze([[8.6,17.6],[21.8,24]].map(Object.freeze));
++  const retired=Object.freeze([[21.8,24]].map(Object.freeze));
+   function skipRetired(phase,direction=1){for(const [start,end] of retired)if(phase>=start&&phase<end)return direction<0?start-.0001:end;return phase}
+   function advanceRetired(current,target){for(const [start,end] of retired){if(current>=start&&current<end)return target<current?start-.0001:end;if(current<start&&target>=end)return end;if(current>=end&&target<start)return start-.0001}return current}
+   window.houseRoute=Object.freeze({passages,heading,vector,section,transform,passage,skipRetired,advanceRetired,retired});

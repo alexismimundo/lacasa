@@ -1,0 +1,44 @@
+{
+  "method": "Herramienta integrada de generación de imágenes",
+  "assets": [
+    {
+      "file": "dist/assets/box-base.png",
+      "prompt": "Photographic cutout of ONE empty used brown kraft cardboard shoebox WITHOUT LID, seen slightly from above 35 degrees, front long side facing viewer, dark empty interior clearly visible, worn folded corners, faded tiny blue marks, blue #335386 cyanotype shadows but warm cardboard remains. Wide 3:2 composition, whole box centered with margins. Truly transparent background, no floor, no contents, no text, no hands. Authentic scanned analog collage material.",
+      "transparent_background": true
+    },
+    {
+      "file": "dist/assets/box-lid.png",
+      "prompt": "Photographic cutout of ONE detached rectangular shoebox LID ONLY, worn brown kraft cardboard, low side lip visible, seen slightly from above 35 degrees, front long edge toward viewer, matching an ordinary modest shoebox, faded tiny blue marks, blue #335386 cyanotype shadows with brown paper remaining, empty undecorated cardboard top. Entire lid centered with transparent margins, wide landscape 3:2. Truly transparent background, no box base, no floor, no hands, no readable text.",
+      "transparent_background": true
+    },
+    {
+      "file": "dist/assets/box-spoon.png",
+      "prompt": "Single small vintage translucent pale blue plastic ice cream spoon, slightly scratched, photographed straight on, diagonally tilted, entire spoon visible with generous margins. Photographic scanned cutout with blue #335386 shadows, analog grain, genuinely transparent background. No other objects no text.",
+      "transparent_background": true
+    },
+    {
+      "file": "dist/assets/box-key.png",
+      "prompt": "One small worn metal house key with a round head, blue #335386 cyanotype tinted photograph, diagonally placed, whole isolated object with generous transparent margin, analog grain and authentic worn scratches. Truly transparent background, no hand no keyring no text.",
+      "transparent_background": true
+    }
+  ],
+  "reused": [
+    "dist/assets/low-robot.png",
+    "dist/assets/daily-photo.png",
+    "dist/assets/low-cloth.png"
+  ],
+  "state": {
+    "key": "la-casa-guardar-algo-v1",
+    "storage": "sessionStorage",
+    "fields": [
+      "object",
+      "confirmed",
+      "draft",
+      "draftDirty",
+      "editing",
+      "hasResponse"
+    ],
+    "futureReader": "getFirstParticipation()",
+    "network": false
+  }
+}

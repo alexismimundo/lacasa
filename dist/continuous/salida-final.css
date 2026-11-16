@@ -1,0 +1,12 @@
+#salida-personal{position:absolute;z-index:3;pointer-events:none;transform-origin:center}
+#salida-personal[hidden],#salida-personal [hidden],#salida-menu[hidden]{display:none!important}
+.salida-drawing{position:absolute;left:40.5%;top:32%;width:18%;height:26%;overflow:hidden}.salida-drawing svg{width:100%;height:100%}
+.salida-sill{position:absolute;left:38.8%;top:60%;width:22.4%;height:6.8%;display:flex;gap:1%;align-items:flex-end;justify-content:center}.salida-sill img{object-fit:contain;width:12%;max-width:40px;height:100%;min-width:0}
+.salida-memory{position:absolute;left:61.7%;top:46%;width:11%;max-height:14%;overflow:hidden;padding:5px;color:#335386;background:#F4F2EAbb;transform:rotate(-2deg);box-sizing:border-box}.salida-memory h3{font:italic clamp(7px,.9vw,13px) Georgia;margin:0 0 3px}.salida-memory p{font:clamp(5px,.55vw,9px)/1.3 monospace;margin:0;white-space:pre-wrap;overflow-wrap:anywhere}.salida-echo{position:absolute;inset:2px -1px -2px 1px;color:#B9A3DE;opacity:.7;pointer-events:none}
+#salida-menu{position:fixed;z-index:12;left:5%;right:5%;top:max(66vh,var(--window-bottom,66vh));display:flex;flex-wrap:wrap;justify-content:center;gap:14px 32px;padding:20px 0;color:#335386;font:300 clamp(12px,1.2vw,18px)/1.55 'IBM Plex Mono',monospace}
+#salida-menu button{color:inherit;background:none;border:0;border-bottom:1px solid transparent;padding:5px 0;font:inherit;cursor:pointer}#salida-menu button:hover,#salida-menu button:focus-visible{filter:blur(.4px);text-shadow:1px 0 currentColor,-1px 0 currentColor;border-bottom-color:currentColor;outline:none}
+.salida-final-outside #threshold-menu{visibility:hidden!important;pointer-events:none!important}
+body.salida-final-outside #closing-window-enter{display:block!important;pointer-events:auto}
+.salida-tracks{list-style:none;padding:0;max-width:650px}.salida-tracks li{display:flex;align-items:center;justify-content:space-between;gap:20px;border-bottom:1px solid #33538633;padding:8px 0}.salida-tracks button{background:none;border:0;padding:5px;color:#335386;font:14px 'IBM Plex Mono',monospace;text-align:left}.salida-tracks button:disabled{opacity:.7}.salida-tracks small{font:10px monospace}#menu-panel-content audio{width:min(100%,500px)}
+@media(max-width:700px){#salida-menu{top:66vh;gap:7px 22px;padding:12px 0;left:7%;right:7%;font-size:12px}.salida-memory{left:59.5%;width:9%}}
+@media(prefers-reduced-motion:reduce){#salida-menu button:hover{filter:none;text-shadow:none}}

@@ -1,0 +1,1 @@
+PASS: production syntax; window click does not start music; browser fixture generated.

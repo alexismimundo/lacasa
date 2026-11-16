@@ -1,0 +1,15 @@
+{
+  "result": {
+    "result": {
+      "type": "string",
+      "value": "PASS: scroll phase launches without click gate; hover steers with smooth bounded movement; hover reverses without buttons; clicks sustain; pointer movement alone still allows falling"
+    }
+  },
+  "info": {
+    "result": {
+      "type": "string",
+      "value": "PASS: scroll phase launches without click gate; hover steers with smooth bounded movement; hover reverses without buttons; clicks sustain; pointer movement alone still allows falling"
+    }
+  },
+  "errors": []
+}

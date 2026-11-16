@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>La Casa — Próximamente</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <svg width="0" height="0" aria-hidden="true" style="position:absolute;pointer-events:none"><defs>
+    <filter id="teaser-ink-edge" x="-2%" y="-2%" width="104%" height="104%" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency=".42 .58" numOctaves="3" seed="23" result="paper"/>
+      <feDisplacementMap in="SourceGraphic" in2="paper" scale="1.5" xChannelSelector="R" yChannelSelector="G"/>
+      <feGaussianBlur stdDeviation=".7"/>
+    </filter>
+  </defs></svg>
+  <canvas id="living-grain" aria-hidden="true"></canvas>
+  <audio id="teaser-music" loop preload="metadata" src="../Silvana Estrada - La Enfermedad del Siglo - (original Kbps).mp3"></audio>
+  <!-- Fondo con la textura negra -->
+  <div class="fondo" aria-hidden="true"></div>
+
+  <!-- Escena: la casa (video base) y encima los loops de fuego y humo -->
+  <main class="escena" aria-label="La casa incendiándose">
+    <video class="capa base" id="base" muted playsinline preload="auto">
+      <source src="media/casa-base.webm" type="video/webm">
+      <source src="media/casa-base.mp4"  type="video/mp4">
+    </video>
+
+    <!-- Un loop por etapa. Cada uno tiene dos copias (a/b) para encadenarlo sin cortes -->
+    <div class="loop" data-desde="0" data-hasta="2" data-src="media/loop-dias-1-2"></div>
+    <div class="loop" data-desde="2" data-hasta="4" data-src="media/loop-dias-3-4"></div>
+    <div class="loop" data-desde="4" data-hasta="5" data-src="media/loop-dia-5"></div>
+    <div class="loop" data-desde="5" data-hasta="7" data-src="media/loop-dias-6-7"></div>
+  </main>
+
+  <!-- Contador -->
+  <footer class="interfaz">
+    <p class="contador" id="contador" aria-live="polite">
+      <span id="dd">07</span><i>d</i>
+      <span id="hh">00</span><i>h</i>
+      <span id="mm">00</span><i>m</i>
+      <span id="ss">00</span><i>s</i>
+    </p>
+  </footer>
+
+  <!-- Aparece cuando termina la semana -->
+  <a class="entrar" id="entrar" href="#" hidden>Entrar</a>
+
+  <script src="coming-soon.js"></script>
+  <script src="teaser-atmosphere.js"></script>
+</body>
+</html>

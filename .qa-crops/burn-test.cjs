@@ -1,0 +1,25 @@
+const fs=require('fs'),vm=require('vm'),assert=require('assert'),path=require('path');
+const root=path.resolve(__dirname,'..'),js=fs.readFileSync(path.join(root,'dist/continuous/first-house.js'),'utf8');
+new vm.Script(js);
+let strokes=0,clears=0,fills=0,synced=0,still=false;
+const context={clearRect(){clears++},fillRect(){fills++},beginPath(){},rect(){},moveTo(){},lineTo(){},closePath(){},fill(){},save(){},clip(){},stroke(){strokes++},restore(){}};
+const sandbox={Math,Image:class{},A:{paper:'paper.webp'},innerWidth:1440,innerHeight:900,devicePixelRatio:1,burnCanvas:{width:0,height:0},burnContext:context,clamp:(v)=>Math.max(0,Math.min(1,v)),ease:(a,b,v)=>{const t=Math.max(0,Math.min(1,(v-a)/(b-a)));return t*t*(3-2*t)},st:{burn:0},syncObjects(){synced++},reduced:()=>still,document:{hidden:false,createElement:()=>({})}};
+vm.createContext(sandbox);
+vm.runInContext(js.slice(js.indexOf('let burnRun='),js.indexOf('const tip=document.createElement')),sandbox);
+const run=s=>vm.runInContext(s,sandbox);
+assert.equal(run('updatePaperBurn(6.86,.05)'),0);
+for(let i=0;i<60;i++)run('updatePaperBurn(6.9,.05)');
+const middle=run('burnVisible');assert(middle>.45&&middle<.55);assert(strokes>0);
+sandbox.document.hidden=true;for(let i=0;i<60;i++)run('updatePaperBurn(6.9,.05)');assert.equal(run('burnVisible'),middle);
+sandbox.document.hidden=false;for(let i=0;i<70;i++)run('updatePaperBurn(6.9,.05)');assert.equal(run('burnVisible'),1);assert(fills>0);assert.equal(synced,1);
+assert.equal(run('updatePaperBurn(5.8,.05)'),0);assert.equal(sandbox.st.burn,1);
+still=true;for(let i=0;i<25;i++)run('updatePaperBurn(6.9,.05)');assert.equal(run('burnVisible'),1);
+sandbox.innerWidth=390;sandbox.innerHeight=844;run('drawPaperBurn(.5)');assert.equal(sandbox.burnCanvas.width,390);
+assert(!js.includes('getElementById(\'fh-alpha\')'));
+const css=fs.readFileSync(path.join(root,'dist/continuous/first-house.css'),'utf8');assert(css.includes('.fh-sky:after{display:none}'));
+fs.writeFileSync(path.join(__dirname,'burn-test-result.txt'),'PASS: JS syntax; automatic 6.2s burn; hidden-tab pause; completion; saved destruction does not darken earlier scenes; reduced motion; mobile resize; obsolete filter removed.\n');
+// Browser fixture runs the actual canvas drawing function and production CSS.
+const draw="const A={paper:'../dist/assets/fondo-papel.webp'};let burnVisible=.5;"+js.slice(js.indexOf('const darkPaper='),js.indexOf('function updatePaperBurn('));
+fs.writeFileSync(path.join(__dirname,'burn-preview.html'),`<!doctype html><meta charset="utf-8"><link rel="stylesheet" href="../dist/continuous/first-house.css"><style>body{margin:0}#first-house{visibility:visible;background:#fff url('../dist/assets/fondo-papel.webp');height:100vh}.fh-sky{visibility:visible;background:none}.fh-end{visibility:visible}.fh-paper-burn{z-index:10}</style><section id="first-house"><div class="fh-sky fh-layer"><div class="fh-sky-world"><div class="fh-macro"><div class="fh-macro-content"><img style="position:absolute;width:22%;left:45%;top:45%" src="../dist/assets/objetos-incendio/bag.webp"></div></div></div><canvas class="fh-paper-burn"></canvas></div><div class="fh-end fh-layer"><button class="fh-soldiers"><img src="../dist/assets/objetos-incendio/soldiers.webp"></button></div></section><pre id="result"></pre><script>const burnCanvas=document.querySelector('canvas'),burnContext=burnCanvas.getContext('2d');let burnFrame=-1,burnSize='';const clamp=x=>Math.max(0,Math.min(1,x)),ease=(a,b,x)=>{const t=clamp((x-a)/(b-a));return t*t*(3-2*t)};${draw};try{drawPaperBurn(.5);const edge=burnContext.getImageData(0,0,1,1).data,center=burnContext.getImageData(burnCanvas.width/2,burnCanvas.height*.59,1,1).data;if(edge[3]!==255||center[3]!==0)throw Error('Invalid burn coverage');document.querySelector('#result').textContent='BROWSER PASS: black edge, transparent paper center, production canvas draw';}catch(e){document.querySelector('#result').textContent='FAIL '+e.stack}</script>`);
+console.log('PASS');
+fs.appendFileSync(path.join(__dirname,'burn-preview.html'),`<script>darkPaper.addEventListener('load',()=>{try{burnFrame=-1;drawPaperBurn(1);const data=burnContext.getImageData(0,0,burnCanvas.width,burnCanvas.height).data;let lo=255,hi=0;for(let i=0;i<data.length;i+=400){lo=Math.min(lo,data[i]);hi=Math.max(hi,data[i]);}if(hi<=lo||hi>150)throw Error('Expected dark textured paper: '+lo+'..'+hi);document.querySelector('#result').textContent='BROWSER PASS: original paper loaded, inverted dark texture verified ('+lo+'..'+hi+'), opaque burned surface';burnFrame=-1;drawPaperBurn(.5);}catch(e){document.querySelector('#result').textContent='FAIL '+e.stack}});</script>`);

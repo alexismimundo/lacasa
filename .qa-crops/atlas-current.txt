@@ -1,0 +1,96 @@
+﻿  openMenuSection=function(section){
+   if(section==='others'&&document.body.classList.contains('closing-outside')){openAtlas();return}
+   previousMenu(section);
+  };
+  // Provisional local atlas: recycle only visible cells instead of an enormous DOM.
+  const atlas=document.createElement('dialog');atlas.id='community-atlas';
+  atlas.setAttribute('aria-labelledby','community-atlas-title');
+  atlas.innerHTML=`<header class="atlas-header"><div><p>LA COMUNIDAD Â· OTRAS CASAS</p><h2 id="community-atlas-title">Las casas de los demÃ¡s.</h2></div><button type="button" class="atlas-close">Volver al menÃº Ã—</button></header><div class="atlas-viewport" tabindex="0" role="region" aria-label="Lienzo infinito de casas. ArrastrÃ¡ en cualquier direcciÃ³n o usÃ¡ las flechas. UsÃ¡ mÃ¡s y menos para acercarte."><div class="atlas-world"></div></div><aside class="atlas-memory-hint">Una casa, un nombre.<br>Algo que todavÃ­a sigue ahÃ­.</aside><footer class="atlas-footer"><div><p>ARRASTRÃ EN CUALQUIER DIRECCIÃ“N â†” â†•</p><small>Prototipo local Â· casas y memorias de ejemplo. Tu aporte aparece si lo guardaste en este navegador.</small></div><div class="atlas-controls"><button type="button" data-atlas="out" aria-label="Alejar">âˆ’</button><output aria-live="polite" aria-label="Nivel de zoom">100%</output><button type="button" data-atlas="in" aria-label="Acercar">+</button><button type="button" data-atlas="home">Volver al centro</button></div></footer>`;
+  // Avoid the journey's global footer visibility rules inside the modal.
+  const atlasFooter=atlas.querySelector('.atlas-footer'),atlasToolbar=document.createElement('div');
+  atlasToolbar.className='atlas-footer';atlasToolbar.innerHTML=atlasFooter.innerHTML;atlasFooter.replaceWith(atlasToolbar);
+  document.body.append(atlas);
+  const viewport=atlas.querySelector('.atlas-viewport'),world=atlas.querySelector('.atlas-world'),cells=new Map(),pointers=new Map();
+  const camera={x:0,y:0,zoom:1};let atlasFrame=0,atlasFocus=null,gestureMoved=false,pinch=null;
+  const limit=(v,a,b)=>Math.max(a,Math.min(b,v));
+  function requestAtlas(){if(!atlasFrame&&atlas.open)atlasFrame=requestAnimationFrame(paintAtlas)}
+  function paintAtlas(){
+   atlasFrame=0;if(!atlas.open)return;
+   const width=viewport.clientWidth,height=viewport.clientHeight,stepX=360,stepY=300;
+   const col=Math.floor(-camera.x/stepX),row=Math.floor(-camera.y/stepY);
+   const cols=Math.ceil(width/camera.zoom/stepX/2)+1,rows=Math.ceil(height/camera.zoom/stepY/2)+1;
+   const archive=[...entries,...(saved?[saved]:[])],needed=new Set();
+   world.style.transform=`translate(${width/2+camera.x*camera.zoom}px,${height/2+camera.y*camera.zoom}px) scale(${camera.zoom})`;
+   for(let y=row-rows;y<=row+rows;y++)for(let x=col-cols;x<=col+cols;x++){
+    const key=x+':'+y;needed.add(key);let button=cells.get(key);
+    if(!button){
+     const index=((x*7+y*11)%archive.length+archive.length)%archive.length,entry=archive[index];
+     button=document.createElement('button');button.type='button';button.className='atlas-house';
+     button.dataset.cell=key;button.setAttribute('aria-label',(entry.name||'Sin nombre')+' Â· Leer memoria'+(entry.demo?' de ejemplo':''));
+     button.innerHTML=artwork(entry)+'<span>'+esc(entry.name||'Sin nombre')+'<small>'+(entry.demo?'Una memoria de ejemplo â†—':'Tu casa Â· leer memoria â†—')+'</small></span>';
+     button.onclick=()=>{if(!gestureMoved)showMemory(entry)};
+     button.addEventListener('focus',()=>{if(!atlas.open||!button.matches(':focus-visible'))return;camera.x=-x*stepX;camera.y=-y*stepY;requestAtlas()});
+     world.append(button);cells.set(key,button);
+    }
+    const offsetX=Math.sin(x*13+y*7)*35,offsetY=Math.sin(x*3-y*11)*24;
+    button.style.left=(x*stepX+offsetX)+'px';button.style.top=(y*stepY+offsetY)+'px';
+    button.style.setProperty('--atlas-turn',Math.sin(x*5+y*3)*4+'deg');
+   }
+   for(const [key,button] of cells)if(!needed.has(key)){button.remove();cells.delete(key)}
+   // Texture moves with the same world, including in negative coordinates.
+   viewport.style.backgroundPosition=(camera.x*camera.zoom)+'px '+(camera.y*camera.zoom)+'px';
+   atlas.querySelector('output').value=Math.round(camera.zoom*100)+'%';
+  }
+  function zoomAtlas(next,x=viewport.clientWidth/2,y=viewport.clientHeight/2){
+   next=limit(next,.5,1.8);const px=x-viewport.clientWidth/2,py=y-viewport.clientHeight/2;
+   camera.x+=px/next-px/camera.zoom;camera.y+=py/next-py/camera.zoom;camera.zoom=next;requestAtlas();
+  }
+  function openAtlas(){
+   if(atlas.open)return;atlasFocus=document.activeElement;
+   if(menuPanel.open)menuPanel.close();document.body.classList.remove('menu-panel-open');
+   document.body.classList.add('community-atlas-open');atlas.showModal();
+   cells.forEach(button=>button.remove());cells.clear();gestureMoved=false;
+   viewport.focus();paintAtlas();
+  }
+  atlas.querySelector('.atlas-close').onclick=()=>atlas.close();
+  atlas.addEventListener('close',()=>{document.body.classList.remove('community-atlas-open');cancelAnimationFrame(atlasFrame);atlasFrame=0;pointers.clear();pinch=null;viewport.classList.remove('is-dragging');atlasFocus?.focus()});
+  atlas.querySelectorAll('[data-atlas]').forEach(button=>button.onclick=()=>{
+   if(button.dataset.atlas==='home'){camera.x=camera.y=0;camera.zoom=1;requestAtlas()}
+   else zoomAtlas(camera.zoom*(button.dataset.atlas==='in'?1.2:1/1.2));
+  });
+  viewport.addEventListener('wheel',e=>{e.preventDefault();if(e.ctrlKey||e.metaKey){const r=viewport.getBoundingClientRect();zoomAtlas(camera.zoom*Math.exp(-e.deltaY*.002),e.clientX-r.left,e.clientY-r.top)}else{const unit=e.deltaMode===1?16:e.deltaMode===2?viewport.clientHeight:1;camera.x-=e.deltaX*unit/camera.zoom;camera.y-=e.deltaY*unit/camera.zoom;requestAtlas()}},{passive:false});
+  viewport.addEventListener('pointerdown',e=>{
+   if(e.button!==0)return;gestureMoved=false;
+   pointers.set(e.pointerId,{x:e.clientX,y:e.clientY,startX:e.clientX,startY:e.clientY});
+   // Capture on the original house so an unmoved tap still opens its memory.
+   e.target.setPointerCapture(e.pointerId);viewport.classList.add('is-dragging');
+   if(pointers.size===2){const [a,b]=[...pointers.values()];pinch={distance:Math.hypot(a.x-b.x,a.y-b.y)}}
+  });
+  viewport.addEventListener('pointermove',e=>{
+   const previous=pointers.get(e.pointerId);if(!previous)return;
+   const dx=e.clientX-previous.x,dy=e.clientY-previous.y;
+   if(Math.hypot(e.clientX-previous.startX,e.clientY-previous.startY)>6)gestureMoved=true;
+   previous.x=e.clientX;previous.y=e.clientY;
+   if(pointers.size===2){const [a,b]=[...pointers.values()],distance=Math.hypot(a.x-b.x,a.y-b.y),r=viewport.getBoundingClientRect();
+    gestureMoved=true;if(pinch?.distance>0&&distance>0)zoomAtlas(camera.zoom*distance/pinch.distance,(a.x+b.x)/2-r.left,(a.y+b.y)/2-r.top);pinch={distance};
+   }else{camera.x+=dx/camera.zoom;camera.y+=dy/camera.zoom;requestAtlas()}
+  });
+  function endAtlasPointer(e){pointers.delete(e.pointerId);pinch=null;if(!pointers.size)viewport.classList.remove('is-dragging')}
+  viewport.addEventListener('pointerup',endAtlasPointer);viewport.addEventListener('pointercancel',endAtlasPointer);viewport.addEventListener('lostpointercapture',endAtlasPointer);
+  viewport.addEventListener('dragstart',e=>e.preventDefault());
+  atlas.addEventListener('keydown',e=>{
+   if(e.key==='Escape')return;
+   const moves={ArrowLeft:[80,0],ArrowRight:[-80,0],ArrowUp:[0,80],ArrowDown:[0,-80]};
+   if(moves[e.key]){e.preventDefault();const [x,y]=moves[e.key];camera.x+=x/camera.zoom;camera.y+=y/camera.zoom;requestAtlas()}
+   else if(e.key==='+'||e.key==='='){e.preventDefault();zoomAtlas(camera.zoom*1.2)}
+   else if(e.key==='-'){e.preventDefault();zoomAtlas(camera.zoom/1.2)}
+   else if(e.key==='Home'){e.preventDefault();camera.x=camera.y=0;requestAtlas()}
+   if(e.key==='Enter'||e.key===' ')gestureMoved=false;
+  });
+  // No wheel/touch/key input may leak into the scroll-driven journey underneath.
+  for(const event of ['wheel','touchstart','touchmove','touchend','keydown','pointerdown','pointermove','pointerup'])atlas.addEventListener(event,e=>e.stopPropagation(),{passive:true});
+  window.addEventListener('resize',requestAtlas);
+ const previousRender=window.casaRender;
+ window.casaRender=function(now,dt){previousRender(now,dt);const inside=document.body.classList.contains('inhabited')&&!document.body.classList.contains('reentering'),visible=inside&&current>=21.8&&current<24.15;root.classList.toggle('is-visible',visible);root.inert=!visible;document.body.classList.toggle('community-active',visible);root.style.transform='translateY('+((current<22?22-current:current>23.7?23.7-current:0)*innerHeight)+'px)';$('community-draw-step').hidden=!visible;const progress=Math.max(0,Math.min(1,(current-17.6)/3.4));track.style.transform='translate3d('+(-progress*Math.max(0,track.scrollWidth-innerWidth))+'px,0,0)';landscape.style.transform='none';landscape.style.filter='none';$('p15-lejos').style.transform='translateX('+(-progress*innerWidth*.9)+'px)';$('p15-lejos').style.filter='none'};
+ window.communityPrototype={closed,drawing,valid};
+})();

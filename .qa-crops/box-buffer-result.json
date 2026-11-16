@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "results": [
+    {
+      "viewportWidth": 1280,
+      "shrinkingFrames": 120,
+      "allocationsDuringShrink": 1,
+      "allocationsAfterDock": 2,
+      "aspectPreserved": true
+    },
+    {
+      "viewportWidth": 390,
+      "shrinkingFrames": 120,
+      "allocationsDuringShrink": 1,
+      "allocationsAfterDock": 2,
+      "aspectPreserved": true
+    }
+  ]
+}

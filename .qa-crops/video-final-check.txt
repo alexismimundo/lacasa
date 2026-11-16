@@ -1,0 +1,14 @@
+ a.innerHTML='<div class="c2-scene"><div class="c2-landscape">'+corridor+'</div><canvas class="c2-mask" aria-label="Raspá la oscuridad con el mouse o el dedo para abrir un hueco"></canvas><p class="c2-phrase">Que la luz no entre / voy tapando agujeros</p><p class="c2-scratch-hint">[raspá con el mouse o arrastrá el dedo]</p>'+memory(configA.memoria,'01')+'<button type="button" class="c2-flower" aria-label="Una flor de glicina. Arrastrá a la caja o presioná G"><img src="assets/casa2/glicina-flor-provisoria.svg" alt="Flor de glicina provisoria"><span>Arrastrá a la caja</span></button>'+labels(configA)+'</div>';
+  const landscape=a.querySelector('.c2-landscape');
+  landscape.replaceChildren();
+  const runningFilm=document.createElement('video');
+  runningFilm.className='c2-running-film';runningFilm.src='assets/videos/nino-corriendo.mp4';
+  runningFilm.poster='assets/videos/nino-corriendo-poster.jpg';runningFilm.muted=true;
+  runningFilm.loop=true;runningFilm.playsInline=true;runningFilm.preload='auto';
+  runningFilm.setAttribute('aria-hidden','true');landscape.append(runningFilm);
+ let filmWanted=false;
+ function syncRunningFilm(wanted){
+  if(wanted===filmWanted)return;filmWanted=wanted;
+  if(wanted)runningFilm.play().catch(()=>{filmWanted=false});else runningFilm.pause();
+ document.addEventListener('visibilitychange',()=>{if(document.hidden)syncRunningFilm(false)});
+  syncRunningFilm(inside&&p>=8.6&&p<10.6&&!document.hidden&&!red.matches);

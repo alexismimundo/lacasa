@@ -1,0 +1,15 @@
+{
+  "result": {
+    "result": {
+      "type": "string",
+      "value": "PASS: Video-1 first interior film; matching poster; decoded 1920x1080; duration 9.16; playback advances; captions and later film preserved; 1280x900"
+    }
+  },
+  "info": {
+    "result": {
+      "type": "string",
+      "value": "PASS: Video-1 first interior film; matching poster; decoded 1920x1080; duration 9.16; playback advances; captions and later film preserved; 1280x900"
+    }
+  },
+  "errors": []
+}

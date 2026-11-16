@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "candidate": "C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\assets\\entrada-video-hd.mp4",
+  "backup": "C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\source-materials\\entrada-video-before-hd.mp4",
+  "filter": "Lanczos 1080p + mild unsharp 0.35; H.264 CRF 16",
+  "bytesBefore": 11149750,
+  "bytesAfter": 8304379,
+  "decode": "PASS",
+  "imagesUnchanged": true,
+  "imageHashes": [
+    "78ade1e038b0508db629c04b17ac0561df079b00eb7133d7806679b749639f3a",
+    "8cb3ccf50ad49702968efdf75f1ba704c700e21cf0f0ae72597ef3158b395666"
+  ]
+}

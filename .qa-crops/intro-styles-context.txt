@@ -1,0 +1,11 @@
+﻿C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\dist\index.html:20: #intro-video{position:absolute;width:1080px;height:607.5px;max-width:none;left:-360px;top:-130px;pointer-events:none;opacity:0;mask-image:radial-gradient(ellipse 45% 65% at 50% 52%,black 65%,transparent 100%)}
+C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\dist\index.html:21: .video-visible #intro-video{opacity:1}.video-visible #sequence{visibility:hidden}
+C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\dist\index.html:30: #sequence,#final-window,#intro-video{inset:0;width:100%;height:100%;left:0;top:0;object-fit:cover;object-position:center;mask-image:none}
+C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\dist\index.html:66: #intro-video{z-index:2;transition:opacity .6s ease-in-out}
+C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\dist\index.html:67: .video-visible #intro-video{opacity:1;transition-duration:.45s}
+C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\dist\index.html:70: @media(prefers-reduced-motion:reduce){#intro-video{transition:none!important}}
+C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\dist\index.html:1065: const menuVideoLayer=$('menu-video-layer');function syncMenuVideoLayer(){menuVideoLayer.inert=document.body.classList.contains('sequence-playing')}new MutationObserver(syncMenuVideoLayer).observe(document.body,{attributes:true,attributeFilter:['class']});syncMenuVideoLayer();
+C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\dist\index.html:1565:  const active=paperDrawingAvailable();paperIntro.style.visibility=active?'visible':'hidden';
+C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\dist\index.html:1571:   paperIntro.style.clipPath='inset('+((1-paperReveal(current))*100).toFixed(3)+'% 0 0 0)';
+C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\dist\index.html:1575:   paperIntro.style.transform=houseRoute.transform({x:boxArrival.x+roomPass.outgoing.x,y:boxArrival.y+roomPass.outgoing.y});
+C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\dist\index.html:1577:   paperIntro.style.zIndex=current>=1.85?'13':'11';

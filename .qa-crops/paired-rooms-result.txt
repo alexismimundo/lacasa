@@ -1,0 +1,1 @@
+PASS: production syntax; dense paired-edge geometry and deterministic reversal across four early transitions.

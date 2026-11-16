@@ -1,0 +1,113 @@
+/* Casas compartidas: papel continuo, recortes originales y dibujos abiertos. */
+#casa-screens #p15.pantalla{background:#000!important;color:#fff;transition:none}
+#p15 #p15-cielo{background:none}
+#p15 #p15-cerca{background:none;bottom:22vh;height:60vh;overflow:visible;z-index:2}
+#p15 #p15-lejos{background:none;display:flex;gap:12vw;width:max-content;opacity:.3;bottom:38vh;height:23vh}
+#p15-lejos img{width:20vw;height:100%;object-fit:contain}
+#p15 .community-landscape-track{position:absolute;top:auto;bottom:0;height:100%;gap:6vw;padding:0 10vw}
+#p15 .community-house{width:clamp(145px,22vw,310px);height:44vh;align-self:flex-end;transform:none}
+#p15 .community-house img,#p15 .community-house svg{height:80%}
+#p15-calle,#p15-bici,#p15-retrovisor,#p15-ventana-lejos{display:none!important}
+#p15 .community-house{color:#fff}
+#p15 .community-house svg path{fill:#fff;stroke:#fff}
+#p15 .community-house svg path[fill="none"]{fill:none}
+#p15 .community-house span{display:none}
+body.neighborhood-active #house-cursor{display:none!important}
+body.neighborhood-active,body.neighborhood-active #p15,body.neighborhood-active #p15 *{cursor:auto!important}
+#community-journey #community-walk{display:none!important}
+#p15-bici,#p15-retrovisor{z-index:3}
+[data-guardable]{touch-action:none;cursor:grab!important}
+.caja-ghost{z-index:300!important;pointer-events:none!important}
+#fh-model-box.drop-ready{filter:drop-shadow(0 0 12px #335386);outline:1px dashed #335386}
+#journey-objects{position:fixed;inset:0;z-index:70;pointer-events:none}
+.journey-object{position:absolute;transform:translate(-50%,-50%);width:clamp(75px,12vw,160px);height:clamp(85px,17vh,170px);border:0;padding:0;background:none;pointer-events:auto;color:#335386}
+.journey-object[hidden]{display:none}
+.journey-object img{width:100%;height:80%;object-fit:contain;pointer-events:none}
+.journey-object span{display:block;font:10px/1.4 'IBM Plex Mono',monospace;background:#f4f4f1dd;padding:4px}
+#box-inventory{box-sizing:border-box;width:min(850px,92vw);max-height:86vh;overflow:auto;border:1px solid #33538666;background:#f4f4f1 url('../assets/fondo-papel.webp') center/1200px;color:#335386;padding:28px;cursor:auto}
+#box-inventory::backdrop{background:#101c3077}
+#box-inventory h2{font:300 clamp(22px,3vw,34px)/1.2 'IBM Plex Mono',monospace}
+#box-inventory p{font:13px/1.6 'IBM Plex Mono',monospace}
+#box-inventory ul{list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:25px}
+#box-inventory li img{width:100%;height:130px;object-fit:contain}
+.inventory-close{display:block;margin-left:auto;border:0;border-bottom:1px solid;background:none;color:inherit;padding:10px;font:12px 'IBM Plex Mono',monospace;cursor:pointer}
+#community-journey{position:fixed;inset:0;z-index:45;overflow:hidden;background:#f4f4f1 url('../assets/fondo-papel.webp') center/1600px;color:#335386;visibility:hidden;pointer-events:none}
+#community-journey.is-visible{visibility:visible;pointer-events:auto}
+#community-journey,#community-journey *,.community-gallery,.community-gallery *{cursor:auto!important}
+body.community-active #house-cursor{display:none!important}
+.community-heading{position:absolute;left:7vw;top:8vh;margin:0;font:300 clamp(25px,3vw,44px)/1.15 'IBM Plex Mono',monospace}
+.community-caption{position:absolute;left:7vw;bottom:10vh;font:11px/1.6 'IBM Plex Mono',monospace;max-width:75vw}
+.community-track{position:absolute;left:0;top:25vh;height:54vh;display:flex;align-items:flex-end;gap:9vw;padding:0 12vw;width:max-content;will-change:transform}
+.community-house{flex:none;width:clamp(170px,24vw,360px);height:42vh;position:relative;border:0;padding:0;background:none;color:inherit;text-align:left;cursor:pointer!important}
+.community-house:nth-child(3n+1){align-self:center;transform:rotate(-3deg)}
+.community-house:nth-child(3n+2){transform:rotate(2deg)}
+.community-house img,.community-house svg{width:100%;height:75%;object-fit:contain;display:block;overflow:visible}
+.community-house span{display:block;margin-top:15px;font:11px/1.6 'IBM Plex Mono',monospace}
+.community-house small{opacity:.65;font:10px 'IBM Plex Mono',monospace}
+.community-house:focus-visible{outline:1px dashed #335386;outline-offset:8px}
+.community-house:hover img,.community-house:hover svg{translate:0 -6px;transition:translate .2s}
+#community-draw-step{position:absolute;inset:0;padding:5vh 7vw 95px;background:inherit;overflow:auto}
+#community-draw-step[hidden],#community-walk[hidden]{display:none}
+.community-draw-layout{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(220px,1fr);gap:5vw;max-width:1300px;margin:auto}
+.community-draw-title{font:300 clamp(23px,3vw,40px)/1.2 'IBM Plex Mono',monospace;margin:0 0 16px}
+.community-help{font:12px/1.7 'IBM Plex Mono',monospace;margin:0 0 20px;max-width:720px}
+#community-pad{display:block;width:100%;height:min(48vh,420px);border:1px solid #33538688;touch-action:none;cursor:crosshair!important;background:#ffffff26}
+.community-tools{display:flex;gap:18px;flex-wrap:wrap;margin:12px 0}
+#community-journey button:not(.community-house),.community-gallery button:not(.community-house),#community-memory button{border:0;border-bottom:1px solid #33538666;background:none;color:#335386;padding:9px 0;font:11px/1.5 'IBM Plex Mono',monospace;cursor:pointer!important}
+.community-form label{display:block;font:11px/1.6 'IBM Plex Mono',monospace;margin:0 0 22px}
+.community-form input,.community-form textarea{box-sizing:border-box;display:block;width:100%;margin-top:7px;padding:10px;border:1px solid #33538655;border-radius:0;background:#ffffff33;color:#335386;font:14px/1.5 'IBM Plex Mono',monospace;user-select:text}
+.community-form textarea{min-height:135px;resize:vertical}
+.community-local{font:10px/1.7 'IBM Plex Mono',monospace;opacity:.7}
+#community-status{font:12px/1.6 'IBM Plex Mono',monospace;min-height:2em}
+#community-memory{box-sizing:border-box;width:min(700px,90vw);max-height:88vh;overflow:auto;border:1px solid #33538655;padding:28px;background:#f4f4f1 url('../assets/fondo-papel.webp') center/1200px;color:#335386;z-index:160}
+#community-memory::backdrop{background:#101c3055}
+#community-memory img,#community-memory svg{display:block;width:100%;height:190px;object-fit:contain}
+#community-memory h2{font:300 24px 'IBM Plex Mono',monospace}
+#community-memory p{font:16px/1.7 Georgia,serif;white-space:pre-wrap;overflow-wrap:anywhere}
+#community-memory .community-local{font:10px/1.7 'IBM Plex Mono',monospace}
+.community-gallery{margin-top:24px}
+.community-gallery-track{display:flex;gap:50px;overflow-x:auto;padding:20px 12px 45px;overscroll-behavior-x:contain}
+.community-gallery .community-house{width:220px;height:280px;min-width:220px}
+@media(max-width:700px){.community-draw-layout{grid-template-columns:1fr;gap:18px}#community-draw-step{padding:4vh 6vw 100px}#community-pad{height:34vh}.community-heading{top:10vh}.community-house{width:58vw}.community-track{gap:16vw}.community-caption{bottom:12vh}.community-form textarea{min-height:85px}}
+@media(prefers-reduced-motion:reduce){.community-track{will-change:auto}.community-house:hover img,.community-house:hover svg{transition:none;translate:none}}
+/* Provisional all-direction community atlas, isolated from the journey. */
+#community-atlas{position:fixed;inset:0;box-sizing:border-box;width:100vw;height:100dvh;max-width:none;max-height:none;margin:0;padding:0;border:0;overflow:hidden;background:#f4f4f1;color:#335386;cursor:auto!important}
+#community-atlas::backdrop{background:#f4f4f1}
+#community-atlas [hidden]{display:none}
+#community-atlas .atlas-header{position:absolute;inset:0 0 auto;z-index:3;display:flex;justify-content:space-between;align-items:flex-start;padding:28px 4vw;pointer-events:none;background:linear-gradient(#f4f4f1 65%,transparent)}
+.atlas-header p{margin:0 0 10px;font:10px/1.5 'IBM Plex Mono',monospace;letter-spacing:.12em}
+.atlas-header h2{margin:0;font:300 clamp(24px,3vw,44px)/1.2 'IBM Plex Mono',monospace}
+#community-atlas button{color:inherit;background:none;border:0;font:11px/1.5 'IBM Plex Mono',monospace;cursor:pointer!important}
+#community-atlas .atlas-close{pointer-events:auto;border-bottom:1px solid #33538666;padding:8px 0;margin-left:20px;white-space:nowrap}
+.atlas-viewport{position:absolute;inset:0;overflow:hidden;touch-action:none;cursor:grab!important;background:#f4f4f1 url('../assets/fondo-papel.webp') 0 0/1600px;outline:none;user-select:none}
+.atlas-viewport.is-dragging,.atlas-viewport.is-dragging *{cursor:grabbing!important}
+.atlas-world{position:absolute;left:0;top:0;transform-origin:0 0;will-change:transform}
+#community-atlas .atlas-house{position:absolute;width:250px;height:225px;padding:0;text-align:center;transform:translate(-50%,-50%) rotate(var(--atlas-turn));touch-action:none}
+.atlas-house img,.atlas-house svg{display:block;width:100%;height:175px;object-fit:contain;pointer-events:none}
+.atlas-house span{display:block;margin-top:14px;font:12px/1.6 'IBM Plex Mono',monospace}
+.atlas-house small{display:block;opacity:.65;font-size:9px}
+.atlas-house:hover span{text-decoration:underline;text-underline-offset:4px}
+#community-atlas button:focus-visible{outline:1px dashed #335386;outline-offset:6px}
+.atlas-memory-hint{position:absolute;left:4vw;bottom:120px;font:italic 18px/1.4 Georgia,serif;pointer-events:none;opacity:.7}
+#community-atlas .atlas-footer{position:absolute;inset:auto 0 0;z-index:3;display:flex;justify-content:space-between;align-items:flex-end;gap:20px;padding:30px 4vw 24px;background:linear-gradient(transparent,#f4f4f1 35%);pointer-events:none}
+.atlas-footer p{margin:0 0 8px;font:10px/1.5 'IBM Plex Mono',monospace}
+.atlas-footer small{display:block;max-width:510px;font:9px/1.6 'IBM Plex Mono',monospace;opacity:.7}
+.atlas-controls{display:flex;align-items:center;gap:14px;pointer-events:auto;white-space:nowrap}
+#community-atlas .atlas-controls button{border-bottom:1px solid #33538666;padding:8px;min-width:34px;min-height:44px}
+.atlas-controls output{font:11px 'IBM Plex Mono',monospace;min-width:42px;text-align:center}
+/* Exterior header/footer rules must not hide the atlas's own controls. */
+#community-atlas .atlas-header,#community-atlas .atlas-footer{opacity:1!important;visibility:visible!important;transform:none!important}
+body.community-atlas-open #house-cursor{display:none!important}
+@media(max-width:650px){#community-atlas .atlas-header{padding:22px 5vw}.atlas-header h2{max-width:220px;font-size:23px}.atlas-header p{font-size:8px}#community-atlas .atlas-close{font-size:9px;margin-left:10px}.atlas-memory-hint{display:none}#community-atlas .atlas-footer{padding:30px 5vw 18px;align-items:flex-start;flex-direction:column;gap:12px}.atlas-footer small{max-width:90vw}.atlas-controls{align-self:flex-end;gap:10px}}
+@media(prefers-reduced-motion:reduce){.atlas-world{will-change:auto}}
+/* Minimal blue community field: only return and a small title remain. */
+#community-atlas,#community-atlas::backdrop{background:#335386;color:#f4f4f1}
+#community-atlas .atlas-viewport{background:#335386}
+#community-atlas .atlas-house{transform:translate(-50%,-50%) rotate(var(--atlas-turn)) scale(var(--atlas-depth,1));height:175px}
+#community-atlas .atlas-house svg path{fill:#f4f4f1;stroke:#f4f4f1}
+#community-atlas .atlas-house svg path[fill="none"]{fill:none}
+.atlas-minimal-nav{position:absolute;left:28px;top:20px;z-index:3;display:flex;align-items:center;gap:22px;color:#f4f4f1}
+#community-atlas .atlas-minimal-nav .atlas-close{margin:0;padding:8px 0;min-height:44px;border-bottom:1px solid #f4f4f166;font:11px/1.5 'IBM Plex Mono',monospace}
+.atlas-minimal-nav h2{margin:0;font:400 11px/1.5 'IBM Plex Mono',monospace}
+#community-atlas button:focus-visible{outline-color:#f4f4f1}
+@media(max-width:650px){.atlas-minimal-nav{left:20px;top:14px}}

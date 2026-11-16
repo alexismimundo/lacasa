@@ -1,0 +1,15 @@
+{
+  "result": {
+    "result": {
+      "type": "string",
+      "value": "PASS: sharp single/double cuts; texture remains visible; no flat black; reduced motion and exit cleanup; 390x844"
+    }
+  },
+  "info": {
+    "result": {
+      "type": "string",
+      "value": "PASS: sharp single/double cuts; texture remains visible; no flat black; reduced motion and exit cleanup; 390x844"
+    }
+  },
+  "errors": []
+}

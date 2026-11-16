@@ -1,0 +1,1 @@
+PASS: inline JS syntax; reset saved late phase and completion; preserve memories and drawings; malformed/blocked storage tolerated; native scroll restoration disabled.

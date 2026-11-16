@@ -1,0 +1,1 @@
+PASS: first-house syntax; steering converges monotonically with bounded per-frame motion and zero-dt stability.

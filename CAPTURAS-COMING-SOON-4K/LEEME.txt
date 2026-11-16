@@ -1,0 +1,5 @@
+La Casa — Coming soon
+5 capturas PNG sin perdida, 3840 x 2160.
+Se conserva el fondo negro original, la textura SVG, el grano vivo y el filtro de bordes de la web.
+Solo se ocultan la interfaz/contador y el enlace Entrar durante la captura. La web no fue modificada.
+Los nombres ordenan cinco momentos de la secuencia (dias 0.7, 2.8, 4.5, 5.8 y 6.95).

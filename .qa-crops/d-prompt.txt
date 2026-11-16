@@ -1,0 +1,38 @@
+  - `casa3/mesa.webp`, `casa3/plato.png`, `casa3/vaso.png`, `casa3/cubiertos.png`
+  - `casa3/marco-retrovisor.png`
+  - `casa3/puerta-1…3.png`
+
+### Momento D · «Tu casa» + la cuadra — canción «La bicicleta» (≈ 15.8 → 21.8)
+
+Es la parte participativa y la más importante para la defensa. Tomá `community.js` como base y reorganizalo.
+
+**D1. Tu casa (pausa activa)**
+- Detrás de la puerta, sobre papel, aparece: «¿Cómo recordás tu casa?».
+- **Lienzo para dibujar con la línea viva:** trazo azul `#335386`, con la vibración del grafito. Solo dibujar, deshacer y borrar. Las figuras cerradas se rellenan, como ya hace community.js.
+- Al lado, **una tarjeta de memoria igual a las mías**, vacía, para escribir un título corto y una memoria. La memoria se muestra en estilo recuerdo mientras se escribe.
+- **La portada se arma en vivo:** el dibujo aparece dentro del calado de la ventana de ladrillos (la ventana de la tapa del disco), con la memoria abajo.
+- **Botones:**
+  - **«Descargar portada»:** PNG de 2000 × 2000 con la plantilla de portada. El dibujo va centrado en el área de la ventana, con márgenes fijos.
+  - **«Formato historia»:** PNG de 1080 × 1920.
+  - **«Pedir mi disco»:** abre un formulario **simulado**. Dejá claro que es un prototipo y que no envía nada.
+  - **«Sumar mi casa al barrio»:** guarda en `localStorage` y la casa aparece en la cuadra y en "Otras casas".
+  - **«Seguir sin dibujar»:** siempre visible. Nadie tiene que quedar trabado.
+- Mientras el lienzo o la tarjeta están en uso, el scroll **no** avanza el recorrido.
+- **Sacá los nombres y las frases de ejemplo inventados** que hay en community.js (Ana, Nico, «En el patio siempre había una silla esperando», etc.). Las casas de ejemplo quedan **sin texto** o con `[memoria de la comunidad]`.
+
+**D2. La cuadra**
+- Scroll horizontal (reutilizá el panorama `p15` y las 44 casitas de `assets/casas-comunidad/recortes/`).
+- Primer plano de manubrio de bicicleta, con un leve vaivén.
+- Pasan en paralaje las casas dibujadas por otros. Al pasar el cursor, o tocar, se abre su memoria corta.
+- **La última casa de la fila es la que dibujó el visitante** (si la sumó). Si no dibujó, la fila termina en un terreno vacío con «[tu casa podría estar acá]».
+- **Frases** (letra de «La bicicleta»): «Recorramos el barrio» / «Toma la bicicleta y vamos juntos a atravesar este vendaval».
+- **Sacá el retrovisor de esta pantalla:** ahora vive en el momento C.
+- **Assets pendientes:**
+  - `tu-casa/plantilla-portada-2000.png` (con el calado transparente)
+  - `tu-casa/plantilla-historia-1080x1920.png`
+  - `tu-casa/manubrio.png`
+  - `tu-casa/barrio-capa-1.webp`, `tu-casa/barrio-capa-2.webp`
+
+### Momento E · Salida por la ventana + menú final — vuelve «La casa» (≈ 21.8 → final)
+
+- **Reutilizá `#closing-scene`:** el zoom out por la misma ventana del principio, ahora con glicinas.

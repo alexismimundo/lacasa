@@ -1,0 +1,1 @@
+PASS: production syntax; script integration; browser fixture generated.

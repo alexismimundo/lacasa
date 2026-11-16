@@ -1,0 +1,124 @@
+﻿
+
+FullName      : C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\.qa-crops\fire-frames-range.png
+Length        : 53689
+LastWriteTime : 26/10/2026 14:30:00
+
+FullName      : C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\.qa-crops\fire-frames.png
+Length        : 53689
+LastWriteTime : 26/10/2026 14:28:52
+
+FullName      : C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\.qa-crops\negro.png
+Length        : 207088
+LastWriteTime : 26/10/2026 13:38:00
+
+FullName      : C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\.qa-crops\azul.png
+Length        : 282777
+LastWriteTime : 26/10/2026 13:34:59
+
+FullName      : C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\.qa-crops\audit.png
+Length        : 745728
+LastWriteTime : 26/10/2026 13:34:22
+
+FullName      : C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\dist\assets\objetos-incendio\Objetos-Incendio-azul.png
+Length        : 3431181
+LastWriteTime : 26/10/2026 12:45:49
+
+FullName      : C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\dist\assets\objetos-incendio\Objetos-Incendio-negro.png
+Length        : 2936938
+LastWriteTime : 26/10/2026 12:45:23
+
+FullName      : C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\dist\assets\barrilete\cola-negro.png
+Length        : 30097
+LastWriteTime : 26/10/2026 11:27:19
+
+FullName      : C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\dist\assets\barrilete\cola-rosa.png
+Length        : 32715
+LastWriteTime : 26/10/2026 11:27:19
+
+FullName      : C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\dist\assets\barrilete\cola-azul.png
+Length        : 35667
+LastWriteTime : 26/10/2026 11:27:19
+
+FullName      : C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\dist\assets\barrilete\volador-cola.png
+Length        : 91964
+LastWriteTime : 26/10/2026 10:43:47
+
+FullName      : C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\dist\assets\barrilete\volador-azul-rombo.png
+Length        : 123141
+LastWriteTime : 26/10/2026 10:43:47
+
+FullName      : C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\dist\assets\barrilete\volador-negro.png
+Length        : 106289
+LastWriteTime : 26/10/2026 10:43:47
+
+FullName      : C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\dist\assets\barrilete\volador-azul.png
+Length        : 121652
+LastWriteTime : 26/10/2026 10:43:47
+
+FullName      : C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\dist\assets\barrilete\volador-usuario.png
+Length        : 112392
+LastWriteTime : 26/10/2026 10:43:46
+
+FullName      : C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\dist\assets\barrilete\nube-06.png
+Length        : 130666
+LastWriteTime : 26/10/2026 06:23:16
+
+FullName      : C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\dist\assets\barrilete\nube-05.png
+Length        : 145630
+LastWriteTime : 26/10/2026 06:23:16
+
+FullName      : C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\dist\assets\barrilete\nube-04.png
+Length        : 146646
+LastWriteTime : 26/10/2026 06:23:16
+
+FullName      : C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\dist\assets\barrilete\nube-03.png
+Length        : 84154
+LastWriteTime : 26/10/2026 06:23:16
+
+FullName      : C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\dist\assets\barrilete\nube-02.png
+Length        : 115648
+LastWriteTime : 26/10/2026 06:23:16
+
+FullName      : C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\dist\assets\barrilete\nube-01.png
+Length        : 139775
+LastWriteTime : 26/10/2026 06:23:16
+
+FullName      : C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\dist\assets\barrilete\barrilete-azul.png
+Length        : 3153119
+LastWriteTime : 26/10/2026 06:15:57
+
+FullName      : C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\dist\assets\barrilete\barrilete-negro.png
+Length        : 2399142
+LastWriteTime : 26/10/2026 06:15:28
+
+FullName      : C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\dist\assets\barrilete\barrilete-rosa.png
+Length        : 2808321
+LastWriteTime : 26/10/2026 06:15:18
+
+FullName      : C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\dist\assets\barrilete\nubes.png
+Length        : 3301380
+LastWriteTime : 26/10/2026 06:01:38
+
+FullName      : C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\dist\assets\casas-comunidad\casas-comunidad-2.png
+Length        : 2748779
+LastWriteTime : 26/10/2026 06:00:04
+
+FullName      : C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\dist\assets\casas-comunidad\casas-comunidad-1.png
+Length        : 2551423
+LastWriteTime : 26/10/2026 05:59:33
+
+FullName      : C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\dist\assets\tooltips\casa-1-lila-base.png
+Length        : 34215
+LastWriteTime : 26/10/2026 05:04:38
+
+FullName      : C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\dist\assets\tooltips\tooltips-blanco.png
+Length        : 2574399
+LastWriteTime : 26/10/2026 04:58:56
+
+FullName      : C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\dist\assets\tooltips\tooltips-azul.png
+Length        : 3767854
+LastWriteTime : 26/10/2026 04:58:40
+
+
+

@@ -1,0 +1,30 @@
+﻿/* Provisional all-direction community atlas, isolated from the journey. */
+#community-atlas{position:fixed;inset:0;box-sizing:border-box;width:100vw;height:100dvh;max-width:none;max-height:none;margin:0;padding:0;border:0;overflow:hidden;background:#f4f4f1;color:#335386;cursor:auto!important}
+#community-atlas::backdrop{background:#f4f4f1}
+#community-atlas [hidden]{display:none}
+#community-atlas .atlas-header{position:absolute;inset:0 0 auto;z-index:3;display:flex;justify-content:space-between;align-items:flex-start;padding:28px 4vw;pointer-events:none;background:linear-gradient(#f4f4f1 65%,transparent)}
+.atlas-header p{margin:0 0 10px;font:10px/1.5 MonumentMono,monospace;letter-spacing:.12em}
+.atlas-header h2{margin:0;font:300 clamp(24px,3vw,44px)/1.2 MonumentMono,monospace}
+#community-atlas button{color:inherit;background:none;border:0;font:11px/1.5 MonumentMono,monospace;cursor:pointer!important}
+#community-atlas .atlas-close{pointer-events:auto;border-bottom:1px solid #33538666;padding:8px 0;margin-left:20px;white-space:nowrap}
+.atlas-viewport{position:absolute;inset:0;overflow:hidden;touch-action:none;cursor:grab!important;background:#f4f4f1 url('../assets/fondo-papel.webp') 0 0/1600px;outline:none;user-select:none}
+.atlas-viewport.is-dragging,.atlas-viewport.is-dragging *{cursor:grabbing!important}
+.atlas-world{position:absolute;left:0;top:0;transform-origin:0 0;will-change:transform}
+#community-atlas .atlas-house{position:absolute;width:250px;height:225px;padding:0;text-align:center;transform:translate(-50%,-50%) rotate(var(--atlas-turn));touch-action:none}
+.atlas-house img,.atlas-house svg{display:block;width:100%;height:175px;object-fit:contain;pointer-events:none}
+.atlas-house span{display:block;margin-top:14px;font:12px/1.6 MonumentMono,monospace}
+.atlas-house small{display:block;opacity:.65;font-size:9px}
+.atlas-house:hover span{text-decoration:underline;text-underline-offset:4px}
+#community-atlas button:focus-visible{outline:1px dashed #335386;outline-offset:6px}
+.atlas-memory-hint{position:absolute;left:4vw;bottom:120px;font:italic 18px/1.4 Georgia,serif;pointer-events:none;opacity:.7}
+#community-atlas .atlas-footer{position:absolute;inset:auto 0 0;z-index:3;display:flex;justify-content:space-between;align-items:flex-end;gap:20px;padding:30px 4vw 24px;background:linear-gradient(transparent,#f4f4f1 35%);pointer-events:none}
+.atlas-footer p{margin:0 0 8px;font:10px/1.5 MonumentMono,monospace}
+.atlas-footer small{display:block;max-width:510px;font:9px/1.6 MonumentMono,monospace;opacity:.7}
+.atlas-controls{display:flex;align-items:center;gap:14px;pointer-events:auto;white-space:nowrap}
+#community-atlas .atlas-controls button{border-bottom:1px solid #33538666;padding:8px;min-width:34px;min-height:44px}
+.atlas-controls output{font:11px MonumentMono,monospace;min-width:42px;text-align:center}
+/* Exterior header/footer rules must not hide the atlas's own controls. */
+#community-atlas .atlas-header,#community-atlas .atlas-footer{opacity:1!important;visibility:visible!important;transform:none!important}
+body.community-atlas-open #house-cursor{display:none!important}
+@media(max-width:650px){#community-atlas .atlas-header{padding:22px 5vw}.atlas-header h2{max-width:220px;font-size:23px}.atlas-header p{font-size:8px}#community-atlas .atlas-close{font-size:9px;margin-left:10px}.atlas-memory-hint{display:none}#community-atlas .atlas-footer{padding:30px 5vw 18px;align-items:flex-start;flex-direction:column;gap:12px}.atlas-footer small{max-width:90vw}.atlas-controls{align-self:flex-end;gap:10px}}
+@media(prefers-reduced-motion:reduce){.atlas-world{will-change:auto}}

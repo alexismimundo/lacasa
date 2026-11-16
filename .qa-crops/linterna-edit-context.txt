@@ -1,0 +1,42 @@
+ const canvas=a.querySelector('canvas'),ctx=canvas.getContext('2d'),red=matchMedia('(prefers-reduced-motion:reduce)');
+ const scratchToggle=document.createElement('button');scratchToggle.type='button';scratchToggle.className='c2-scratch-toggle';scratchToggle.textContent='Raspar';scratchToggle.setAttribute('aria-pressed','false');a.querySelector('.c2-scene').append(scratchToggle);
+ scratchToggle.onclick=()=>{const active=scratchToggle.getAttribute('aria-pressed')!=='true';scratchToggle.setAttribute('aria-pressed',String(active));scratchToggle.textContent=active?'Volver al scroll':'Raspar';a.classList.toggle('c2-touch-scratch',active)};
+ let scratches=[],pointer=null,lastPhase=null,lastPaint=0,viewW=0,viewH=0,aim={x:0,y:0};
+ function scratch(e){const r=canvas.getBoundingClientRect();scratches.push({x:(e.clientX-r.left)/r.width,y:(e.clientY-r.top)/r.height,time:performance.now()});if(scratches.length>100)scratches.shift();lastPhase=null}
+ canvas.addEventListener('pointerdown',e=>{if(e.button!==0)return;pointer=e.pointerId;canvas.setPointerCapture(e.pointerId);scratch(e);e.preventDefault();e.stopPropagation()});
+ canvas.addEventListener('pointermove',e=>{if(e.pointerType==='mouse'||pointer===e.pointerId){scratch(e);e.stopPropagation()}});
+ const end=e=>{if(pointer===e.pointerId){pointer=null;if(canvas.hasPointerCapture(e.pointerId))canvas.releasePointerCapture(e.pointerId)}};
+ canvas.addEventListener('pointerup',end);canvas.addEventListener('pointercancel',end);
+ for(const type of ['touchstart','touchmove','touchend'])canvas.addEventListener(type,e=>e.stopPropagation(),{passive:true});
+ canvas.addEventListener('wheel',e=>{if(pointer!==null)e.stopPropagation()},{passive:true});
+ b.addEventListener('pointermove',e=>{if(!red.matches)aim={x:(e.clientX/innerWidth-.5)*18,y:(e.clientY/innerHeight-.5)*7}});
+ // Continue inside the actual flashlight screen, using its exact processed stamp.
+ const flashlight=document.getElementById('fh-next-house'),aContent=a.querySelector('.c2-scene');flashlight.append(aContent);aContent.hidden=true;
+ function hole(x,y,r,seed){const light=window.casaLinterna;if(light?.ready){const height=r*2*light.stamp.height/light.stamp.width;ctx.drawImage(light.stamp,x-r,y-height/2,r*2,height);return}ctx.beginPath();for(let j=0;j<18;j++){const angle=j/18*Math.PI*2,rr=r*(.83+Math.sin(j*7.3+seed)*.17);const px=x+Math.cos(angle)*rr,py=y+Math.sin(angle)*rr*.72;j?ctx.lineTo(px,py):ctx.moveTo(px,py)}ctx.closePath();ctx.fill()}
+ function mask(now,p){const w=Math.round(innerWidth),h=Math.round(innerHeight);if(viewW!==w||viewH!==h){canvas.width=viewW=w;canvas.height=viewH=h;lastPhase=null}if(lastPhase===p&&now-lastPaint<80)return;lastPhase=p;lastPaint=now;
+  const q=progress(p,configA);ctx.globalCompositeOperation='source-over';ctx.globalAlpha=1;ctx.fillStyle='#000';ctx.fillRect(0,0,w,h);
+  // The original beam stays in place while matching stains open across the black.
+  ctx.globalCompositeOperation='destination-out';
+  const beam=window.casaLinterna?.point;if(beam&&q<.25){ctx.globalAlpha=1-clamp(q/.25);hole(beam.x*w,beam.y*h,Math.min(w,h)*.19,0);ctx.globalAlpha=1}
+  const point=window.casaLinterna?.point||{x:.5,y:.5};ctx.globalAlpha=red.matches?1:.60+Math.sin(now/1000*7.1)*.23+Math.sin(now/1000*11.3+.7)*.10+Math.sin(now/1000*3.7+1.2)*.06;hole(point.x*w,point.y*h,Math.min(w,h)*(.19+q*.5),0);ctx.globalAlpha=1;
+  for(let i=0;i<8;i++){const open=clamp((q-.025-i*.065)/.43),growth=1+clamp((q-.5)/.4)*4,r=Math.min(w,h)*.38*open*growth,x=w*(.1+(i%4)*.26),y=h*(.28+Math.floor(i/4)*.44);if(open>0)hole(x,y,r,i)}
+  scratches=scratches.filter(s=>now-s.time<3500);for(const s of scratches){ctx.globalAlpha=clamp((3500-(now-s.time))/1000);hole(s.x*w,s.y*h,Math.min(w,h)*.12,4)}ctx.globalAlpha=1;ctx.globalCompositeOperation='source-over';
+  // Fully clear the last ink residue after the stamps have grown together.
+  ctx.globalCompositeOperation='destination-out';ctx.globalAlpha=clamp((q-.8)/.15);ctx.fillRect(0,0,w,h);ctx.globalAlpha=1;ctx.globalCompositeOperation='source-over';
+  canvas.dataset.progress=q.toFixed(4);canvas.dataset.scratches=String(scratches.length);
+ }
+ let filmWanted=false;
+ function syncRunningFilm(wanted){
+  if(wanted===filmWanted)return;filmWanted=wanted;
+  if(wanted)runningFilm.play().catch(()=>{filmWanted=false});else runningFilm.pause();
+ }
+ document.addEventListener('visibilitychange',()=>{if(document.hidden)syncRunningFilm(false)});
+ const old=window.casaRender;
+ window.casaRender=function(now,dt){old(now,dt);const p=current,inside=document.body.classList.contains('inhabited')&&!document.body.classList.contains('reentering');
+  aContent.hidden=!inside||p<8.6||p>=10.6;flashlight.style.transform=p>=8.6&&p<10.6?a.style.transform:'none';aContent.style.setProperty('--aperture-phrase',String(clamp((p-9.05)/.3)));
+  syncRunningFilm(inside&&p>=8.6&&p<10.6&&!document.hidden&&!red.matches);
+  if(!inside||p<8.6||p>=12.6){scratches=[];pointer=null;return}
+  if(!a.hidden){aContent.style.backgroundColor='rgb('+colorFondoCasa2(Math.min(p,10.5999)).join(',')+')';mask(now,p);flower.hidden=enCaja('glicina')||p<9||p>=10.3;flower.inert=flower.hidden}
+  if(!b.hidden){const q=progress(p,configB),bg=colorFondoCasa2(Math.max(10.6,p));b.style.backgroundColor='rgb('+bg.join(',')+')';const drift=red.matches?0:q*180;b.querySelector('.c2-horizon').style.transform='translate('+(-drift*.4+aim.x)+'px,'+aim.y+'px)';b.querySelector('.c2-grass').style.transform='translateX('+(-drift)+'px)';const child=b.querySelector('.c2-child'),frame=frames[red.matches?0:Math.floor(now/100)%8],available=frame.ready?frame:frames.find(f=>f.ready);if(available&&child.getAttribute('src')!==available.image.getAttribute('src'))child.src=available.image.src;child.style.transform=red.matches?'none':'translateY('+(-Math.abs(Math.sin(now/115))*7)+'px) rotate('+Math.sin(now/180)*2+'deg)';child.style.opacity=String(1-clamp((q-.65)/.25));b.querySelector('.c2-remains').style.opacity=String(clamp((q-.55)/.35));b.querySelector('.c2-phrase').textContent=q<.62?'El niño salió corriendo, sobresaltado\nCorro y lo hago a campo abierto':'De nuestra casa / hay solo barro';b.dataset.progress=q.toFixed(4)}
+ };
+})();

@@ -1,0 +1,1 @@
+PASS: production syntax; no cupboard anchor or table drawing; box hidden through kitchen transition; centered appearance; rotation and corner shortcut preserved; reverse-scroll cleanup; desktop 1280x900 and mobile 390x844.

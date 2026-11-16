@@ -1,0 +1,20 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><title>Soldiers reload regression</title></head><body style="margin:0"><iframe id="journey" style="position:fixed;inset:0;width:100%;height:100%;border:0" title="Journey"></iframe><script>
+window.ready=(async()=>{try{
+ const frame=document.querySelector('iframe'),assert=(v,m)=>{if(!v)throw Error(m)},wait=ms=>new Promise(r=>setTimeout(r,ms));
+ const firstKey='la-casa-first-house-v2',inventoryKey='la-casa-etapa1-v1';
+ // Seed the exact stale combination that used to hide the memory after F5.
+ sessionStorage.setItem(firstKey,JSON.stringify({soldiers:true,burn:1,kept:['soldiers','money']}));
+ sessionStorage.setItem(inventoryKey,JSON.stringify({caja:[{id:'soldiers',texto:''},{id:'money',texto:''}]}));
+ async function load(){const ready=new Promise(r=>frame.addEventListener('load',r,{once:true}));frame.src='../dist/index.html?vista=landing&reload-test='+Date.now();await ready;await wait(1000)}
+ async function verify(){const w=frame.contentWindow,d=frame.contentDocument;
+ assert(w.eval("!enCaja('soldiers')"),'soldiers removed from restored inventory');assert(w.eval("enCaja('money')"),'other memories retained');
+ w.eval("document.body.classList.add('inhabited');document.body.classList.remove('closing-outside','reentering');target=current=6.9;for(let i=0;i<55;i++)window.casaRender(performance.now(),.05)");await wait(100);
+ const s=d.querySelector('.fh-soldiers'),r=s.getBoundingClientRect();assert(!s.hidden&&!s.inert,'memory available after reload');assert(Math.abs(r.top+r.height/2-w.innerHeight/2)<3,'centered after reload');assert(!d.querySelector('#fh-soldiers-prompt').hidden,'prompt restored');assert(!w.laCasaCarry.soldiers,'carry reset');
+ }
+ await load();await verify();
+ // Store again, then perform a real document reload within the same session.
+ frame.contentWindow.eval("guardar('soldiers',{silencioso:true})");assert(frame.contentWindow.eval("enCaja('soldiers')"),'can store again');
+ const loaded=new Promise(r=>frame.addEventListener('load',r,{once:true}));frame.contentWindow.location.reload();await loaded;await wait(1000);await verify();
+ return 'PASS: stale collected state cleared, real reload restores centered draggable soldiers and prompt, other inventory retained; '+innerWidth+'x'+innerHeight;
+ }catch(e){return 'FAIL: '+e.stack}})();
+</script></body></html>

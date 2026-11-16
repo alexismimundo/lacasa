@@ -1,0 +1,14 @@
+{
+  "result": {
+    "result": {
+      "type": "string",
+      "value": "PASS: stale collected state cleared, real reload restores centered draggable soldiers and prompt, other inventory retained; 1280x900"
+    }
+  },
+  "info": {
+    "result": {
+      "type": "undefined"
+    }
+  },
+  "errors": []
+}

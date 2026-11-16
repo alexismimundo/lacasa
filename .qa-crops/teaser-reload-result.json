@@ -1,0 +1,11 @@
+{
+  "result": "PASS",
+  "checks": [
+    "reload shows teaser even after entering house",
+    "fresh clock starts at zero elapsed: seven days remaining",
+    "later reload also starts at seven days",
+    "old stored date never read",
+    "landing and explicit day previews preserved",
+    "script syntax valid"
+  ]
+}

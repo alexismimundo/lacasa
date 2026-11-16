@@ -1,0 +1,35 @@
+closingFilm.addEventListener('playing',()=>{const ready=()=>{closingVideoReady=true};if(closingFilm.requestVideoFrameCallback)closingFilm.requestVideoFrameCallback(ready);else requestAnimationFrame(()=>requestAnimationFrame(ready))});
+closingFilm.addEventListener('ended',()=>{closingFinished=true;closingPlaying=false;renderClosingScene()});
+function renderClosingScene(){
+ if(resetBusy)return;
+ if(reentryStarted!==null){
+  reentryCurrent+=(reentryTarget-reentryCurrent)*.16;if(Math.abs(reentryTarget-reentryCurrent)<.001)reentryCurrent=reentryTarget;
+  const t=reentryCurrent,e=t;
+  if(t===0&&reentryTarget===0){restoreFlowerExterior();return}
+  document.body.style.setProperty('--exit-identity',String(1-lowEase(0,.3,t)));document.body.classList.toggle('exit-identity-visible',t<.3);
+  closingRoot.classList.add('active');closingRoot.inert=true;closingRoot.style.opacity=String(1-lowEase(.72,1,t));
+  $('closing-window').style.transform='scale('+Math.exp(e*Math.log(10))+')';$('closing-window').style.opacity='1';
+  if(t>=1){closingStill.src='assets/salida-inicial.webp';reentryStarted=null;reentryTarget=reentryCurrent=0;busy=false;closingFinished=false;closingPlaying=false;closingVideoReady=false;closingFilm.currentTime=0;closingRoot.classList.remove('active');closingRoot.style.opacity='0';$('closing-final-photo').style.opacity='0';document.body.classList.remove('reentering','closing-present','exit-identity-visible');houseFilm.currentTime=0;memoryActive=false;memoryStarted=performance.now();}
+  return;
+ }
+ const closingPhase=current-2;
+ const active=document.body.classList.contains('inhabited')&&closingPhase>22;
+ closingRoot.classList.toggle('active',active);closingRoot.inert=!active;document.body.classList.toggle('closing-present',active);
+ if(!active){closingRoot.style.opacity='0';closingInterior.pause();closingFilm.pause();closingPlaying=false;document.body.classList.remove('closing-outside','exit-identity-visible');return}
+ const entry=lowEase(22,22.6,closingPhase),zoom=lowEase(23.2,25.05,closingPhase),outside=zoom>=.999&&closingFinished;
+ closingRoot.style.opacity=String(entry);closingInterior.style.opacity=String(1-lowEase(23.2,23.85,closingPhase));
+ if(closingPhase<24.05&&closingInterior.paused)closingInterior.play().catch(()=>{});else if(closingPhase>=24.05)closingInterior.pause();
+ $('closing-window').style.transform='scale('+(memoryReduced.matches?1:Math.exp((1-zoom)*Math.log(10)))+')';
+ $('closing-window').style.opacity=String(memoryReduced.matches?lowEase(23.55,24.25,closingPhase):lowEase(23.2,23.8,closingPhase));
+ $('closing-phrase').style.opacity=String(lowEase(22.25,22.7,closingPhase)*(1-lowEase(23.15,23.7,closingPhase)));
+ if(zoom>=.995&&!closingFinished&&!closingPlaying){closingPlaying=true;closingFilm.play().catch(()=>{closingPlaying=false;closingFinished=true})}
+ if(zoom<.98&&closingPlaying){closingFilm.pause();closingPlaying=false}
+ const showFinal=closingFinished&&closingFinalReady;
+ // Keep the last video frame opaque beneath the separate photo during the dissolve.
+ $('closing-final-photo').style.opacity=showFinal?'1':'0';
+ closingStill.style.opacity=!closingVideoReady?'1':'0';closingFilm.style.opacity=closingVideoReady?'1':'0';
+ const identity=zoom>=.995?(closingFinished?1:lowEase(.35,2.7,closingFilm.currentTime)):0;
+ document.body.style.setProperty('--exit-identity',String(identity));document.body.classList.toggle('exit-identity-visible',identity>.001);
+ if(identity>.001){menuDepthWords.forEach(({node})=>{node.style.transform='none';node.style.filter='none';node.style.opacity='1'});if(!$('threshold-menu').dataset.growthMeasured){$('threshold-menu').dataset.growthMeasured='true';measureMenuRows()}}
+ $('closing-again').hidden=!outside;$('closing-window-enter').hidden=!outside;document.body.classList.toggle('closing-outside',outside);
+}

@@ -1,0 +1,38 @@
+[
+    {
+        "LineNumber":  750,
+        "Line":  "function navigateScroll(delta){"
+    },
+    {
+        "LineNumber":  787,
+        "Line":  "window.addEventListener(\u0027wheel\u0027,e=\u003e{"
+    },
+    {
+        "LineNumber":  792,
+        "Line":  " navigateScroll(Math.max(-innerHeight*1.5,Math.min(innerHeight*1.5,delta)));"
+    },
+    {
+        "LineNumber":  794,
+        "Line":  "window.addEventListener(\u0027keydown\u0027,e=\u003e{"
+    },
+    {
+        "LineNumber":  797,
+        "Line":  "  e.preventDefault();navigateScroll([\u0027ArrowUp\u0027,\u0027ArrowLeft\u0027,\u0027PageUp\u0027].includes(e.key)?-160:160);"
+    },
+    {
+        "LineNumber":  1080,
+        "Line":  "r.line.addEventListener(\u0027keydown\u0027,e=\u003e{if(![\u0027ArrowLeft\u0027,\u0027ArrowRight\u0027].includes(e.key))return;e.preventDefault();e.stopPropagation();r.targetX+=(e.key===\u0027ArrowRight\u0027?-100:100)});"
+    },
+    {
+        "LineNumber":  1256,
+        "Line":  "$(\u0027box-text\u0027).addEventListener(\u0027keydown\u0027,e=\u003ee.stopPropagation());"
+    },
+    {
+        "LineNumber":  1397,
+        "Line":  "$(\u0027music-player\u0027).addEventListener(\u0027keydown\u0027,e=\u003ee.stopPropagation());"
+    },
+    {
+        "LineNumber":  1620,
+        "Line":  "\u003c/script\u003e\u003cscript src=\"continuous/prefs.js\"\u003e\u003c/script\u003e\u003cscript src=\"continuous/house-route.js\"\u003e\u003c/script\u003e\u003cscript src=\"continuous/casa.js\"\u003e\u003c/script\u003e\u003cscript src=\"continuous/casa2.js\"\u003e\u003c/script\u003e\u003cscript src=\"continuous/casa3.js\"\u003e\u003c/script\u003e\u003cscript src=\"continuous/fondo.js\"\u003e\u003c/script\u003e\u003cscript src=\"continuous/rooms.js\"\u003e\u003c/script\u003e\u003cscript src=\"continuous/first-house.js\"\u003e\u003c/script\u003e\u003clink rel=\"stylesheet\" href=\"continuous/community.css\"\u003e\u003cscript src=\"continuous/community.js\"\u003e\u003c/script\u003e\u003cscript src=\"continuous/inventory.js\"\u003e\u003c/script\u003e\u003cscript src=\"continuous/floor-plan.js\"\u003e\u003c/script\u003e\u003cscript src=\"continuous/light-cuts.js\"\u003e\u003c/script\u003e\u003cscript src=\"continuous/visual-interaction.js\"\u003e\u003c/script\u003e\u003clink rel=\"stylesheet\" href=\"continuous/escenas-resto.css\"\u003e\u003cscript src=\"continuous/escenas-resto.js\"\u003e\u003c/script\u003e\u003cscript src=\"continuous/assets-resto.js\"\u003e\u003c/script\u003e\u003clink rel=\"stylesheet\" href=\"continuous/casa2-oscuridad.css\"\u003e\u003cscript src=\"continuous/casa2-oscuridad.js\"\u003e\u003c/script\u003e\u003clink rel=\"stylesheet\" href=\"continuous/casa3-terrero.css\"\u003e\u003cscript src=\"continuous/casa3-terrero.js\"\u003e\u003c/script\u003e\u003c/body\u003e\u003c/html\u003e"
+    }
+]

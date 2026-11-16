@@ -1,0 +1,15 @@
+{
+  "result": {
+    "result": {
+      "type": "string",
+      "value": "PASS: variable intensities within bursts; mixed short/long gaps; hard cuts; texture preserved; reduced motion and exit cleanup; 1280x900"
+    }
+  },
+  "info": {
+    "result": {
+      "type": "string",
+      "value": "PASS: variable intensities within bursts; mixed short/long gaps; hard cuts; texture preserved; reduced motion and exit cleanup; 1280x900"
+    }
+  },
+  "errors": []
+}

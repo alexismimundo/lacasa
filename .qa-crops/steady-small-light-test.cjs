@@ -1,0 +1,11 @@
+const fs=require('fs'),path=require('path'),vm=require('vm'),assert=require('assert'),root=path.resolve(__dirname,'..');
+const read=file=>fs.readFileSync(path.join(root,file),'utf8');
+for(const file of ['dist/continuous/light-cuts.js','dist/continuous/first-house.js','dist/assets/coming-soon/teaser-atmosphere.js'])new vm.Script(read(file));
+vm.runInNewContext(read('dist/continuous/light-cuts.js'),{});
+assert(!/scheduleBlackout|blackoutTimer|clearBlackout/.test(read('dist/assets/coming-soon/teaser-atmosphere.js')),'no teaser blackout scheduler');
+assert(read('dist/continuous/teaser-gate.js').includes("cut.animate(frames,{duration:1000"),'entry cut retained');
+assert(read('dist/continuous/first-house.js').includes('const endingCuts=[[0,0],[.06,1]'),'soldiers cut retained');
+require('./single-memory-black-test.cjs');
+const file=path.join(__dirname,'single-memory-black-browser.html');
+const extra=`a(!document.querySelector('#house-light-cut'),'no ambient blackout overlay');const canvas=house.querySelector('canvas'),context=canvas.getContext('2d');for(let i=0;i<100&&canvas.dataset.mask!=='linterna';i++)await wait(50);a(canvas.dataset.mask==='linterna','textured beam loaded');step(8.1);const before=context.getImageData(0,0,canvas.width,canvas.height).data;await wait(400);step(8.1);const after=context.getImageData(0,0,canvas.width,canvas.height).data;a(before.every((v,i)=>v===after[i]),'beam stays steady over time');let lit=0,minX=canvas.width,maxX=0;for(let y=0;y<canvas.height;y++)for(let x=0;x<canvas.width;x++)if(after[(y*canvas.width+x)*4+3]<254){lit++;minX=Math.min(minX,x);maxX=Math.max(maxX,x)}a(lit>0&&maxX-minX<=Math.min(innerWidth,innerHeight)*.38+2,'smaller textured beam');house.dispatchEvent(new PointerEvent('pointermove',{bubbles:true,clientX:innerWidth*.7,clientY:innerHeight*.5}));step(8.1);const moved=context.getImageData(0,0,canvas.width,canvas.height).data;a(moved.some((v,i)=>v!==after[i]),'beam still follows pointer');`;
+fs.writeFileSync(path.join(__dirname,'steady-small-light-browser.html'),fs.readFileSync(file,'utf8').replace("return 'PASS: single time-faded card",extra+"return 'PASS: no ambient cuts, steady smaller textured beam, preserved narrative cuts; single time-faded card"));

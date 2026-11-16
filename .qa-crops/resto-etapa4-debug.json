@@ -1,0 +1,52 @@
+{
+  "result": {
+    "result": {
+      "type": "undefined"
+    }
+  },
+  "info": {
+    "result": {
+      "type": "string",
+      "value": "La Casa · prueba 02. El muro se abre, atravesás la ventana y el hueco permanece. Marco, niño, logo y ladrillos usan los PNG originales separados, con sus transparencias y colores intactos. La entrada reproduce el video del niño atravesando la ventana. Antes de entrar, la ventana tapiada espera inmóvil. Podés repetir el cruce sin borrar el papel ni la luz.Las huellas se conservan en este navegador. Suena «Sirens». Podés silenciarla desde el botón de música.VOLVER ↗"
+    }
+  },
+  "errors": [
+    {
+      "timestamp": 1794832942914.675,
+      "exceptionDetails": {
+        "exceptionId": 1,
+        "text": "Uncaught",
+        "lineNumber": 1619,
+        "columnNumber": 2188,
+        "scriptId": "28",
+        "url": "http://127.0.0.1:21871/.qa-crops/resto-etapa4-browser.html?vista=landing",
+        "exception": {
+          "type": "object",
+          "subtype": "error",
+          "className": "SyntaxError",
+          "description": "SyntaxError: Invalid or unexpected token",
+          "objectId": "7334795633256498211.2.1",
+          "preview": {
+            "type": "object",
+            "subtype": "error",
+            "description": "SyntaxError: Invalid or unexpected token",
+            "overflow": false,
+            "properties": [
+              {
+                "name": "stack",
+                "type": "string",
+                "value": "SyntaxError: Invalid or unexpected token"
+              },
+              {
+                "name": "message",
+                "type": "string",
+                "value": "Invalid or unexpected token"
+              }
+            ]
+          }
+        },
+        "executionContextId": 2
+      }
+    }
+  ]
+}

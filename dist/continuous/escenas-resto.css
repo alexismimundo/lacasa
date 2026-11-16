@@ -1,0 +1,10 @@
+#resto-provisorio{position:fixed;inset:0;z-index:35;pointer-events:none;overflow:hidden;color:#F4F2EA}
+#resto-provisorio[hidden],#resto-provisorio [hidden]{display:none!important}
+.resto-momento{position:absolute;inset:0;display:grid;place-items:center;overflow:hidden}
+.resto-cartel{max-width:min(85vw,780px);padding:24px 30px;text-align:center;background:#1e1e1ce8;border:1px solid #b9a3de;font:400 14px/1.6 'IBM Plex Mono',monospace}
+.resto-cartel h2{margin:0 0 12px;font:inherit;font-size:clamp(20px,3vw,36px)}
+.resto-cartel p{margin:8px 0}.resto-cartel small{font-size:11px}
+.resto-momento.resto-heredado{background:transparent!important;align-items:start;padding-top:5vh}
+.resto-heredado .resto-cartel{padding:10px 18px}.resto-heredado h2{font-size:16px;margin:0}.resto-heredado p{margin:3px 0}
+@media(max-width:700px){.resto-cartel{padding:18px;max-width:88vw}.resto-momento.resto-heredado{padding-top:9vh}}
+@media(prefers-reduced-motion:reduce){.resto-momento{will-change:auto}}

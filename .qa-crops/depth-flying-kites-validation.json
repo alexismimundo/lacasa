@@ -1,0 +1,19 @@
+{
+  "result": "PASS",
+  "output": "C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\barriletes-volando-rosa-protagonista-transparente.png",
+  "previousFilesUnchanged": true,
+  "bytes": 757230,
+  "width": 2048,
+  "height": 2048,
+  "bounds": {
+    "minX": 196,
+    "minY": 82,
+    "maxX": 1847,
+    "maxY": 2000
+  },
+  "transparentBackground": true,
+  "kites": 8,
+  "pinkIncluded": true,
+  "blueThreads": 8,
+  "layout": "dominant pink kite 470px, secondary blue diamond 290px, remaining kites 70–165px"
+}

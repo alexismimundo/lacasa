@@ -1,0 +1,15 @@
+{
+  "result": {
+    "result": {
+      "type": "string",
+      "value": "PASS: new landing video 1920x1080, 4.000s; decoded-frame reveal; underlying still retained; final crossfade; replay twice; 1280x900"
+    }
+  },
+  "info": {
+    "result": {
+      "type": "string",
+      "value": "PASS: new landing video 1920x1080, 4.000s; decoded-frame reveal; underlying still retained; final crossfade; replay twice; 1280x900"
+    }
+  },
+  "errors": []
+}

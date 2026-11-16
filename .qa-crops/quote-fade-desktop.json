@@ -1,0 +1,15 @@
+{
+  "result": {
+    "result": {
+      "type": "string",
+      "value": "PASS: quote attributed and animated; zero hold; automatic fade; music stopped; reload gate; 1280x900"
+    }
+  },
+  "info": {
+    "result": {
+      "type": "string",
+      "value": "PASS: quote attributed and animated; zero hold; automatic fade; music stopped; reload gate; 1280x900"
+    }
+  },
+  "errors": []
+}

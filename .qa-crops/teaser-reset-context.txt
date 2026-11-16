@@ -1,0 +1,29 @@
+﻿C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\dist\assets\coming-soon\coming-soon.js:3:   La casa se incendia a lo largo de una semana. Cuando termina,
+C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\dist\assets\coming-soon\coming-soon.js:14:  duracionDias: 7,
+C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\dist\assets\coming-soon\coming-soon.js:17:  segundosModoRapido: 7,
+C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\dist\assets\coming-soon\coming-soon.js:29:  videoBase: "media/casa-base",
+C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\dist\assets\coming-soon\coming-soon.js:33:   ?dia=4.5   → salta a ese momento de la semana (0 a 7)
+C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\dist\assets\coming-soon\coming-soon.js:34:   ?rapido    → arranca en modo Adelantar
+C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\dist\assets\coming-soon\coming-soon.js:35:   ?reiniciar → olvida la fecha de inicio guardada                */
+C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\dist\assets\coming-soon\coming-soon.js:47:const SEMANA_MS = AJUSTES.duracionDias * 24 * 60 * 60 * 1000;
+C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\dist\assets\coming-soon\coming-soon.js:50:  if (params.has("reiniciar")) {
+C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\dist\assets\coming-soon\coming-soon.js:51:    try { localStorage.removeItem("laCasaInicio"); } catch (e) {}
+C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\dist\assets\coming-soon\coming-soon.js:55:    const guardado = localStorage.getItem("laCasaInicio");
+C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\dist\assets\coming-soon\coming-soon.js:58:    localStorage.setItem("laCasaInicio", String(ahora));
+C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\dist\assets\coming-soon\coming-soon.js:66:// "Desfase" que suma el modo Adelantar o el atajo ?dia=
+C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\dist\assets\coming-soon\coming-soon.js:68:if (params.has("dia")) {
+C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\dist\assets\coming-soon\coming-soon.js:69:  const dia = Math.min(Math.max(parseFloat(params.get("dia")) || 0, 0), AJUSTES.duracionDias);
+C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\dist\assets\coming-soon\coming-soon.js:70:  adelanto = dia * 24 * 3600 * 1000 - (Date.now() - inicio);
+C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\dist\assets\coming-soon\coming-soon.js:73:let rapido = params.has("rapido");
+C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\dist\assets\coming-soon\coming-soon.js:74:const factorRapido = SEMANA_MS / (AJUSTES.segundosModoRapido * 1000);
+C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\dist\assets\coming-soon\coming-soon.js:92:  if (rapido && p < 1) {
+C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\dist\assets\coming-soon\coming-soon.js:94:    base.playbackRate = base.duration / AJUSTES.segundosModoRapido;
+C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\dist\assets\coming-soon\coming-soon.js:133:function actualizarLoops(dia) {
+C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\dist\assets\coming-soon\coming-soon.js:136:    const ultima = E.hasta >= AJUSTES.duracionDias;
+C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\dist\assets\coming-soon\coming-soon.js:137:    const debe = dia >= E.desde && (dia < E.hasta || ultima);
+C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\dist\assets\coming-soon\coming-soon.js:217:  if(!terminado)rapido=true;
+C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\dist\assets\coming-soon\coming-soon.js:220:  if(!terminado)rapido=false;
+C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\dist\assets\coming-soon\coming-soon.js:230:  if (rapido && !terminado) adelanto += dt * (factorRapido - 1);
+C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\dist\assets\coming-soon\coming-soon.js:234:  actualizarLoops(p * AJUSTES.duracionDias);
+C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\dist\assets\coming-soon\teaser-atmosphere.js:6: const reduced=matchMedia('(prefers-reduced-motion: reduce)');let last=0,stopped=false;
+C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\dist\assets\coming-soon\teaser-atmosphere.js:48:  if(new URLSearchParams(location.search).has('integrado'))window.parent.postMessage({type:'la-casa:teaser-enter',immediate:true},location.origin);

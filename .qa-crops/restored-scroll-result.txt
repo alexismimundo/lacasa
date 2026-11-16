@@ -1,0 +1,1 @@
+PASS: syntax; previous scroll sensitivity and entry restored; no automatic controller; zoom monotonic, deterministic and same endpoints; adjustment below 0.2 scale units.

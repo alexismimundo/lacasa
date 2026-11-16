@@ -1,0 +1,15 @@
+{
+  "result": {
+    "result": {
+      "type": "string",
+      "value": "PASS: no automatic outline/tooltip; scenery not selectable or draggable; fields editable; hover and keyboard focus preserved; 1280x900"
+    }
+  },
+  "info": {
+    "result": {
+      "type": "string",
+      "value": "PASS: no automatic outline/tooltip; scenery not selectable or draggable; fields editable; hover and keyboard focus preserved; 1280x900"
+    }
+  },
+  "errors": []
+}

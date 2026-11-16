@@ -1,0 +1,18 @@
+ b.innerHTML='<div class="c2-scene"><div class="c2-horizon">'+horizon+'</div><div class="c2-grass">'+grass+'</div><div class="c2-remains">'+remains+'</div><img class="c2-child" src="assets/nino.webp" alt="El niño corriendo, representación provisoria"><p class="c2-phrase"></p>'+memory(configB.memoria,'02')+labels(configB)+'</div>';
+ const flower=a.querySelector('.c2-flower'),flowerFallback='data:image/svg+xml;charset=utf-8,'+encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 360"><path d="M120 15Q85 140 120 320" fill="none" stroke="#335386" stroke-width="5"/><g fill="#B9A3DE" stroke="#9B83B2" stroke-width="2">'+Array.from({length:10},(_,i)=>'<ellipse cx="'+(i%2?137:99)+'" cy="'+(65+i*25)+'" rx="'+(31-i*1.8)+'" ry="22"/>').join('')+'</g></svg>');
+ flower.querySelector('img').onerror=e=>{e.target.onerror=null;e.target.src=flowerFallback};COSAS.glicina={...COSAS.glicina,src:flowerFallback};hacerGuardable(flower,'glicina',{alGuardar:()=>{flower.hidden=true}});
+  // The apertures uncover the original running-child footage, not the test corridor.
+  const landscape=a.querySelector('.c2-landscape');
+  landscape.replaceChildren();
+  const runningFilm=document.createElement('video');
+  runningFilm.className='c2-running-film';runningFilm.src='assets/videos/nino-corriendo.mp4';
+  runningFilm.poster='assets/videos/nino-corriendo-poster.jpg';runningFilm.muted=true;
+  runningFilm.loop=true;runningFilm.playsInline=true;runningFilm.preload='auto';
+  runningFilm.setAttribute('aria-hidden','true');landscape.append(runningFilm);
+ const sky=document.createElement('div');sky.className='c2-sky';b.querySelector('.c2-scene').prepend(sky);restoAssets.bind(sky,'assets/casa2/cielo.webp');
+ for(const [sel,src] of [['.c2-horizon','horizonte.png'],['.c2-grass','pasto.png'],['.c2-remains','restos-casa.webp']])restoAssets.bind(b.querySelector(sel),'assets/casa2/'+src);
+ restoAssets.replace(flower.querySelector('img'),'assets/casa2/glicina-flor.png',()=>{COSAS.glicina.src='assets/casa2/glicina-flor.png';pintarCaja()});
+ const frames=Array.from({length:8},(_,i)=>restoAssets.load('assets/casa2/nino-corre-'+String(i+1).padStart(2,'0')+'.png'));
+ const holes=Array.from({length:8},(_,i)=>restoAssets.load('assets/casa2/hueco-'+String(i+1).padStart(2,'0')+'.png')),coverImage=restoAssets.load('assets/casa2/tapa-carton.webp');
+ const canvas=a.querySelector('canvas'),ctx=canvas.getContext('2d'),red=matchMedia('(prefers-reduced-motion:reduce)');
+ let viewW=0,viewH=0,aim={x:0,y:0},lastPoint=null;

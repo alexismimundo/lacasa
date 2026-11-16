@@ -1,0 +1,3 @@
+const fs=require('fs'),path=require('path'),{spawnSync}=require('child_process');const root=path.resolve(__dirname,'..'),ff='C:\\Users\\alexismimundo\\AppData\\Local\\Programs\\Stremio\\ffmpeg.exe',src=path.join(root,'dist/assets/videos/Video-2.mp4');
+const result=spawnSync(ff,['-hide_banner','-i',src,'-vf','blackdetect=d=0.08:pix_th=0.10:pic_th=0.97','-an','-f','null','-'],{encoding:'utf8'});fs.writeFileSync(path.join(__dirname,'video2-analysis.txt'),result.stderr);
+for(const t of [0,2,4.8])spawnSync(ff,['-y','-ss',String(t),'-i',src,'-frames:v','1',path.join(__dirname,'video2-frame-'+t+'.jpg')]);

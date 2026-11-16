@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "originalUnchanged": true,
+  "sourceHash": "4267dc96f853c96396f55ad1ef6d4bca68a050b44592c98f1bdabc3a0dc28d46",
+  "filter": "Lanczos 1920x1080 + unsharp 0.35; H.264 CRF 16; silent; faststart",
+  "bytes": 4837810,
+  "decode": "PASS"
+}

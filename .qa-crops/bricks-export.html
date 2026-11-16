@@ -1,0 +1,29 @@
+<!doctype html><html><body><script>
+window.ready=(async()=>{
+ const image=new Image();image.src='../dist/assets/ladrillos.webp';await image.decode();
+ const canvas=document.createElement('canvas');canvas.width=4000;canvas.height=5000;const ctx=canvas.getContext('2d');ctx.imageSmoothingQuality='high';
+ // Individual brick faces traced inside their mortar boundaries (2000px source).
+ const outlines=[
+ [[446,23],[772,18],[785,62],[766,91],[457,99],[439,72]],
+ [[840,16],[1160,14],[1150,77],[855,92],[819,67]],
+ [[121,140],[425,136],[437,182],[410,203],[139,209],[119,186]],
+ [[477,138],[790,132],[803,181],[774,201],[489,211],[470,189]],
+ [[834,134],[1148,128],[1160,177],[1129,204],[855,208],[824,180]],
+ [[1204,133],[1503,121],[1515,170],[1490,193],[1218,202],[1199,175]],
+ [[127,246],[442,235],[453,285],[429,312],[136,321],[118,295]],
+ [[496,244],[805,227],[813,277],[784,303],[514,315],[489,289]]
+ ];
+ const sprites=outlines.map(points=>{const minX=Math.min(...points.map(p=>p[0])),minY=Math.min(...points.map(p=>p[1])),maxX=Math.max(...points.map(p=>p[0])),maxY=Math.max(...points.map(p=>p[1]));const c=document.createElement('canvas');c.width=maxX-minX;c.height=maxY-minY;const g=c.getContext('2d');g.beginPath();points.forEach((p,i)=>i?g.lineTo(p[0]-minX,p[1]-minY):g.moveTo(p[0]-minX,p[1]-minY));g.closePath();g.clip();g.drawImage(image,-minX,-minY);return c});
+ // Narrow, coherent downward cascade. No upward spray, background or drawn trails.
+ const placements=[
+ [1640,350,690,-8],[2380,485,620,14],[1280,900,610,-20],[2130,1110,730,22],
+ [2740,1430,560,-32],[1550,1590,700,12],[920,1930,550,-38],[2220,2050,720,37],
+ [2980,2390,590,18],[1390,2520,670,-25],[2050,2880,620,68],[720,3090,540,29],
+ [2850,3250,700,-45],[1480,3500,680,33],[2330,3870,640,-19],[1050,4170,590,61],
+ [3060,4370,560,35],[1840,4620,710,-33]
+ ];
+ placements.forEach(([x,y,width,angle],i)=>{const sprite=sprites[i%sprites.length],height=width*sprite.height/sprite.width;ctx.save();ctx.translate(x,y);ctx.rotate(angle*Math.PI/180);ctx.drawImage(sprite,-width/2,-height/2,width,height);ctx.restore()});
+ const pixels=ctx.getImageData(0,0,4000,5000).data;let clear=0,ink=0;for(let i=3;i<pixels.length;i+=4){if(pixels[i]===0)clear++;else ink++}if(!ink||clear<15000000)throw Error('Transparency check failed');
+ return {width:4000,height:5000,bricks:placements.length,transparentPixels:clear,png:canvas.toDataURL('image/png')};
+})();
+</script></body></html>

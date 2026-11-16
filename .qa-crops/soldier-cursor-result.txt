@@ -1,0 +1,1 @@
+PASS: production JavaScript syntax, blue asset exists and selected, legacy cursor suppression cleared in active house.

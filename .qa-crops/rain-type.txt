@@ -1,0 +1,10 @@
+﻿
+dist\continuous\first-house.js:204:const 
+boxScrollHint=document.createElement('p');boxScrollHint.id='fh-box-scroll-hint';boxScrollHint.textContent='ARRASTRÁ PARA GIRAR · SCROLLEÁ PARA 
+SEGUIR ↓';boxScrollHint.hidden=true;document.body.append(boxLidHint,boxScrollHint);
+dist\continuous\first-house.css:8:#fh-box-scroll-hint{margin:0;width:max-content;max-width:90vw;text-align:center;transform:translateX(-50%);anima
+tion:fh-box-hint-pulse 2.8s ease-in-out infinite}
+dist\continuous\first-house.css:192:#approach-hint,#fh-box-scroll-hint{box-sizing:border-box;width:max-content;max-width:90vw;white-space:normal;t
+ext-align:center}
+
+

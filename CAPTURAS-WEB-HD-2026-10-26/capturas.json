@@ -1,0 +1,203 @@
+{
+  "resolution": "3840 × 2160 PNG",
+  "info": {
+    "three": true,
+    "boxFallback": false,
+    "images": [
+      "http://127.0.0.1:9881/dist/assets/casas-comunidad/recortes/casa-09.png",
+      "http://127.0.0.1:9881/dist/assets/casas-comunidad/recortes/casa-35.png"
+    ],
+    "failed": []
+  },
+  "records": [
+    {
+      "file": "01-entrada-ventana.png",
+      "title": "Entrada · ventana y título",
+      "phase": 0,
+      "width": 3840,
+      "height": 2160,
+      "bytes": 9505501
+    },
+    {
+      "file": "02-cocina.png",
+      "title": "Cocina · mesa, televisor y alacena",
+      "phase": 1.55,
+      "width": 3840,
+      "height": 2160,
+      "bytes": 9503523
+    },
+    {
+      "file": "03-caja-primer-plano.png",
+      "title": "Caja de recuerdos",
+      "phase": 2.35,
+      "width": 3840,
+      "height": 2160,
+      "bytes": 10701237
+    },
+    {
+      "file": "04-primera-casa-persiana.png",
+      "title": "Primera casa · fachada y persiana",
+      "phase": 3.05,
+      "width": 3840,
+      "height": 2160,
+      "bytes": 9221656
+    },
+    {
+      "file": "05-salon.png",
+      "title": "Primera casa · salón",
+      "phase": 4.05,
+      "width": 3840,
+      "height": 2160,
+      "bytes": 13175321
+    },
+    {
+      "file": "06-salon-recuerdo.png",
+      "title": "Salón · acercamiento al recuerdo",
+      "phase": 4.9,
+      "width": 3840,
+      "height": 2160,
+      "bytes": 11390697
+    },
+    {
+      "file": "07-barriletes.png",
+      "width": 3840,
+      "height": 2160,
+      "bytes": 10755145
+    },
+    {
+      "file": "08-objetos-antes-del-fuego.png",
+      "width": 3840,
+      "height": 2160,
+      "bytes": 11321212
+    },
+    {
+      "file": "09-segunda-casa.png",
+      "title": "Segunda casa · fachada",
+      "phase": 7.95,
+      "width": 3840,
+      "height": 2160,
+      "bytes": 10904798
+    },
+    {
+      "file": "10-pasillo.png",
+      "title": "Pasillo y patio",
+      "phase": 9.25,
+      "width": 3840,
+      "height": 2160,
+      "bytes": 10633491
+    },
+    {
+      "file": "11-patio-campo.png",
+      "title": "Patio y campo · recorrido lateral",
+      "phase": 10.8,
+      "width": 3840,
+      "height": 2160,
+      "bytes": 10565657
+    },
+    {
+      "file": "12-versiones-recuerdo.png",
+      "title": "Versiones de los objetos guardados",
+      "phase": 12.9,
+      "width": 3840,
+      "height": 2160,
+      "bytes": 8440793
+    },
+    {
+      "file": "13-terrero-ceramica.png",
+      "title": "Terrero · cerámica",
+      "phase": 14.9,
+      "width": 3840,
+      "height": 2160,
+      "bytes": 10943492
+    },
+    {
+      "file": "14-mesa.png",
+      "title": "Terrero · mesa",
+      "phase": 15.95,
+      "width": 3840,
+      "height": 2160,
+      "bytes": 9887378
+    },
+    {
+      "file": "15-cuaderno.png",
+      "title": "Cuaderno de memorias",
+      "phase": 16.95,
+      "width": 3840,
+      "height": 2160,
+      "bytes": 8410351
+    },
+    {
+      "file": "16-casas-horizontal-inicio.png",
+      "title": "Bicicleta · casas al comienzo",
+      "phase": 18.05,
+      "width": 3840,
+      "height": 2160,
+      "bytes": 11224206
+    },
+    {
+      "file": "17-casas-horizontal-medio.png",
+      "title": "Bicicleta · casas a mitad del camino",
+      "phase": 19.35,
+      "width": 3840,
+      "height": 2160,
+      "bytes": 11252098
+    },
+    {
+      "file": "18-casas-horizontal-final.png",
+      "title": "Bicicleta · final del recorrido",
+      "phase": 20.7,
+      "width": 3840,
+      "height": 2160,
+      "bytes": 11328615
+    },
+    {
+      "file": "19-dibujar-casa.png",
+      "title": "Contribución · dibujar tu casa",
+      "phase": 22.8,
+      "width": 3840,
+      "height": 2160,
+      "bytes": 10827183
+    },
+    {
+      "file": "20-cierre-interior.png",
+      "title": "Cierre · interior y frase",
+      "phase": 24.85,
+      "width": 3840,
+      "height": 2160,
+      "bytes": 8785955
+    },
+    {
+      "file": "21-cierre-ventana.png",
+      "title": "Cierre · ventana",
+      "phase": 26.8,
+      "width": 3840,
+      "height": 2160,
+      "bytes": 5745452
+    },
+    {
+      "file": "22-memoria-de-una-casa.png",
+      "title": "Detalle · memoria de una casa",
+      "phase": 19.35,
+      "width": 3840,
+      "height": 2160,
+      "bytes": 10172867
+    },
+    {
+      "file": "23-inventario-caja.png",
+      "title": "Inventario · objetos de ejemplo recogidos para la captura",
+      "phase": 19.35,
+      "width": 3840,
+      "height": 2160,
+      "bytes": 9665319
+    },
+    {
+      "file": "24-cierre-exterior.png",
+      "title": "Cierre · exterior",
+      "phase": 28.9,
+      "width": 3840,
+      "height": 2160,
+      "bytes": 10722335
+    }
+  ],
+  "errors": []
+}

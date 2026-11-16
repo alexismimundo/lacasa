@@ -1,0 +1,15 @@
+{
+  "result": {
+    "result": {
+      "type": "string",
+      "value": "PASS: continuous linear kitchen → video → box strip; 49 sampled phases without hold or easing restart; paired edges; fullscreen cover; reverse scroll; preserved box; 390x844"
+    }
+  },
+  "info": {
+    "result": {
+      "type": "string",
+      "value": "PASS: continuous linear kitchen → video → box strip; 49 sampled phases without hold or easing restart; paired edges; fullscreen cover; reverse scroll; preserved box; 390x844"
+    }
+  },
+  "errors": []
+}

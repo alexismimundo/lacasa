@@ -1,0 +1,15 @@
+﻿
+Name                             
+----                             
+.qa-crops                        
+dist                             
+source-materials                 
+CLAUDE_CONTINUAR.md              
+CONTINUIDAD-SUELO.md             
+ESTADO-Y-DECISIONES-2026-10-25.md
+FIRST_HOUSE.md                   
+LEEME.md                         
+MANIFIESTO.json                  
+TEXTURAL_ASSETS.json             
+
+

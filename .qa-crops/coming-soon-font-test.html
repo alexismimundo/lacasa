@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Coming soon font QA</title></head>
+<body style="margin:0;background:black"><iframe id="teaser" src="../dist/assets/coming-soon/index.html?dia=1" style="position:fixed;inset:0;width:100%;height:100%;border:0" title="Coming soon"></iframe>
+<script>
+window.ready=(async()=>{try{
+ const frame=document.querySelector('#teaser');await new Promise(resolve=>frame.addEventListener('load',resolve,{once:true}));
+ const doc=frame.contentDocument,win=frame.contentWindow,a=(v,m)=>{if(!v)throw Error(m)};
+ const faces=await doc.fonts.load('400 20px "IBM Plex Mono"','0123456789');a(faces.length===1&&faces[0].status==='loaded','local IBM Plex Mono loaded');
+ for(const id of ['dd','hh','mm','ss']){const el=doc.getElementById(id),style=win.getComputedStyle(el);a(style.fontFamily.includes('IBM Plex Mono'),'family '+id);a(style.fontWeight==='400','weight '+id);a(style.color==='rgb(255, 255, 255)','white '+id);a(/^\d{2}$/.test(el.textContent),'two digits '+id)}
+ const labels=[...doc.querySelectorAll('.contador i')];a(labels.length===4,'four labels');labels.forEach(el=>a(win.getComputedStyle(el).color==='rgb(209, 181, 213)','lilac label'));
+ const counter=doc.querySelector('.contador').getBoundingClientRect();a(counter.left>=0&&counter.right<=win.innerWidth,'counter within viewport');
+ return 'PASS: coming soon local IBM Plex Mono 400 loaded, white countdown numbers, #d1b5d5 unit labels, viewport fit '+innerWidth+'x'+innerHeight;
+ }catch(e){return 'FAIL: '+e.stack}})();
+</script></body></html>

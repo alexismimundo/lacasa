@@ -1,0 +1,2 @@
+const {spawnSync}=require('child_process'),path=require('path');const root=path.resolve(__dirname,'..'),ff='C:\\Users\\alexismimundo\\AppData\\Local\\Programs\\Stremio\\ffmpeg.exe';
+for(const part of ['first','last']){const r=spawnSync(ff,['-hide_banner','-y','-i',path.join(root,'dist/assets/videos/Video-landing-2-'+part+'.png'),'-vf','scale=960:-1','-frames:v','1',path.join(__dirname,'landing2-'+part+'.jpg')],{encoding:'utf8'});if(r.status)throw Error(r.stderr)}

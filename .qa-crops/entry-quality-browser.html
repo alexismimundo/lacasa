@@ -1,0 +1,7 @@
+<!doctype html><html><body><pre id="info"></pre><script>
+window.ready=(async()=>{const results=[];for(const item of [{"file":"dist/assets/entrada-video.mp4","bytes":11149750},{"file":"source-materials/web-originals/entrada-video.mp4","bytes":11072436},{"file":"dist/assets/entrada-inicial-hq.jpg","bytes":1983850},{"file":"dist/assets/entrada-final-hq.jpg","bytes":1981355}]){
+ const media=document.createElement(item.file.endsWith('.mp4')?'video':'img');document.body.append(media);
+ await new Promise((resolve,reject)=>{media.addEventListener(media.tagName==='VIDEO'?'loadedmetadata':'load',resolve,{once:true});media.onerror=()=>reject(Error(item.file));media.src='../'+item.file});
+ results.push({...item,width:media.videoWidth||media.naturalWidth,height:media.videoHeight||media.naturalHeight,duration:media.duration||null});
+ }const result=JSON.stringify(results,null,2);document.querySelector('#info').textContent=result;return result})().catch(e=>'FAIL: '+e.stack);
+</script></body></html>

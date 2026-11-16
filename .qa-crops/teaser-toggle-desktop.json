@@ -1,0 +1,15 @@
+{
+  "result": {
+    "result": {
+      "type": "string",
+      "value": "PASS: double toggles fast-normal-fast; no progress reset; only triple skips directly; music reset; 1280x900"
+    }
+  },
+  "info": {
+    "result": {
+      "type": "string",
+      "value": "PASS: double toggles fast-normal-fast; no progress reset; only triple skips directly; music reset; 1280x900"
+    }
+  },
+  "errors": []
+}

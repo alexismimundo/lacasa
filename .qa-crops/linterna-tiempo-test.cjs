@@ -1,0 +1,21 @@
+const fs=require('fs'),path=require('path'),vm=require('vm'),root=path.resolve(__dirname,'..');
+for(const file of ['first-house','casa2-oscuridad','memorias-ejemplo'])new vm.Script(fs.readFileSync(path.join(root,'dist/continuous',file+'.js'),'utf8'));
+const test=String.raw`<script>window.ready=(async()=>{try{
+ const a=(v,m)=>{if(!v)throw Error(m)},wait=ms=>new Promise(r=>setTimeout(r,ms));await wait(2400);reachInside();
+ const step=(p,dt=.016)=>{target=current=p;casaRender(performance.now(),dt)},tick=n=>{for(let i=0;i<n;i++)casaRender(performance.now(),.05)};
+ step(8);step(8.1);tick(65);a(current===8.6,'flashlight automatically enters video reveal');step(8);step(8.6);const mask=document.querySelector('.c2-mask'),film=document.querySelector('.c2-running-film'),phrase=document.querySelector('#fh-light-phrase');
+ a(getComputedStyle(phrase).visibility==='visible','phrase retained');a(Number(film.parentElement.style.opacity)===0,'video initially withheld');
+ step(9.8);a(current===8.6,'fast scroll waits for phrase');
+ tick(80);a(Number(mask.dataset.progress)>0,'automatic reveal without scrolling');a(Number(film.parentElement.style.opacity)>0,'video appears after wait');
+ a(!document.querySelector('.c2-scratch-toggle'),'no scratch control');
+ tick(150);a(Number(mask.dataset.progress)===1,'automatic reveal complete');
+ const data=mask.getContext('2d').getImageData(0,0,mask.width,mask.height).data;for(let i=3;i<data.length;i+=4)a(data[i]===0,'black fully clears');
+ step(10.7);a(document.querySelector('#fh-next-house').hidden,'next scene accessible');step(8);step(8.6);a(Number(mask.dataset.progress)===0,'reverse resets sequence');
+ const card=document.querySelector('#fh-next-house .memoria-ejemplo'),img=card.querySelector('.memoria-ejemplo-imagen');
+ const width=card.getBoundingClientRect().width;a(width<120&&width>20,'compact memory');a(getComputedStyle(img).pointerEvents==='auto','card clickable');
+ img.click();const dialog=document.querySelector('.memoria-lectura');a(dialog.open,'click enlarges memory');a(dialog.getBoundingClientRect().width>width,'reading size larger');dialog.querySelector('button').click();a(!dialog.open,'close returns to scene');
+ img.dispatchEvent(new KeyboardEvent('keydown',{key:'Enter',bubbles:true}));a(dialog.open,'keyboard opens');dialog.close();
+ for(const el of document.querySelectorAll('[data-asset-label],.c2-assets'))a(getComputedStyle(el).display==='none','pending labels hidden');
+ step(9.5);tick(90);return 'PASS timed phrase / single flashlight / autonomous reveal / no scroll skip / reverse reset / tiny cards '+Math.round(width)+'px / click and keyboard reader / hidden pending labels; '+innerWidth+'x'+innerHeight;
+ }catch(e){return 'FAIL '+e.stack}})();</script>`;
+fs.writeFileSync(path.join(__dirname,'linterna-tiempo-browser.html'),fs.readFileSync(path.join(root,'dist/index.html'),'utf8').replace('<head>','<head><base href="../dist/">').replace('</body>',test+'</body>'));

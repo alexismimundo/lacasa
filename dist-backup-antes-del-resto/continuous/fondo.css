@@ -1,0 +1,36 @@
+/* La Casa — fondo continuo: blanco, negro, azul. Las pantallas dejan de tener fondo propio. */
+#casa-fondo{position:absolute;inset:0;z-index:4;pointer-events:none;opacity:0;background:#f4f1ea url('../assets/fondo-papel.webp') center/1600px;background-blend-mode:multiply}
+#p3,#p4,#p5,#p6,#p7,#p8,#p9,#p10,#p11,#p11.luz-vuelve,#p12,#p13,#p14,#p15,#p17{background:none!important}
+#p13::before{display:none}
+#p12-piso{background:transparent}
+#p15-cielo{background:none}
+
+/* Segunda casa, en el negro: la fachada y el patio pasan a ser de noche. */
+.p8-fachada{filter:brightness(.42) saturate(.75)}
+#p8-interior{background:radial-gradient(ellipse at 50% 60%,#1d2638,#07090d)}
+#p9-fondo img{filter:brightness(.3) saturate(.6)}
+.p9-pasillo{filter:brightness(.42) saturate(.7)}
+.p9-casa-vecina,.p9-alambrado img,.p9-vias,.p9-laurel,.p9-moral>img,.arbol-img,.p9-bomba img,.p9-basural>img,.p9-tranquera img,.vaca{filter:brightness(.72)}
+#p11-oscuro{background:#050608}
+
+/* Tercera casa, en el azul: el cielo de la bicicleta toma el azul y el barrio queda al atardecer. */
+#p15-lejos{opacity:.4}
+#p15-cerca{filter:brightness(.88)}
+
+/* Texto suelto sobre fondo oscuro o azul: pasa a tinta clara. Lo que está sobre papel (cartas, cuaderno, carteles) no cambia. */
+body.fondo-tinta-clara :is(#p8-pista,#p13-pista,.p13-daisy .ladrido,#p14-cd-nota,#second-narrative,#second-caption,#second-hint,#p10-eleccion,#p10-elegida,#second-tabs button,#p10-eleccion button,#second-personal-label,.pista){color:#eef0f6!important}
+body.fondo-tinta-clara #second-tabs button[aria-pressed=true]{border-color:#eef0f6}
+body.fondo-tinta-clara #p10-eleccion button{border-bottom-color:#eef0f688}
+body.fondo-tinta-clara #second-drawing::after{color:#eef0f6}
+body.fondo-tinta-clara #escondidas{color:#eef0f6}
+body.fondo-tinta-clara #orientacion button{color:#eef0f6aa}
+body.fondo-tinta-clara #ori-casas button[aria-current=true]{color:#fff}
+body.fondo-tinta-clara #ori-herramientas button{color:#eef0f6}
+.p11-baldio{filter:brightness(.55) saturate(.8)}
+/* La cerámica se coloca sobre el azul: entre las juntas se ve el fondo. */
+.baldosa{margin:3px;width:calc(var(--lado) - 6px);height:calc(var(--lado) - 6px)}
+.baldosa.puesta{opacity:.92}
+
+/* Página continua: Mamá ocupa una pantalla y media; la frase arriba, la dirección más abajo. */
+#p7-frase{top:30vh!important}
+#p7 .direccion{top:112vh!important}

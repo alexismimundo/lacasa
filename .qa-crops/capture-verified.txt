@@ -1,0 +1,1 @@
+PASS: 24 PNG verificados en 3840x2160. Total 233.7 MB. Índice y LEEME creados.

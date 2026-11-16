@@ -1,0 +1,2 @@
+419:  if(burnRun&&!burnRun.done)return 6.9;
+420:  if(step>0&&current>=6.8&&current<7.3&&!burnRun)return Math.min(next,6.9);

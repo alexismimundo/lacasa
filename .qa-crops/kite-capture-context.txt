@@ -1,0 +1,172 @@
+﻿
+  dist\continuous\first-house.js:2:(()=>{'use strict';
+> dist\continuous\first-house.js:3:const A={robot:'assets/low-robot.webp',money:'assets/first-house/money.webp',bag:'assets/first-house/bag.webp',bagClosed:'assets/first-house/bag-closed.webp',legs:'assets/first-house/legs.webp',children:'assets/first-house/children.webp',sleep:'assets/first-house/sleep.webp',kite:'assets/first-house/kite.webp',soldiers:'assets/first-house/soldiers.webp',paper:'assets/fondo-papel.webp',cumbia:null};
+  dist\continuous\first-house.js:4:const key='la-casa-first-house-v2',blank=()=>({kept:[],bag:false,money:false,robot:false,box:false,shared:false,filters:[{x:33,y:28},{x:60,y:32}],flight:{phase:'ready',time:0,y:48,vy:0},burn:0,soldiers:false});
+  dist\continuous\first-house.js:5:let st=blank();try{const v=JSON.parse(sessionStorage.getItem(key));if(v)st={...st,...v,flight:{...st.flight,...v.flight}}}catch{}
+  dist\continuous\first-house.js:14:<div class="fh-shutter fh-layer"><div class="fh-metal-wall"></div><div class="fh-metal-roll"></div></div>
+> dist\continuous\first-house.js:15:<div class="fh-sky fh-layer"><svg class="fh-kite-strings" aria-hidden="true">${[...skyDesigns,'usuario'].map((_,i)=>`<path class="kite-string-${i}" pathLength="1"/>`).join('')}</svg>${skyDesigns.map((color,i)=>`<div class="fh-distant distant-${i}" aria-hidden="true">${im('assets/barrilete/volador-'+color+'.png')}${im('assets/barrilete/cola-'+['azul','rosa','negro'][i%3]+'.png','fh-kite-tail')}</div>`).join('')}<div class="fh-kite-entry"><button class="fh-kite" aria-label="Hacé clic para mantenerlo en el aire">${im('assets/barrilete/volador-usuario.png')}${im('assets/barrilete/cola-rosa.png','fh-kite-tail')}</button></div></div>
+> dist\continuous\first-house.js:16:<div class="fh-macro fh-layer"><div class="fh-macro-content">${im(A.kite,'fh-fallen-kite')}${im(A.robot,'fh-macro-robot')}${im(A.money,'fh-macro-money')}</div><div class="fh-burn-edge"></div><div class="fh-ash"></div></div>
+  dist\continuous\first-house.js:17:<div class="fh-end fh-layer"><button class="fh-soldiers" aria-label="Llevar conmigo">${im(A.soldiers,'','Soldaditos verdes de plástico')}</button><p class="fh-end-note"></p><span class="fh-continue">Seguí bajando ↓</span></div><div class="fh-notice" role="status" aria-live="polite"></div>`;
+  dist\continuous\first-house.js:18:$('inside').append(root);
+  dist\continuous\first-house.js:462:window.laCasaCarry={soldiers:st.soldiers};
+> dist\continuous\first-house.js:463:const kite=Q('.fh-kite',root);let tug=0;
+  dist\continuous\first-house.js:464:// Runtime steering does not persist across visits or replace the click impulse.
+  dist\continuous\first-house.js:465:const steering={x:null,y:48,offset:0,pointer:null,idle:Infinity,lastX:null,lastY:null};
+> dist\continuous\first-house.js:466:function kiteSteeringStep(offset,target,dt){return offset+(target-offset)*(1-Math.exp(-3.5*Math.max(0,Math.min(.05,dt))))}
+> dist\continuous\first-house.js:467:const skyKites=[...root.querySelectorAll('.fh-distant')],kiteEntry=Q('.fh-kite-entry',root),skyStrings=[...root.querySelectorAll('.fh-kite-strings path')];
+> dist\continuous\first-house.js:468:loadImages(kiteEntry);
+> dist\continuous\first-house.js:469:// Only the portion of the kite beyond the salon's clip is painted separately.
+  dist\continuous\first-house.js:470:// The original stays in the child's layer, behind the woman and other guests.
+> dist\continuous\first-house.js:471:const crossingKite=document.createElement('canvas');
+> dist\continuous\first-house.js:472:crossingKite.className='fh-crossing-kite';crossingKite.setAttribute('aria-hidden','true');
+> dist\continuous\first-house.js:473:crossingKite.style.cssText='position:absolute;inset:0;width:100%;height:100%;z-index:10;pointer-events:none';
+> dist\continuous\first-house.js:474:root.append(crossingKite);
+> dist\continuous\first-house.js:475:function paintCrossingKite(p){
+> dist\continuous\first-house.js:476: crossingKite.hidden=!(p>=5.28&&p<5.70);
+> dist\continuous\first-house.js:477: if(crossingKite.hidden)return;
+  dist\continuous\first-house.js:478: const ratio=Math.min(devicePixelRatio||1,2),w=Math.round(innerWidth*ratio),h=Math.round(innerHeight*ratio);
+> dist\continuous\first-house.js:479: if(crossingKite.width!==w||crossingKite.height!==h){crossingKite.width=w;crossingKite.height=h}
+> dist\continuous\first-house.js:480: const ctx=crossingKite.getContext('2d');ctx.setTransform(ratio,0,0,ratio,0,0);ctx.clearRect(0,0,innerWidth,innerHeight);
+  dist\continuous\first-house.js:481: const viewport=salonViewport.getBoundingClientRect();
+> dist\continuous\first-house.js:482: // Exclude the entire outgoing viewport: its crowd already occludes the real kite.
+  dist\continuous\first-house.js:483: ctx.save();ctx.beginPath();ctx.rect(0,0,innerWidth,innerHeight);
+  dist\continuous\first-house.js:484: ctx.rect(viewport.left,viewport.top,viewport.width,viewport.height);ctx.clip('evenodd');
+  dist\continuous\first-house.js:489: const child=Q('.fh-salon-kid',root),rect=child.getBoundingClientRect(),s=rect.width/child.clientWidth;
+> dist\continuous\first-house.js:490: const m=new DOMMatrix(getComputedStyle(kite).transform);
+  dist\continuous\first-house.js:491: ctx.setTransform(ratio*m.a*s,ratio*m.b*s,ratio*m.c*s,ratio*m.d*s,ratio*(rect.left+m.e*s),ratio*(rect.top+m.f*s));
+> dist\continuous\first-house.js:492: for(const image of kite.querySelectorAll('img')){
+  dist\continuous\first-house.js:493:  if(!image.complete||!image.naturalWidth)continue;
+  dist\continuous\first-house.js:494:  const style=getComputedStyle(image),im=new DOMMatrix(style.transform==='none'?undefined:style.transform),origin=style.transformOrigin.split(' ').map(parseFloat);
+  dist\continuous\first-house.js:499:}
+> dist\continuous\first-house.js:500:// One physical kite: held over the updated photo, then carried into the sky.
+> dist\continuous\first-house.js:501:function updateHeldKite(p){
+  dist\continuous\first-house.js:502: const crossing=p>5.05&&p<5.70;
+  dist\continuous\first-house.js:503:  salonViewport.style.overflow='hidden';
+  dist\continuous\first-house.js:505: if(p>=5.70){
+> dist\continuous\first-house.js:506:  if(kiteEntry.parentNode!==skyWorld)skyWorld.append(kiteEntry);
+> dist\continuous\first-house.js:507:  kiteEntry.style.zIndex='';
+> dist\continuous\first-house.js:508:  crossingKite.hidden=true;
+  dist\continuous\first-house.js:509:   if(playerString.parentNode!==skyWorld)skyWorld.append(playerString);
+> dist\continuous\first-house.js:510:   skyStrings[skyKites.length].removeAttribute('transform');
+  dist\continuous\first-house.js:511:   delete playerString.dataset.crossingPath;
+  dist\continuous\first-house.js:512:  return;
+  dist\continuous\first-house.js:515: const parent=child;
+> dist\continuous\first-house.js:516: if(kiteEntry.parentNode!==parent)parent.append(kiteEntry);
+  dist\continuous\first-house.js:517: // Stay inside the child's stacking context throughout release: the woman
+> dist\continuous\first-house.js:518: // must occlude the kite until the whole salon has left the viewport.
+> dist\continuous\first-house.js:519: kiteEntry.style.zIndex='3';kiteEntry.style.transform='none';
+> dist\continuous\first-house.js:520: kiteEntry.style.visibility=p>=2.1&&p<5.70?'visible':'hidden';
+> dist\continuous\first-house.js:521: kiteEntry.style.opacity='1';kite.inert=true;
+  dist\continuous\first-house.js:522: const rect=child.getBoundingClientRect();
+  dist\continuous\first-house.js:523: const width=held?child.clientWidth:rect.width,height=held?child.clientHeight:rect.height;
+  dist\continuous\first-house.js:525: const ox=(held?0:rect.left)+(width-3072*scale)/2,oy=(held?0:rect.top)+(height-2048*scale)/2;
+> dist\continuous\first-house.js:526: const w=kite.offsetWidth,h=kite.offsetHeight;if(!w||!h)return;
+  dist\continuous\first-house.js:527: const t=ease(5.05,5.70,p),mix=(a,b)=>a+(b-a)*t;
+  dist\continuous\first-house.js:528: const finalY=innerHeight*.48;
+  dist\continuous\first-house.js:529: // Upper tip (top midpoint) rests at (1650,1550), between the fingers.
+> dist\continuous\first-house.js:530: // A foreshortened transverse axis and long sideways axis lay the kite down.
+  dist\continuous\first-house.js:531: const a=mix(130*scale/w,1),b=mix(-95*scale/w,0);
+  dist\continuous\first-house.js:532: const c=mix(270*scale/h,0),d=mix(110*scale/h,1);
+  dist\continuous\first-house.js:534: const y=mix(oy+1597.5*scale,finalY-h/2);
+> dist\continuous\first-house.js:535: kite.style.left='0px';kite.style.top='0px';kite.style.transformOrigin='0 0';
+  dist\continuous\first-house.js:536: const parentScale=rect.width/child.clientWidth;
+> dist\continuous\first-house.js:537: kite.style.transform=held?`matrix(${a},${b},${c},${d},${x},${y})`:
+  dist\continuous\first-house.js:538:  `matrix(${a/parentScale},${b/parentScale},${c/parentScale},${d/parentScale},${(x-rect.left)/parentScale},${(y-rect.top)/parentScale})`;
+> dist\continuous\first-house.js:539: kiteEntry.dataset.release=String(t);
+  dist\continuous\first-house.js:540: updateReleaseString(p,t);
+> dist\continuous\first-house.js:541: paintCrossingKite(p);
+  dist\continuous\first-house.js:542:}
+  dist\continuous\first-house.js:543:// Keep the player's line above the heap, independent of the distant strings.
+  dist\continuous\first-house.js:545:playerString.setAttribute('class','fh-player-string');playerString.setAttribute('aria-hidden','true');
+> dist\continuous\first-house.js:546:playerString.append(skyStrings[skyKites.length]);skyWorld.append(playerString);
+  dist\continuous\first-house.js:547:// Loose thread: smooth, broad bends with anchored ends, never sharp zigzags.
+> dist\continuous\first-house.js:548:function looseKiteThread(x,y,endX,endY,index,time,still=false){
+  dist\continuous\first-house.js:549: const dx=endX-x,dy=endY-y,length=Math.hypot(dx,dy),nx=length?-dy/length:0,ny=length?dx/length:0;
+  dist\continuous\first-house.js:550: const slack=Math.min(length*.16,innerWidth*.065),wind=still?0:time*.65+index*1.7;
+  dist\continuous\first-house.js:565: if(playerString.parentNode!==child)child.append(playerString);
+> dist\continuous\first-house.js:566: const path=skyStrings[skyKites.length],m=new DOMMatrix(getComputedStyle(kite).transform);
+> dist\continuous\first-house.js:567: const x=rect.left+s*(m.e+m.a*kite.offsetWidth*.5+m.c*kite.offsetHeight*.98);
+> dist\continuous\first-house.js:568: const y=rect.top+s*(m.f+m.b*kite.offsetWidth*.5+m.d*kite.offsetHeight*.98);
+  dist\continuous\first-house.js:569: const imageScale=Math.max(rect.width/3072,rect.height/2048);
+  dist\continuous\first-house.js:570: const handX=rect.left+(rect.width-3072*imageScale)/2+1650*imageScale;
+  dist\continuous\first-house.js:573: const endX=mix(handX,w*.29),endY=mix(handY,h*1.15);
+> dist\continuous\first-house.js:574: const d=pinkKiteThread(x,y,endX,endY,Math.max(0,p-5.28)*4,reduced());
+  dist\continuous\first-house.js:575: path.setAttribute('d',d);path.setAttribute('transform',`matrix(${1/s} 0 0 ${1/s} ${-rect.left/s} ${-rect.top/s})`);
+  dist\continuous\first-house.js:576: path.style.visibility=p>=5.05?'visible':'hidden';path.style.strokeDasharray='none';path.style.strokeDashoffset='0';
+  dist\continuous\first-house.js:579:}
+> dist\continuous\first-house.js:580:function pinkKiteThread(x,y,endX,endY,time,still){
+  dist\continuous\first-house.js:581: const dx=endX-x,dy=endY-y,length=Math.hypot(dx,dy);
+  dist\continuous\first-house.js:582: const slack=Math.min(length*.12,innerWidth*.045);
+  dist\continuous\first-house.js:590:const flightReady=5.64,flightGate=5.70,flightPrompt=document.createElement('p');
+> dist\continuous\first-house.js:591:flightPrompt.className='fh-flight-start';flightPrompt.textContent='NO DEJES CAER EL BARRILETE';flightPrompt.hidden=true;Q('.fh-sky',root).append(flightPrompt);
+> dist\continuous\first-house.js:592:const flightWarning=document.createElement('p');flightWarning.className='fh-flight-start fh-flight-warning';flightWarning.textContent='NO DEJES CAER EL BARRILETE';flightWarning.hidden=true;flightWarning.setAttribute('role','status');Q('.fh-sky',root).append(flightWarning);
+  dist\continuous\first-house.js:593:// The child camera follows the shared scroll phase in both directions.
+  dist\continuous\first-house.js:594:window.firstHouseScrollLimit=(next,step)=>{
+  dist\continuous\first-house.js:602:function animateSky(p,dt){
+> dist\continuous\first-house.js:603: kite.style.transformOrigin='50% 50%';
+  dist\continuous\first-house.js:604: const still=reduced();
+  dist\continuous\first-house.js:605: if(!flightStartedThisVisit&&st.flight.phase!=='ready')st.flight={phase:'ready',time:0,y:48,vy:0};
+  dist\continuous\first-house.js:612:   function string(index,x,y,entry=1,offsetX=0,offsetY=0,depth=1){
+> dist\continuous\first-house.js:613:   const settling=index===skyKites.length?ease(0,1,st.flight.fallProgress||0):0;
+  dist\continuous\first-house.js:614:    const endX=w*(.15+(index%6)*.14+settling*.35)+offsetX,endY=h*(1.15+settling*1.34)+offsetY;
+  dist\continuous\first-house.js:615:   const path=skyStrings[index];
+  dist\continuous\first-house.js:619:     path.style.strokeOpacity=clamp(.24+depth*.08,.26,.42).toFixed(3);
+> dist\continuous\first-house.js:620:   skyStrings[index].setAttribute('d',index===skyKites.length?pinkKiteThread(x,y,endX,endY,skyTime,still):looseKiteThread(x,y,endX,endY,index,skyTime,still));
+  dist\continuous\first-house.js:621: }
+> dist\continuous\first-house.js:622: skyKites.forEach((el,i)=>{
+  dist\continuous\first-house.js:623:     // Rise from behind the outgoing shutter, opaque and tied only to scroll.
+  dist\continuous\first-house.js:624:     const delay=[0,.045,.09,.02,.07,.12,.055][i];
+  dist\continuous\first-house.js:638:    const playerRise=(1-ease(5.36,5.70,p))*h*1.15;
+> dist\continuous\first-house.js:639:  kiteEntry.style.opacity='1';
+> dist\continuous\first-house.js:640:  kiteEntry.style.transform=`translateY(${playerRise.toFixed(2)}px)`;
+> dist\continuous\first-house.js:641: kiteEntry.style.visibility=playerEntry>0?'visible':'hidden';
+> dist\continuous\first-house.js:642:  kite.inert=p<flightReady;
+  dist\continuous\first-house.js:643:  const f=st.flight,autopilot=!still&&f.phase==='ready'?Math.sin(skyTime/1.5)*5:0;
+  dist\continuous\first-house.js:644: const flying=f.phase==='flying',t=f.travel||0;
+  dist\continuous\first-house.js:648: const freeHorizontal=!still?clamp(launch*(Math.sin(t/2.6)*.10+Math.sin(t/4.7)*.045+edgeExcursion)+(f.drift||0)*.45,-.53,.53):0;
+> dist\continuous\first-house.js:649: if(flying)steering.offset=kiteSteeringStep(steering.offset,steering.x===null?freeHorizontal:steering.x,dt);
+  dist\continuous\first-house.js:650: const horizontal=flying?clamp(steering.offset,-.40,.40):0;
+  dist\continuous\first-house.js:651: if(flying)f.lastHorizontal=horizontal;
+  dist\continuous\first-house.js:657: if(flying)f.lastDepth=depth;
+> dist\continuous\first-house.js:658: kite.style.left=playerX+'px';kite.style.top=playerY+'px';
+  dist\continuous\first-house.js:659:  const desiredBank=flying?(steering.x===null?launch*(Math.cos(t/2.1)*20+Math.cos(t/5.3)*6):(steering.x-steering.offset)*65)+(f.gust||0)*14+(f.vy||0)*.18:f.phase==='fallen'?28+fallProgress*38:Math.sin(skyTime/3)*4;
+  dist\continuous\first-house.js:660: // Click tension affects acceleration, never the rendered angle directly.
+  dist\continuous\first-house.js:661: f.bank=(f.bank||0)+(desiredBank-(f.bank||0))*(1-Math.exp(-3*Math.min(Math.max(dt,0),.05)));
+> dist\continuous\first-house.js:662: kite.style.transform=`translate(-50%,-50%) rotate(${still?0:f.bank}deg) scale(${depth})`;
+> dist\continuous\first-house.js:663:   const tailAngle=(still?0:f.bank)*Math.PI/180,tailReach=kite.offsetHeight*.48*depth;
+> dist\continuous\first-house.js:664:   string(skyKites.length,playerX-Math.sin(tailAngle)*tailReach,playerY+playerRise+Math.cos(tailAngle)*tailReach,playerEntry,0,playerRise,depth);
+  dist\continuous\first-house.js:665:  flightPrompt.hidden=!(!flightStartedThisVisit&&p>=flightReady&&p<6.55);
+  dist\continuous\first-house.js:666:  const showTangle=f.entangled&&fallProgress<.25;
+> dist\continuous\first-house.js:667: const warningText='NO DEJES CAER EL BARRILETE';
+  dist\continuous\first-house.js:668: if(flightWarning.textContent!==warningText)flightWarning.textContent=warningText;
+  dist\continuous\first-house.js:669: flightWarning.hidden=!((showTangle||(flying&&f.sinceClick>.85&&steering.idle>.6))&&p>=flightReady&&p<6.55);
+> dist\continuous\first-house.js:670: root.querySelectorAll('.fh-kite-tail').forEach((el,i)=>{el.style.transform=`rotate(${still?0:Math.sin(skyTime/1.7+i)*11+Math.sin(skyTime/3.8+i)*6}deg)`});
+  dist\continuous\first-house.js:671:}
+  dist\continuous\first-house.js:672:function impulse(){const f=st.flight;if(f.phase==='fallen'||(f.phase==='ready'&&current<flightReady))return;if(f.phase==='ready'){flightStartedThisVisit=true;f.phase='flying';f.time=0;f.travel=0;flightPrompt.hidden=true}if(f.phase==='flying'){f.tension=Math.min(2,(f.tension||0)+1.1);f.sinceClick=0;flightWarning.hidden=true}else {f.vy=-2;tug=1}save()}
+  dist\continuous\first-house.js:681:function skyClick(){impulse()}
+> dist\continuous\first-house.js:682:kite.onclick=e=>{e.stopPropagation();skyClick(e)};steeringSky.onclick=skyClick;kite.onkeydown=e=>{if(e.code==='Space'){e.preventDefault();e.stopPropagation()}};
+  dist\continuous\first-house.js:683:steeringSky.addEventListener('pointerdown',e=>{if(e.button!==0||steering.pointer!==null||current<flightReady||current>6.4||st.flight.phase==='fallen')return;steerAt(e);steering.pointer=e.pointerId;steeringSky.setPointerCapture(e.pointerId)});
+  dist\continuous\first-house.js:684:steeringSky.addEventListener('pointermove',e=>{if(e.pointerType==='mouse'||e.pointerType==='pen'||steering.pointer===e.pointerId)steerAt(e)});
+  dist\continuous\first-house.js:717: // Falling position is integrated with the camera, not in a separate outgoing layer.
+> dist\continuous\first-house.js:718:   kite.setAttribute('aria-label',f.phase==='fallen'?'El barrilete cayó':'Mové el mouse para dirigirlo y sostenerlo; también podés hacer clic para darle impulso');
+  dist\continuous\first-house.js:719: tug=Math.max(0,tug-step*3);
+  dist\continuous\first-house.js:720:}
+  dist\continuous\first-house.js:722:function layer(sel,a){let el=layerCache.get(sel);if(!el){el=Q(sel,root);layerCache.set(sel,el)}el.style.opacity=clamp(a);el.style.visibility=a>.001?'visible':'hidden';el.inert=a<.7;if(a>.001&&!loadedLayers.has(el)){loadImages(el);loadedLayers.add(el)}return el}
+> dist\continuous\first-house.js:723:function followFallingKite(dt){
+  dist\continuous\first-house.js:724: const f=st.flight;
+  dist\continuous\first-house.js:725: const inside=adentro()&&!document.body.classList.contains('reentering')&&!document.body.classList.contains('closing-outside');
+  dist\continuous\first-house.js:735: f.fallProgress=progress;f.cameraY=190*progress;
+> dist\continuous\first-house.js:736: // One coordinate system: falling kite, floor and camera move together, no dissolve.
+  dist\continuous\first-house.js:737: target=current=fallCamera.start+(6.86-fallCamera.start)*progress;
+  dist\continuous\first-house.js:738: if(progress>=1){f.vy=0;f.landed=true;target=current=6.86;fallCamera=null;storeTravel();save()}
+  dist\continuous\first-house.js:743:window.casaRender=function(now,dt){
+> dist\continuous\first-house.js:744:followFallingKite(dt);
+  dist\continuous\first-house.js:745: if(endingRun&&!st.soldiers&&adentro()&&current>=6.8&&current<7.6&&target>=current)target=current=6.9;
+  dist\continuous\first-house.js:746:if(adentro()&&!flightStartedThisVisit&&current>=flightGate&&current<6.55){
+  dist\continuous\first-house.js:867:if(p>=5.28&&p<7.42){flight(dt,p);animateSky(p,dt)}else skyWasVisible=false;
+> dist\continuous\first-house.js:868:updateHeldKite(p);
+  dist\continuous\first-house.js:869:const macro=layer('.fh-macro',1);
+  dist\continuous\first-house.js:870:if(p>6.8&&p<7.12)macroDwell+=dt;
+
+
+

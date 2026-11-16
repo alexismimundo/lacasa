@@ -1,0 +1,5 @@
+const fs=require('fs'),path=require('path');
+require('./salon-small-reveal-test.cjs');
+const file=path.join(__dirname,'salon-small-reveal-browser.html');
+const checks=`const z=n=>+getComputedStyle(document.querySelector('.sp-'+n)).zIndex;a(z(6)>z(7)&&z(7)>z(3),'left white shirt above raised arm above woman');a(z(2)>z(1),'right neighbour above extended arm');sample(5.28);const salon=document.querySelector('.fh-salon'),imageW=3072*Math.max(salon.offsetWidth/3072,salon.offsetHeight/2048);a(Math.abs(new DOMMatrix(document.querySelector('.sp-7').style.transform).m41+imageW*.020)<.1,'raised arm moves slightly further left');a(Math.abs(new DOMMatrix(document.querySelector('.sp-6').style.transform).m41+imageW*.012)<.1,'white shirt movement unchanged');`;
+fs.writeFileSync(path.join(__dirname,'salon-layer-order-browser.html'),fs.readFileSync(file,'utf8').replace("return 'PASS: late small reveal;",checks+"return 'PASS: corrected left/right stacking; extra small left movement; late small reveal;"));

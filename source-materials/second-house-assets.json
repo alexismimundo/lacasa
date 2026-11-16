@@ -1,0 +1,56 @@
+{
+  "method": "Herramienta integrada de generación de imágenes",
+  "documentaryAvailable": false,
+  "assets": [
+    {
+      "file": "dist/assets/second-base.png",
+      "prompt": "Use case: photorealistic-natural. Provisional reconstructed scene, NOT documentary. A modest domestic corner, worn blue #335386 plaster wall with a few simple chalk tally strokes and a tiny childlike sun (NO words), a small wooden table centered lower half, a round portable 1990s cassette radio on the table right of center. Straight-on fixed camera, broad empty blue wall above, mild oblique table surface visible, intimate natural light, photographic grain and subtle analog worn paper edges. Landscape 3:2. No people, no autobiographical labels, no text or logos. Keep wall, table and radio in clearly defined positions to compare later variants.",
+      "provisional": true
+    },
+    {
+      "file": "dist/assets/second-radio.png",
+      "prompt": "Photographic cutout of a modest ROUND portable 1990s radio cassette boombox, worn blue gray plastic, cream buttons and a narrow tuning dial with one small lilac indicator. Whole object visible, slightly from above, natural analog photo grain, isolated truly transparent background, no hands, no logos, no readable writing. Blue #335386 collage palette.",
+      "provisional": true
+    },
+    {
+      "file": "dist/assets/second-water.png",
+      "prompt": "Photographic cutout of a worn shallow enamel basin containing still water with a subtle pale lilac reflection. Seen from slightly above so the water surface is visible. Blue #335386 cyanotype shadows, cream enamel with chips, quiet domestic object, analog grain, whole object isolated on truly transparent background. No people no text no splash.",
+      "provisional": true
+    },
+    {
+      "file": "dist/assets/second-drawing.png",
+      "prompt": "A tentative childlike drawing on a small worn cream sheet of paper, blue wax crayon: a simple house, a window, a small sun and a few loose marks, no people and NO words. Handmade uneven lines, analog scanned material, slightly torn paper edges, entire sheet visible isolated on truly transparent background. Blue #335386 only with a tiny lilac mark. This is a fictional prototype drawing, not an archival childhood document.",
+      "provisional": true
+    },
+    {
+      "file": "dist/assets/second-memory.png",
+      "editTarget": "dist/assets/second-base.png",
+      "prompt": "Edit target: this provisional reconstructed domestic corner. Keep EXACT same landscape canvas, fixed camera, perspective, table position and silhouette, radio position, window light and outer paper border. Create the RECUERDO version of this same image: make some blue wall regions more saturated and lilac, erase a few worn wall details into pale paper patches, slightly exaggerate the radio's visual intensity WITHOUT moving it, replace a small upper-left patch of wall with loose blue crayon hatch marks. Subtle analog photomontage showing remembered layers, not a new scene. No people no new events no readable writing. Maintain precise alignment of the table and radio outlines with reference.",
+      "provisional": true
+    },
+    {
+      "file": "dist/assets/second-missing.png",
+      "editTarget": "dist/assets/second-base.png",
+      "prompt": "Edit target: this provisional reconstructed domestic corner. Keep EXACT same landscape canvas, perspective, camera, outer border and locations of wall, table and radio. Create LO QUE FALTA version: most of the picture is incomplete warm pale paper; retain irregular portions of the blue wall and a fragment of the tabletop in their original positions. The radio is absent, leaving a faint worn outline exactly where it was. Large areas of blank scanned paper, irregular missing-image boundaries, no blur, no loading symbols, no interface, no text, no new objects no people. This is intentional incomplete memory, not a damaged upload.",
+      "provisional": true
+    }
+  ],
+  "disclosure": {
+    "base": "Registro — pendiente de incorporar / Imagen provisional reconstruida.",
+    "memory": "Recuerdo / Reconstrucción visual tentativa.",
+    "missing": "Lo que falta / Composición incompleta · ausencia de información."
+  },
+  "configuration": "secondNarrative y secondStates en dist/index.html",
+  "viewState": {
+    "key": "la-casa-segunda-vista-v1",
+    "storage": "sessionStorage",
+    "fields": [
+      "index",
+      "explored"
+    ],
+    "affectsPersonalContributions": false,
+    "affectsTape": false,
+    "coverSlotsUsed": 0
+  },
+  "note": "No se dispone de una fotografía documental de este rincón. Todas las variantes se derivaron de la misma base provisional; no afirman acontecimientos autobiográficos."
+}

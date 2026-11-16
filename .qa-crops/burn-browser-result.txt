@@ -1,0 +1,1 @@
+BROWSER PASS: black edge, transparent paper center, production canvas draw

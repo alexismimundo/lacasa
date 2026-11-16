@@ -1,0 +1,1 @@
+﻿PASS: single gesture reaches child continuously; reverse cancels; inventory and drag stop navigation; flight gate preserved; reduced motion and gallery stay manual

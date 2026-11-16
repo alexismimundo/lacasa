@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><style>body{margin:0;background:#eee}canvas{width:100vw;height:100vh}pre{position:fixed;top:0;background:white}</style></head><body><canvas id="output" width="640" height="360"></canvas><pre id="info">PASS: MP4 decoded; green background keyed to transparency; 1920x1080; duration 4</pre><script>const root=document.body,A={paper:'../dist/assets/fondo-papel.webp'},burnCanvas=document.querySelector('#output'),burnContext=burnCanvas.getContext('2d'),clamp=x=>Math.max(0,Math.min(1,x)),ease=(a,b,x)=>{const t=clamp((x-a)/(b-a));return t*t*(3-2*t)},reduced=()=>false,st={burn:0},syncObjects=()=>{};let burnRun=null,burnFrame=-1,burnSize='',burnVisible=0;
+const fireVideo=document.createElement('video');fireVideo.muted=true;fireVideo.playsInline=true;fireVideo.preload='auto';fireVideo.setAttribute('aria-hidden','true');fireVideo.hidden=true;
+fireVideo.src='../dist/assets/videos/Papel_quemandose_en_fondo_verde_1080p_20261026142343.mp4';root.append(fireVideo);
+const fireBuffer=document.createElement('canvas'),firePixels=fireBuffer.getContext('2d',{willReadFrequently:true});
+const fireMask=document.createElement('canvas'),fireMaskContext=fireMask.getContext('2d');
+let fireLastTime=-1,fireFailed=false,fireCoverage=null;
+function keyFireFrame(data,coverage){
+ for(let i=0,j=0;i<data.length;i+=4,j++){
+  const r=data[i],g=data[i+1],b=data[i+2],excess=g-Math.max(r,b);
+  const key=clamp((excess-8)/35)*clamp((g-38)/40),alpha=Math.round(data[i+3]*(1-key));
+  // Both layers come from this exact pixel, not an independent geometric front.
+  coverage[j]=Math.max(coverage[j],alpha);
+  const luminance=r*.299+Math.min(g,Math.max(r,b)+8)*.587+b*.114;
+  const ink=luminance>=125?244:16;
+  data[i]=data[i+1]=data[i+2]=ink;data[i+3]=alpha;
+ }
+}
+function resetFireMask(){
+ fireLastTime=-1;fireCoverage=null;fireMaskContext.clearRect(0,0,fireMask.width,fireMask.height);
+}
+fireVideo.addEventListener('error',()=>{fireFailed=true});
+function compositeFire(ctx,w,h,progress){
+ if(reduced()||fireFailed||fireVideo.readyState<2||progress<=0||progress>=1)return;
+ const fw=Math.min(960,Math.round(innerWidth)),fh=Math.round(fw*fireVideo.videoHeight/fireVideo.videoWidth);
+ if(fireBuffer.width!==fw||fireBuffer.height!==fh){
+  fireBuffer.width=fw;fireBuffer.height=fh;
+  // Preserve already consumed areas when the viewport changes.
+  const old=document.createElement('canvas');old.width=fireMask.width;old.height=fireMask.height;
+  if(old.width&&old.height)old.getContext('2d').drawImage(fireMask,0,0);
+  fireMask.width=fw;fireMask.height=fh;
+  if(old.width&&old.height)fireMaskContext.drawImage(old,0,0,fw,fh);
+  const previous=fireMaskContext.getImageData(0,0,fw,fh).data;fireCoverage=new Uint8ClampedArray(fw*fh);
+  for(let j=0;j<fireCoverage.length;j++)fireCoverage[j]=previous[j*4+3];
+  fireLastTime=-1;
+ }
+ if(!fireCoverage)fireCoverage=new Uint8ClampedArray(fw*fh);
+ if(fireLastTime!==fireVideo.currentTime){
+  firePixels.drawImage(fireVideo,0,0,fw,fh);
+  const frame=firePixels.getImageData(0,0,fw,fh),data=frame.data;
+  keyFireFrame(data,fireCoverage);
+  const mask=fireMaskContext.createImageData(fw,fh);
+  for(let j=0;j<fireCoverage.length;j++)mask.data[j*4+3]=fireCoverage[j];
+  fireMaskContext.putImageData(mask,0,0);
+  firePixels.putImageData(frame,0,0);fireLastTime=fireVideo.currentTime;
+ }
+ // Mask and flame use identical dimensions, timing and viewport transform.
+ ctx.drawImage(fireMask,0,0,w,h);revealDarkPaper(ctx,w,h,Math.min(devicePixelRatio||1,1.5));
+ ctx.drawImage(fireBuffer,0,0,w,h);
+}
+// The revealed surface is the same paper, inverted, not a flat black overlay.
+const darkPaper=new Image(),darkSurface=document.createElement('canvas');let darkSurfaceSize='';
+darkPaper.onload=()=>{darkSurfaceSize='';burnFrame=-1;drawPaperBurn(burnVisible)};
+darkPaper.src=A.paper;
+function revealDarkPaper(ctx,w,h,ratio){
+ if(!darkPaper.complete||!darkPaper.naturalWidth)return;
+ const size=w+'x'+h;
+ if(darkSurfaceSize!==size){
+  darkSurface.width=w;darkSurface.height=h;
+  const paper=darkSurface.getContext('2d'),tw=1600*ratio,th=tw*darkPaper.naturalHeight/darkPaper.naturalWidth;
+  const x=(w-tw)/2,y=-190*innerHeight/100*ratio;
+  paper.fillStyle='#0b0b0d';paper.fillRect(0,0,w,h);
+  paper.filter='grayscale(1) invert(1) brightness(.7)';
+  for(let px=x-Math.ceil(x/tw)*tw;px<w;px+=tw){
+   for(let py=y-Math.floor(y/th)*th-th;py<h;py+=th)paper.drawImage(darkPaper,px,py,tw,th);
+  }
+  paper.filter='none';darkSurfaceSize=size;
+ }
+ ctx.save();ctx.globalCompositeOperation='source-in';ctx.drawImage(darkSurface,0,0);ctx.restore();
+}
+function drawPaperBurn(progress){
+ const ratio=Math.min(devicePixelRatio||1,1.5),w=Math.round(innerWidth*ratio),h=Math.round(innerHeight*ratio),size=w+'x'+h;
+ const frame=progress>=1?181:Math.floor(progress*180);
+ if(size===burnSize&&frame===burnFrame&&(progress<=0||progress>=1||reduced()))return;
+ burnSize=size;burnFrame=frame;
+ if(burnCanvas.width!==w||burnCanvas.height!==h){burnCanvas.width=w;burnCanvas.height=h}
+ const ctx=burnContext;if(!ctx)return;
+ ctx.clearRect(0,0,w,h);if(progress<=0)return;
+ ctx.fillStyle='#0b0b0d';
+ if(progress>=1){ctx.fillRect(0,0,w,h);revealDarkPaper(ctx,w,h,ratio);return}
+ if(reduced()||fireFailed){ctx.globalAlpha=progress;ctx.fillRect(0,0,w,h);ctx.globalAlpha=1;revealDarkPaper(ctx,w,h,ratio);return}
+ compositeFire(ctx,w,h,progress);
+}
+function updatePaperBurn(p,dt){
+ // Runtime progress is separate from persisted destruction. Earlier scenes stay white.
+ if(p<6.88){burnVisible=0;fireVideo.pause();if(burnRun&&burnRun.done)burnRun=null}
+ else if(p<7.6){
+  if(!burnRun){burnRun={elapsed:0,done:false,waiting:0};fireVideo.currentTime=0;resetFireMask()}
+  const duration=reduced()?1.2:(Number.isFinite(fireVideo.duration)?fireVideo.duration:4);
+  if(!document.hidden&&!burnRun.done){
+   if(fireVideo.readyState<2){burnRun.waiting+=Math.min(Math.max(dt,0),.05);if(burnRun.waiting>8)fireFailed=true}
+   if(!reduced()&&!fireFailed&&fireVideo.paused&&!fireVideo.ended)fireVideo.play().catch(()=>{fireFailed=true});
+   const usingVideo=!reduced()&&!fireFailed;
+   if(usingVideo&&fireVideo.readyState>=2)burnRun.elapsed=fireVideo.currentTime;
+   else if(!usingVideo)burnRun.elapsed+=Math.min(Math.max(dt,0),.05);
+   burnRun.done=fireVideo.ended||burnRun.elapsed>=duration;
+  }
+  burnVisible=burnRun.done?1:clamp(burnRun.elapsed/duration);
+  if(burnRun.done)fireVideo.pause();
+ }
+ if(burnVisible>st.burn){const first=st.burn===0;st.burn=burnVisible;if(first)syncObjects()}
+ drawPaperBurn(burnVisible);
+ return burnVisible;
+}
+;fireVideo.addEventListener('loadeddata',()=>{try{burnCanvas.width=640;burnCanvas.height=360;compositeFire(burnContext,640,360,.5);const d=firePixels.getImageData(0,0,fireBuffer.width,fireBuffer.height).data;let green=0;for(let i=0;i<d.length;i+=4)if(d[i+1]>d[i]+25&&d[i+1]>d[i+2]+25&&d[i+3]>20)green++;if(green)throw Error('Green remains: '+green);document.querySelector('#info').textContent='PASS: MP4 decoded; green background keyed to transparency; '+fireVideo.videoWidth+'x'+fireVideo.videoHeight+'; duration '+fireVideo.duration;fireVideo.play();}catch(e){document.querySelector('#info').textContent='FAIL '+e.stack}});</script><video playsinline="" preload="auto" aria-hidden="true" hidden="" src="../dist/assets/videos/Papel_quemandose_en_fondo_verde_1080p_20261026142343.mp4"></video></body></html>

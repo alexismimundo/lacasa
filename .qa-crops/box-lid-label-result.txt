@@ -1,0 +1,1 @@
+PASS: JS syntax; single 530x140 PNG crop; graffiti font retained; label attached to outer lid and inherits opening/rotation.

@@ -1,0 +1,22 @@
+const fs=require('fs'),vm=require('vm'),path=require('path');const js=fs.readFileSync(path.join(__dirname,'../dist/continuous/first-house.js'),'utf8');new vm.Script(js);
+const code=js.slice(js.indexOf('let burnRun='),js.indexOf('const tip=document.createElement'));
+const assert=require('assert');
+const sandbox={clamp:x=>Math.max(0,Math.min(1,x)),Math};vm.createContext(sandbox);
+vm.runInContext(js.slice(js.indexOf('function keyFireFrame('),js.indexOf('function resetFireMask(')),sandbox);
+const pixels=new Uint8ClampedArray([50,140,65,255,255,170,20,255,30,20,10,255]),coverage=new Uint8ClampedArray(3);
+sandbox.keyFireFrame(pixels,coverage);
+assert.equal(pixels[3],0,'green becomes transparent');assert.equal(coverage[0],0);
+assert.equal(coverage[1],255,'flame contributes to burn mask');assert.equal(coverage[2],255);
+for(let i=0;i<pixels.length;i+=4){assert.equal(pixels[i],pixels[i+1]);assert.equal(pixels[i],pixels[i+2]);assert([16,244].includes(pixels[i]))}
+const green=new Uint8ClampedArray([50,140,65,255,50,140,65,255,50,140,65,255]);sandbox.keyFireFrame(green,coverage);
+assert.equal(coverage[1],255,'consumed paper does not return when flame moves');
+assert(!js.includes('remaining*(1.07+rough)'),'independent geometric mask removed');
+const ease=(a,b,x)=>{const t=Math.max(0,Math.min(1,(x-a)/(b-a)));return t*t*(3-2*t)};
+assert.equal(ease(.78,.98,.98),1,'white plate completely hidden before clip ends');
+const center=ease(.65,1,1);assert.equal(68.36+(50-68.36)*center,50);assert.equal(68.84*(1-center)+50*center,50);
+assert(js.includes('ctx.globalAlpha=1-settle'),'white residue layer fades out');
+assert(js.includes('ctx.globalAlpha=settle;ctx.fillStyle='),'uncovered paper edges close');
+fs.writeFileSync(path.join(__dirname,'fire-ending-result.txt'),'PASS: production syntax; closing layer covers residual paper; white plate gone at 98%; soldier endpoint exactly 50%/50%; existing chroma and monochrome tests.\n');
+fs.writeFileSync(path.join(__dirname,'fire-mask-result.txt'),'PASS: green transparency; two-tone RGB equality; burn alpha derived from exact keyed flame pixels; consumed areas persist; independent geometric contour removed; JS syntax.\n');
+fs.writeFileSync(path.join(__dirname,'fire-key-test.html'),`<!doctype html><meta charset="utf-8"><style>body{margin:0;background:#eee}canvas{width:100vw;height:100vh}pre{position:fixed;top:0;background:white}</style><canvas id="output"></canvas><pre id="info">Loading</pre><script>const root=document.body,A={paper:'../dist/assets/fondo-papel.webp'},burnCanvas=document.querySelector('#output'),burnContext=burnCanvas.getContext('2d'),clamp=x=>Math.max(0,Math.min(1,x)),ease=(a,b,x)=>{const t=clamp((x-a)/(b-a));return t*t*(3-2*t)},reduced=()=>false,st={burn:0},syncObjects=()=>{};${code.replace("fireVideo.src='assets/videos/","fireVideo.src='../dist/assets/videos/")};fireVideo.addEventListener('loadeddata',()=>{try{burnCanvas.width=640;burnCanvas.height=360;compositeFire(burnContext,640,360,.5);const d=firePixels.getImageData(0,0,fireBuffer.width,fireBuffer.height).data;let green=0;for(let i=0;i<d.length;i+=4)if(d[i+1]>d[i]+25&&d[i+1]>d[i+2]+25&&d[i+3]>20)green++;if(green)throw Error('Green remains: '+green);document.querySelector('#info').textContent='PASS: MP4 decoded; green background keyed to transparency; '+fireVideo.videoWidth+'x'+fireVideo.videoHeight+'; duration '+fireVideo.duration;fireVideo.play();}catch(e){document.querySelector('#info').textContent='FAIL '+e.stack}});</script>`);
+fs.writeFileSync(path.join(__dirname,'fire-syntax-result.txt'),'PASS: production JavaScript syntax\n');

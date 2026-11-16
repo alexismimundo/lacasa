@@ -1,0 +1,25 @@
+/* Preserve each scene's placement; the approved PNG owns the complete card design. */
+.memoria-ejemplo>:not(.memoria-ejemplo-imagen){display:none!important}
+.memoria-ejemplo{padding:0!important;background:none!important;box-shadow:none!important}
+.memoria-ejemplo>.memoria-ejemplo-imagen{display:block!important;width:100%!important;height:auto!important;max-height:none!important;object-fit:contain!important;margin:0!important;pointer-events:none}
+.tu-memory-preview.memoria-ejemplo{max-width:240px;margin:12px auto 0;white-space:normal}
+#tu-house-memory.memoria-ejemplo>button{display:block!important;position:absolute;right:4px;top:4px;z-index:2;background:#F4F2EA}
+.salida-memory.memoria-ejemplo{max-height:none;width:8%;top:43%;overflow:visible}
+#community-memory>.memoria-ejemplo{width:min(100%,340px);margin:15px auto}
+/* Match the small card emerging from the 3D box, rather than a reading panel. */
+.memoria-ejemplo{width:var(--memory-card-width,clamp(48px,8vw,110px))!important;max-width:var(--memory-card-width,clamp(48px,8vw,110px))!important;overflow:visible!important;pointer-events:auto}
+.memoria-ejemplo>.memoria-ejemplo-imagen{pointer-events:auto!important;cursor:zoom-in;touch-action:none}
+.memoria-ejemplo>.memoria-ejemplo-imagen:focus-visible{outline:2px dashed #335386;outline-offset:5px}
+.memoria-lectura{position:fixed;inset:0;width:min(280px,76vw);max-height:85dvh;margin:auto;padding:0;border:0;overflow:visible;background:transparent;color:#335386;z-index:10000;touch-action:none;cursor:grab}
+.memoria-lectura[open]{animation:memoria-aparecer .38s ease-out both}
+.memoria-lectura[open].memoria-cerrando{animation:memoria-desaparecer .2s ease-in both}
+.memoria-guardada{display:none!important}
+body .caja-ghost,body .guardado-vuela{z-index:10020;pointer-events:none}
+@keyframes memoria-aparecer{from{opacity:0;transform:translateY(12px) scale(.9)}to{opacity:1;transform:translateY(0) scale(1)}}
+@keyframes memoria-desaparecer{from{opacity:1;transform:scale(1)}to{opacity:0;transform:translateY(6px) scale(.96)}}
+@media(prefers-reduced-motion:reduce){.memoria-lectura[open]{animation-duration:.01ms}.memoria-lectura[open].memoria-cerrando{animation-duration:.01ms}}
+.memoria-lectura::backdrop{background:#0b0b0da8}
+.memoria-lectura>img{display:block;width:100%;max-height:80dvh;object-fit:contain}
+.memoria-lectura>button{position:absolute;right:-12px;top:-16px;width:32px;height:32px;border:1px solid #335386;border-radius:50%;background:#F4F2EA;color:#335386;font:24px/1 Georgia;cursor:pointer}
+/* Production presentation: retain asset diagnostics in code, never on the scene. */
+[data-asset-label],.c2-assets{display:none!important}

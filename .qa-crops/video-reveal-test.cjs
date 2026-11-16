@@ -1,0 +1,21 @@
+const fs=require('fs'),path=require('path'),vm=require('vm');
+const root=path.resolve(__dirname,'..');
+for(const name of ['first-house','casa2-oscuridad'])new vm.Script(fs.readFileSync(path.join(root,'dist/continuous',name+'.js'),'utf8'));
+const test=String.raw`<script>window.ready=(async()=>{try{
+ const wait=ms=>new Promise(r=>setTimeout(r,ms)),a=(v,m)=>{if(!v)throw Error(m)};
+ await wait(3000);reachInside();
+ const step=p=>{target=current=p;casaRender(performance.now(),.016)},box=document.querySelector('#fh-model-box'),film=document.querySelector('.c2-running-film');
+ for(let i=0;i<80&&box.dataset.loaded!=='true';i++)await wait(100);
+ a(box.dataset.loaded==='true','3D model loaded');a(!box.classList.contains('fh-mv-fallback'),'real 3D, no fallback');
+ a(document.querySelector('#house-film').getAttribute('src').includes('glicinas-entrada'),'entry is only wisteria');
+ a(!performance.getEntriesByType('resource').some(r=>/cdn.jsdelivr.net.*three/.test(r.name)),'no external Three.js dependency');
+ step(1.8);await wait(100);box.click();await wait(450);a(window.laCasaBoxOpening>.5,'3D box opens');box.click();
+ step(9.5);for(let i=0;i<50&&film.readyState<2;i++)await wait(100);a(film.readyState>=2,'running video decoded');
+ a(film.closest('#fh-next-house'),'video inside original flashlight');
+ if(!matchMedia('(prefers-reduced-motion:reduce)').matches){const t=film.currentTime;await wait(250);a(film.currentTime!==t,'video actually plays')}else a(film.paused,'reduced motion still');
+ a(Math.abs(film.duration-1.36)<.05,'clean running shot duration');
+ step(10.55);const mask=document.querySelector('.c2-mask'),data=mask.getContext('2d').getImageData(0,0,mask.width,mask.height).data;for(let i=3;i<data.length;i+=4)a(data[i]===0,'black fully cleared');
+ step(10.7);a(film.paused,'video pauses after handoff');step(8.4);a(film.paused,'video pauses in reverse');step(9.5);
+ return 'PASS entry wisteria / running child reveal / decoded playback / reverse / fully clear mask / local Three.js / real box opens; '+innerWidth+'x'+innerHeight;
+ }catch(e){return 'FAIL '+e.stack}})();</script>`;
+fs.writeFileSync(path.join(__dirname,'video-reveal-browser.html'),fs.readFileSync(path.join(root,'dist/index.html'),'utf8').replace('<head>','<head><base href="../dist/">').replace('</body>',test+'</body>'));

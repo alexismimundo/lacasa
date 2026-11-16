@@ -1,0 +1,1 @@
+/* Ambient light cuts retired. Narrative cuts remain in teaser-gate.js and first-house.js. */

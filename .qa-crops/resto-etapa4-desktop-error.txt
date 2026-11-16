@@ -1,0 +1,4 @@
+Error: ENOENT: no such file or directory, scandir 'C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\.qa-crops\resto-etapa4-desktop-downloads'
+    at Object.readdirSync (node:fs:1631:26)
+    at Object.readdirSync (node:electron/js2c/node_init:2:16179)
+    at C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\.qa-crops\resto-etapa4-runner.cjs:9:1176

@@ -1,0 +1,17 @@
+{
+  "result": {
+    "result": {
+      "type": "object",
+      "value": {
+        "width": 2000,
+        "height": 2000
+      }
+    }
+  },
+  "info": {
+    "result": {
+      "type": "undefined"
+    }
+  },
+  "errors": []
+}

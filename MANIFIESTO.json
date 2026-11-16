@@ -1,0 +1,1442 @@
+[
+  {
+    "path": "FIRST_HOUSE.md",
+    "bytes": 2304,
+    "sha256": "85c3a357fd081d9f80f03c505e10e22688ec23c809e9e16ed22908b38cb80139"
+  },
+  {
+    "path": "TEXTURAL_ASSETS.json",
+    "bytes": 1569,
+    "sha256": "62af6657546000456a4b85f9cca58824f2cdd222fefa39de39a987e6801111a9"
+  },
+  {
+    "path": "dist/assets/box-base.webp",
+    "bytes": 439630,
+    "sha256": "36b294a6db47f6502ade42e2385db0971f46c45dc41198592fa1920ec248252f"
+  },
+  {
+    "path": "dist/assets/box-key.webp",
+    "bytes": 230174,
+    "sha256": "9b8652096cca8c2aa8fb8976441d6a68ddb86ca6e01b68ff789de91df5ea32f9"
+  },
+  {
+    "path": "dist/assets/box-lid.webp",
+    "bytes": 327240,
+    "sha256": "8a9d73053deb150e36c8117b30b45c48d4e0169758dcc8234038abb7c1050ab4"
+  },
+  {
+    "path": "dist/assets/box-spoon.webp",
+    "bytes": 152644,
+    "sha256": "0b0084cdc5e08039b311295f950b08d7419b90b4a8f3d5ba1a294c2f256883eb"
+  },
+  {
+    "path": "dist/assets/bridge-tape.webp",
+    "bytes": 177754,
+    "sha256": "fc6cd9b2056c95fefe6740be8cf225e16e617ecd01f54e253a012874e4487ff1"
+  },
+  {
+    "path": "dist/assets/bridge-wall.webp",
+    "bytes": 670450,
+    "sha256": "c82fe963040f19b94c227fe53d30f2e0fd8c3af985416a11d75c56f78e4b9fe3"
+  },
+  {
+    "path": "dist/assets/casa-interior-poster.jpg",
+    "bytes": 223717,
+    "sha256": "dbd3251e23e318870edb59857dcec0f6d422398c74af338353fd5de2b98634a7"
+  },
+  {
+    "path": "dist/assets/casa-interior.mp4",
+    "bytes": 16737105,
+    "sha256": "8273b238b174ecf563474a29b94224a5c4dc9ee996767d489a60f9d7202422c0"
+  },
+  {
+    "path": "dist/assets/cut-ash.webp",
+    "bytes": 382974,
+    "sha256": "b11ff4123fd5259f18fdc80d4b54f878921c2827b6e867864a3d855ce7087051"
+  },
+  {
+    "path": "dist/assets/daily-burger.webp",
+    "bytes": 284784,
+    "sha256": "1df3999e3af79c91e4147508b7ed2b5224fe52b91280eca406659b4f0ebf5826"
+  },
+  {
+    "path": "dist/assets/daily-chair.webp",
+    "bytes": 312516,
+    "sha256": "60e8af7237dc83520c9786f7c40134d75a375c6aec54b2c2ed2400c84ce712ed"
+  },
+  {
+    "path": "dist/assets/daily-door.webp",
+    "bytes": 631534,
+    "sha256": "b921967963550f7a863776790877aa2e4411160f7877a4887649c8d5408733bf"
+  },
+  {
+    "path": "dist/assets/daily-photo.webp",
+    "bytes": 414196,
+    "sha256": "68ac8c99fbd9596b77a0bbaa4f62437b0488120750f3ed277f8c08c28bcfe443"
+  },
+  {
+    "path": "dist/assets/daily-place-alt.webp",
+    "bytes": 380336,
+    "sha256": "0ba05aaafccd4b52d69f3b717b3f347818e5a09d6dd16fbde19115208ce8062c"
+  },
+  {
+    "path": "dist/assets/daily-place.webp",
+    "bytes": 354622,
+    "sha256": "82a13735e0635e1b5896549721d62e2f0d64979ade4a8241b6d31bbc35756511"
+  },
+  {
+    "path": "dist/assets/daily-table.webp",
+    "bytes": 355472,
+    "sha256": "767ffeebf2396b6805ccd41273dc82207e609e862e9ce4c4952e6abf3cbf7855"
+  },
+  {
+    "path": "dist/assets/entrada-final-hq.jpg",
+    "bytes": 816624,
+    "sha256": "d1b83c56bee57951ef5c2410fb3654c98b5da9c561bc8fb8913a49906e32344f"
+  },
+  {
+    "path": "dist/assets/entrada-final.jpg",
+    "bytes": 53827,
+    "sha256": "5d1a163adc9988bb6690a7ff96738784892d610419172732448d835816de0a80"
+  },
+  {
+    "path": "dist/assets/entrada-inicial-hq.jpg",
+    "bytes": 828486,
+    "sha256": "0e7c79831ea75d12a773a7c5dd3577fe418c29385963418436a154b8dd99699f"
+  },
+  {
+    "path": "dist/assets/entrada-video.mp4",
+    "bytes": 8752895,
+    "sha256": "01a4caff1540db128387d92b797902f870252bd6ecb73cce8aa424d1d31239a8"
+  },
+  {
+    "path": "dist/assets/first-house/bag-closed.webp",
+    "bytes": 351312,
+    "sha256": "554605a7dbf55749570447b133fec5c86b4ff1e02d1bebf2a9a4ba7915f73ebc"
+  },
+  {
+    "path": "dist/assets/first-house/bag.webp",
+    "bytes": 346688,
+    "sha256": "bf2382065e59e996433597ee12343bd3ccc5e6b853202eda7332b61260dac429"
+  },
+  {
+    "path": "dist/assets/first-house/children.webp",
+    "bytes": 300548,
+    "sha256": "ca0dbbdf64d973d0eadad9cf2449386c920d76a6160e4943350f4bbd68708a21"
+  },
+  {
+    "path": "dist/assets/first-house/kite.webp",
+    "bytes": 215202,
+    "sha256": "bd25e84b7b73aadecc8a0cbbd61706b54af3dff0d7537c9b85edb25deee36fe6"
+  },
+  {
+    "path": "dist/assets/first-house/lamp.webp",
+    "bytes": 62454,
+    "sha256": "9c6017ec1b931565ba0ec749c6e505bae1498a3d7c3beb0c9f7afd4e970bab45"
+  },
+  {
+    "path": "dist/assets/first-house/legs.webp",
+    "bytes": 330018,
+    "sha256": "842e00527e9f0dad94e2053c467959adf1969a4dc8fbf0887cddbb3a8b854f71"
+  },
+  {
+    "path": "dist/assets/first-house/money.webp",
+    "bytes": 300050,
+    "sha256": "bbde1546c8b98b11425eb1935023b3e5b32b1b72c2e931e114be6b615da1ea09"
+  },
+  {
+    "path": "dist/assets/first-house/sleep.webp",
+    "bytes": 431134,
+    "sha256": "ee1ad2a49cbd6b08f0d5df274c3d1acae76d5b744381a93a09ed4daeb7bd619f"
+  },
+  {
+    "path": "dist/assets/first-house/soldiers.webp",
+    "bytes": 290562,
+    "sha256": "3cbc3a74546a3ebd516e7bcb8e3a8219ca26210be5ac4f53188ab10cd1a4338d"
+  },
+  {
+    "path": "dist/assets/fondo-papel.webp",
+    "bytes": 1749728,
+    "sha256": "86d23cd80f55a6a65778ea431da37f0a1b326dbe284907e540d2e171a39225c0"
+  },
+  {
+    "path": "dist/assets/fonts/monument-mono-light.otf",
+    "bytes": 48252,
+    "sha256": "d21454c211963eb9a9a46af1a2984bcbf20303ed9a8c950e8d85a68e330f9501"
+  },
+  {
+    "path": "dist/assets/fonts/monument-mono-regular.otf",
+    "bytes": 47728,
+    "sha256": "69bbcac2533a6a0803f1cd8a0ad29fa8d76f27f131d2dda91bad520be8ab3aa8"
+  },
+  {
+    "path": "dist/assets/glicinas-reversa.mp4",
+    "bytes": 1562086,
+    "sha256": "09de4358f52f60fdc5ea10f277dcdc7564bb615385882948cb06fb9cd550785b"
+  },
+  {
+    "path": "dist/assets/kitchen/alacena-1.webp",
+    "bytes": 1304206,
+    "sha256": "38d3da2b685008c4335f6791542275a1d77f566dc69b49c0498156a7924d4f70"
+  },
+  {
+    "path": "dist/assets/kitchen/alacena-2.webp",
+    "bytes": 167162,
+    "sha256": "f899f8fbc5b2e6cea98539bd86fb09b8adfb84fcf6d3286606caf7121abbc6e0"
+  },
+  {
+    "path": "dist/assets/kitchen/alacena-3.webp",
+    "bytes": 190822,
+    "sha256": "b6fee5f8b2db067f94980bf2ee2b2ada7df21cb61cc39adc4fd1eda83c2606ae"
+  },
+  {
+    "path": "dist/assets/kitchen/alacena-interior.webp",
+    "bytes": 1008830,
+    "sha256": "bf217840b20e8d6d93d581a731eaaa0a9a63b5c859da9dbcd5c53d5269f8b0a6"
+  },
+  {
+    "path": "dist/assets/kitchen/hamburguesa-1.webp",
+    "bytes": 12192,
+    "sha256": "298a10ac5d598e7c8fa544c42b0aca5db3dadecff43a1976a018b03f016e486b"
+  },
+  {
+    "path": "dist/assets/kitchen/hamburguesa-2.webp",
+    "bytes": 22046,
+    "sha256": "417181c53f93bfdfee7d1547cc5f4b512e031ca7e51645953afbd0c96550aa5d"
+  },
+  {
+    "path": "dist/assets/kitchen/hamburguesa-3.webp",
+    "bytes": 19714,
+    "sha256": "19eed0632b969b1c7d15e1dc4b4c4f9a73ca2a05bfd5b4bf7fa86c97e897f5a2"
+  },
+  {
+    "path": "dist/assets/kitchen/mesa.webp",
+    "bytes": 271136,
+    "sha256": "7078abb756e387d8e7e08c0ca748ea36bbb0b78d58ac4da445d8fac09b66a609"
+  },
+  {
+    "path": "dist/assets/kitchen/tele-1.webp",
+    "bytes": 557752,
+    "sha256": "5ff74ef87b77ca43fce111578a1d9fca300a2307e00fa4271ddec1c8134ce302"
+  },
+  {
+    "path": "dist/assets/kitchen/tele-2.webp",
+    "bytes": 513254,
+    "sha256": "2f1060d3eed1d1c553adffd085089c22b000793c6f38d44888858d7d7f438b5c"
+  },
+  {
+    "path": "dist/assets/ladrillos.webp",
+    "bytes": 2109710,
+    "sha256": "b79a58929be6b59746122c6866dacba6df9913b52391203932deeaafcda740b0"
+  },
+  {
+    "path": "dist/assets/logo-la-casa.webp",
+    "bytes": 170338,
+    "sha256": "ee1e12c3b914e3a40effac8c94636c658cff6f60d74534f4c342528af6800463"
+  },
+  {
+    "path": "dist/assets/low-cloth.webp",
+    "bytes": 434056,
+    "sha256": "6785c25861c7c6b43c96085049f318e88b7f2311777b1398719002378bf6eb11"
+  },
+  {
+    "path": "dist/assets/low-cupboard.webp",
+    "bytes": 403154,
+    "sha256": "0f166417c7936e245166b7e61e1c210258b00c7c1d0ed3adab0ac3da12f68864"
+  },
+  {
+    "path": "dist/assets/low-robot.webp",
+    "bytes": 362278,
+    "sha256": "9c17602610a697200defb858c1933c7a257b08e192605904e1c6b01ee43d511e"
+  },
+  {
+    "path": "dist/assets/low-table.webp",
+    "bytes": 387388,
+    "sha256": "42fd53af626470937833de8cb36734904af47609ce27894b4a4fa47bc065d407"
+  },
+  {
+    "path": "dist/assets/low-tv.webp",
+    "bytes": 355664,
+    "sha256": "67cc3aa96ac8ebdbc703a1824460cfba5a288df6b27853ee7754d426fe664011"
+  },
+  {
+    "path": "dist/assets/low-wrapper.webp",
+    "bytes": 175670,
+    "sha256": "123965694dc18dfbbe0fba8c1459837637a97dfc993eccc00dfcfbd9eaf15b42"
+  },
+  {
+    "path": "dist/assets/marco-ventana.webp",
+    "bytes": 998676,
+    "sha256": "792c0b3ee1538022c5b45c7452775aff4014d57905d151e6f967091fd9d5e66b"
+  },
+  {
+    "path": "dist/assets/nino.webp",
+    "bytes": 453598,
+    "sha256": "d7343d3458f433add3f88b5e20c5a0b860fddde82a27965ee44f50d3f258047c"
+  },
+  {
+    "path": "dist/assets/petalos-glicina.png",
+    "bytes": 2225300,
+    "sha256": "37132b34d971b92677a337ee86f43d5f0224456b03ffef88c16a58c787e97eb3"
+  },
+  {
+    "path": "dist/assets/provisional/aguja.svg",
+    "bytes": 359,
+    "sha256": "144dd8f6e0799a7e69cce7fc7dcfc527a4e349deb16fc682bde9d8ab6d696320"
+  },
+  {
+    "path": "dist/assets/provisional/alambrado.svg",
+    "bytes": 3177,
+    "sha256": "fadb1958a004b17baff0bb3bc311a9183aa921273087502ed3a2a2e4d90cd62e"
+  },
+  {
+    "path": "dist/assets/provisional/album-huecos.svg",
+    "bytes": 879,
+    "sha256": "cf2b26f1c29dffd575f349bd587a4b4ce91170af09b5d90e1d900355f9f048d7"
+  },
+  {
+    "path": "dist/assets/provisional/albumes.svg",
+    "bytes": 687,
+    "sha256": "cbad01a59fe8fe8f28f1cda08f3074bcf01b50350068efcd4a6286a69cf83143"
+  },
+  {
+    "path": "dist/assets/provisional/aluminio-abierto.svg",
+    "bytes": 587,
+    "sha256": "c8d65bf076ed91ede205b8eddae35f228d00917f3c6c816430f75d8755445dba"
+  },
+  {
+    "path": "dist/assets/provisional/aluminio.svg",
+    "bytes": 601,
+    "sha256": "0862f5e885f1e2579dd6272e3642b85735aec5f5b833c6ec9986edb2370f3092"
+  },
+  {
+    "path": "dist/assets/provisional/arbol.svg",
+    "bytes": 506,
+    "sha256": "aa5184ae4a1d52c1e64ed3b3f8790f344d26d7488c714829e5378b475e2098b4"
+  },
+  {
+    "path": "dist/assets/provisional/baldio.svg",
+    "bytes": 663,
+    "sha256": "a54840757e460894728e04af307ec18886fb8b44eaa72d8de3ebe7043304e803"
+  },
+  {
+    "path": "dist/assets/provisional/baldosa.svg",
+    "bytes": 611,
+    "sha256": "d8ef6f447e200d9646513ff90883cfd90709fe730b694d9842c4dfb8f19a4f83"
+  },
+  {
+    "path": "dist/assets/provisional/barrio.svg",
+    "bytes": 782,
+    "sha256": "38d0b567ddae6b97038d8e77bb7705c805d12637ff3368a09023a66da9a9b94e"
+  },
+  {
+    "path": "dist/assets/provisional/basural.svg",
+    "bytes": 624,
+    "sha256": "f7824f38aa3565b66d57bfd087c5fc4531cb4e69ab80da24e894637ae3003fc6"
+  },
+  {
+    "path": "dist/assets/provisional/billetes.svg",
+    "bytes": 967,
+    "sha256": "29c0f31cd95dbe6f4e228720f5668f9c4596a44af633594f49fb71874334ec1b"
+  },
+  {
+    "path": "dist/assets/provisional/bomba.svg",
+    "bytes": 616,
+    "sha256": "1d8a42cbda163f3029c1571cca77be8591ce1c08083a5aac7221be566429649e"
+  },
+  {
+    "path": "dist/assets/provisional/botella-agua.svg",
+    "bytes": 514,
+    "sha256": "5fd0869415bef7576976fc7de250dc9946dd4453ae1533b487285a7b3946a076"
+  },
+  {
+    "path": "dist/assets/provisional/botella.svg",
+    "bytes": 555,
+    "sha256": "6f0e744d98278ddb1c38cf9a7a162933d14ec721b73f86da68469cd350fabf4f"
+  },
+  {
+    "path": "dist/assets/provisional/bowl-lleno.svg",
+    "bytes": 1182,
+    "sha256": "64d82aef10e8c5dc1be5c95fe6d515704f4402448c7c5da608f6122f1d343475"
+  },
+  {
+    "path": "dist/assets/provisional/bowl.svg",
+    "bytes": 431,
+    "sha256": "69d6c2772b40abccf6870a28352c9451f6f58b39d878621c58809f147b0e078e"
+  },
+  {
+    "path": "dist/assets/provisional/caja-chamuscada.svg",
+    "bytes": 645,
+    "sha256": "f5796b5f8ca4f327537981dd9454939dd0ac2f2be57e2fec449a451f67dee8c9"
+  },
+  {
+    "path": "dist/assets/provisional/caja-jardin-abierta.svg",
+    "bytes": 601,
+    "sha256": "b0787bb97d479271d5fd68816a67cd1d36390c4b52def9d43c5b6b6909668b9c"
+  },
+  {
+    "path": "dist/assets/provisional/caja-jardin.svg",
+    "bytes": 635,
+    "sha256": "3f9500bdf4f8d05715d7ddc8fd5a10d58924555b110c5a7a4223f50ecc38c55b"
+  },
+  {
+    "path": "dist/assets/provisional/calle.svg",
+    "bytes": 2489,
+    "sha256": "e926901cf34fdbdb3229a95c0d0fe1b84762658419d600031a7585a3af1c8306"
+  },
+  {
+    "path": "dist/assets/provisional/cama.svg",
+    "bytes": 721,
+    "sha256": "279e7cf4533e81e7128e64637b450cf0d1b925cdd394f69a85157a7abbf1cc61"
+  },
+  {
+    "path": "dist/assets/provisional/campo.svg",
+    "bytes": 805,
+    "sha256": "d1059d8b4953e01edc66cfbd096253c054d542cd1ceef41d21f767bfdc892cb6"
+  },
+  {
+    "path": "dist/assets/provisional/carta-dorso.svg",
+    "bytes": 637,
+    "sha256": "aac0b69e178e92c7a6cc66d235fb87d869daa2ca183f221136288b8616a0f311"
+  },
+  {
+    "path": "dist/assets/provisional/carta-frente.svg",
+    "bytes": 486,
+    "sha256": "baa2bbe09def54b9a6fd593778f9d4766bd457e30006a8c855a347ff0b945189"
+  },
+  {
+    "path": "dist/assets/provisional/cartas-juego.svg",
+    "bytes": 1122,
+    "sha256": "2aabace5bb35bc2be9cfc80981fea5fa4250fc1c6808c014400568bf94bd617c"
+  },
+  {
+    "path": "dist/assets/provisional/cartel.svg",
+    "bytes": 460,
+    "sha256": "1070795a9cd3dc0511444c210f6f46971ee4244701c42d1da1f2615f58582af3"
+  },
+  {
+    "path": "dist/assets/provisional/casa-vecina.svg",
+    "bytes": 533,
+    "sha256": "d3a041b9e25d3d8c9b334c068f074f1f2a117ec62e2a06faa4417acc4d4c8c9e"
+  },
+  {
+    "path": "dist/assets/provisional/cd.svg",
+    "bytes": 600,
+    "sha256": "dc2211d26780b2fb885a4b3ce426dc77b55eaf4c57675256268211a6a9b2a559"
+  },
+  {
+    "path": "dist/assets/provisional/ciclista.svg",
+    "bytes": 1108,
+    "sha256": "bc56a4d6a1d51bd6caabd99ba70314c7b9611c6c44f685772b2bb6466bf266d0"
+  },
+  {
+    "path": "dist/assets/provisional/cotillon.svg",
+    "bytes": 574,
+    "sha256": "3961e97377941216cdd834750d108db53e154e34804426713f0b871039dcf8b6"
+  },
+  {
+    "path": "dist/assets/provisional/cuaderno-escuela-abierto.svg",
+    "bytes": 1196,
+    "sha256": "5e0e0b79d44855cb0c0cc38f4ea129e25a1301a701e925875abfd0951197f057"
+  },
+  {
+    "path": "dist/assets/provisional/cuaderno-escuela.svg",
+    "bytes": 520,
+    "sha256": "851b9a959036c936dcd6c0d538e42e6e4ea01bc6292442754e9c866f6dfc3a90"
+  },
+  {
+    "path": "dist/assets/provisional/cubiertos.svg",
+    "bytes": 384,
+    "sha256": "2d245aec7c39570dd9848732bb1436e43165458f4c49c47c6b3e05a5f043022d"
+  },
+  {
+    "path": "dist/assets/provisional/cursor-crayon.svg",
+    "bytes": 489,
+    "sha256": "ce28890f33444619e3ae5aa0ec8da241b9e9763b2d38b60977a122dd3896ee09"
+  },
+  {
+    "path": "dist/assets/provisional/cursor-lapiz.svg",
+    "bytes": 505,
+    "sha256": "96838c360fcb06bdf601a6275b0d7946779f739426bf0b939392345387d3761b"
+  },
+  {
+    "path": "dist/assets/provisional/cursor-linterna.svg",
+    "bytes": 533,
+    "sha256": "2709598e83d1e915bc650a806b1804203c2b64c3a193bfa79c2f717de21c8087"
+  },
+  {
+    "path": "dist/assets/provisional/cursor-lupa.svg",
+    "bytes": 446,
+    "sha256": "84e7c82c1558dc44bded911bd22b5abf95d38cd430bf57efdf764f051c110734"
+  },
+  {
+    "path": "dist/assets/provisional/cursor-mano-abierta.svg",
+    "bytes": 496,
+    "sha256": "b32e2fa55a681351182ac79bfa1291b69f627687e32aedbc3273a46c1f0628c0"
+  },
+  {
+    "path": "dist/assets/provisional/cursor-mano.svg",
+    "bytes": 485,
+    "sha256": "f930178fa347530f2deb0ae936f86209078e80f934a2751dab06fa01cd18927b"
+  },
+  {
+    "path": "dist/assets/provisional/cursor-manubrio.svg",
+    "bytes": 509,
+    "sha256": "376dad9d2f7b658c805a02c5448291d9abb7395727072e4db2feca6616840353"
+  },
+  {
+    "path": "dist/assets/provisional/cursor-tijera.svg",
+    "bytes": 510,
+    "sha256": "77e3215b6db9cb2917310f0e54517549f8bbec15edfb81b8c72a56d6061a8a74"
+  },
+  {
+    "path": "dist/assets/provisional/daisy-ladra.svg",
+    "bytes": 850,
+    "sha256": "7b51c0e04e30f096fda1658ac887e23c18dbf357cddccc6ba112657714b57c9c"
+  },
+  {
+    "path": "dist/assets/provisional/daisy.svg",
+    "bytes": 731,
+    "sha256": "2f4a113df7483e542723c95906786eeb913db7d54680f1a5d84e065abb27b5aa"
+  },
+  {
+    "path": "dist/assets/provisional/estacion.svg",
+    "bytes": 590,
+    "sha256": "8ae65294c3a2b143af737c8b3cf168861f6522d52a1faf5b57b1bd46ca08d8f8"
+  },
+  {
+    "path": "dist/assets/provisional/fachada-gm.svg",
+    "bytes": 1001,
+    "sha256": "721b6dfb8f89d04b0a1a3f67e68e272d638e7b55e724901fdc9d5e66435f1e35"
+  },
+  {
+    "path": "dist/assets/provisional/fachada.svg",
+    "bytes": 1181,
+    "sha256": "87e16b1e8c4ef70f773776d70c4576bdae18eedb00b680a9900e0a6e0e58233a"
+  },
+  {
+    "path": "dist/assets/provisional/frecuencias.svg",
+    "bytes": 738,
+    "sha256": "77afede22bbfe83255c870fd01d3bfb15d06d8e6dfe9a3f89ceda42e4117da31"
+  },
+  {
+    "path": "dist/assets/provisional/glicina.svg",
+    "bytes": 1333,
+    "sha256": "02cf5c73b7fd27101d44c712d4cf075820907aa29c8ce3bd8f46606823166fcd"
+  },
+  {
+    "path": "dist/assets/provisional/globo.svg",
+    "bytes": 562,
+    "sha256": "5f29e98ee1c2d69042a0a8e076b85a5301e246030a5c067c0349c681be2f0bc7"
+  },
+  {
+    "path": "dist/assets/provisional/gorrito.svg",
+    "bytes": 492,
+    "sha256": "0e6a63be6e2c51ee8fb8286f996c30afb074250d0e497a1657f03bc3d6812418"
+  },
+  {
+    "path": "dist/assets/provisional/guirnalda.svg",
+    "bytes": 691,
+    "sha256": "95c24722ca00405169ab48c7fef37fbe05c4fc96b21c0bd8b2b64d53e577f488"
+  },
+  {
+    "path": "dist/assets/provisional/hoja-laurel.svg",
+    "bytes": 422,
+    "sha256": "4989679e829675a49ea6adda680b63b232e6395a5dcc87975795fa1d8070dced"
+  },
+  {
+    "path": "dist/assets/provisional/ladrillo-suelto.svg",
+    "bytes": 430,
+    "sha256": "ad94363412776b621f5933747f7ca7501fc657b762ff906df82d85acb420f9d2"
+  },
+  {
+    "path": "dist/assets/provisional/laurel.svg",
+    "bytes": 1526,
+    "sha256": "b5cd75dddbdcbc44ea66f7ba118312418f317a8a465f8eb0fbd21b8b7c7c369d"
+  },
+  {
+    "path": "dist/assets/provisional/leche-rota.svg",
+    "bytes": 487,
+    "sha256": "105434b385ae4d5a16642adea8514a3e0cbfa5a81abd28077228b4e1e6148754"
+  },
+  {
+    "path": "dist/assets/provisional/leche.svg",
+    "bytes": 509,
+    "sha256": "1601c0ecdd413a408ad35076d1cb7b02d2125e6d9ccffd0ee46f9150226ad08a"
+  },
+  {
+    "path": "dist/assets/provisional/mesa-cenital.svg",
+    "bytes": 557,
+    "sha256": "9b946b7e5ae36ecbb95984d082b03880795335e6ad58287f72d63720bb980760"
+  },
+  {
+    "path": "dist/assets/provisional/mochila-abierta.svg",
+    "bytes": 633,
+    "sha256": "f899b856ff344d990dfda2324943b5020e063132c877e33c1cc19c9696315710"
+  },
+  {
+    "path": "dist/assets/provisional/mochila.svg",
+    "bytes": 650,
+    "sha256": "a8a7cfb4be07ef4e9ce79cb31dcaafa06bcf52a9024686d4e29c79743d018f10"
+  },
+  {
+    "path": "dist/assets/provisional/moneda.svg",
+    "bytes": 550,
+    "sha256": "da890c4d34da0e25102f66c39d977da6f619c05c0ffbfa4cbf27305d6f45aa1d"
+  },
+  {
+    "path": "dist/assets/provisional/mora.svg",
+    "bytes": 566,
+    "sha256": "238a3bb17b26e0595c2cd270e6a6c99ed57d01ff96706ab70da448e30a5835c8"
+  },
+  {
+    "path": "dist/assets/provisional/moral.svg",
+    "bytes": 1562,
+    "sha256": "b1ddde5df6a61bb330904b5b23e60ea3961a939f9468d4dbf6966a9ca3ddcf3a"
+  },
+  {
+    "path": "dist/assets/provisional/papel-picado.svg",
+    "bytes": 886,
+    "sha256": "20b53ec711371732b6f13b7d2bedc943319b15aab8b92a52cfdf1570c038f7a4"
+  },
+  {
+    "path": "dist/assets/provisional/papeles.svg",
+    "bytes": 483,
+    "sha256": "89b0e87547e4f13a5c70836b05c28d023828820b5f417b904e7f4737fd948995"
+  },
+  {
+    "path": "dist/assets/provisional/parlante.svg",
+    "bytes": 548,
+    "sha256": "c277dc415037d18acd73047f0d005aafaabb87a5df6d6abda3638e8e97e889ca"
+  },
+  {
+    "path": "dist/assets/provisional/pasillo.svg",
+    "bytes": 645,
+    "sha256": "e610705d852cc2d66f2859983e72e9c0521477fc348dd14d84d66b02e9f3a248"
+  },
+  {
+    "path": "dist/assets/provisional/perilla.svg",
+    "bytes": 547,
+    "sha256": "eb425010405f59bb90d30b742b1b3f9cd48d066a96189d2659ffa9176eccf9db"
+  },
+  {
+    "path": "dist/assets/provisional/petalo.svg",
+    "bytes": 392,
+    "sha256": "2d42eb07bb40b19208ebf35f16dc573ef8a99e8d3d06fbd665904d03004249aa"
+  },
+  {
+    "path": "dist/assets/provisional/pila-cds.svg",
+    "bytes": 778,
+    "sha256": "1354420b4e36af5876f04b7842facb614a7f0bd39c8c09a01cfaef42063e4f96"
+  },
+  {
+    "path": "dist/assets/provisional/plato.svg",
+    "bytes": 464,
+    "sha256": "59ca9fe72c07f77b714b93b997efccc494e67064c5c2fd375bcb38e82cfac1ec"
+  },
+  {
+    "path": "dist/assets/provisional/puerta.svg",
+    "bytes": 545,
+    "sha256": "65ef028e29d0b1c17faf3cd971f8bbf37dad3457b66dfe9c185f648ebe73b9e8"
+  },
+  {
+    "path": "dist/assets/provisional/radio.svg",
+    "bytes": 783,
+    "sha256": "08df069af67be08eeff182a2f382137198b11b8411ab567c7470742adbc17779"
+  },
+  {
+    "path": "dist/assets/provisional/sillon-quemado.svg",
+    "bytes": 682,
+    "sha256": "f2348b32e7730311ab32f8e1edd0e7fc4d580725454baf7f6aa5aadce076e163"
+  },
+  {
+    "path": "dist/assets/provisional/tickets.svg",
+    "bytes": 530,
+    "sha256": "24ca11350ebf099a12add7f9c72a0eb331a309e90ab344a28afa2e2792c70c72"
+  },
+  {
+    "path": "dist/assets/provisional/tocon.svg",
+    "bytes": 508,
+    "sha256": "6dbca95bac479d7b53498987f20416be8549223e0c309067b11a1e5c988db7ac"
+  },
+  {
+    "path": "dist/assets/provisional/tranquera-abierta.svg",
+    "bytes": 489,
+    "sha256": "8294ce1fe2bd3d6c72a4673feb4557ef336e489dd5ae1a4bd9f0633a9f5e66df"
+  },
+  {
+    "path": "dist/assets/provisional/tranquera.svg",
+    "bytes": 485,
+    "sha256": "69c52937ec22cbc508b28a464bd2611e9fd0cbb9fdbd6ef6ca4a4341dcd00e6d"
+  },
+  {
+    "path": "dist/assets/provisional/vaca.svg",
+    "bytes": 781,
+    "sha256": "ac4760263dda8d61031ff86d2d04bbdc93cd397c6606af392fe2364fe5c374b9"
+  },
+  {
+    "path": "dist/assets/provisional/vaso.svg",
+    "bytes": 435,
+    "sha256": "3ce93cb128a65e611c627819f33cba20043a35005113d391df8a9a54028b1b17"
+  },
+  {
+    "path": "dist/assets/provisional/vecina-saluda.svg",
+    "bytes": 592,
+    "sha256": "4f06cd1d88f0a4f379221f125a210febf010d1e7809c85b69cb8ac1fffc4a726"
+  },
+  {
+    "path": "dist/assets/provisional/vecina.svg",
+    "bytes": 579,
+    "sha256": "4d00d41a144b4949804ec41697c462594521a048a66a1d8ba9533ce3638d34f3"
+  },
+  {
+    "path": "dist/assets/provisional/vias.svg",
+    "bytes": 2278,
+    "sha256": "eed9f02174b84bb661791be7a53dba8285af2657f48736c41b6c20ae88c397e3"
+  },
+  {
+    "path": "dist/assets/provisional/zapatitos.svg",
+    "bytes": 560,
+    "sha256": "6a03321758b2b7df2d8bf01af83f4238acbaead6ff0734ff1557d9617f70b87e"
+  },
+  {
+    "path": "dist/assets/rooms/10.webp",
+    "bytes": 6946,
+    "sha256": "3af5dfda847162386188ead29f1f8edfc48b4ca8f78e07e582068d840c691f72"
+  },
+  {
+    "path": "dist/assets/rooms/108.webp",
+    "bytes": 33140,
+    "sha256": "8bc1d1815f25a6be8746261d3cdda0c865c70b726f3bcbd6fdfb2864b429471e"
+  },
+  {
+    "path": "dist/assets/rooms/111.webp",
+    "bytes": 38986,
+    "sha256": "68994df7bd06800bd3f4a4216f94b0a29aecd3286df65bb5b3d98df0d18e078b"
+  },
+  {
+    "path": "dist/assets/rooms/12.webp",
+    "bytes": 9730,
+    "sha256": "74b2a11b897e384f1a6503c35f76ff5a574b3af5646fd38067fc12f21ae4ae53"
+  },
+  {
+    "path": "dist/assets/rooms/123.webp",
+    "bytes": 424022,
+    "sha256": "4625614abbbcf872553c410195d8c21250cd9fcbcdde5c178872c12fb62c0376"
+  },
+  {
+    "path": "dist/assets/rooms/15.webp",
+    "bytes": 10768,
+    "sha256": "2d48a87ad926098cf80fce56b123d4a7894de76cf7b9e42cfc046b0866b63556"
+  },
+  {
+    "path": "dist/assets/rooms/22.webp",
+    "bytes": 29930,
+    "sha256": "f40032a89766fb9a5351ff574dff2b75fd2c846862983fd27e2861ce714c7457"
+  },
+  {
+    "path": "dist/assets/rooms/54.webp",
+    "bytes": 95558,
+    "sha256": "4137227a58cc50d18396a15d2b06e752a5ef31ecc9de1cceb9ccae4e560d2f8e"
+  },
+  {
+    "path": "dist/assets/rooms/65.webp",
+    "bytes": 50256,
+    "sha256": "ef248e88ce19bd5693af65058deada95a8921f9d01e332d394820cdecaff626b"
+  },
+  {
+    "path": "dist/assets/rooms/87.webp",
+    "bytes": 137614,
+    "sha256": "fe5cd82f62ea51b2843bc128b92cefc6cf84b0de358e586080faf92c36fb8105"
+  },
+  {
+    "path": "dist/assets/rooms/97.webp",
+    "bytes": 9842,
+    "sha256": "1547da767c3e4e8b59c3ec7a3c5f84dea4ce9002d05f18b630ad7b556f3b1e83"
+  },
+  {
+    "path": "dist/assets/salida-final.webp",
+    "bytes": 854780,
+    "sha256": "06823a5658d30d18f41a41a49e596918d7663a32fe03f17d06221f2d5b3c1bc0"
+  },
+  {
+    "path": "dist/assets/salida-inicial.webp",
+    "bytes": 38608,
+    "sha256": "706d0b70f8ab0fd366a9e4329cc5c9be9ef56986abbaf0ad29d911a60e30a677"
+  },
+  {
+    "path": "dist/assets/salida-video.mp4",
+    "bytes": 1739636,
+    "sha256": "3cedb77efc2a803886a78926c90cfa8bf7c066f3bec197e46864016ccafc5a5f"
+  },
+  {
+    "path": "dist/assets/second-base.webp",
+    "bytes": 408456,
+    "sha256": "c8232405ebed4b6df411cc9bdb128d5b1a5bc41264c360aa9b933dae7785a8d5"
+  },
+  {
+    "path": "dist/assets/second-drawing.webp",
+    "bytes": 529720,
+    "sha256": "b49f83c6e190f61d21d5e9e32e055ea21788c4302a08e451671e2163979f868f"
+  },
+  {
+    "path": "dist/assets/second-memory.webp",
+    "bytes": 557476,
+    "sha256": "917284ae8e43d7f1579b4602d1f22e63faa3779d0381eadf60a71982e7fbf857"
+  },
+  {
+    "path": "dist/assets/second-missing.webp",
+    "bytes": 452952,
+    "sha256": "9b6097e6e93d2c5fd9b14c4434d67a64c535f7b149ae4386ff60f1e9c72c15c1"
+  },
+  {
+    "path": "dist/assets/second-radio.webp",
+    "bytes": 447934,
+    "sha256": "a1d22bbe4ed419cb0a43338ea146328144e61f1c1c4980e3b6c23541bc6bf5f2"
+  },
+  {
+    "path": "dist/assets/second-water.webp",
+    "bytes": 282644,
+    "sha256": "00b18a2b08d80b981d2919df25692676d4edef3a51d54efe277b8079c443b2a6"
+  },
+  {
+    "path": "dist/assets/sirens.mp3",
+    "bytes": 4569266,
+    "sha256": "823333f43d6628cd6c9e4385ccf9b64ce4e62e0f6c35042abc9b9d9f9be00ea7"
+  },
+  {
+    "path": "dist/assets/textural/fragment-105.webp",
+    "bytes": 44956,
+    "sha256": "680790104101e8b1dd70f4c30fc100a9af278a7884f355e6c6c115ef6b013334"
+  },
+  {
+    "path": "dist/assets/textural/fragment-107.webp",
+    "bytes": 32000,
+    "sha256": "5c14045f6892b4f701d853ce14454f56801032b9be3386148c40ed3529e8aa91"
+  },
+  {
+    "path": "dist/assets/textural/fragment-108.webp",
+    "bytes": 30788,
+    "sha256": "7ba943e6f2f3945aabcafc2806e8c5a9ae746d27d842e6af8dc707a80d1d9b6f"
+  },
+  {
+    "path": "dist/assets/textural/fragment-111.webp",
+    "bytes": 36546,
+    "sha256": "62cc433b0fe800525f9e51e94a622c9370f4fe090d057d02f6ddffc96f942f1c"
+  },
+  {
+    "path": "dist/assets/textural/fragment-116.webp",
+    "bytes": 28224,
+    "sha256": "10562706e6122790a2e9cb4e314aacbd3cdd5150aec031372046f58d1ee34fa3"
+  },
+  {
+    "path": "dist/assets/textural/fragment-118.webp",
+    "bytes": 455234,
+    "sha256": "eb510cbb32b8bfdcf31301f83db02a7079f16b0dc5eda49a7ff3f219fcb284b2"
+  },
+  {
+    "path": "dist/assets/textural/fragment-119.webp",
+    "bytes": 368192,
+    "sha256": "d8973281341bed4205abb76fe8ac9c5d099f5b5b2e84067797e041dcb2672c08"
+  },
+  {
+    "path": "dist/assets/textural/fragment-120.webp",
+    "bytes": 303034,
+    "sha256": "f7c129142e9f4b8fe8f490bdfd4631958643e65c3427e0dae47ba647f5985916"
+  },
+  {
+    "path": "dist/assets/textural/fragment-123.webp",
+    "bytes": 359708,
+    "sha256": "415418b0e7d9db722d2b584583fcd3d67c461eea5c61819b52663151afde84c1"
+  },
+  {
+    "path": "dist/assets/textural/fragment-127.webp",
+    "bytes": 189082,
+    "sha256": "03084a1b1b70936c329d9b4f68054925e46b841ae6929daa59e676d741a7d997"
+  },
+  {
+    "path": "dist/assets/textural/fragment-129.webp",
+    "bytes": 186122,
+    "sha256": "150f48d365bc5ebdb69bf811c35a06176a229993245e7a240cba6e2d8daf8592"
+  },
+  {
+    "path": "dist/assets/textural/fragment-134.webp",
+    "bytes": 174648,
+    "sha256": "ae2014150eb2c2c246dfb69a24e39d3ddf1d308f3a30eb6f9660a86fdbf9cf00"
+  },
+  {
+    "path": "dist/assets/textural/fragment-135.webp",
+    "bytes": 170624,
+    "sha256": "680d8a82c2d0e37afc13348f05f79df98722effb5bd4a82a11d13463e4f2c8d5"
+  },
+  {
+    "path": "dist/assets/textural/fragment-18.webp",
+    "bytes": 74566,
+    "sha256": "553cabd265611bfb0a1d5e9e1ece7b553a1b321500ef6e9bc0caae8d55d2990c"
+  },
+  {
+    "path": "dist/assets/textural/fragment-25.webp",
+    "bytes": 37506,
+    "sha256": "c04d2f1fd7a08bf559eb1e19f55da6af2581783e8f146f884fe9256d11ea6fba"
+  },
+  {
+    "path": "dist/assets/textural/fragment-27.webp",
+    "bytes": 78308,
+    "sha256": "8c0cb33ba262c5ee7a64098a7fb82db4409756936d28a3cd718f83ff56640670"
+  },
+  {
+    "path": "dist/assets/textural/fragment-28.webp",
+    "bytes": 59116,
+    "sha256": "ead65cd6948a882ea3eaecaeb8392977fa86b5f165127003c0db6dee2e93f03f"
+  },
+  {
+    "path": "dist/assets/textural/fragment-30.webp",
+    "bytes": 76824,
+    "sha256": "154e590c4c98fbac5790345cf864e3e1add8efd39d8672f9a833c87129b7f33e"
+  },
+  {
+    "path": "dist/assets/textural/fragment-31.webp",
+    "bytes": 79940,
+    "sha256": "54a1dff1881b30eb0368c76466a119e0c3069c37ecd204c6d969fa6d75df9a7a"
+  },
+  {
+    "path": "dist/assets/textural/fragment-34.webp",
+    "bytes": 298134,
+    "sha256": "6147aafbcc640a05b770e6d9a15cf0458bad4521ca0d68873fcbc8d359e3aa3d"
+  },
+  {
+    "path": "dist/assets/textural/fragment-35.webp",
+    "bytes": 401012,
+    "sha256": "26cf064fc24ed701cda627a68d02a499cf1f27f3f4e4390be751a944a4c91d06"
+  },
+  {
+    "path": "dist/assets/textural/fragment-36.webp",
+    "bytes": 98756,
+    "sha256": "ccbfee7daeed6cecafd204bd84c01789d7c121e25b372001718cfa5e486ba3e6"
+  },
+  {
+    "path": "dist/assets/textural/fragment-38.webp",
+    "bytes": 275538,
+    "sha256": "3e8a9e2e4553f62a37eab8d6db6d48929a1616f85448f3eabec6d54c66766eb3"
+  },
+  {
+    "path": "dist/assets/textural/fragment-39.webp",
+    "bytes": 104170,
+    "sha256": "bd461586ff32534c15739aafcef4c0566d63b43624e3586e996932aa284a8f68"
+  },
+  {
+    "path": "dist/assets/textural/fragment-40.webp",
+    "bytes": 63312,
+    "sha256": "b4e12c0c6d21a630352d2e540ad12976a5117fe28837b6d1675d2bdaf5260931"
+  },
+  {
+    "path": "dist/assets/textural/fragment-43.webp",
+    "bytes": 405836,
+    "sha256": "34bbc6e755db5d3ab232e5f07e6b2124f5fd73b98f051cbf4240c2611e8859e9"
+  },
+  {
+    "path": "dist/assets/textural/fragment-44.webp",
+    "bytes": 182038,
+    "sha256": "bd18a50db3a9e111386c9c1bcfe1e5ed90cfec92be1c48d620b2298b482ac8c2"
+  },
+  {
+    "path": "dist/assets/textural/fragment-45.webp",
+    "bytes": 174064,
+    "sha256": "dad7751e7edea70ce9c57743d5f6dc5299a8dabee4174f6fa5f9e7a408a7fffe"
+  },
+  {
+    "path": "dist/assets/textural/fragment-46.webp",
+    "bytes": 173986,
+    "sha256": "ec9430ebf48aeeb5cba6b6fbeec7cfbe1f5d630e69c5c233313d54d0ce5f3aba"
+  },
+  {
+    "path": "dist/assets/textural/fragment-47.webp",
+    "bytes": 145834,
+    "sha256": "fe67a0b09047bb0f21b257fbc1d2af80e2cae6eb215ad93fc2e995b4d2b5bfd7"
+  },
+  {
+    "path": "dist/assets/textural/fragment-50.webp",
+    "bytes": 80486,
+    "sha256": "9df24b5f76856e6c4c6035cec25a62b5ee21d78a847ee84f9847d0b8bf7991af"
+  },
+  {
+    "path": "dist/assets/textural/fragment-54.webp",
+    "bytes": 87190,
+    "sha256": "0022fb16629736021a679ee3700c624fad9fa64cb97aebe290863af335c00004"
+  },
+  {
+    "path": "dist/assets/textural/fragment-55.webp",
+    "bytes": 88006,
+    "sha256": "f4efa0bb972fac54de62c6e46237da85bfd08f5dcc07717dd546b83fc9ea2cdd"
+  },
+  {
+    "path": "dist/assets/textural/fragment-61.webp",
+    "bytes": 186094,
+    "sha256": "a5fdbd92c520d24f2b316049837ecf5f8b47ff007a58b1e6acbfdede8c659cb9"
+  },
+  {
+    "path": "dist/assets/textural/fragment-63.webp",
+    "bytes": 204072,
+    "sha256": "89b7d9b881da36da900ea09fcaa2b75b3c0ac6e52d980fc32a93974b9b707311"
+  },
+  {
+    "path": "dist/assets/textural/fragment-65.webp",
+    "bytes": 47432,
+    "sha256": "43402a631611d13072db45a01e3dacbc7e1d1cbf7ab2589c88601674b805722f"
+  },
+  {
+    "path": "dist/assets/textural/fragment-68.webp",
+    "bytes": 116500,
+    "sha256": "3092f37eb64ad71343ef7d840463d92b2b020e11bea1a42e78ad202c6849bc75"
+  },
+  {
+    "path": "dist/assets/textural/fragment-69.webp",
+    "bytes": 77866,
+    "sha256": "6303967ffe938cce823df8e6a043e42d36fbd63a2a86b897247c5fc18854fe84"
+  },
+  {
+    "path": "dist/assets/textural/fragment-73.webp",
+    "bytes": 136246,
+    "sha256": "7b1f19f628224914e3672a0b15f595662de79eb34502087a7eb2a2fed4c10d5a"
+  },
+  {
+    "path": "dist/assets/textural/fragment-74.webp",
+    "bytes": 124788,
+    "sha256": "c679007e141c3512a2c8485f06f548ffd5546756b22cb75901c28d5b5e36b250"
+  },
+  {
+    "path": "dist/assets/textural/fragment-75.webp",
+    "bytes": 129922,
+    "sha256": "4f0178d5c15bf9e912eae1b9ebbe5c38a7bfb68d013e03aa86fd23ff8ea5ef5e"
+  },
+  {
+    "path": "dist/assets/textural/fragment-78.webp",
+    "bytes": 99482,
+    "sha256": "671ec550a5b9649b37223402fc3f4fd0ce2b56b5cd1fd419a15ce77d612a72a7"
+  },
+  {
+    "path": "dist/assets/textural/fragment-79.webp",
+    "bytes": 45712,
+    "sha256": "5f772462b8d8d5c17c0f4fb8e9115f12a49f6f08f7d0ac2359ccb856c1e0a9ad"
+  },
+  {
+    "path": "dist/assets/textural/fragment-80.webp",
+    "bytes": 46158,
+    "sha256": "2a72e1f57c708d3e72186b0bbf58d78f2e469b7ed1bdb856c4bbc1c1a2d6dcd6"
+  },
+  {
+    "path": "dist/assets/textural/fragment-81.webp",
+    "bytes": 107972,
+    "sha256": "a34ee66bb649945d734879ed7732b23d36418ff959cf1cbfec1e7d06e420b67d"
+  },
+  {
+    "path": "dist/assets/textural/fragment-82.webp",
+    "bytes": 101796,
+    "sha256": "2592455c0f21d27bcf6bd8ab47b5f84e92d69d012d296a5020c1f05fee96afde"
+  },
+  {
+    "path": "dist/assets/textural/fragment-83.webp",
+    "bytes": 187186,
+    "sha256": "6ffb56a1a98a9b184c9a9ac79f60baa63765fdfa3acc640af9114001de94be05"
+  },
+  {
+    "path": "dist/assets/textural/fragment-84.webp",
+    "bytes": 123240,
+    "sha256": "e2ed25fa6be016bd7c134fdb4774f70caa75532aed10275bf3a4364b1db5f96b"
+  },
+  {
+    "path": "dist/assets/textural/fragment-87.webp",
+    "bytes": 129536,
+    "sha256": "473fe8d348bad62ffef3d12adaae9a98169030dcb8323967223180bb0ca12749"
+  },
+  {
+    "path": "dist/assets/textural/fragment-88.webp",
+    "bytes": 167420,
+    "sha256": "e9fd5c01f6037fa8abe0d52b37eacef529ebab1fa5b82fdd0700acb4e6e7c0c6"
+  },
+  {
+    "path": "dist/assets/textural/fragment-89.webp",
+    "bytes": 173796,
+    "sha256": "6f7d6ce59ac60932d7fd7f34ea8f18e96f74dd3b5fd7481afdeeffc17bbbf4bd"
+  },
+  {
+    "path": "dist/assets/textural/fragment-90.webp",
+    "bytes": 144130,
+    "sha256": "b6b7b4df187b0e754894c17e0a7a8a4031caab43270fb0bf5f064aa8e6fefdf0"
+  },
+  {
+    "path": "dist/assets/textural/fragment-92.webp",
+    "bytes": 786270,
+    "sha256": "05b5cf5d30b96a03fd00a3e951362599d379c9027b71a6e50fd25c74d634ec24"
+  },
+  {
+    "path": "dist/assets/textural/fragment-93.webp",
+    "bytes": 21358,
+    "sha256": "607323176d092ff709d42283b8600ecfd88b72b71fb53f0ad5d3197a4117e311"
+  },
+  {
+    "path": "dist/assets/textural/fragment-94.webp",
+    "bytes": 21856,
+    "sha256": "1c0cea7a913449f17e4c8d1e650609ee92f02177ee7219c47377ae8e2cbc6992"
+  },
+  {
+    "path": "dist/assets/tv/program-1.mp4",
+    "bytes": 2523101,
+    "sha256": "f470d1fdc507ac715611b321129dc7066d680e11a8362246d06e71d64b48a0f6"
+  },
+  {
+    "path": "dist/assets/tv/program-2.mp4",
+    "bytes": 1148447,
+    "sha256": "9b445be06f8f85bd70f70ecdb79749b60d7fc38f8639c6df71122fa2d0fd87e9"
+  },
+  {
+    "path": "dist/assets/tv/program-3.mp4",
+    "bytes": 4242395,
+    "sha256": "3bdc14a4eb4bff28b388591eef0a19d3e6bcb4b31eeef50ba3f8e8866bf4a862"
+  },
+  {
+    "path": "dist/assets/tv/program-4.mp4",
+    "bytes": 920249,
+    "sha256": "c86051a752f6b17ee6b5dcf46ebbf6a9e9974f051f5bc92aeb6839e6aa7fb535"
+  },
+  {
+    "path": "dist/assets/tv/program-5.mp4",
+    "bytes": 4774565,
+    "sha256": "87645957d330d9048cd2976398cb17a6719453b178602a31323b28d73d8cd3ca"
+  },
+  {
+    "path": "dist/assets/tv/program-edited-1.mp4",
+    "bytes": 2130826,
+    "sha256": "3d31290f0411bd2175488a7f9bd2d3270047547ddc468e3ad8cd1aa570fb28e9"
+  },
+  {
+    "path": "dist/assets/tv/program-edited-2.mp4",
+    "bytes": 560669,
+    "sha256": "3be81a28a441913d6141f0c54c340923435c730251f13b51b064ce2ca56bc925"
+  },
+  {
+    "path": "dist/assets/tv/program-edited-3.mp4",
+    "bytes": 585681,
+    "sha256": "d73f16f15f29be631761afd13f0e3b5e9aae6d6bdf3d3a5b18f590fa65fed169"
+  },
+  {
+    "path": "dist/assets/tv/program-edited-4.mp4",
+    "bytes": 497069,
+    "sha256": "53c20d200d662012a5b7761632d83943e0363c8bf09ae3bbba00bda17d805047"
+  },
+  {
+    "path": "dist/assets/tv/program-edited-5.mp4",
+    "bytes": 807863,
+    "sha256": "f1143f44e1f31e2a08f992b05d95b79609781aa2c49b0efc0ad178581b6b6df0"
+  },
+  {
+    "path": "dist/assets/tv/program-revised-3.mp4",
+    "bytes": 589009,
+    "sha256": "332a0f51c4b7dd0c23cb5b2e200f5ae4fa4f0c1c16b5771e477dc4ea607e900b"
+  },
+  {
+    "path": "dist/assets/tv/program-revised-5.mp4",
+    "bytes": 747674,
+    "sha256": "49c3ff38c28b8afff27c3d9a39ae4b7d21a87e608abb4fcacf32a34d21fac3c6"
+  },
+  {
+    "path": "dist/assets/umbral-materials.webp",
+    "bytes": 537052,
+    "sha256": "1dd3938499dcb273c1dfdb5d6f3c394458f234325a0514039877840ad469bee5"
+  },
+  {
+    "path": "dist/continuous/casa.css",
+    "bytes": 24331,
+    "sha256": "bc03cc925d0f82d9a19f16de5562b009c1fbf2257183e3b7a4f0e3d08a4b0570"
+  },
+  {
+    "path": "dist/continuous/casa.js",
+    "bytes": 46468,
+    "sha256": "8d7d7d531ca1dc391edc595b7781d14d1e9e08e6db2bea152ab64cd3132f6752"
+  },
+  {
+    "path": "dist/continuous/casa2.css",
+    "bytes": 10483,
+    "sha256": "7a66a5113f0f9bee15493822e1fc4c3a8d0c5a9d53783950b7e7fef022dad19b"
+  },
+  {
+    "path": "dist/continuous/casa2.js",
+    "bytes": 17386,
+    "sha256": "d228272c992c63003411c6ebaf359e15c5664df091222e6232b5275c2c90a79d"
+  },
+  {
+    "path": "dist/continuous/casa3.css",
+    "bytes": 8972,
+    "sha256": "fa69cafcdd9d7eb42b84274637e4b7865bbbb261b368ed2c0d5a9fa48951aaa4"
+  },
+  {
+    "path": "dist/continuous/casa3.js",
+    "bytes": 21944,
+    "sha256": "049c0a1c1bfc80d19217635a8fa602e71bc94f6dfba1abe88d0069e33e3c6108"
+  },
+  {
+    "path": "dist/continuous/first-house.css",
+    "bytes": 13446,
+    "sha256": "690ab27a55691d173bc1fdb123290354ce9f1f9b6c6f72f94b3e276e720372b4"
+  },
+  {
+    "path": "dist/continuous/first-house.js",
+    "bytes": 20606,
+    "sha256": "9a5ea53d73249d4b07d970dddecb6c36b47d904b4177ea7761f1aa2de4558970"
+  },
+  {
+    "path": "dist/continuous/fondo.css",
+    "bytes": 2378,
+    "sha256": "4ac64d99ec6a6f0e7d4bfc01126f8710aeaf0c41b585db7f8e402a71eb83281a"
+  },
+  {
+    "path": "dist/continuous/fondo.js",
+    "bytes": 1954,
+    "sha256": "98aae417c1b99af6c17f586d8be79a07bfb6991d7ff57d632b7f75abf96d051e"
+  },
+  {
+    "path": "dist/continuous/prefs.js",
+    "bytes": 1494,
+    "sha256": "23a8cfa8b2629677ad38f0e0b6d70300f08214516c7283f4627c9a1006ce34c1"
+  },
+  {
+    "path": "dist/continuous/rooms.css",
+    "bytes": 5441,
+    "sha256": "aa2539fae672865e6ceb36fd63503cb911e2371426454be41ce74d8dff860a97"
+  },
+  {
+    "path": "dist/continuous/rooms.js",
+    "bytes": 7589,
+    "sha256": "35f745211aa98633e326cddad15417101119b992c94e25ab8b19d4d8f249ffc9"
+  },
+  {
+    "path": "dist/index.html",
+    "bytes": 202510,
+    "sha256": "a64753264c793984e77e27373cd8a4434b3a26bfb7a5ead74f8ea9087a8249cf"
+  },
+  {
+    "path": "source-materials/box-assets.json",
+    "bytes": 2451,
+    "sha256": "4247493744501b07f5e9d276882bfee46c4e65fda5d2ec497527a48c66fdebd7"
+  },
+  {
+    "path": "source-materials/bridge-assets.json",
+    "bytes": 1798,
+    "sha256": "0ffcb812a307191962a6712d24e3b6897fa19980972a8171cc142ecc947cfd1a"
+  },
+  {
+    "path": "source-materials/casa-silvana-estrada.mp3",
+    "bytes": 11440121,
+    "sha256": "db478f4ca60618de3df145c301e380554f5883320c0b10dead0158cdd4ee11b3"
+  },
+  {
+    "path": "source-materials/collage-atlas-retired.webp",
+    "bytes": 532986,
+    "sha256": "ade4707a1d00838bd263415302e4ff9002d06a794b28351ec1992a8dc14b9d58"
+  },
+  {
+    "path": "source-materials/cut-assets.json",
+    "bytes": 1158,
+    "sha256": "9041ee000bdf53fb87dbb09bfe48b217c96560b2c678b38fed016063b4168811"
+  },
+  {
+    "path": "source-materials/daily-scene-assets.md",
+    "bytes": 1506,
+    "sha256": "9fcf801e990e6214a5005b859cebdde1a64fb623653bedd350a1f6d9d7bfd487"
+  },
+  {
+    "path": "source-materials/portada-original.png",
+    "bytes": 2672992,
+    "sha256": "c17a89d68420a1bf1fa2eb83e03a3c1422ab9e4817ede000853cc9663dd12870"
+  },
+  {
+    "path": "source-materials/pre-continuous-v53.html",
+    "bytes": 625247,
+    "sha256": "c19f9fdcb5e1f83e58b5ed60e107d0213065b7101c5eedd4348940cb69705d34"
+  },
+  {
+    "path": "source-materials/radio-original.svg",
+    "bytes": 461355,
+    "sha256": "a8f35f702f349650420bf15f4216aa61408b0c9fbe73ea9aeee191f42cba617b"
+  },
+  {
+    "path": "source-materials/second-house-assets.json",
+    "bytes": 4712,
+    "sha256": "a342f534b72f59e3be86b818542e2d722529475c3f96b88bc77f3cf5efa1d496"
+  },
+  {
+    "path": "source-materials/web-optimization.json",
+    "bytes": 14565,
+    "sha256": "e5c2751418a4dca49391b479ad0bb6fe51063eecb3da60630da3b84a64aaa83f"
+  },
+  {
+    "path": "source-materials/web-originals/box-base.png",
+    "bytes": 2515836,
+    "sha256": "b0c17392acfd7907f47597a8eb80b4d6db8e83ddd61d08fda02c3a8678822e57"
+  },
+  {
+    "path": "source-materials/web-originals/box-key.png",
+    "bytes": 1652115,
+    "sha256": "3862a3f06dd7e430f70ecf0f4fb7ad7fc68a723bb6523fbbbd43e0c6f1a0845c"
+  },
+  {
+    "path": "source-materials/web-originals/box-lid.png",
+    "bytes": 2234954,
+    "sha256": "2c97965514fe5e7e5241cc4b797b3d4376b27fb4bf38065ed5f3aa689f612596"
+  },
+  {
+    "path": "source-materials/web-originals/box-spoon.png",
+    "bytes": 1389588,
+    "sha256": "5d5d203e4a91471fe811dce8591f5bbe18ffaba314dfb8daec41dcc15f12a5b5"
+  },
+  {
+    "path": "source-materials/web-originals/bridge-tape.png",
+    "bytes": 935157,
+    "sha256": "a6ca6b1af458b437c02c19386f213af2b005a199fd940ae15900a5f7ba7d3773"
+  },
+  {
+    "path": "source-materials/web-originals/bridge-wall.png",
+    "bytes": 3249367,
+    "sha256": "376911a1221c7619731f360e5ba447f007043fbc009edad6ca46d73bee272bf6"
+  },
+  {
+    "path": "source-materials/web-originals/collage-atlas.png",
+    "bytes": 2019864,
+    "sha256": "f5142070f943ebae5ed81f046443926569c4fb915c7ef6e1e54cf918eb419c7d"
+  },
+  {
+    "path": "source-materials/web-originals/cut-ash.png",
+    "bytes": 1846734,
+    "sha256": "673ac1d0aac5d5ef110d74a26c8cec00ff75ba9cdfa9be4d209786259c2b92ea"
+  },
+  {
+    "path": "source-materials/web-originals/daily-burger.png",
+    "bytes": 1976297,
+    "sha256": "af58037089f553d07be6494c9acc4546b8f71e64885f77db7a376a9d66b3800c"
+  },
+  {
+    "path": "source-materials/web-originals/daily-chair.png",
+    "bytes": 1212571,
+    "sha256": "cf9d5ff241fe1a83a82865b82711d5a5f3c74034dd4480db36b5fe1a42389275"
+  },
+  {
+    "path": "source-materials/web-originals/daily-door.png",
+    "bytes": 3212435,
+    "sha256": "45f0c374f28dfe1779447678d20367b480511c99d7f8e15facbe891868e4f3ea"
+  },
+  {
+    "path": "source-materials/web-originals/daily-photo.png",
+    "bytes": 2540564,
+    "sha256": "a04a7a1ddbac3e124869433aee26278cbd9b0d71fc835659c7ade45135351e1e"
+  },
+  {
+    "path": "source-materials/web-originals/daily-place-alt.png",
+    "bytes": 2341713,
+    "sha256": "58b1308a852b0ebc67f72a644897ab80697511349adc898a0a2f927230b72595"
+  },
+  {
+    "path": "source-materials/web-originals/daily-place.png",
+    "bytes": 2356280,
+    "sha256": "c4416ced4563344a7adf65bab89c7478f863082611ef460fbd13f97c2aebd6c5"
+  },
+  {
+    "path": "source-materials/web-originals/daily-table.png",
+    "bytes": 2107191,
+    "sha256": "67b2273b0ddb646307e8e776f63431e880485391486dc1cfa93aefbcf8f8bdeb"
+  },
+  {
+    "path": "source-materials/web-originals/entrada-video.mp4",
+    "bytes": 11072436,
+    "sha256": "bafd4db1e72eed41994449b6a5c9e916b543f9441cb2b552ffb2be009d90e723"
+  },
+  {
+    "path": "source-materials/web-originals/fondo-papel.png",
+    "bytes": 9409142,
+    "sha256": "f7dbd3d57979ea81a22552261cc457fdaa7305255f79970adaf6f4bd1065a51b"
+  },
+  {
+    "path": "source-materials/web-originals/ladrillos.png",
+    "bytes": 11105961,
+    "sha256": "0867a4d4103d0ac9700606e9b1764e77551659ae5f86532a0716312f870d6e7f"
+  },
+  {
+    "path": "source-materials/web-originals/logo-la-casa.png",
+    "bytes": 512791,
+    "sha256": "ea6f38ba15730badc5660bdf162cd03269c7005780d6b8d3d0b44b2f5d5ce5cf"
+  },
+  {
+    "path": "source-materials/web-originals/low-cloth.png",
+    "bytes": 2154840,
+    "sha256": "f5f54c80fc578857da242300868b9666e84913fdea5a12a1cafea7b74f33420c"
+  },
+  {
+    "path": "source-materials/web-originals/low-cupboard.png",
+    "bytes": 2399109,
+    "sha256": "b524d9456e98f98aa1b2e51414a6aaed5d79e582c33b48a10c4cc5470ec8372d"
+  },
+  {
+    "path": "source-materials/web-originals/low-robot.png",
+    "bytes": 1479132,
+    "sha256": "7f0a2a34d0cf44532ae73140010bd95d3b50a82987c332d54aeb9b21c2e75af0"
+  },
+  {
+    "path": "source-materials/web-originals/low-table.png",
+    "bytes": 2265879,
+    "sha256": "1f7428777287117457740cadef750bf911418588e5918fadf9b1dbb21a5efd28"
+  },
+  {
+    "path": "source-materials/web-originals/low-tv.png",
+    "bytes": 2186374,
+    "sha256": "90ea55a5137ec4bcfe06b8aee7a0c395d035356d9da75e83a779a633af7da9d1"
+  },
+  {
+    "path": "source-materials/web-originals/low-wrapper.png",
+    "bytes": 864656,
+    "sha256": "b8adfb6b7a0f3f2f81cf6dd3cf85ccafe3cc956197ce485b5963b58b868a7fb2"
+  },
+  {
+    "path": "source-materials/web-originals/marco-ventana.png",
+    "bytes": 2015689,
+    "sha256": "07cc961bbfe97b3e493c0ad3462110e2142b68f5bdd8d43c0faee6c1f498645c"
+  },
+  {
+    "path": "source-materials/web-originals/nino.png",
+    "bytes": 2476875,
+    "sha256": "1d17fcfa1a4964f77d4b18835e0d73af16f2a7d731d5030117905d4e9ecd287a"
+  },
+  {
+    "path": "source-materials/web-originals/second-base.png",
+    "bytes": 2698483,
+    "sha256": "c12ff25d8428d7d90db5c910d264b42c739576561d0232e958fae018a810e806"
+  },
+  {
+    "path": "source-materials/web-originals/second-drawing.png",
+    "bytes": 2884033,
+    "sha256": "604c058db37cf7f4f5130ba9ff603e5a2bf0b8ad914531aed1ed16ec7be29206"
+  },
+  {
+    "path": "source-materials/web-originals/second-memory.png",
+    "bytes": 3079898,
+    "sha256": "2a10b4fb5976240e245a1c6bb69d0ece503a68596dd5a540f46c95f683a68edc"
+  },
+  {
+    "path": "source-materials/web-originals/second-missing.png",
+    "bytes": 2805510,
+    "sha256": "21aee8c759d675f17fdab1d97b8a6e9f26f6ba9a34b95d137c81e180be68650b"
+  },
+  {
+    "path": "source-materials/web-originals/second-radio.png",
+    "bytes": 2683913,
+    "sha256": "4ccc6a58b06df77ffaf6531ab6dd7f91432d47e118bee809d367918d7a58d62a"
+  },
+  {
+    "path": "source-materials/web-originals/second-water.png",
+    "bytes": 2144426,
+    "sha256": "6706eaec5b5d4f18794cd284875c3752cc66e1debbf3849007688b9bd183a3dd"
+  },
+  {
+    "path": "source-materials/web-originals/umbral-materials.png",
+    "bytes": 2347692,
+    "sha256": "7564b8d502f91256e6646845cd8fd25c2757721e8c08df2bc8e78a5c23e3dcae"
+  }
+]

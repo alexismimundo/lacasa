@@ -1,0 +1,1 @@
+PASS: green transparency; two-tone RGB equality; burn alpha derived from exact keyed flame pixels; consumed areas persist; independent geometric contour removed; JS syntax.

@@ -1,0 +1,15 @@
+{
+  "result": {
+    "result": {
+      "type": "string",
+      "value": "PASS: paired film/paper, kitchen/paper, paper/salon and salon/sky; opaque rooms; viewport clip; reverse; 1280x900"
+    }
+  },
+  "info": {
+    "result": {
+      "type": "string",
+      "value": "PASS: paired film/paper, kitchen/paper, paper/salon and salon/sky; opaque rooms; viewport clip; reverse; 1280x900"
+    }
+  },
+  "errors": []
+}

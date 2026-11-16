@@ -1,0 +1,24 @@
+<!doctype html><html><head><meta charset="utf-8"><style>body{margin:0;background:#ddd}canvas{width:100vw;height:auto;background:repeating-conic-gradient(#eee 0% 25%,#fff 0% 50%) 0/24px 24px}</style></head><body><canvas id="art" width="2048" height="2048"></canvas><script>
+window.ready=(async()=>{
+ const canvas=document.querySelector('canvas'),ctx=canvas.getContext('2d'),assets={};
+ const names=['volador-azul','volador-negro','volador-azul-rombo','volador-usuario','cola-azul','cola-negro','cola-rosa'];
+ await Promise.all(names.map(async name=>{const image=new Image();image.src='../dist/assets/barrilete/'+name+'.png';await image.decode();assets[name]=image}));
+ const designs=[['azul',230,475,190,-.42,'azul'],['negro',475,95,65,.34,'negro'],['azul-rombo',680,725,120,-.28,'azul'],['usuario',1060,330,265,.24,'rosa'],['azul',840,145,85,-.31,'azul'],['negro',1540,660,185,.43,'negro'],['azul-rombo',1715,85,135,-.22,'azul'],['azul',1375,210,60,.30,'azul']];
+ // Fine blue threads behind the artwork, with relaxed, slightly crossing arcs.
+ ctx.strokeStyle='#335386';ctx.lineWidth=.85;ctx.globalAlpha=.48;ctx.lineCap='round';
+ designs.forEach(([name,x,y,width,angle],i)=>{
+  const height=width*assets['volador-'+name].naturalHeight/assets['volador-'+name].naturalWidth;
+  const startX=x-Math.sin(angle)*height*.72,startY=y+Math.cos(angle)*height*.72;
+   const endX=[445,350,850,780,1110,1325,1810,1565][i],endY=[958,675,1002,980,810,995,735,560][i];
+  ctx.beginPath();ctx.moveTo(startX,startY);
+  ctx.bezierCurveTo(startX+(i%2?-55:65),startY+(endY-startY)*.38,endX+(i%2?45:-60),startY+(endY-startY)*.74,endX,endY);ctx.stroke();
+ });ctx.globalAlpha=1;
+ for(const [name,x,y,width,angle,tail] of designs){
+  const image=assets['volador-'+name],height=width*image.naturalHeight/image.naturalWidth,thread=assets['cola-'+tail];
+  ctx.save();ctx.translate(x,y);ctx.rotate(angle);ctx.drawImage(thread,-width*.03,height*.9,width*.6,width*.6*thread.naturalHeight/thread.naturalWidth);ctx.drawImage(image,-width/2,0,width,height);ctx.restore();
+ }
+ const pixels=ctx.getImageData(0,0,2048,2048).data;let minX=2048,minY=2048,maxX=-1,maxY=-1,count=0;
+ for(let y=0;y<2048;y++)for(let x=0;x<2048;x++){if(pixels[(y*2048+x)*4+3]){minX=Math.min(minX,x);minY=Math.min(minY,y);maxX=Math.max(maxX,x);maxY=Math.max(maxY,y);count++;if(y>=1024)throw Error('Artwork outside upper half')}}
+ if(!count||minX===0||maxX===2047||minY===0)throw Error('Empty or clipped composition');
+  return {png:canvas.toDataURL('image/png'),width:2048,height:2048,bounds:{minX,minY,maxX,maxY},bottomHalf:'fully transparent',kites:designs.length,pinkIncluded:true,blueThreads:designs.length,layout:'irregular clusters across upper half, widths 60–265px, varied thread lengths'};
+})();</script></body></html>

@@ -1,0 +1,74 @@
+[
+  {
+    "name": "objeto-06-azul.webp",
+    "width": 198,
+    "height": 214,
+    "residual": 0
+  },
+  {
+    "name": "objeto-06-negro.webp",
+    "width": 198,
+    "height": 214,
+    "residual": 0
+  },
+  {
+    "name": "objeto-07-azul.webp",
+    "width": 243,
+    "height": 222,
+    "residual": 0
+  },
+  {
+    "name": "objeto-07-negro.webp",
+    "width": 243,
+    "height": 222,
+    "residual": 0
+  },
+  {
+    "name": "objeto-11-azul.webp",
+    "width": 216,
+    "height": 186,
+    "residual": 0
+  },
+  {
+    "name": "objeto-11-negro.webp",
+    "width": 216,
+    "height": 186,
+    "residual": 0
+  },
+  {
+    "name": "objeto-18-azul.webp",
+    "width": 233,
+    "height": 194,
+    "residual": 0
+  },
+  {
+    "name": "objeto-18-negro.webp",
+    "width": 233,
+    "height": 194,
+    "residual": 0
+  },
+  {
+    "name": "objeto-21-azul.webp",
+    "width": 231,
+    "height": 170,
+    "residual": 0
+  },
+  {
+    "name": "objeto-21-negro.webp",
+    "width": 231,
+    "height": 170,
+    "residual": 0
+  },
+  {
+    "name": "objeto-22-azul.webp",
+    "width": 218,
+    "height": 164,
+    "residual": 0
+  },
+  {
+    "name": "objeto-22-negro.webp",
+    "width": 218,
+    "height": 164,
+    "residual": 0
+  }
+]

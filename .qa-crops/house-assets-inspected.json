@@ -1,0 +1,14 @@
+{
+  "result": {
+    "result": {
+      "type": "string",
+      "value": "[{\"n\":1,\"w\":273,\"h\":162,\"transparent\":21178,\"white\":0,\"solid\":23048,\"corners\":[0,0,0,0]},{\"n\":2,\"w\":193,\"h\":160,\"transparent\":16141,\"white\":0,\"solid\":14739,\"corners\":[35,35,35,137]},{\"n\":13,\"w\":309,\"h\":174,\"transparent\":33688,\"white\":0,\"solid\":20078,\"corners\":[36,36,37,252]},{\"n\":27,\"w\":231,\"h\":199,\"transparent\":19763,\"white\":0,\"solid\":26206,\"corners\":[25,25,25,171]},{\"n\":28,\"w\":333,\"h\":222,\"transparent\":36943,\"white\":0,\"solid\":36983,\"corners\":[0,0,0,0]}]"
+    }
+  },
+  "info": {
+    "result": {
+      "type": "undefined"
+    }
+  },
+  "errors": []
+}

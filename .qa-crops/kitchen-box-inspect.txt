@@ -1,0 +1,87 @@
+﻿[
+    {
+        "Path":  "C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\continuous\\first-house.js",
+        "LineNumber":  195,
+        "Line":  "  const id=\u0027kitchen-memory-\u0027+(i+1),src=\u0027assets/Memorias/03-frente.png\u0027;"
+    },
+    {
+        "Path":  "C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\continuous\\first-house.js",
+        "LineNumber":  197,
+        "Line":  "  const card=object(\u0027kitchen-memory\u0027,src,\u0027arrastrá este recuerdo a la caja\u0027,Q(\u0027.kitchen-scene\u0027));"
+    },
+    {
+        "Path":  "C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\continuous\\first-house.js",
+        "LineNumber":  207,
+        "Line":  "  card.style.setProperty(\u0027--memory-arrival\u0027,String(opacity));card.style.setProperty(\u0027--memory-rise\u0027,\u00270px\u0027);"
+    },
+    {
+        "Path":  "C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\continuous\\first-house.js",
+        "LineNumber":  229,
+        "Line":  " for(const [i,src] of [\u002703-frente.png\u0027,\u002702-dorso.png\u0027].entries()){"
+    },
+    {
+        "Path":  "C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\continuous\\first-house.js",
+        "LineNumber":  345,
+        "Line":  "  // Cocina → caja → vídeo. Dock before the film fills the screen."
+    },
+    {
+        "Path":  "C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\continuous\\first-house.js",
+        "LineNumber":  352,
+        "Line":  "   // Retract the card before closing the lid, even while docking."
+    },
+    {
+        "Path":  "C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\continuous\\first-house.js",
+        "LineNumber":  363,
+        "Line":  "  // Blend the user\u0027s rotation back to the same frontal pose as it docks."
+    },
+    {
+        "Path":  "C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\continuous\\first-house.js",
+        "LineNumber":  370,
+        "Line":  "  // Keep GPU attachments stable throughout docking; CSS handles the visible size."
+    },
+    {
+        "Path":  "C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\continuous\\first-house.js",
+        "LineNumber":  758,
+        "Line":  "  // The docked shortcut is static. Repaint only after an actual model, lid,"
+    },
+    {
+        "Path":  "C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\continuous\\rooms.css",
+        "LineNumber":  11,
+        "Line":  "#remembered-rooms .kitchen-memory{position:absolute;left:var(--memory-x);top:var(--memory-y);width:clamp(80px,10vw,145px);z-index:8;opacity:var(--memory-arrival,0);transform:translate(-50%,calc(-50% + var(--memory-rise,0px))) rotate(var(--memory-angle)) scale(1);transition:transform .35s ease;touch-action:none}"
+    },
+    {
+        "Path":  "C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\continuous\\rooms.css",
+        "LineNumber":  12,
+        "Line":  "#remembered-rooms .kitchen-memory:hover,#remembered-rooms .kitchen-memory:focus-visible{transform:translate(-50%,calc(-50% + var(--memory-rise,0px))) rotate(0deg) scale(1.14);z-index:9}"
+    },
+    {
+        "Path":  "C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\continuous\\rooms.css",
+        "LineNumber":  13,
+        "Line":  "#remembered-rooms .kitchen-memory\u003eimg{display:block;width:100%;height:auto}"
+    },
+    {
+        "Path":  "C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\continuous\\rooms.css",
+        "LineNumber":  14,
+        "Line":  "#remembered-rooms .kitchen-memory[hidden]{display:none}"
+    },
+    {
+        "Path":  "C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\continuous\\rooms.css",
+        "LineNumber":  15,
+        "Line":  "@media(prefers-reduced-motion:reduce){#remembered-rooms .kitchen-memory{transition:none}}"
+    },
+    {
+        "Path":  "C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\continuous\\rooms.js",
+        "LineNumber":  84,
+        "Line":  "    syncTeaserPlayback(teaserVisible\u0026\u0026!document.hidden\u0026\u0026!reduced\u0026\u0026!document.querySelector(\u0027#coming-soon-gate\u0027));"
+    },
+    {
+        "Path":  "C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\continuous\\teaser-gate.js",
+        "LineNumber":  7,
+        "Line":  " style.textContent=\u0027html.teaser-pending{background:#000}html.teaser-pending body{visibility:hidden}#coming-soon-gate{visibility:visible!important;position:fixed;inset:0;width:100%;height:100%;border:0;z-index:2147483647;background:#000}\u0027;"
+    },
+    {
+        "Path":  "C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\continuous\\teaser-gate.js",
+        "LineNumber":  10,
+        "Line":  "  const frame=document.createElement(\u0027iframe\u0027);frame.id=\u0027coming-soon-gate\u0027;frame.title=\u0027La Casa — Próximamente\u0027;"
+    }
+]

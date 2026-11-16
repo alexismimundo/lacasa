@@ -1,0 +1,12 @@
+ function paint(){pad.innerHTML=drawing(strokes).replace(/^.*?<svg[^>]*>|<\/svg>$/g,'')+(active?'<path d="'+path(active)+'" fill="none" stroke="#335386" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>':'')}
+ function point(e){const r=pad.getBoundingClientRect();return [Math.max(0,Math.min(800,(e.clientX-r.left)*800/r.width)),Math.max(0,Math.min(500,(e.clientY-r.top)*500/r.height))]}
+ pad.addEventListener('pointerdown',e=>{if(e.button!==0||strokes.length>=120)return;e.preventDefault();e.stopPropagation();pad.setPointerCapture(e.pointerId);active=[point(e)];paint()});
+ pad.addEventListener('pointermove',e=>{if(!active)return;const p=point(e),last=active.at(-1);if(Math.hypot(p[0]-last[0],p[1]-last[1])<1.5||active.length>=2500)return;active.push(p);paint()});
+ function finish(e){if(!active)return;if(e?.type==='pointercancel'){active=null;paint();return}if(e)active.push(point(e));if(active.length>1)strokes.push({points:active,closed:closed(active)});active=null;paint()}
+ pad.addEventListener('pointerup',finish);pad.addEventListener('pointercancel',finish);pad.addEventListener('lostpointercapture',()=>{if(active){active=null;paint()}});
+ $('community-undo').onclick=()=>{active=null;strokes.pop();paint()};$('community-clear').onclick=()=>{active=null;strokes=[];paint()};
+ $('community-name').value=saved?.name||'';$('community-text').value=saved?.memory||'';paint();
+ root.querySelector('form').onsubmit=e=>{e.preventDefault();if(!strokes.length){status.textContent='Primero dejá un dibujo de tu casa en el recuadro.';return}saved={name:$('community-name').value.trim()||'Sin nombre',memory:$('community-text').value.trim(),strokes:JSON.parse(JSON.stringify(strokes)),demo:false};try{localStorage.setItem(KEY,JSON.stringify(saved));status.textContent='Tu casa ya forma parte de este recorrido local. Podés seguir bajando.'}catch{status.textContent='Tu casa se sumó a esta visita, pero el navegador no permitió guardarla.'}populate(track);document.querySelectorAll('.community-gallery-track').forEach(populate);$('community-continue').textContent='Continuar ↓'};
+ $('community-continue').onclick=()=>{target=24.15;storeTravel()};
+ root.addEventListener('keydown',e=>{if(e.target.closest('input,textarea,button'))e.stopPropagation()});
+ root.addEventListener('touchstart',e=>{if(e.target.closest('#community-pad,input,textarea'))e.stopPropagation()},{passive:true});

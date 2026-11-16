@@ -1,0 +1,15 @@
+{
+  "result": {
+    "result": {
+      "type": "string",
+      "value": "PASS: production scene transforms left/up/right; exact reverse; inventory blocks navigation; 1280x900"
+    }
+  },
+  "info": {
+    "result": {
+      "type": "string",
+      "value": "PASS: production scene transforms left/up/right; exact reverse; inventory blocks navigation; 1280x900"
+    }
+  },
+  "errors": []
+}

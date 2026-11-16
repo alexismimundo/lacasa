@@ -1,0 +1,33 @@
+{
+  "method": "Herramienta integrada de generación de imágenes",
+  "assets": [
+    {
+      "file": "dist/assets/bridge-wall.png",
+      "prompt": "Photographic cutout of one small fragment of a worn blue #335386 plaster wall with a narrow wooden ledge at its bottom, slightly seen from above so its horizontal top can receive a small object. Modest domestic material, aged blue paint with scuffs, analog scanned texture, imperfect torn irregular perimeter, no room no people no objects no text, entire fragment isolated on truly transparent background, landscape 3:2. The ledge top lies at 75 percent of the image height.",
+      "transparent_background": true
+    },
+    {
+      "file": "dist/assets/bridge-tape.png",
+      "prompt": "One straight horizontal strip of real pale cream paper masking tape, photographed flat from above, fibrous translucent paper, gently torn ends and slightly imperfect parallel long edges, constant narrow width, subtle adhesive shadows, no curl, no text, no surrounding objects, entire tape centered on truly transparent background, wide landscape 3:1. Analog collage scan.",
+      "transparent_background": true
+    }
+  ],
+  "reused": [
+    "daily-table.png",
+    "Objeto real de boxCatalog según getFirstParticipation()",
+    "Texto confirmado real; borrador excluido",
+    "Puntos originales de memoryStrokes y dimensiones de memoryDrawingSize"
+  ],
+  "state": {
+    "key": "la-casa-union-v1",
+    "storage": "sessionStorage",
+    "fields": [
+      "joined",
+      "fragments",
+      "anchors"
+    ],
+    "reader": "getTapeComposition()",
+    "network": false
+  },
+  "rendering": "La cinta usa una muestra del centro de su fotografía repetida horizontalmente, con ancho constante. El dibujo se traslada y escala uniformemente, sin generar nuevos trazos."
+}

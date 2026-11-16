@@ -1,0 +1,379 @@
+[
+    {
+        "value":  " function paint(){pad.innerHTML=drawing(strokes).replace(/^.*?\u003csvg[^\u003e]*\u003e|\u003c\\/svg\u003e$/g,\u0027\u0027)+(active?\u0027\u003cpath d=\"\u0027+path(active)+\u0027\" fill=\"none\" stroke=\"#335386\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/\u003e\u0027:\u0027\u0027)}",
+        "PSPath":  "C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\continuous\\community.js",
+        "PSParentPath":  "C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\continuous",
+        "PSChildName":  "community.js",
+        "PSDrive":  {
+                        "CurrentLocation":  "Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo",
+                        "Name":  "C",
+                        "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                        "Root":  "C:\\",
+                        "Description":  "Programas",
+                        "MaximumSize":  null,
+                        "Credential":  "System.Management.Automation.PSCredential",
+                        "DisplayRoot":  null
+                    },
+        "PSProvider":  {
+                           "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                           "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                           "Name":  "FileSystem",
+                           "PSSnapIn":  "Microsoft.PowerShell.Core",
+                           "ModuleName":  "Microsoft.PowerShell.Core",
+                           "Module":  null,
+                           "Description":  "",
+                           "Capabilities":  52,
+                           "Home":  "C:\\Users\\alexismimundo",
+                           "Drives":  "C D G"
+                       },
+        "ReadCount":  33
+    },
+    {
+        "value":  " function point(e){const r=pad.getBoundingClientRect();return [Math.max(0,Math.min(800,(e.clientX-r.left)*800/r.width)),Math.max(0,Math.min(500,(e.clientY-r.top)*500/r.height))]}",
+        "PSPath":  "C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\continuous\\community.js",
+        "PSParentPath":  "C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\continuous",
+        "PSChildName":  "community.js",
+        "PSDrive":  {
+                        "CurrentLocation":  "Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo",
+                        "Name":  "C",
+                        "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                        "Root":  "C:\\",
+                        "Description":  "Programas",
+                        "MaximumSize":  null,
+                        "Credential":  "System.Management.Automation.PSCredential",
+                        "DisplayRoot":  null
+                    },
+        "PSProvider":  {
+                           "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                           "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                           "Name":  "FileSystem",
+                           "PSSnapIn":  "Microsoft.PowerShell.Core",
+                           "ModuleName":  "Microsoft.PowerShell.Core",
+                           "Module":  null,
+                           "Description":  "",
+                           "Capabilities":  52,
+                           "Home":  "C:\\Users\\alexismimundo",
+                           "Drives":  "C D G"
+                       },
+        "ReadCount":  34
+    },
+    {
+        "value":  " pad.addEventListener(\u0027pointerdown\u0027,e=\u003e{if(e.button!==0||strokes.length\u003e=120)return;e.preventDefault();e.stopPropagation();pad.setPointerCapture(e.pointerId);active=[point(e)];paint()});",
+        "PSPath":  "C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\continuous\\community.js",
+        "PSParentPath":  "C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\continuous",
+        "PSChildName":  "community.js",
+        "PSDrive":  {
+                        "CurrentLocation":  "Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo",
+                        "Name":  "C",
+                        "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                        "Root":  "C:\\",
+                        "Description":  "Programas",
+                        "MaximumSize":  null,
+                        "Credential":  "System.Management.Automation.PSCredential",
+                        "DisplayRoot":  null
+                    },
+        "PSProvider":  {
+                           "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                           "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                           "Name":  "FileSystem",
+                           "PSSnapIn":  "Microsoft.PowerShell.Core",
+                           "ModuleName":  "Microsoft.PowerShell.Core",
+                           "Module":  null,
+                           "Description":  "",
+                           "Capabilities":  52,
+                           "Home":  "C:\\Users\\alexismimundo",
+                           "Drives":  "C D G"
+                       },
+        "ReadCount":  35
+    },
+    {
+        "value":  " pad.addEventListener(\u0027pointermove\u0027,e=\u003e{if(!active)return;const p=point(e),last=active.at(-1);if(Math.hypot(p[0]-last[0],p[1]-last[1])\u003c1.5||active.length\u003e=2500)return;active.push(p);paint()});",
+        "PSPath":  "C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\continuous\\community.js",
+        "PSParentPath":  "C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\continuous",
+        "PSChildName":  "community.js",
+        "PSDrive":  {
+                        "CurrentLocation":  "Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo",
+                        "Name":  "C",
+                        "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                        "Root":  "C:\\",
+                        "Description":  "Programas",
+                        "MaximumSize":  null,
+                        "Credential":  "System.Management.Automation.PSCredential",
+                        "DisplayRoot":  null
+                    },
+        "PSProvider":  {
+                           "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                           "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                           "Name":  "FileSystem",
+                           "PSSnapIn":  "Microsoft.PowerShell.Core",
+                           "ModuleName":  "Microsoft.PowerShell.Core",
+                           "Module":  null,
+                           "Description":  "",
+                           "Capabilities":  52,
+                           "Home":  "C:\\Users\\alexismimundo",
+                           "Drives":  "C D G"
+                       },
+        "ReadCount":  36
+    },
+    {
+        "value":  " function finish(e){if(!active)return;if(e?.type===\u0027pointercancel\u0027){active=null;paint();return}if(e)active.push(point(e));if(active.length\u003e1)strokes.push({points:active,closed:closed(active)});active=null;paint()}",
+        "PSPath":  "C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\continuous\\community.js",
+        "PSParentPath":  "C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\continuous",
+        "PSChildName":  "community.js",
+        "PSDrive":  {
+                        "CurrentLocation":  "Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo",
+                        "Name":  "C",
+                        "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                        "Root":  "C:\\",
+                        "Description":  "Programas",
+                        "MaximumSize":  null,
+                        "Credential":  "System.Management.Automation.PSCredential",
+                        "DisplayRoot":  null
+                    },
+        "PSProvider":  {
+                           "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                           "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                           "Name":  "FileSystem",
+                           "PSSnapIn":  "Microsoft.PowerShell.Core",
+                           "ModuleName":  "Microsoft.PowerShell.Core",
+                           "Module":  null,
+                           "Description":  "",
+                           "Capabilities":  52,
+                           "Home":  "C:\\Users\\alexismimundo",
+                           "Drives":  "C D G"
+                       },
+        "ReadCount":  37
+    },
+    {
+        "value":  " pad.addEventListener(\u0027pointerup\u0027,finish);pad.addEventListener(\u0027pointercancel\u0027,finish);pad.addEventListener(\u0027lostpointercapture\u0027,()=\u003e{if(active){active=null;paint()}});",
+        "PSPath":  "C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\continuous\\community.js",
+        "PSParentPath":  "C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\continuous",
+        "PSChildName":  "community.js",
+        "PSDrive":  {
+                        "CurrentLocation":  "Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo",
+                        "Name":  "C",
+                        "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                        "Root":  "C:\\",
+                        "Description":  "Programas",
+                        "MaximumSize":  null,
+                        "Credential":  "System.Management.Automation.PSCredential",
+                        "DisplayRoot":  null
+                    },
+        "PSProvider":  {
+                           "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                           "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                           "Name":  "FileSystem",
+                           "PSSnapIn":  "Microsoft.PowerShell.Core",
+                           "ModuleName":  "Microsoft.PowerShell.Core",
+                           "Module":  null,
+                           "Description":  "",
+                           "Capabilities":  52,
+                           "Home":  "C:\\Users\\alexismimundo",
+                           "Drives":  "C D G"
+                       },
+        "ReadCount":  38
+    },
+    {
+        "value":  " $(\u0027community-undo\u0027).onclick=()=\u003e{active=null;strokes.pop();paint()};$(\u0027community-clear\u0027).onclick=()=\u003e{active=null;strokes=[];paint()};",
+        "PSPath":  "C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\continuous\\community.js",
+        "PSParentPath":  "C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\continuous",
+        "PSChildName":  "community.js",
+        "PSDrive":  {
+                        "CurrentLocation":  "Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo",
+                        "Name":  "C",
+                        "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                        "Root":  "C:\\",
+                        "Description":  "Programas",
+                        "MaximumSize":  null,
+                        "Credential":  "System.Management.Automation.PSCredential",
+                        "DisplayRoot":  null
+                    },
+        "PSProvider":  {
+                           "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                           "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                           "Name":  "FileSystem",
+                           "PSSnapIn":  "Microsoft.PowerShell.Core",
+                           "ModuleName":  "Microsoft.PowerShell.Core",
+                           "Module":  null,
+                           "Description":  "",
+                           "Capabilities":  52,
+                           "Home":  "C:\\Users\\alexismimundo",
+                           "Drives":  "C D G"
+                       },
+        "ReadCount":  39
+    },
+    {
+        "value":  " $(\u0027community-name\u0027).value=saved?.name||\u0027\u0027;$(\u0027community-text\u0027).value=saved?.memory||\u0027\u0027;paint();",
+        "PSPath":  "C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\continuous\\community.js",
+        "PSParentPath":  "C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\continuous",
+        "PSChildName":  "community.js",
+        "PSDrive":  {
+                        "CurrentLocation":  "Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo",
+                        "Name":  "C",
+                        "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                        "Root":  "C:\\",
+                        "Description":  "Programas",
+                        "MaximumSize":  null,
+                        "Credential":  "System.Management.Automation.PSCredential",
+                        "DisplayRoot":  null
+                    },
+        "PSProvider":  {
+                           "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                           "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                           "Name":  "FileSystem",
+                           "PSSnapIn":  "Microsoft.PowerShell.Core",
+                           "ModuleName":  "Microsoft.PowerShell.Core",
+                           "Module":  null,
+                           "Description":  "",
+                           "Capabilities":  52,
+                           "Home":  "C:\\Users\\alexismimundo",
+                           "Drives":  "C D G"
+                       },
+        "ReadCount":  40
+    },
+    {
+        "value":  " root.querySelector(\u0027form\u0027).onsubmit=e=\u003e{e.preventDefault();if(!strokes.length){status.textContent=\u0027Primero dejá un dibujo de tu casa en el recuadro.\u0027;return}saved={name:$(\u0027community-name\u0027).value.trim()||\u0027Sin nombre\u0027,memory:$(\u0027community-text\u0027).value.trim(),strokes:JSON.parse(JSON.stringify(strokes)),demo:false};try{localStorage.setItem(KEY,JSON.stringify(saved));status.textContent=\u0027Tu casa ya forma parte de este recorrido local. Podés seguir bajando.\u0027}catch{status.textContent=\u0027Tu casa se sumó a esta visita, pero el navegador no permitió guardarla.\u0027}populate(track);document.querySelectorAll(\u0027.community-gallery-track\u0027).forEach(populate);$(\u0027community-continue\u0027).textContent=\u0027Continuar ↓\u0027};",
+        "PSPath":  "C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\continuous\\community.js",
+        "PSParentPath":  "C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\continuous",
+        "PSChildName":  "community.js",
+        "PSDrive":  {
+                        "CurrentLocation":  "Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo",
+                        "Name":  "C",
+                        "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                        "Root":  "C:\\",
+                        "Description":  "Programas",
+                        "MaximumSize":  null,
+                        "Credential":  "System.Management.Automation.PSCredential",
+                        "DisplayRoot":  null
+                    },
+        "PSProvider":  {
+                           "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                           "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                           "Name":  "FileSystem",
+                           "PSSnapIn":  "Microsoft.PowerShell.Core",
+                           "ModuleName":  "Microsoft.PowerShell.Core",
+                           "Module":  null,
+                           "Description":  "",
+                           "Capabilities":  52,
+                           "Home":  "C:\\Users\\alexismimundo",
+                           "Drives":  "C D G"
+                       },
+        "ReadCount":  41
+    },
+    {
+        "value":  " $(\u0027community-continue\u0027).onclick=()=\u003e{target=24.15;storeTravel()};",
+        "PSPath":  "C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\continuous\\community.js",
+        "PSParentPath":  "C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\continuous",
+        "PSChildName":  "community.js",
+        "PSDrive":  {
+                        "CurrentLocation":  "Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo",
+                        "Name":  "C",
+                        "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                        "Root":  "C:\\",
+                        "Description":  "Programas",
+                        "MaximumSize":  null,
+                        "Credential":  "System.Management.Automation.PSCredential",
+                        "DisplayRoot":  null
+                    },
+        "PSProvider":  {
+                           "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                           "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                           "Name":  "FileSystem",
+                           "PSSnapIn":  "Microsoft.PowerShell.Core",
+                           "ModuleName":  "Microsoft.PowerShell.Core",
+                           "Module":  null,
+                           "Description":  "",
+                           "Capabilities":  52,
+                           "Home":  "C:\\Users\\alexismimundo",
+                           "Drives":  "C D G"
+                       },
+        "ReadCount":  42
+    },
+    {
+        "value":  " root.addEventListener(\u0027keydown\u0027,e=\u003e{if(e.target.closest(\u0027input,textarea,button\u0027))e.stopPropagation()});",
+        "PSPath":  "C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\continuous\\community.js",
+        "PSParentPath":  "C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\continuous",
+        "PSChildName":  "community.js",
+        "PSDrive":  {
+                        "CurrentLocation":  "Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo",
+                        "Name":  "C",
+                        "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                        "Root":  "C:\\",
+                        "Description":  "Programas",
+                        "MaximumSize":  null,
+                        "Credential":  "System.Management.Automation.PSCredential",
+                        "DisplayRoot":  null
+                    },
+        "PSProvider":  {
+                           "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                           "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                           "Name":  "FileSystem",
+                           "PSSnapIn":  "Microsoft.PowerShell.Core",
+                           "ModuleName":  "Microsoft.PowerShell.Core",
+                           "Module":  null,
+                           "Description":  "",
+                           "Capabilities":  52,
+                           "Home":  "C:\\Users\\alexismimundo",
+                           "Drives":  "C D G"
+                       },
+        "ReadCount":  43
+    },
+    {
+        "value":  " root.addEventListener(\u0027touchstart\u0027,e=\u003e{if(e.target.closest(\u0027#community-pad,input,textarea\u0027))e.stopPropagation()},{passive:true});",
+        "PSPath":  "C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\continuous\\community.js",
+        "PSParentPath":  "C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\continuous",
+        "PSChildName":  "community.js",
+        "PSDrive":  {
+                        "CurrentLocation":  "Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo",
+                        "Name":  "C",
+                        "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                        "Root":  "C:\\",
+                        "Description":  "Programas",
+                        "MaximumSize":  null,
+                        "Credential":  "System.Management.Automation.PSCredential",
+                        "DisplayRoot":  null
+                    },
+        "PSProvider":  {
+                           "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                           "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                           "Name":  "FileSystem",
+                           "PSSnapIn":  "Microsoft.PowerShell.Core",
+                           "ModuleName":  "Microsoft.PowerShell.Core",
+                           "Module":  null,
+                           "Description":  "",
+                           "Capabilities":  52,
+                           "Home":  "C:\\Users\\alexismimundo",
+                           "Drives":  "C D G"
+                       },
+        "ReadCount":  44
+    },
+    {
+        "value":  " // Reuse the same archive in the exterior menu without touching other menu sections.",
+        "PSPath":  "C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\continuous\\community.js",
+        "PSParentPath":  "C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\continuous",
+        "PSChildName":  "community.js",
+        "PSDrive":  {
+                        "CurrentLocation":  "Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo",
+                        "Name":  "C",
+                        "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                        "Root":  "C:\\",
+                        "Description":  "Programas",
+                        "MaximumSize":  null,
+                        "Credential":  "System.Management.Automation.PSCredential",
+                        "DisplayRoot":  null
+                    },
+        "PSProvider":  {
+                           "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                           "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                           "Name":  "FileSystem",
+                           "PSSnapIn":  "Microsoft.PowerShell.Core",
+                           "ModuleName":  "Microsoft.PowerShell.Core",
+                           "Module":  null,
+                           "Description":  "",
+                           "Capabilities":  52,
+                           "Home":  "C:\\Users\\alexismimundo",
+                           "Drives":  "C D G"
+                       },
+        "ReadCount":  45
+    }
+]

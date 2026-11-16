@@ -1,0 +1,12 @@
+﻿ const track=root.querySelector('.community-track'),pad=$('community-pad'),status=$('community-status');
+ const modal=document.createElement('dialog');modal.id='community-memory';modal.innerHTML='<button type="button">Cerrar memoria Ã—</button><div></div>';document.body.append(modal);modal.querySelector('button').onclick=()=>modal.close();
+ for(const event of ['wheel','keydown','touchstart','touchmove'])modal.addEventListener(event,e=>e.stopPropagation(),{passive:true});
+ const artwork=e=>e.strokes?drawing(e.strokes):'<img src="'+e.asset+'" alt="Silueta de una casa con textura de papel" loading="lazy">';
+ function showMemory(e){modal.querySelector('div').innerHTML=artwork(e)+'<h2>'+esc(e.name||'Sin nombre')+'</h2><p>'+esc(e.memory||'Una casa que todavÃ­a no tiene palabras.')+'</p><p class="community-local">'+(e.demo?'Memoria y nombre de ejemplo Â· prototipo':'Tu aporte Â· guardado solo en este navegador')+'</p>';modal.showModal()}
+ function populate(container){container.replaceChildren();[...entries,...(saved?[saved]:[])].forEach(e=>{const b=document.createElement('button');b.type='button';b.className='community-house';b.innerHTML=artwork(e)+'<span>'+esc(e.name||'Sin nombre')+'<br><small>'+(e.demo?'leer memoria â†—':'tu casa Â· leer memoria â†—')+'</small></span>';b.onclick=()=>showMemory(e);container.append(b)})}
+ populate(track);
+ // Use the existing bicycle panorama, not a second horizontal scene.
+ const landscape=$('p15-cerca');landscape.replaceChildren(track);track.classList.add('community-landscape-track');
+ $('p15-lejos').replaceChildren();
+ for(let i=0;i<12;i++){const im=document.createElement('img');im.src='assets/casas-comunidad/recortes/casa-'+String(i+13).padStart(2,'0')+'.png';im.alt='';$('p15-lejos').append(im)}
+ const oldWalk=$('community-walk');oldWalk.hidden=true;

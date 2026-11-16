@@ -1,0 +1,25 @@
+﻿diff --git "a/C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist-backup-antes-del-resto\\continuous\\first-house.js" "b/C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\continuous\\first-house.js"
+index d96b25c..b023588 100644
+--- "a/C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist-backup-antes-del-resto\\continuous\\first-house.js"
++++ "b/C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\continuous\\first-house.js"
+@@ -432,8 +432,9 @@ const nextDark=nextHouse.querySelector('.fh-next-dark');let nextLight={x:.5,y:.5
+ nextHouse.addEventListener('pointermove',e=>{nextLight={x:e.clientX/innerWidth,y:e.clientY/innerHeight}});
+ nextHouse.addEventListener('pointerdown',e=>{nextLight={x:e.clientX/innerWidth,y:e.clientY/innerHeight}});
+ function renderNextHouse(inside,p){
+- const visible=inside&&p>=7.28,finished=visible&&p>=8.6;nextHouse.hidden=!visible;
+- nextHouse.classList.toggle('awaiting-next-scene',finished);
++ const finLinterna=window.escenasResto?.inicio??8.6,finSalida=finLinterna+.3;
++ const visible=inside&&p>=7.28&&p<finSalida,finished=p>=finLinterna;nextHouse.hidden=!visible;nextHouse.inert=!visible;
++ nextHouse.classList.toggle('leaving-next-scene',visible&&finished);
+  nextHint.hidden=!visible||p>=8.02;
+  nextHouse.classList.toggle('flashlight-active',visible&&p>=8.02&&!finished);
+   const illuminating=visible&&p>=8.02&&!finished;lightPhrase.style.visibility=illuminating?'visible':'hidden';
+@@ -443,7 +444,7 @@ function renderNextHouse(inside,p){
+  const heading=nextHouse.querySelector('h2'),progress=clamp((p-7.28)/(8.02-7.28)),opacity=Math.sin(Math.PI*progress);
+  heading.style.opacity=String(opacity);heading.style.visibility=visible&&opacity>.001?'visible':'hidden';heading.style.transform=`translate(-50%,calc(-50% + ${(5-progress*10).toFixed(3)}vh))`;
+  nextDark.style.setProperty('--light-x',nextLight.x*100+'%');nextDark.style.setProperty('--light-y',nextLight.y*100+'%');
+- nextHouse.style.opacity='1';
++ nextHouse.style.opacity=String(p<finLinterna?1:1-ease(finLinterna,finSalida,p));
+ }
+ window.laCasaCarry={soldiers:st.soldiers};
+ const kite=Q('.fh-kite',root);let tug=0;

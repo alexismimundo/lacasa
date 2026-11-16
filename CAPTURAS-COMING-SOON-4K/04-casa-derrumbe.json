@@ -1,0 +1,14 @@
+{
+  "result": {
+    "result": {
+      "type": "string",
+      "value": "{\"status\":\"PASS\",\"day\":5.8,\"viewport\":[3840,2160],\"baseTime\":41.394047,\"stage\":\"media/loop-dias-6-7.webm\",\"stageTime\":2.5,\"counterHidden\":true,\"background\":\"url(\\\"http://127.0.0.1:21873/dist/assets/coming-soon/media/fondo-negro.webp\\\")\",\"grain\":[3840,2160],\"edgeFilter\":\"url(\\\"#teaser-ink-edge\\\")\",\"overlay\":\"0.15\"}"
+    }
+  },
+  "info": {
+    "result": {
+      "type": "undefined"
+    }
+  },
+  "errors": []
+}

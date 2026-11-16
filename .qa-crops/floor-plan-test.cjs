@@ -1,0 +1,24 @@
+const fs=require('fs'),path=require('path'),vm=require('vm'),assert=require('assert'),root=path.resolve(__dirname,'..');
+const html=fs.readFileSync(path.join(root,'dist/index.html'),'utf8'),code=fs.readFileSync(path.join(root,'dist/continuous/floor-plan.js'),'utf8');new vm.Script(code);
+assert(html.includes('continuous/floor-plan.js'));
+const test=`<script>window.ready=new Promise(resolve=>setTimeout(()=>{try{
+ const a=(v,m)=>{if(!v)throw Error(m)},canvas=document.querySelector('#house-floor-plan'),ctx=canvas.getContext('2d');
+ const sample=(p,t=1000)=>{current=target=p;casaRender(t,0);return canvas.toDataURL()};
+ document.body.classList.remove('inhabited');sample(1.5);a(canvas.hidden,'no landing outline');document.body.classList.add('inhabited');
+ sample(1.5);a(canvas.hidden,'no frame between transitions');const first=sample(1.85);a(!canvas.hidden,'shared seam');a(getComputedStyle(canvas).pointerEvents==='none','no interaction capture');a(canvas.getAttribute('aria-hidden')==='true','decorative');
+ const pixels=ctx.getImageData(0,0,canvas.width,canvas.height).data;let count=0;for(let i=3;i<pixels.length;i+=4)if(pixels[i]>0)count++;a(count>1000,'graphite rendered');a(count<canvas.width*canvas.height*.12,'sparse plan not solid overlay');
+ const bounds=()=>{const p=ctx.getImageData(0,0,canvas.width,canvas.height).data;let l=canvas.width,r=0,t=canvas.height,b=0;for(let y=0;y<canvas.height;y++)for(let x=0;x<canvas.width;x++)if(p[(y*canvas.width+x)*4+3]){l=Math.min(l,x);r=Math.max(r,x);t=Math.min(t,y);b=Math.max(b,y)}return {l,r,t,b}};
+  let box=bounds();a(box.r-box.l<28&&box.b-box.t>canvas.height-5,'compact marks on vertical seam, no frame');a(Math.abs((box.l+box.r)/2-canvas.width/2)<5,'exact horizontal-passage boundary');
+ const alive=sample(1.85,2000);a(first!==alive,'living line');const mid=sample(1.85,3000);sample(1.95,3000);a(sample(1.85,3000)===mid,'reversible seam');
+   sample(.86);box=bounds();a(box.b-box.t<28&&box.r-box.l>canvas.width-5,'compact marks on horizontal seam');a(Math.abs((box.t+box.b)/2-canvas.height/2)<5,'exact vertical-passage boundary');sample(2.7);box=bounds();a(box.b-box.t>=10&&box.b-box.t<28,'small perpendicular jamb marks');const door=sample(2.7,4000);a(sample(2.7,4050)!==door,'fast living stroke refresh');sample(2.8,4000);a(sample(2.7,4000)===door,'door reverses with phase');sample(8.35);const seamPixels=ctx.getImageData(Math.round(canvas.width*.75)-4,0,9,Math.floor(canvas.height*.2)).data;a(seamPixels.some((v,i)=>i%4===3&&v>0),'later seam stays on linear boundary');
+  const locations=new Set();for(const phase of [.86,1.85,2.7,5.51,8.1,12.1,13.1,14.1,15.1,16.1,17.1,21.5]){
+   sample(phase,5000);a(!canvas.hidden,'visible transition '+phase);const b=bounds(),horizontal=b.r-b.l>b.b-b.t;
+   const p=ctx.getImageData(0,0,canvas.width,canvas.height).data,center=horizontal?(b.t+b.b)/2:(b.l+b.r)/2,marks=[];
+   for(let v=0;v<(horizontal?canvas.width:canvas.height);v++){let ink=false;for(let d=5;d<=8;d++){const x=horizontal?v:Math.round(center+d),y=horizontal?Math.round(center+d):v;if(p[(y*canvas.width+x)*4+3])ink=true}if(ink)marks.push(v)}
+   a(marks.length>0,'door marks on every passage '+phase);a(marks[marks.length-1]-marks[0]<95,'door width stays compact '+phase);locations.add(Math.round(marks[0]/(horizontal?canvas.width:canvas.height)*10));
+  }a(locations.size>=4,'door placement varies between passages');
+ sample(1.5);a(canvas.hidden,'table absent before approach');const fullTable=sample(2.35,6000);a(!canvas.hidden,'table at centered box');const tableBounds=bounds();a(tableBounds.r-tableBounds.l>innerWidth*.5,'wide simple tabletop');a(tableBounds.b-tableBounds.t>50,'two legs below tabletop');const partial=sample(2.48,6000);a(partial!==fullTable,'table erases as box shrinks');a(sample(2.35,6000)===fullTable,'table reverses exactly');sample(2.63);a(!canvas.hidden,'seam continues after table erased');sample(3.1);a(canvas.hidden,'no table residual');sample(2.35);sample(5.5);sample(8.1);sample(13.1);sample(22);a(canvas.hidden,'community not covered');sample(2.35);
+    const result='PASS: moderated irregular graphite vibration; reversible perspective table; compact paired marks on all 12 passages; varied door positions; continuous boundary; reversible; pointer-transparent; '+innerWidth+'x'+innerHeight;document.querySelector('#info').textContent=result;resolve(result);
+ }catch(e){resolve('FAIL: '+e.stack)}},1800));</script>`;
+fs.writeFileSync(path.join(__dirname,'floor-plan-browser.html'),html.replace('<head>','<head><base href="../dist/">').replace('</body>',test+'</body>'));
+fs.writeFileSync(path.join(__dirname,'floor-plan-result.txt'),'PASS: production syntax; script integration; browser fixture generated.');

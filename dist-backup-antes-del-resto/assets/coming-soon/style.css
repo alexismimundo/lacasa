@@ -1,0 +1,162 @@
+/* ===== La Casa — Coming soon ===== */
+
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("../fonts/IBMPlexMono-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+:root {
+  --negro: #000;
+  --texto: #d9d9d9;
+  --texto-tenue: #7a7a7a;
+  --fuente: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* Repeated clicks are teaser gestures, not text/media selection. */
+html, body, body * {
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+video, canvas, img {
+  -webkit-user-drag: none;
+  -webkit-touch-callout: none;
+}
+
+html, body {
+  height: 100%;
+  background: var(--negro);
+  color: var(--texto);
+  font-family: var(--fuente);
+  overflow: hidden;
+}
+
+/* Textura negra a pantalla completa */
+.fondo {
+  position: fixed;
+  inset: -5vmax;
+  background: var(--negro) url("media/fondo-negro.webp") center / cover no-repeat;
+  pointer-events: none;
+  animation: fondo-drift 32s ease-in-out infinite;
+}
+@keyframes fondo-drift {
+  0%,100% { transform: translate(-.6vmax,.3vmax) rotate(-.25deg); }
+  33% { transform: translate(.8vmax,-.5vmax) rotate(.3deg); }
+  67% { transform: translate(-.2vmax,.7vmax) rotate(-.1deg); }
+}
+
+/* Smaller centered render; the counter follows the scene rather than the viewport bottom. */
+:root {
+  --escena-ancho: min(110vw, 156vh);
+  --interfaz-top: calc(50% + min(16.70625vw, 23.6925vh));
+}
+.escena {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  width: var(--escena-ancho);
+  aspect-ratio: 16 / 9;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  filter: url(#teaser-ink-edge);
+}
+
+.capa,
+.loop video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* El MP4 (respaldo para Safari) viene sobre negro: "screen" hace desaparecer
+   el negro y deja ver la textura. El WebM ya trae transparencia real. */
+.capa.sin-alfa,
+.loop video.sin-alfa { mix-blend-mode: screen; }
+
+.loop {
+  position: absolute;
+  inset: 0;
+  transition: opacity 6s ease;
+}
+
+.loop video {
+  opacity: 0;
+  transition: opacity 1.2s linear;
+}
+.loop video.visible { opacity: 1; }
+
+/* ===== Interfaz ===== */
+.interfaz {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: var(--interfaz-top);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+.contador {
+  font-family: var(--fuente);
+  font-weight: 400;
+  color: #fff;
+  font-size: clamp(14px, 1.4vw, 20px);
+  letter-spacing: 0.18em;
+  font-variant-numeric: tabular-nums;
+}
+.contador i {
+  font-style: normal;
+  color: #d1b5d5;
+  margin: 0 0.9em 0 0.15em;
+}
+.contador i:last-child { margin-right: 0; }
+
+.adelantar,
+.entrar {
+  font: inherit;
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--texto-tenue);
+  background: none;
+  border: 1px solid #333;
+  padding: 9px 16px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: color .2s, border-color .2s;
+}
+.adelantar:hover,
+.entrar:hover { color: var(--texto); border-color: var(--texto); }
+.adelantar[aria-pressed="true"] { color: var(--texto); border-color: var(--texto); }
+
+.entrar {
+  position: fixed;
+  left: 50%;
+  top: calc(var(--interfaz-top) + 70px);
+  transform: translate(-50%, -50%);
+  font-size: 13px;
+  color: var(--texto);
+  border-color: var(--texto);
+  opacity: 0;
+  transition: opacity 1.5s ease;
+}
+.entrar.visible { opacity: 1; }
+
+@media (prefers-reduced-motion: reduce) {
+  .loop video { transition: none; }
+  .fondo { animation: none; }
+}
+
+/* Shared house grain */
+body:after{z-index:10;content:'';position:fixed;inset:0;pointer-events:none;opacity:.15;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' opacity='.5' filter='url(%23n)'/%3E%3C/svg%3E")}
+[hidden]{display:none!important}
+/* Same animated pixel grain as the house, above all teaser layers. */
+#living-grain{position:fixed;inset:0;width:100%;height:100%;z-index:140;pointer-events:none;opacity:.6;mix-blend-mode:normal;background:none;animation:none}

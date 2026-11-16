@@ -1,0 +1,4 @@
+{
+  "status": "PASS",
+  "checks": "Visible in box scene; hidden as soon as target leaves, throughout minimization and widget; restored on return; hover guarded; syntax valid"
+}

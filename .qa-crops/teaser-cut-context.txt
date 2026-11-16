@@ -1,0 +1,5 @@
+﻿C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\dist\assets\coming-soon\coming-soon.js:206:     window.dispatchEvent(new Event('la-casa:teaser-transition'));
+C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\dist\assets\coming-soon\coming-soon.js:207:     if(integrado)window.parent.postMessage({type:'la-casa:teaser-enter'},location.origin);
+C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\dist\assets\coming-soon\teaser-atmosphere.js:81:   if(new URLSearchParams(location.search).has('integrado'))window.parent.postMessage({type:'la-casa:teaser-enter',immediate:true},location.origin);
+C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\dist\assets\coming-soon\teaser-atmosphere.js:86:  window.addEventListener('la-casa:teaser-transition',()=>{
+C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\dist\continuous\teaser-gate.js:21:    if(event.source!==frame.contentWindow||event.origin!==url.origin||event.data?.type!=='la-casa:teaser-enter')return;

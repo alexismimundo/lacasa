@@ -1,0 +1,15 @@
+{
+  "result": {
+    "result": {
+      "type": "string",
+      "value": "PASS: kitchen → teaser video → box; paired horizontal edges; centered film; reverse scroll; no premature box/table; media lifecycle; 1280x900"
+    }
+  },
+  "info": {
+    "result": {
+      "type": "string",
+      "value": "PASS: kitchen → teaser video → box; paired horizontal edges; centered film; reverse scroll; no premature box/table; media lifecycle; 1280x900"
+    }
+  },
+  "errors": []
+}

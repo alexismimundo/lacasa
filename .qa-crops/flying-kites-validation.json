@@ -1,0 +1,18 @@
+{
+  "result": "PASS",
+  "output": "C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\barriletes-volando-transparente.png",
+  "bytes": 439086,
+  "width": 2048,
+  "height": 2048,
+  "bounds": {
+    "minX": 178,
+    "minY": 89,
+    "maxX": 1832,
+    "maxY": 1002
+  },
+  "bottomHalf": "fully transparent",
+  "kites": 8,
+  "pinkIncluded": true,
+  "blueThreads": 8,
+  "layout": "irregular clusters across upper half, widths 60–265px, varied thread lengths"
+}

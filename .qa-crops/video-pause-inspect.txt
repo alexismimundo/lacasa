@@ -1,0 +1,32 @@
+﻿[
+    {
+        "Filename":  "first-house.js",
+        "LineNumber":  741,
+        "Line":  "function audio(p,active,dt){const enter=active\u0026\u0026p\u003e4\u0026\u0026p\u003c5,exit=!active||p\u003c4||p\u003e5.05;if(enter\u0026\u0026!partyActive){partyActive=true;albumTime=music.currentTime;albumWasPlaying=sounding\u0026\u0026!music.paused;music.pause();if(cumbia\u0026\u0026sounding\u0026\u0026!music.muted)cumbia.play().catch(()=\u003e{})}else if(partyActive\u0026\u0026exit){partyActive=false;cumbia?.pause();if(sounding\u0026\u0026albumWasPlaying){music.currentTime=albumTime;music.play().catch(()=\u003e{})}}if(partyActive\u0026\u0026!music.paused)music.pause();if(cumbia){cumbia.muted=music.muted||!sounding||document.hidden;cumbia.volume=.45*(1-ease(4.85,5.05,p))}const tv=Q(\u0027.tv-video\u0027),tvOn=active\u0026\u0026p\u003e1.2\u0026\u0026p\u003c2\u0026\u0026Q(\u0027.kitchen-tv\u0027).dataset.channel!==\u00270\u0027;tv.muted=music.muted||!sounding||!tvOn;tv.volume=.55;const desired=tvOn?.12:.55;if(entryMusicComplete\u0026\u0026adentro())music.volume+= (desired-music.volume)*Math.min(1,dt*3);if(partyActive)$(\u0027player-status\u0027).textContent=cumbia?\u0027LA JODITA\u0027:\u0027EN PAUSA\u0027;}"
+    },
+    {
+        "Filename":  "first-house.js",
+        "LineNumber":  896,
+        "Line":  "window.addEventListener(\u0027pagehide\u0027,save);document.addEventListener(\u0027visibilitychange\u0027,()=\u003e{if(document.hidden){cumbia?.pause()}else if(partyActive\u0026\u0026cumbia\u0026\u0026sounding)cumbia.play().catch(()=\u003e{})});"
+    },
+    {
+        "Filename":  "rooms.js",
+        "LineNumber":  24,
+        "Line":  "  ++playRequest;video.pause();channel=next;tv.dataset.channel=String(channel);tv.classList.remove(\u0027video-ready\u0027);hint();"
+    },
+    {
+        "Filename":  "rooms.js",
+        "LineNumber":  32,
+        "Line":  " document.addEventListener(\u0027visibilitychange\u0027,()=\u003e{if(document.hidden){++playRequest;video.pause()}else if(playbackVisible\u0026\u0026channel)play()});"
+    },
+    {
+        "Filename":  "rooms.js",
+        "LineNumber":  55,
+        "Line":  "   if(wanted)teaserVideo.play().catch(()=\u003e{teaserPlaying=false});else teaserVideo.pause();"
+    },
+    {
+        "Filename":  "rooms.js",
+        "LineNumber":  90,
+        "Line":  "  if(visible!==playbackVisible){playbackVisible=visible;if(!visible){++playRequest;video.pause()}else if(channel\u0026\u0026!document.hidden)play()}"
+    }
+]

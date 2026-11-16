@@ -1,0 +1,129 @@
+/* First house: one paper surface, successive scales and layers. */
+@font-face{font-family:SisterSpray;src:url('../assets/fonts/sister_spray/Sister%20Spray.ttf') format('truetype');font-style:normal;font-weight:400;font-display:swap}
+:root{--casa-1-tooltip-ink:#fff;--casa-1-tooltip-paper:#000;--casa-1-tooltip-image:none}
+body.new-first-house{--house-tooltip-ink:var(--casa-1-tooltip-ink);--house-tooltip-paper:var(--casa-1-tooltip-paper);--house-tooltip-image:var(--casa-1-tooltip-image)}
+#fh-box-lid-hint,#fh-box-scroll-hint{position:fixed;z-index:96;pointer-events:none;color:#153f6f;font:11px/1.4 monospace;letter-spacing:1px}
+#fh-box-lid-hint{padding:7px 9px}
+#fh-box-scroll-hint{margin:0;width:max-content;max-width:90vw;text-align:center;transform:translateX(-50%);animation:fh-box-hint-pulse 2.8s ease-in-out infinite}
+#fh-box-lid-hint[hidden],#fh-box-scroll-hint[hidden]{display:none}
+@keyframes fh-box-hint-pulse{0%,100%{opacity:1}50%{opacity:.35}}
+@media(prefers-reduced-motion:reduce){#fh-box-scroll-hint{animation:none}}
+#memory-materials,#memory-instruction,#memory-drawing,#memory-clear{display:none!important}
+#p2,#p3,#p4,#p5,#p6,#p7{display:none!important}
+body.new-first-house #casa-layers,body.new-first-house #trace-field,body.new-first-house #charcoal-ground{display:none!important}
+#first-house{position:absolute;inset:0;z-index:13;pointer-events:none;overflow:hidden;color:#335386;visibility:hidden;--night:0}
+#first-house img{user-select:none;-webkit-user-drag:none;pointer-events:none;object-fit:contain}
+.fh-layer{position:absolute;inset:0;visibility:hidden;pointer-events:none;will-change:transform,opacity}
+#first-house button,.kitchen-stage button{font:inherit;color:inherit}
+#first-house button{pointer-events:auto;background:none;border:0;padding:0;cursor:pointer}
+#first-house [inert],#first-house [inert] *{pointer-events:none!important}
+#first-house button:focus-visible,.kitchen-stage button:focus-visible{outline:2px dashed #ad86b8;outline-offset:5px}
+#first-house button:hover>img,.fh-room-robot:hover>img,.fh-room-bag:hover>img,.fh-room-money:hover>img{filter:drop-shadow(0 0 2px #ad86b8)}
+#fh-tooltip{position:fixed;z-index:100;pointer-events:none;max-width:min(270px,85vw);background:#f4f4f1 url('../assets/fondo-papel.webp') center/600px;color:#335386;padding:9px 12px;font:11px/1.4 MonumentMono,monospace;opacity:0;visibility:hidden;box-shadow:2px 3px 0 #0002;transition:opacity .15s}
+#fh-tooltip.shown{opacity:1;visibility:visible}.tv-tooltip{display:none}
+/* Shared hover-tooltip surface for house 1; navigation hints stay transparent. */
+#fh-tooltip,#fh-box-lid-hint,.kitchen-stage .tv-tooltip,body.new-first-house #house-cursor span{color:var(--house-tooltip-ink,var(--casa-1-tooltip-ink));background-color:var(--house-tooltip-paper,var(--casa-1-tooltip-paper));background-image:var(--house-tooltip-image,var(--casa-1-tooltip-image));background-position:center;background-size:420px 140px;box-shadow:none}
+/* Persistent touch labels retain their existing lilac surface, not the hover theme. */
+#first-house .fh-touch-label,.kitchen-stage .fh-touch-label{color:#153f6f;background-color:#c5b3cc;background-image:url('../assets/tooltips/casa-1-lila-base.png');background-position:center;background-size:420px 140px;box-shadow:none}
+.fh-touch-label{display:none;pointer-events:none}
+.fh-notice{position:absolute;bottom:13%;left:50%;transform:translateX(-50%);font:12px MonumentMono,monospace;background:#f4f4f1;color:#335386;z-index:30;padding:8px;pointer-events:none}.fh-notice:empty{display:none}
+#fh-detail{padding:30px;background:#f4f4f1 url('../assets/fondo-papel.webp') center/800px;max-width:85vw;width:620px}#fh-detail img{width:100%;max-height:65vh;object-fit:contain}#fh-detail button{background:none;border:0;border-bottom:1px solid;padding:8px;font:13px MonumentMono,monospace}#fh-detail::backdrop{background:#18233399}
+.fh-room-robot{position:absolute;left:780px;top:720px;width:110px;height:190px;z-index:6}.fh-room-robot img{width:100%;height:100%}.fh-room-robot.walked{transform:translateX(55px)}.fh-room-robot.walking{animation:fh-walk 1.8s steps(8) forwards}@keyframes fh-walk{0%{transform:translateX(0) rotate(-3deg)}40%{transform:translateX(22px) rotate(3deg)}100%{transform:translateX(55px) rotate(0)}}
+.fh-room-bag{position:absolute;left:140px;top:425px;width:230px;height:235px;z-index:6;overflow:hidden}.fh-room-bag img{width:100%;height:100%;clip-path:inset(19% 0 0);transition:clip-path .6s}.fh-room-bag.open img{clip-path:inset(0)}.fh-room-bag:not(.open):after{content:'';position:absolute;left:18%;top:21%;width:67%;height:8%;background:#2d2d2a;transform:rotate(-6deg);border-radius:50%;filter:url(#paper-grain)}
+.fh-room-money{position:absolute;left:1320px;top:555px;width:120px;height:75px;z-index:6;transform:rotate(-12deg);transition:transform .6s}.fh-room-money img{width:100%;height:100%}.fh-room-money.unfolded{transform:rotate(2deg) scale(1.3)}
+.fh-box-anchor{position:absolute;left:58%;top:39%;width:27%;height:16%;pointer-events:none}
+.fh-tv-lit:after{content:'';position:absolute;left:0;top:0;width:45%;height:48%;background:radial-gradient(ellipse,#b597d73d,transparent 65%);mix-blend-mode:multiply;pointer-events:none}
+#fh-model-box{position:fixed;z-index:95;visibility:hidden;pointer-events:none;background:transparent;display:block;cursor:pointer}
+#fh-model-box.fh-mv-fallback{background:url('../assets/box-base.webp') center/contain no-repeat}
+#remembered-rooms .kitchen-scene{transition:filter .1s linear}
+.fh-shutter{z-index:6;color:#f2f1ee;overflow:hidden;transform-origin:54.5% 80%}.fh-metal-roll{position:absolute;inset:0;background:url('../assets/first-house/persiana-textura.webp') center/cover;z-index:1;pointer-events:none}.fh-metal-wall{position:absolute;inset:0;background:url('../assets/first-house/persiana-calado.webp') center/cover;z-index:2}.fh-shutter p{position:absolute;left:8%;right:6%;top:17%;margin:0;font:bold clamp(30px,6vw,100px)/.98 Arial,sans-serif;letter-spacing:-.04em;transform:rotate(-2deg);text-shadow:1px 2px #111;z-index:3}.fh-shutter small{display:block;margin-top:6vh;font:bold .52em/1.05 Arial,sans-serif;letter-spacing:-.02em}.fh-shutter>span{position:absolute;bottom:8%;left:8%;font:11px MonumentMono,monospace;z-index:3}
+/* Paint belongs to the moving roll, below the wall's cutout, never to the party. */
+.fh-metal-roll .fh-shutter-graffiti{left:28%;right:26%;top:49%;font:400 clamp(16px,2.6vw,49px)/1.65 SisterSpray,Arial,sans-serif;font-synthesis:none;letter-spacing:0;text-align:center;text-transform:uppercase;transform:rotate(-5deg);color:#f2f1ee;text-shadow:none;opacity:.9;pointer-events:none}
+.fh-party{z-index:4;background:#0b0b0d;overflow:hidden;transform-origin:54.5% 80%}
+/* These two camera layers also inherit the generic promotion hint. Avoid
+   pinning their raster scale while the same zoom is traversed backwards. */
+.fh-party,.fh-shutter{will-change:auto}
+.fh-salon{position:absolute;overflow:hidden}
+/* Let the browser rasterize the cutouts at the current camera scale instead of
+   forcing a separate cached transform surface for every full-scene image. */
+.fh-salon-bg,.fh-salon-kid,.fh-sp{position:absolute;inset:0;background-size:cover;background-position:center;will-change:auto}
+.fh-salon-bg{background-image:url('../assets/first-house/salon/salon-01.webp');z-index:1}
+.fh-salon-kid{z-index:2;transform:translateY(2%) scale(.7225)}
+.fh-salon-kid.pose-a{background-image:url('../assets/first-house/salon/salon-02-a.webp')}
+.fh-salon-kid.pose-b{background-image:url('../assets/first-house/salon/salon-03-a.webp')}
+.sp-1{background-image:url('../assets/first-house/salon/persona-01-celular.webp');z-index:22}
+.sp-2{background-image:url('../assets/first-house/salon/persona-02-vaso-izq.webp');z-index:21}
+.sp-3{background-image:url('../assets/first-house/salon/persona-03-top-blanco.webp');z-index:20}
+.sp-4{background-image:url('../assets/first-house/salon/persona-04-vaso-espaldas.webp');z-index:19}
+.sp-5{background-image:url('../assets/first-house/salon/persona-05-gorra-cerveza.webp');z-index:18}
+.sp-6{background-image:url('../assets/first-house/salon/persona-06-remera-blanca-cerveza.webp');z-index:17}
+.sp-7{background-image:url('../assets/first-house/salon/persona-07-remera-negra-brazo.webp');z-index:16}
+.sp-8{background-image:url('../assets/first-house/salon/persona-08-celular-cortado.webp');z-index:15}
+.sp-9{background-image:url('../assets/first-house/salon/persona-09-centro-pantalon-blanco.webp');z-index:23}
+.sp-10{background-image:url('../assets/first-house/salon/persona-10-espaldas.webp');z-index:13}
+.sp-11{background-image:url('../assets/first-house/salon/persona-11-perfil-vaso.webp');z-index:12}
+.sp-12{background-image:url('../assets/first-house/salon/persona-12-espaldas-pelolargo.webp');z-index:24}
+.fh-salon-tint{position:absolute;inset:0;z-index:30;mix-blend-mode:multiply;opacity:0;pointer-events:none}
+.fh-cardboard{z-index:7;background:none;transform-origin:60% 70%;pointer-events:none}.fh-kite-shadow{position:absolute;left:30%;top:18%;width:35%;height:45%;filter:brightness(0) blur(5px);transform:rotate(-25deg);opacity:0}.fh-kite-shadow img{width:100%;height:100%}
+.fh-sky{z-index:8;background:#e5e8ed url('../assets/fondo-papel.webp') center/1300px;background-blend-mode:multiply}.fh-clouds{position:absolute;inset:0;background:radial-gradient(ellipse at 20% 20%,#fff9,transparent 55%),radial-gradient(ellipse at 70% 75%,#8facc133,transparent 50%)}.fh-distant{position:absolute;width:10vw;height:17vh;opacity:.35;top:20%;left:15%;rotate:-16deg}.distant-1{left:72%;top:40%;width:7vw;rotate:25deg}.distant-2{left:55%;top:12%;width:5vw;rotate:12deg}.fh-kite{position:absolute;left:50%;top:48%;width:23vw;height:42vh;z-index:3;transform:translate(-50%,-50%)}.fh-kite img{width:100%;height:100%}.fh-thread{position:absolute;left:50%;top:82%;height:70vh;width:1px;background:#33538670;rotate:15deg;transform-origin:top}.fh-flight-help{position:absolute;left:7%;bottom:12%;font:clamp(18px,2.5vw,30px)/1.4 Georgia,serif}.fh-flight-help small{font:11px/1.5 MonumentMono,monospace}.fh-crossed-threads{position:absolute;inset:0;opacity:0;z-index:4;pointer-events:none}.fh-crossed-threads i{position:absolute;width:1px;height:120vh;background:#33538688;left:50%;top:23%;rotate:48deg;transform-origin:top}.fh-crossed-threads i:nth-child(2){rotate:-38deg}.fh-crossed-threads b{position:absolute;left:49.5%;top:23%;width:10px;height:10px;border:2px solid #335386;border-radius:50%}
+.fh-macro{z-index:9;background:#aa9b85 url('../assets/fondo-papel.webp') center/450px;background-blend-mode:multiply;overflow:hidden}.fh-macro:after{content:'';position:absolute;inset:0;background:#0b0b0d;opacity:var(--burn);pointer-events:none}.fh-macro-content{position:absolute;inset:0}.fh-fallen-kite{position:absolute;width:65vw;height:95vh;left:25%;top:10%;rotate:22deg}.fh-macro-robot{position:absolute;width:40vw;height:110vh;left:-6%;top:-10%;rotate:-13deg}.fh-macro-money{position:absolute;width:65vw;height:65vh;left:56%;top:-10%;rotate:15deg}.fh-burn-edge{position:absolute;left:-10%;width:120%;height:18%;background:radial-gradient(ellipse,#2e2116,#aa6f3633 65%,transparent);filter:blur(12px);rotate:-7deg;pointer-events:none}.fh-ash{position:absolute;inset:0;background:url('../assets/cut-ash.webp') center/cover;mix-blend-mode:screen;opacity:0;z-index:2}.fh-end{z-index:10;color:#dbdfd4;background:#0b0b0d}.fh-soldiers{position:absolute;left:50%;top:49%;width:17vw;height:22vh;transform:translate(-50%,-50%)}.fh-soldiers img{width:100%;height:100%}.fh-end-note{position:absolute;top:67%;left:0;right:0;text-align:center;font:italic 21px Georgia,serif}.fh-continue{position:absolute;bottom:12%;right:8%;font:11px MonumentMono,monospace}
+@media(max-width:650px){.fh-room-bag{left:25px;top:660px;width:175px;height:190px}.fh-room-money{left:585px;top:900px;width:100px}.fh-room-robot{left:270px;top:1050px;width:90px;height:170px}.fh-kite{width:44vw;height:35vh}.fh-flight-help{bottom:16%;max-width:84%;font-size:23px}.fh-soldiers{width:35vw;height:22vh}.fh-shutter p{top:23%;font-size:42px}.fh-macro-robot{width:65vw}.fh-macro-money{width:90vw}.fh-fallen-kite{width:90vw}.fh-notice{bottom:18%;width:max-content;max-width:90%}}
+@media(hover:none){.fh-touch-label{display:block;position:absolute;left:50%;top:100%;transform:translateX(-50%);font:10px/1.4 MonumentMono,monospace;color:#335386;background:#f4f4f1dd;padding:3px 5px;width:max-content;max-width:140px}.fh-soldiers .fh-touch-label{color:#edf0e8;background:#0b0b0d}.kitchen-door .fh-touch-label{top:45%}}
+@media(prefers-reduced-motion:reduce){#first-house *,#remembered-rooms *{animation:none!important;transition:none!important}.fh-layer{will-change:auto}.fh-macro-content{filter:none!important}.fh-room-robot.walked{transform:translateX(20px)}}
+
+.fh-room-bag img{clip-path:none!important}.fh-room-bag:after{display:none!important}
+/* Match the shared white paper without letting underlying scene colours bleed through. */
+.fh-sky{background:#f4f4f1 url('../assets/fondo-papel.webp') center/1600px;background-blend-mode:normal;pointer-events:auto;cursor:pointer}.fh-kite>*{pointer-events:none}
+.fh-distant img{display:block;width:100%;height:auto}
+.fh-kite-entry{position:absolute;inset:0;pointer-events:none}
+.fh-kite-entry .fh-kite{pointer-events:auto;width:18vw;height:32vh}
+.fh-distant{opacity:1;pointer-events:none;rotate:none}
+.fh-kite-strings{position:absolute;inset:0;width:100%;height:100%;overflow:visible;pointer-events:none;z-index:0}
+.fh-kite-strings path{fill:none;stroke:#335386;stroke-width:1;vector-effect:non-scaling-stroke}
+.fh-sky .fh-distant{width:clamp(65px,11vw,175px);height:auto;z-index:1}
+.fh-sky .distant-1,.fh-sky .distant-3{width:clamp(85px,15vw,230px)}
+.fh-flight-start{position:absolute;left:50%;bottom:7%;transform:translateX(-50%);margin:0;max-width:85vw;width:max-content;text-align:center;color:#335386;font:12px/1.5 MonumentMono,monospace;pointer-events:none;z-index:5}
+.fh-flight-start[hidden]{display:none}
+.fh-flight-start{color:#153f6f;font:11px/1.4 monospace;letter-spacing:1px;animation:fh-flight-warning-pulse 2.8s ease-in-out infinite}
+.fh-flight-warning{animation-duration:1.6s}
+@keyframes fh-flight-warning-pulse{0%,100%{opacity:1}50%{opacity:.35}}
+@media(prefers-reduced-motion:reduce){.fh-flight-start{animation:none}}
+.fh-kite-entry{z-index:3}
+.fh-kite-entry .fh-kite{width:clamp(110px,17vw,245px);height:auto;aspect-ratio:212/261}
+.fh-kite-entry .fh-kite>img:not(.fh-kite-tail){display:block;width:100%;height:100%;object-fit:contain}
+.fh-sky .fh-kite-tail{position:absolute;left:47%;top:90%;width:60%;height:auto;transform-origin:8% 0;pointer-events:none}
+@media(max-width:650px){.fh-kite-entry .fh-kite{width:32vw;height:auto}}
+/* One white-paper world: objects exist below the sky, not in a second backdrop. */
+.fh-sky-world{position:absolute;inset:0;pointer-events:none;will-change:transform}
+.fh-sky:after{content:'';position:absolute;inset:0;background:#0b0b0d;opacity:var(--burn,0);pointer-events:none;z-index:0}
+.fh-sky .fh-macro{inset:190vh 0 auto;height:100vh;background:none;background-blend-mode:normal;overflow:visible;z-index:2;will-change:auto}
+.fh-sky .fh-macro:after{display:none}
+.fh-sky .fh-macro-content{filter:none;transform:scale(.68);transform-origin:50% 60%}
+.fh-ground-contact{position:absolute;left:43%;top:76%;width:18%;height:2%;background:radial-gradient(ellipse,#33538620,transparent 70%);transform:rotate(-8deg)}
+.fh-sky .fh-macro-content img{height:auto;max-height:35vh;filter:drop-shadow(1px 3px 1px #24334218)}
+.fh-sky .fh-macro-robot{left:16%;top:52%;width:clamp(75px,14vw,200px);rotate:-31deg}
+.fh-sky .fh-macro-money{left:66%;top:70%;width:clamp(85px,15vw,220px);rotate:-18deg}
+.fh-ground-bag{position:absolute;left:7%;top:27%;width:clamp(100px,20vw,280px);rotate:18deg}
+.fh-ground-soldiers{position:absolute;left:69%;top:39%;width:clamp(85px,14vw,200px);rotate:12deg}
+.fh-ground-lamp{position:absolute;left:39%;top:28%;width:clamp(65px,11vw,165px);rotate:68deg}
+@media(max-width:650px){.fh-sky .fh-macro-robot{left:8%;width:22vw}.fh-sky .fh-macro-money{left:68%;width:25vw}.fh-ground-bag{left:5%;width:29vw}.fh-ground-soldiers{left:70%;width:24vw}.fh-ground-lamp{left:40%;width:18vw}}
+.fh-heap-object{position:absolute;left:var(--x);top:var(--y);width:var(--w);transform:translate(-50%,-50%) rotate(var(--angle));pointer-events:none}
+.fh-sky .fh-heap-object img{display:block;width:100%;height:auto;max-height:29vh;filter:drop-shadow(1px 3px 1px #24334226)}
+.fh-heap-bag{--x:30%;--y:62%;--w:25%;--angle:-23deg;z-index:58}
+.fh-heap-lamp{--x:68%;--y:53%;--w:16%;--angle:64deg;z-index:57}
+.fh-heap-money{--x:57%;--y:78%;--w:22%;--angle:17deg;z-index:59}
+.fh-heap-soldiers{--x:77%;--y:73%;--w:22%;--angle:-14deg;z-index:60}
+.fh-player-string{position:absolute;inset:0;width:100%;height:100%;overflow:visible;pointer-events:none;z-index:3}
+.fh-player-string path{fill:none;stroke:#335386;vector-effect:non-scaling-stroke}
+.fh-sky .fh-kite-entry{z-index:4}
+/* The opaque burn front consumes the shared world; only the original soldiers survive. */
+.fh-sky:after{display:none}
+.fh-burn-edge,.fh-ash{display:none}
+.fh-paper-burn{position:absolute;inset:0;width:100%;height:100%;z-index:10;pointer-events:none}
+.fh-end{background:none}
+.fh-end .fh-soldiers{left:50%;top:50%;width:14.96vw;height:auto;transform:translate(-50%,-50%) rotate(-14deg)}
+.fh-end .fh-soldiers img{display:block;width:100%;height:auto;max-height:19.72vh;filter:drop-shadow(1px 3px 1px #24334226)}
+.fh-end-note{top:83%}
+.fh-end:not(.fh-burn-complete) .fh-end-note,.fh-end:not(.fh-burn-complete) .fh-continue,.fh-end:not(.fh-burn-complete) .fh-touch-label{visibility:hidden}
+/* Legacy scenes must not hide the native tool cursor over the kite field. */
+@media(pointer:fine){html body.new-first-house #first-house .fh-sky,html body.new-first-house #first-house .fh-sky *{cursor:var(--casa-cursor,auto)!important}}

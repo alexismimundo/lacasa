@@ -1,0 +1,15 @@
+{
+  "result": {
+    "result": {
+      "type": "string",
+      "value": "PASS: click directs flight; movement interpolates without teleport; drag reverses direction; cancel works; no-click flight still falls"
+    }
+  },
+  "info": {
+    "result": {
+      "type": "string",
+      "value": "PASS: click directs flight; movement interpolates without teleport; drag reverses direction; cancel works; no-click flight still falls"
+    }
+  },
+  "errors": []
+}

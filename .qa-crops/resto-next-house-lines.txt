@@ -1,0 +1,10 @@
+﻿146:  6:{x:960,y:728,w:216,h:232,pivotX:1094,pivotY:932,outline:[[960,728],[1176,728],[1176,900],[1138,922],[1108,960],[1060,944],[1008,902],[976,852]],overlap:22,angle:4,period:8.6,phase:2.1},
+385: const nextHouse=document.createElement('section');nextHouse.id='fh-next-house';nextHouse.setAttribute('aria-label','Gabriela Mistral 4860');
+434: function renderNextHouse(inside,p){
+435:  const visible=inside&&p>=7.28,finished=visible&&p>=8.6;nextHouse.hidden=!visible;
+436:  nextHouse.classList.toggle('awaiting-next-scene',finished);
+437:  nextHint.hidden=!visible||p>=8.02;
+438:  nextHouse.classList.toggle('flashlight-active',visible&&p>=8.02&&!finished);
+439:   const illuminating=visible&&p>=8.02&&!finished;lightPhrase.style.visibility=illuminating?'visible':'hidden';
+443:  const heading=nextHouse.querySelector('h2'),progress=clamp((p-7.28)/(8.02-7.28)),opacity=Math.sin(Math.PI*progress);
+749: renderNextHouse(inside,p);

@@ -1,0 +1,20 @@
+
+Name                   Length
+----                   ------
+casa-interior.mp4    16737105
+entrada-video-hd.mp4  8304379
+entrada-video.mp4    11149750
+glicinas-reversa.mp4  1562086
+salida-video.mp4      1739636
+
+
+
+
+Name                 Length
+----                 ------
+caja-textura.webp    355998
+caja-zapatillas.glb 1211968
+
+
+
+

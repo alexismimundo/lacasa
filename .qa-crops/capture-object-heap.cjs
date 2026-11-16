@@ -1,0 +1,8 @@
+const fs=require('fs'),path=require('path'),root=path.resolve(__dirname,'..');
+const source=fs.readFileSync(path.join(root,'dist/continuous/first-house.js'),'utf8');
+const hook=`window.prepareHeapCapture=()=>{resetEnding();fallCamera=null;flightStartedThisVisit=true;st.flight={phase:'fallen',time:0,y:94,vy:12,lastHorizontal:.2};current=target=6.3;};`;
+const instrumented=source.replace(/syncObjects\(\);\s*\}\)\(\);\s*$/,()=> 'syncObjects();\n'+hook+'\n})();');
+if(instrumented===source)throw Error('Capture hook failed');
+let html=fs.readFileSync(path.join(root,'dist/index.html'),'utf8').replace('<head>','<head><base href="../dist/">').replace(/<script\b[^>]*src=["']continuous\/first-house\.js[^"']*["'][^>]*><\/script>/,()=>'<script>'+instrumented+'</script>');
+html=html.replace('</body>',`<script>window.ready=(async()=>{await new Promise(r=>setTimeout(r,2000));reachInside();prepareHeapCapture();let now=performance.now();for(let i=0;i<400;i++){casaRender(now+=50,.05);if(current>=6.86)break}const render=casaRender;window.casaRender=(now)=>{current=target=6.86;render(now,0)};casaRender(performance.now());await Promise.all([...document.querySelectorAll('#first-house img')].filter(i=>i.src).map(i=>i.decode().catch(()=>{})));await new Promise(r=>setTimeout(r,300));return {status:'PASS',phase:current,kite:document.querySelector('.fh-kite').getBoundingClientRect().toJSON()}})();</script></body>`);
+fs.writeFileSync(path.join(__dirname,'capture-object-heap.html'),html);

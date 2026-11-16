@@ -1,0 +1,11 @@
+{
+  "result": {
+    "type": "object",
+    "value": {
+      "saved": 1,
+      "lyric": "Toma la bicicleta y vamos juntos a atravesar este vendaval",
+      "track": "translate3d(-16203.8px, 0px, 0px)",
+      "handlebar": "block"
+    }
+  }
+}

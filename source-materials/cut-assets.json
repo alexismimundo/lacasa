@@ -1,0 +1,32 @@
+{
+  "method": "Herramienta integrada de generación de imágenes",
+  "assets": [
+    {
+      "file": "dist/assets/cut-ash.png",
+      "prompt": "Photographic scan of ONE small irregular torn fragment of old paper with discretely singed dark brown and charcoal edges, pale gray ash fibers and worn cream center. Restrained blue gray #335386 shadows, analog handmade collage material, no flames, no smoke, no glowing embers, no particles, no text, no objects. Full fragment visible, truly transparent background, square image.",
+      "transparent_background": true
+    }
+  ],
+  "reused": [
+    "daily-table.png",
+    "daily-photo.png",
+    "low-cupboard.png",
+    "low-tv.png"
+  ],
+  "narrative": {
+    "editable": "cutNarrative",
+    "showPhrase": true,
+    "phrase": "De esto no quedó una foto.",
+    "audioSrc": null
+  },
+  "sequence": {
+    "boxGone": 9.65,
+    "detailStarts": 9.8,
+    "photoImageGone": 10.95,
+    "photoBorderGone": 11.55,
+    "tvBodyGone": 11.35,
+    "tvLightGone": 12.35,
+    "emptyUntil": 13
+  },
+  "notes": "Máscaras SVG con semilla fija, sin animación temporal, sonidos nuevos ni modificaciones a la respuesta del visitante."
+}

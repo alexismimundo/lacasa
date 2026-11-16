@@ -1,0 +1,1 @@
+PASS: inline JavaScript syntax; scoped landing animations and hover; reduced-motion rules; browser fixture generated.

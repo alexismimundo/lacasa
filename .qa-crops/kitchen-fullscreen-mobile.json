@@ -1,0 +1,15 @@
+{
+  "result": {
+    "result": {
+      "type": "string",
+      "value": "PASS: full-viewport cover video without external borders; kitchen → teaser video → box; paired horizontal edges; reverse scroll; no premature box/table; media lifecycle; 390x844"
+    }
+  },
+  "info": {
+    "result": {
+      "type": "string",
+      "value": "PASS: full-viewport cover video without external borders; kitchen → teaser video → box; paired horizontal edges; reverse scroll; no premature box/table; media lifecycle; 390x844"
+    }
+  },
+  "errors": []
+}

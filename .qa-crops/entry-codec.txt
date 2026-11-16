@@ -1,0 +1,22 @@
+﻿ffmpeg.exe : Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 
+'C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\dist\assets\entrada-video.mp4':
+En línea: 1 Carácter: 1
++ & 'C:\Users\alexismimundo\AppData\Local\Programs\Stremio\ffmpeg.exe'  ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Input #0, mov,m...ada-video.mp4'::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  Metadata:
+    major_brand     : mp42
+    minor_version   : 0
+    compatible_brands: mp42mp41
+    creation_time   : 2026-11-14T23:01:08.000000Z
+  Duration: 00:00:05.00, start: 0.000000, bitrate: 17839 kb/s
+  Stream #0:0(eng): Video: h264 (Main) (avc1 / 0x31637661), yuv420p, 1280x720 [SAR 1:1 DAR 16:9], 17350 kb/s, 24 fps, 24 tbr, 24k tbn, 48 tbc 
+(default)
+    Metadata:
+      creation_time   : 2026-11-14T23:01:08.000000Z
+      handler_name    : ?Mainconcept Video Media Handler
+      vendor_id       : [0][0][0][0]
+      encoder         : AVC Coding
+At least one output file must be specified

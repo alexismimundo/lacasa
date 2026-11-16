@@ -1,0 +1,15 @@
+{
+  "result": {
+    "result": {
+      "type": "string",
+      "value": "{\"three\":true,\"loader\":true,\"box\":{\"classes\":\"\",\"style\":\"touch-action: none; visibility: visible; pointer-events: auto; opacity: 1; left: 1086px; top: 673.2px; width: 336px; height: 212.8px;\",\"width\":336,\"height\":213},\"resources\":[{\"name\":\"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/loaders/GLTFLoader.js\",\"size\":0},{\"name\":\"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js\",\"size\":0},{\"name\":\"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/utils/BufferGeometryUtils.js\",\"size\":0},{\"name\":\"http://127.0.0.1:21871/dist/assets/first-house/caja-zapatillas.glb\",\"size\":1212268},{\"name\":\"http://127.0.0.1:21871/dist/assets/first-house/caja-textura.webp\",\"size\":356298},{\"name\":\"http://127.0.0.1:21871/dist/assets/first-house/caja-textura.webp\",\"size\":356298}]}"
+    }
+  },
+  "info": {
+    "result": {
+      "type": "string",
+      "value": "La Casa · prueba 02. El muro se abre, atravesás la ventana y el hueco permanece. Marco, niño, logo y ladrillos usan los PNG originales separados, con sus transparencias y colores intactos. La entrada reproduce el video del niño atravesando la ventana. Antes de entrar, la ventana tapiada espera inmóvil. Podés repetir el cruce sin borrar el papel ni la luz.Las huellas se conservan en este navegador. Suena «Sirens». Podés silenciarla desde el botón de música.VOLVER ↗"
+    }
+  },
+  "errors": []
+}

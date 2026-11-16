@@ -1,0 +1,5 @@
+﻿C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\dist\continuous\casa.js:83: p17:{s:22,h:1}};
+C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\dist\continuous\casa.js:528: body.classList.toggle('casa-oscura',dentro&&((typeof fondoOscuro==='function'&&fondoOscuro(v)&&v<S.p17.s-.5)||(typeof casa2Oscuro==='function'&&casa2Oscuro(v))));
+C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\dist\index.html:316:#casa-screens #p17{visibility:hidden!important}
+C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\dist\index.html:551:<section class="pantalla" id="p17" aria-label="Adentro otra vez, frente a la ventana" inert>
+C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\dist\index.html:552: <p id="p17-frase">algo quedó.</p>

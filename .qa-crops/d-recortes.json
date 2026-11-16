@@ -1,0 +1,1278 @@
+[
+    {
+        "value":  "casa-01.png",
+        "PSPath":  "Microsoft.PowerShell.Core\\FileSystem::C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\assets\\casas-comunidad\\recortes\\casa-01.png",
+        "PSParentPath":  "Microsoft.PowerShell.Core\\FileSystem::C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\assets\\casas-comunidad\\recortes",
+        "PSChildName":  "casa-01.png",
+        "PSDrive":  {
+                        "CurrentLocation":  "Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo",
+                        "Name":  "C",
+                        "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                        "Root":  "C:\\",
+                        "Description":  "Programas",
+                        "MaximumSize":  null,
+                        "Credential":  "System.Management.Automation.PSCredential",
+                        "DisplayRoot":  null
+                    },
+        "PSProvider":  {
+                           "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                           "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                           "Name":  "FileSystem",
+                           "PSSnapIn":  "Microsoft.PowerShell.Core",
+                           "ModuleName":  "Microsoft.PowerShell.Core",
+                           "Module":  null,
+                           "Description":  "",
+                           "Capabilities":  52,
+                           "Home":  "C:\\Users\\alexismimundo",
+                           "Drives":  "C D G"
+                       },
+        "PSIsContainer":  false
+    },
+    {
+        "value":  "casa-02.png",
+        "PSPath":  "Microsoft.PowerShell.Core\\FileSystem::C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\assets\\casas-comunidad\\recortes\\casa-02.png",
+        "PSParentPath":  "Microsoft.PowerShell.Core\\FileSystem::C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\assets\\casas-comunidad\\recortes",
+        "PSChildName":  "casa-02.png",
+        "PSDrive":  {
+                        "CurrentLocation":  "Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo",
+                        "Name":  "C",
+                        "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                        "Root":  "C:\\",
+                        "Description":  "Programas",
+                        "MaximumSize":  null,
+                        "Credential":  "System.Management.Automation.PSCredential",
+                        "DisplayRoot":  null
+                    },
+        "PSProvider":  {
+                           "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                           "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                           "Name":  "FileSystem",
+                           "PSSnapIn":  "Microsoft.PowerShell.Core",
+                           "ModuleName":  "Microsoft.PowerShell.Core",
+                           "Module":  null,
+                           "Description":  "",
+                           "Capabilities":  52,
+                           "Home":  "C:\\Users\\alexismimundo",
+                           "Drives":  "C D G"
+                       },
+        "PSIsContainer":  false
+    },
+    {
+        "value":  "casa-03.png",
+        "PSPath":  "Microsoft.PowerShell.Core\\FileSystem::C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\assets\\casas-comunidad\\recortes\\casa-03.png",
+        "PSParentPath":  "Microsoft.PowerShell.Core\\FileSystem::C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\assets\\casas-comunidad\\recortes",
+        "PSChildName":  "casa-03.png",
+        "PSDrive":  {
+                        "CurrentLocation":  "Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo",
+                        "Name":  "C",
+                        "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                        "Root":  "C:\\",
+                        "Description":  "Programas",
+                        "MaximumSize":  null,
+                        "Credential":  "System.Management.Automation.PSCredential",
+                        "DisplayRoot":  null
+                    },
+        "PSProvider":  {
+                           "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                           "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                           "Name":  "FileSystem",
+                           "PSSnapIn":  "Microsoft.PowerShell.Core",
+                           "ModuleName":  "Microsoft.PowerShell.Core",
+                           "Module":  null,
+                           "Description":  "",
+                           "Capabilities":  52,
+                           "Home":  "C:\\Users\\alexismimundo",
+                           "Drives":  "C D G"
+                       },
+        "PSIsContainer":  false
+    },
+    {
+        "value":  "casa-04.png",
+        "PSPath":  "Microsoft.PowerShell.Core\\FileSystem::C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\assets\\casas-comunidad\\recortes\\casa-04.png",
+        "PSParentPath":  "Microsoft.PowerShell.Core\\FileSystem::C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\assets\\casas-comunidad\\recortes",
+        "PSChildName":  "casa-04.png",
+        "PSDrive":  {
+                        "CurrentLocation":  "Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo",
+                        "Name":  "C",
+                        "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                        "Root":  "C:\\",
+                        "Description":  "Programas",
+                        "MaximumSize":  null,
+                        "Credential":  "System.Management.Automation.PSCredential",
+                        "DisplayRoot":  null
+                    },
+        "PSProvider":  {
+                           "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                           "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                           "Name":  "FileSystem",
+                           "PSSnapIn":  "Microsoft.PowerShell.Core",
+                           "ModuleName":  "Microsoft.PowerShell.Core",
+                           "Module":  null,
+                           "Description":  "",
+                           "Capabilities":  52,
+                           "Home":  "C:\\Users\\alexismimundo",
+                           "Drives":  "C D G"
+                       },
+        "PSIsContainer":  false
+    },
+    {
+        "value":  "casa-05.png",
+        "PSPath":  "Microsoft.PowerShell.Core\\FileSystem::C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\assets\\casas-comunidad\\recortes\\casa-05.png",
+        "PSParentPath":  "Microsoft.PowerShell.Core\\FileSystem::C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\assets\\casas-comunidad\\recortes",
+        "PSChildName":  "casa-05.png",
+        "PSDrive":  {
+                        "CurrentLocation":  "Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo",
+                        "Name":  "C",
+                        "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                        "Root":  "C:\\",
+                        "Description":  "Programas",
+                        "MaximumSize":  null,
+                        "Credential":  "System.Management.Automation.PSCredential",
+                        "DisplayRoot":  null
+                    },
+        "PSProvider":  {
+                           "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                           "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                           "Name":  "FileSystem",
+                           "PSSnapIn":  "Microsoft.PowerShell.Core",
+                           "ModuleName":  "Microsoft.PowerShell.Core",
+                           "Module":  null,
+                           "Description":  "",
+                           "Capabilities":  52,
+                           "Home":  "C:\\Users\\alexismimundo",
+                           "Drives":  "C D G"
+                       },
+        "PSIsContainer":  false
+    },
+    {
+        "value":  "casa-06.png",
+        "PSPath":  "Microsoft.PowerShell.Core\\FileSystem::C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\assets\\casas-comunidad\\recortes\\casa-06.png",
+        "PSParentPath":  "Microsoft.PowerShell.Core\\FileSystem::C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\assets\\casas-comunidad\\recortes",
+        "PSChildName":  "casa-06.png",
+        "PSDrive":  {
+                        "CurrentLocation":  "Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo",
+                        "Name":  "C",
+                        "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                        "Root":  "C:\\",
+                        "Description":  "Programas",
+                        "MaximumSize":  null,
+                        "Credential":  "System.Management.Automation.PSCredential",
+                        "DisplayRoot":  null
+                    },
+        "PSProvider":  {
+                           "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                           "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                           "Name":  "FileSystem",
+                           "PSSnapIn":  "Microsoft.PowerShell.Core",
+                           "ModuleName":  "Microsoft.PowerShell.Core",
+                           "Module":  null,
+                           "Description":  "",
+                           "Capabilities":  52,
+                           "Home":  "C:\\Users\\alexismimundo",
+                           "Drives":  "C D G"
+                       },
+        "PSIsContainer":  false
+    },
+    {
+        "value":  "casa-07.png",
+        "PSPath":  "Microsoft.PowerShell.Core\\FileSystem::C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\assets\\casas-comunidad\\recortes\\casa-07.png",
+        "PSParentPath":  "Microsoft.PowerShell.Core\\FileSystem::C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\assets\\casas-comunidad\\recortes",
+        "PSChildName":  "casa-07.png",
+        "PSDrive":  {
+                        "CurrentLocation":  "Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo",
+                        "Name":  "C",
+                        "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                        "Root":  "C:\\",
+                        "Description":  "Programas",
+                        "MaximumSize":  null,
+                        "Credential":  "System.Management.Automation.PSCredential",
+                        "DisplayRoot":  null
+                    },
+        "PSProvider":  {
+                           "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                           "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                           "Name":  "FileSystem",
+                           "PSSnapIn":  "Microsoft.PowerShell.Core",
+                           "ModuleName":  "Microsoft.PowerShell.Core",
+                           "Module":  null,
+                           "Description":  "",
+                           "Capabilities":  52,
+                           "Home":  "C:\\Users\\alexismimundo",
+                           "Drives":  "C D G"
+                       },
+        "PSIsContainer":  false
+    },
+    {
+        "value":  "casa-08.png",
+        "PSPath":  "Microsoft.PowerShell.Core\\FileSystem::C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\assets\\casas-comunidad\\recortes\\casa-08.png",
+        "PSParentPath":  "Microsoft.PowerShell.Core\\FileSystem::C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\assets\\casas-comunidad\\recortes",
+        "PSChildName":  "casa-08.png",
+        "PSDrive":  {
+                        "CurrentLocation":  "Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo",
+                        "Name":  "C",
+                        "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                        "Root":  "C:\\",
+                        "Description":  "Programas",
+                        "MaximumSize":  null,
+                        "Credential":  "System.Management.Automation.PSCredential",
+                        "DisplayRoot":  null
+                    },
+        "PSProvider":  {
+                           "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                           "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                           "Name":  "FileSystem",
+                           "PSSnapIn":  "Microsoft.PowerShell.Core",
+                           "ModuleName":  "Microsoft.PowerShell.Core",
+                           "Module":  null,
+                           "Description":  "",
+                           "Capabilities":  52,
+                           "Home":  "C:\\Users\\alexismimundo",
+                           "Drives":  "C D G"
+                       },
+        "PSIsContainer":  false
+    },
+    {
+        "value":  "casa-09.png",
+        "PSPath":  "Microsoft.PowerShell.Core\\FileSystem::C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\assets\\casas-comunidad\\recortes\\casa-09.png",
+        "PSParentPath":  "Microsoft.PowerShell.Core\\FileSystem::C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\assets\\casas-comunidad\\recortes",
+        "PSChildName":  "casa-09.png",
+        "PSDrive":  {
+                        "CurrentLocation":  "Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo",
+                        "Name":  "C",
+                        "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                        "Root":  "C:\\",
+                        "Description":  "Programas",
+                        "MaximumSize":  null,
+                        "Credential":  "System.Management.Automation.PSCredential",
+                        "DisplayRoot":  null
+                    },
+        "PSProvider":  {
+                           "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                           "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                           "Name":  "FileSystem",
+                           "PSSnapIn":  "Microsoft.PowerShell.Core",
+                           "ModuleName":  "Microsoft.PowerShell.Core",
+                           "Module":  null,
+                           "Description":  "",
+                           "Capabilities":  52,
+                           "Home":  "C:\\Users\\alexismimundo",
+                           "Drives":  "C D G"
+                       },
+        "PSIsContainer":  false
+    },
+    {
+        "value":  "casa-10.png",
+        "PSPath":  "Microsoft.PowerShell.Core\\FileSystem::C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\assets\\casas-comunidad\\recortes\\casa-10.png",
+        "PSParentPath":  "Microsoft.PowerShell.Core\\FileSystem::C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\assets\\casas-comunidad\\recortes",
+        "PSChildName":  "casa-10.png",
+        "PSDrive":  {
+                        "CurrentLocation":  "Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo",
+                        "Name":  "C",
+                        "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                        "Root":  "C:\\",
+                        "Description":  "Programas",
+                        "MaximumSize":  null,
+                        "Credential":  "System.Management.Automation.PSCredential",
+                        "DisplayRoot":  null
+                    },
+        "PSProvider":  {
+                           "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                           "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                           "Name":  "FileSystem",
+                           "PSSnapIn":  "Microsoft.PowerShell.Core",
+                           "ModuleName":  "Microsoft.PowerShell.Core",
+                           "Module":  null,
+                           "Description":  "",
+                           "Capabilities":  52,
+                           "Home":  "C:\\Users\\alexismimundo",
+                           "Drives":  "C D G"
+                       },
+        "PSIsContainer":  false
+    },
+    {
+        "value":  "casa-11.png",
+        "PSPath":  "Microsoft.PowerShell.Core\\FileSystem::C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\assets\\casas-comunidad\\recortes\\casa-11.png",
+        "PSParentPath":  "Microsoft.PowerShell.Core\\FileSystem::C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\assets\\casas-comunidad\\recortes",
+        "PSChildName":  "casa-11.png",
+        "PSDrive":  {
+                        "CurrentLocation":  "Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo",
+                        "Name":  "C",
+                        "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                        "Root":  "C:\\",
+                        "Description":  "Programas",
+                        "MaximumSize":  null,
+                        "Credential":  "System.Management.Automation.PSCredential",
+                        "DisplayRoot":  null
+                    },
+        "PSProvider":  {
+                           "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                           "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                           "Name":  "FileSystem",
+                           "PSSnapIn":  "Microsoft.PowerShell.Core",
+                           "ModuleName":  "Microsoft.PowerShell.Core",
+                           "Module":  null,
+                           "Description":  "",
+                           "Capabilities":  52,
+                           "Home":  "C:\\Users\\alexismimundo",
+                           "Drives":  "C D G"
+                       },
+        "PSIsContainer":  false
+    },
+    {
+        "value":  "casa-12.png",
+        "PSPath":  "Microsoft.PowerShell.Core\\FileSystem::C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\assets\\casas-comunidad\\recortes\\casa-12.png",
+        "PSParentPath":  "Microsoft.PowerShell.Core\\FileSystem::C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\assets\\casas-comunidad\\recortes",
+        "PSChildName":  "casa-12.png",
+        "PSDrive":  {
+                        "CurrentLocation":  "Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo",
+                        "Name":  "C",
+                        "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                        "Root":  "C:\\",
+                        "Description":  "Programas",
+                        "MaximumSize":  null,
+                        "Credential":  "System.Management.Automation.PSCredential",
+                        "DisplayRoot":  null
+                    },
+        "PSProvider":  {
+                           "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                           "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                           "Name":  "FileSystem",
+                           "PSSnapIn":  "Microsoft.PowerShell.Core",
+                           "ModuleName":  "Microsoft.PowerShell.Core",
+                           "Module":  null,
+                           "Description":  "",
+                           "Capabilities":  52,
+                           "Home":  "C:\\Users\\alexismimundo",
+                           "Drives":  "C D G"
+                       },
+        "PSIsContainer":  false
+    },
+    {
+        "value":  "casa-13.png",
+        "PSPath":  "Microsoft.PowerShell.Core\\FileSystem::C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\assets\\casas-comunidad\\recortes\\casa-13.png",
+        "PSParentPath":  "Microsoft.PowerShell.Core\\FileSystem::C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\assets\\casas-comunidad\\recortes",
+        "PSChildName":  "casa-13.png",
+        "PSDrive":  {
+                        "CurrentLocation":  "Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo",
+                        "Name":  "C",
+                        "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                        "Root":  "C:\\",
+                        "Description":  "Programas",
+                        "MaximumSize":  null,
+                        "Credential":  "System.Management.Automation.PSCredential",
+                        "DisplayRoot":  null
+                    },
+        "PSProvider":  {
+                           "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                           "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                           "Name":  "FileSystem",
+                           "PSSnapIn":  "Microsoft.PowerShell.Core",
+                           "ModuleName":  "Microsoft.PowerShell.Core",
+                           "Module":  null,
+                           "Description":  "",
+                           "Capabilities":  52,
+                           "Home":  "C:\\Users\\alexismimundo",
+                           "Drives":  "C D G"
+                       },
+        "PSIsContainer":  false
+    },
+    {
+        "value":  "casa-14.png",
+        "PSPath":  "Microsoft.PowerShell.Core\\FileSystem::C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\assets\\casas-comunidad\\recortes\\casa-14.png",
+        "PSParentPath":  "Microsoft.PowerShell.Core\\FileSystem::C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\assets\\casas-comunidad\\recortes",
+        "PSChildName":  "casa-14.png",
+        "PSDrive":  {
+                        "CurrentLocation":  "Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo",
+                        "Name":  "C",
+                        "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                        "Root":  "C:\\",
+                        "Description":  "Programas",
+                        "MaximumSize":  null,
+                        "Credential":  "System.Management.Automation.PSCredential",
+                        "DisplayRoot":  null
+                    },
+        "PSProvider":  {
+                           "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                           "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                           "Name":  "FileSystem",
+                           "PSSnapIn":  "Microsoft.PowerShell.Core",
+                           "ModuleName":  "Microsoft.PowerShell.Core",
+                           "Module":  null,
+                           "Description":  "",
+                           "Capabilities":  52,
+                           "Home":  "C:\\Users\\alexismimundo",
+                           "Drives":  "C D G"
+                       },
+        "PSIsContainer":  false
+    },
+    {
+        "value":  "casa-15.png",
+        "PSPath":  "Microsoft.PowerShell.Core\\FileSystem::C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\assets\\casas-comunidad\\recortes\\casa-15.png",
+        "PSParentPath":  "Microsoft.PowerShell.Core\\FileSystem::C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\assets\\casas-comunidad\\recortes",
+        "PSChildName":  "casa-15.png",
+        "PSDrive":  {
+                        "CurrentLocation":  "Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo",
+                        "Name":  "C",
+                        "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                        "Root":  "C:\\",
+                        "Description":  "Programas",
+                        "MaximumSize":  null,
+                        "Credential":  "System.Management.Automation.PSCredential",
+                        "DisplayRoot":  null
+                    },
+        "PSProvider":  {
+                           "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                           "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                           "Name":  "FileSystem",
+                           "PSSnapIn":  "Microsoft.PowerShell.Core",
+                           "ModuleName":  "Microsoft.PowerShell.Core",
+                           "Module":  null,
+                           "Description":  "",
+                           "Capabilities":  52,
+                           "Home":  "C:\\Users\\alexismimundo",
+                           "Drives":  "C D G"
+                       },
+        "PSIsContainer":  false
+    },
+    {
+        "value":  "casa-16.png",
+        "PSPath":  "Microsoft.PowerShell.Core\\FileSystem::C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\assets\\casas-comunidad\\recortes\\casa-16.png",
+        "PSParentPath":  "Microsoft.PowerShell.Core\\FileSystem::C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\assets\\casas-comunidad\\recortes",
+        "PSChildName":  "casa-16.png",
+        "PSDrive":  {
+                        "CurrentLocation":  "Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo",
+                        "Name":  "C",
+                        "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                        "Root":  "C:\\",
+                        "Description":  "Programas",
+                        "MaximumSize":  null,
+                        "Credential":  "System.Management.Automation.PSCredential",
+                        "DisplayRoot":  null
+                    },
+        "PSProvider":  {
+                           "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                           "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                           "Name":  "FileSystem",
+                           "PSSnapIn":  "Microsoft.PowerShell.Core",
+                           "ModuleName":  "Microsoft.PowerShell.Core",
+                           "Module":  null,
+                           "Description":  "",
+                           "Capabilities":  52,
+                           "Home":  "C:\\Users\\alexismimundo",
+                           "Drives":  "C D G"
+                       },
+        "PSIsContainer":  false
+    },
+    {
+        "value":  "casa-17.png",
+        "PSPath":  "Microsoft.PowerShell.Core\\FileSystem::C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\assets\\casas-comunidad\\recortes\\casa-17.png",
+        "PSParentPath":  "Microsoft.PowerShell.Core\\FileSystem::C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\assets\\casas-comunidad\\recortes",
+        "PSChildName":  "casa-17.png",
+        "PSDrive":  {
+                        "CurrentLocation":  "Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo",
+                        "Name":  "C",
+                        "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                        "Root":  "C:\\",
+                        "Description":  "Programas",
+                        "MaximumSize":  null,
+                        "Credential":  "System.Management.Automation.PSCredential",
+                        "DisplayRoot":  null
+                    },
+        "PSProvider":  {
+                           "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                           "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                           "Name":  "FileSystem",
+                           "PSSnapIn":  "Microsoft.PowerShell.Core",
+                           "ModuleName":  "Microsoft.PowerShell.Core",
+                           "Module":  null,
+                           "Description":  "",
+                           "Capabilities":  52,
+                           "Home":  "C:\\Users\\alexismimundo",
+                           "Drives":  "C D G"
+                       },
+        "PSIsContainer":  false
+    },
+    {
+        "value":  "casa-18.png",
+        "PSPath":  "Microsoft.PowerShell.Core\\FileSystem::C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\assets\\casas-comunidad\\recortes\\casa-18.png",
+        "PSParentPath":  "Microsoft.PowerShell.Core\\FileSystem::C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\assets\\casas-comunidad\\recortes",
+        "PSChildName":  "casa-18.png",
+        "PSDrive":  {
+                        "CurrentLocation":  "Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo",
+                        "Name":  "C",
+                        "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                        "Root":  "C:\\",
+                        "Description":  "Programas",
+                        "MaximumSize":  null,
+                        "Credential":  "System.Management.Automation.PSCredential",
+                        "DisplayRoot":  null
+                    },
+        "PSProvider":  {
+                           "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                           "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                           "Name":  "FileSystem",
+                           "PSSnapIn":  "Microsoft.PowerShell.Core",
+                           "ModuleName":  "Microsoft.PowerShell.Core",
+                           "Module":  null,
+                           "Description":  "",
+                           "Capabilities":  52,
+                           "Home":  "C:\\Users\\alexismimundo",
+                           "Drives":  "C D G"
+                       },
+        "PSIsContainer":  false
+    },
+    {
+        "value":  "casa-19.png",
+        "PSPath":  "Microsoft.PowerShell.Core\\FileSystem::C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\assets\\casas-comunidad\\recortes\\casa-19.png",
+        "PSParentPath":  "Microsoft.PowerShell.Core\\FileSystem::C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\assets\\casas-comunidad\\recortes",
+        "PSChildName":  "casa-19.png",
+        "PSDrive":  {
+                        "CurrentLocation":  "Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo",
+                        "Name":  "C",
+                        "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                        "Root":  "C:\\",
+                        "Description":  "Programas",
+                        "MaximumSize":  null,
+                        "Credential":  "System.Management.Automation.PSCredential",
+                        "DisplayRoot":  null
+                    },
+        "PSProvider":  {
+                           "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                           "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                           "Name":  "FileSystem",
+                           "PSSnapIn":  "Microsoft.PowerShell.Core",
+                           "ModuleName":  "Microsoft.PowerShell.Core",
+                           "Module":  null,
+                           "Description":  "",
+                           "Capabilities":  52,
+                           "Home":  "C:\\Users\\alexismimundo",
+                           "Drives":  "C D G"
+                       },
+        "PSIsContainer":  false
+    },
+    {
+        "value":  "casa-20.png",
+        "PSPath":  "Microsoft.PowerShell.Core\\FileSystem::C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\assets\\casas-comunidad\\recortes\\casa-20.png",
+        "PSParentPath":  "Microsoft.PowerShell.Core\\FileSystem::C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\assets\\casas-comunidad\\recortes",
+        "PSChildName":  "casa-20.png",
+        "PSDrive":  {
+                        "CurrentLocation":  "Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo",
+                        "Name":  "C",
+                        "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                        "Root":  "C:\\",
+                        "Description":  "Programas",
+                        "MaximumSize":  null,
+                        "Credential":  "System.Management.Automation.PSCredential",
+                        "DisplayRoot":  null
+                    },
+        "PSProvider":  {
+                           "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                           "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                           "Name":  "FileSystem",
+                           "PSSnapIn":  "Microsoft.PowerShell.Core",
+                           "ModuleName":  "Microsoft.PowerShell.Core",
+                           "Module":  null,
+                           "Description":  "",
+                           "Capabilities":  52,
+                           "Home":  "C:\\Users\\alexismimundo",
+                           "Drives":  "C D G"
+                       },
+        "PSIsContainer":  false
+    },
+    {
+        "value":  "casa-21.png",
+        "PSPath":  "Microsoft.PowerShell.Core\\FileSystem::C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\assets\\casas-comunidad\\recortes\\casa-21.png",
+        "PSParentPath":  "Microsoft.PowerShell.Core\\FileSystem::C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\assets\\casas-comunidad\\recortes",
+        "PSChildName":  "casa-21.png",
+        "PSDrive":  {
+                        "CurrentLocation":  "Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo",
+                        "Name":  "C",
+                        "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                        "Root":  "C:\\",
+                        "Description":  "Programas",
+                        "MaximumSize":  null,
+                        "Credential":  "System.Management.Automation.PSCredential",
+                        "DisplayRoot":  null
+                    },
+        "PSProvider":  {
+                           "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                           "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                           "Name":  "FileSystem",
+                           "PSSnapIn":  "Microsoft.PowerShell.Core",
+                           "ModuleName":  "Microsoft.PowerShell.Core",
+                           "Module":  null,
+                           "Description":  "",
+                           "Capabilities":  52,
+                           "Home":  "C:\\Users\\alexismimundo",
+                           "Drives":  "C D G"
+                       },
+        "PSIsContainer":  false
+    },
+    {
+        "value":  "casa-22.png",
+        "PSPath":  "Microsoft.PowerShell.Core\\FileSystem::C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\assets\\casas-comunidad\\recortes\\casa-22.png",
+        "PSParentPath":  "Microsoft.PowerShell.Core\\FileSystem::C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\assets\\casas-comunidad\\recortes",
+        "PSChildName":  "casa-22.png",
+        "PSDrive":  {
+                        "CurrentLocation":  "Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo",
+                        "Name":  "C",
+                        "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                        "Root":  "C:\\",
+                        "Description":  "Programas",
+                        "MaximumSize":  null,
+                        "Credential":  "System.Management.Automation.PSCredential",
+                        "DisplayRoot":  null
+                    },
+        "PSProvider":  {
+                           "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                           "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                           "Name":  "FileSystem",
+                           "PSSnapIn":  "Microsoft.PowerShell.Core",
+                           "ModuleName":  "Microsoft.PowerShell.Core",
+                           "Module":  null,
+                           "Description":  "",
+                           "Capabilities":  52,
+                           "Home":  "C:\\Users\\alexismimundo",
+                           "Drives":  "C D G"
+                       },
+        "PSIsContainer":  false
+    },
+    {
+        "value":  "casa-23.png",
+        "PSPath":  "Microsoft.PowerShell.Core\\FileSystem::C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\assets\\casas-comunidad\\recortes\\casa-23.png",
+        "PSParentPath":  "Microsoft.PowerShell.Core\\FileSystem::C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\assets\\casas-comunidad\\recortes",
+        "PSChildName":  "casa-23.png",
+        "PSDrive":  {
+                        "CurrentLocation":  "Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo",
+                        "Name":  "C",
+                        "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                        "Root":  "C:\\",
+                        "Description":  "Programas",
+                        "MaximumSize":  null,
+                        "Credential":  "System.Management.Automation.PSCredential",
+                        "DisplayRoot":  null
+                    },
+        "PSProvider":  {
+                           "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                           "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                           "Name":  "FileSystem",
+                           "PSSnapIn":  "Microsoft.PowerShell.Core",
+                           "ModuleName":  "Microsoft.PowerShell.Core",
+                           "Module":  null,
+                           "Description":  "",
+                           "Capabilities":  52,
+                           "Home":  "C:\\Users\\alexismimundo",
+                           "Drives":  "C D G"
+                       },
+        "PSIsContainer":  false
+    },
+    {
+        "value":  "casa-24.png",
+        "PSPath":  "Microsoft.PowerShell.Core\\FileSystem::C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\assets\\casas-comunidad\\recortes\\casa-24.png",
+        "PSParentPath":  "Microsoft.PowerShell.Core\\FileSystem::C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\assets\\casas-comunidad\\recortes",
+        "PSChildName":  "casa-24.png",
+        "PSDrive":  {
+                        "CurrentLocation":  "Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo",
+                        "Name":  "C",
+                        "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                        "Root":  "C:\\",
+                        "Description":  "Programas",
+                        "MaximumSize":  null,
+                        "Credential":  "System.Management.Automation.PSCredential",
+                        "DisplayRoot":  null
+                    },
+        "PSProvider":  {
+                           "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                           "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                           "Name":  "FileSystem",
+                           "PSSnapIn":  "Microsoft.PowerShell.Core",
+                           "ModuleName":  "Microsoft.PowerShell.Core",
+                           "Module":  null,
+                           "Description":  "",
+                           "Capabilities":  52,
+                           "Home":  "C:\\Users\\alexismimundo",
+                           "Drives":  "C D G"
+                       },
+        "PSIsContainer":  false
+    },
+    {
+        "value":  "casa-25.png",
+        "PSPath":  "Microsoft.PowerShell.Core\\FileSystem::C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\assets\\casas-comunidad\\recortes\\casa-25.png",
+        "PSParentPath":  "Microsoft.PowerShell.Core\\FileSystem::C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\assets\\casas-comunidad\\recortes",
+        "PSChildName":  "casa-25.png",
+        "PSDrive":  {
+                        "CurrentLocation":  "Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo",
+                        "Name":  "C",
+                        "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                        "Root":  "C:\\",
+                        "Description":  "Programas",
+                        "MaximumSize":  null,
+                        "Credential":  "System.Management.Automation.PSCredential",
+                        "DisplayRoot":  null
+                    },
+        "PSProvider":  {
+                           "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                           "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                           "Name":  "FileSystem",
+                           "PSSnapIn":  "Microsoft.PowerShell.Core",
+                           "ModuleName":  "Microsoft.PowerShell.Core",
+                           "Module":  null,
+                           "Description":  "",
+                           "Capabilities":  52,
+                           "Home":  "C:\\Users\\alexismimundo",
+                           "Drives":  "C D G"
+                       },
+        "PSIsContainer":  false
+    },
+    {
+        "value":  "casa-26.png",
+        "PSPath":  "Microsoft.PowerShell.Core\\FileSystem::C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\assets\\casas-comunidad\\recortes\\casa-26.png",
+        "PSParentPath":  "Microsoft.PowerShell.Core\\FileSystem::C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\assets\\casas-comunidad\\recortes",
+        "PSChildName":  "casa-26.png",
+        "PSDrive":  {
+                        "CurrentLocation":  "Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo",
+                        "Name":  "C",
+                        "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                        "Root":  "C:\\",
+                        "Description":  "Programas",
+                        "MaximumSize":  null,
+                        "Credential":  "System.Management.Automation.PSCredential",
+                        "DisplayRoot":  null
+                    },
+        "PSProvider":  {
+                           "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                           "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                           "Name":  "FileSystem",
+                           "PSSnapIn":  "Microsoft.PowerShell.Core",
+                           "ModuleName":  "Microsoft.PowerShell.Core",
+                           "Module":  null,
+                           "Description":  "",
+                           "Capabilities":  52,
+                           "Home":  "C:\\Users\\alexismimundo",
+                           "Drives":  "C D G"
+                       },
+        "PSIsContainer":  false
+    },
+    {
+        "value":  "casa-27.png",
+        "PSPath":  "Microsoft.PowerShell.Core\\FileSystem::C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\assets\\casas-comunidad\\recortes\\casa-27.png",
+        "PSParentPath":  "Microsoft.PowerShell.Core\\FileSystem::C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\assets\\casas-comunidad\\recortes",
+        "PSChildName":  "casa-27.png",
+        "PSDrive":  {
+                        "CurrentLocation":  "Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo",
+                        "Name":  "C",
+                        "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                        "Root":  "C:\\",
+                        "Description":  "Programas",
+                        "MaximumSize":  null,
+                        "Credential":  "System.Management.Automation.PSCredential",
+                        "DisplayRoot":  null
+                    },
+        "PSProvider":  {
+                           "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                           "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                           "Name":  "FileSystem",
+                           "PSSnapIn":  "Microsoft.PowerShell.Core",
+                           "ModuleName":  "Microsoft.PowerShell.Core",
+                           "Module":  null,
+                           "Description":  "",
+                           "Capabilities":  52,
+                           "Home":  "C:\\Users\\alexismimundo",
+                           "Drives":  "C D G"
+                       },
+        "PSIsContainer":  false
+    },
+    {
+        "value":  "casa-28.png",
+        "PSPath":  "Microsoft.PowerShell.Core\\FileSystem::C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\assets\\casas-comunidad\\recortes\\casa-28.png",
+        "PSParentPath":  "Microsoft.PowerShell.Core\\FileSystem::C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\assets\\casas-comunidad\\recortes",
+        "PSChildName":  "casa-28.png",
+        "PSDrive":  {
+                        "CurrentLocation":  "Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo",
+                        "Name":  "C",
+                        "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                        "Root":  "C:\\",
+                        "Description":  "Programas",
+                        "MaximumSize":  null,
+                        "Credential":  "System.Management.Automation.PSCredential",
+                        "DisplayRoot":  null
+                    },
+        "PSProvider":  {
+                           "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                           "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                           "Name":  "FileSystem",
+                           "PSSnapIn":  "Microsoft.PowerShell.Core",
+                           "ModuleName":  "Microsoft.PowerShell.Core",
+                           "Module":  null,
+                           "Description":  "",
+                           "Capabilities":  52,
+                           "Home":  "C:\\Users\\alexismimundo",
+                           "Drives":  "C D G"
+                       },
+        "PSIsContainer":  false
+    },
+    {
+        "value":  "casa-29.png",
+        "PSPath":  "Microsoft.PowerShell.Core\\FileSystem::C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\assets\\casas-comunidad\\recortes\\casa-29.png",
+        "PSParentPath":  "Microsoft.PowerShell.Core\\FileSystem::C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\assets\\casas-comunidad\\recortes",
+        "PSChildName":  "casa-29.png",
+        "PSDrive":  {
+                        "CurrentLocation":  "Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo",
+                        "Name":  "C",
+                        "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                        "Root":  "C:\\",
+                        "Description":  "Programas",
+                        "MaximumSize":  null,
+                        "Credential":  "System.Management.Automation.PSCredential",
+                        "DisplayRoot":  null
+                    },
+        "PSProvider":  {
+                           "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                           "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                           "Name":  "FileSystem",
+                           "PSSnapIn":  "Microsoft.PowerShell.Core",
+                           "ModuleName":  "Microsoft.PowerShell.Core",
+                           "Module":  null,
+                           "Description":  "",
+                           "Capabilities":  52,
+                           "Home":  "C:\\Users\\alexismimundo",
+                           "Drives":  "C D G"
+                       },
+        "PSIsContainer":  false
+    },
+    {
+        "value":  "casa-30.png",
+        "PSPath":  "Microsoft.PowerShell.Core\\FileSystem::C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\assets\\casas-comunidad\\recortes\\casa-30.png",
+        "PSParentPath":  "Microsoft.PowerShell.Core\\FileSystem::C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\assets\\casas-comunidad\\recortes",
+        "PSChildName":  "casa-30.png",
+        "PSDrive":  {
+                        "CurrentLocation":  "Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo",
+                        "Name":  "C",
+                        "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                        "Root":  "C:\\",
+                        "Description":  "Programas",
+                        "MaximumSize":  null,
+                        "Credential":  "System.Management.Automation.PSCredential",
+                        "DisplayRoot":  null
+                    },
+        "PSProvider":  {
+                           "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                           "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                           "Name":  "FileSystem",
+                           "PSSnapIn":  "Microsoft.PowerShell.Core",
+                           "ModuleName":  "Microsoft.PowerShell.Core",
+                           "Module":  null,
+                           "Description":  "",
+                           "Capabilities":  52,
+                           "Home":  "C:\\Users\\alexismimundo",
+                           "Drives":  "C D G"
+                       },
+        "PSIsContainer":  false
+    },
+    {
+        "value":  "casa-31.png",
+        "PSPath":  "Microsoft.PowerShell.Core\\FileSystem::C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\assets\\casas-comunidad\\recortes\\casa-31.png",
+        "PSParentPath":  "Microsoft.PowerShell.Core\\FileSystem::C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\assets\\casas-comunidad\\recortes",
+        "PSChildName":  "casa-31.png",
+        "PSDrive":  {
+                        "CurrentLocation":  "Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo",
+                        "Name":  "C",
+                        "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                        "Root":  "C:\\",
+                        "Description":  "Programas",
+                        "MaximumSize":  null,
+                        "Credential":  "System.Management.Automation.PSCredential",
+                        "DisplayRoot":  null
+                    },
+        "PSProvider":  {
+                           "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                           "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                           "Name":  "FileSystem",
+                           "PSSnapIn":  "Microsoft.PowerShell.Core",
+                           "ModuleName":  "Microsoft.PowerShell.Core",
+                           "Module":  null,
+                           "Description":  "",
+                           "Capabilities":  52,
+                           "Home":  "C:\\Users\\alexismimundo",
+                           "Drives":  "C D G"
+                       },
+        "PSIsContainer":  false
+    },
+    {
+        "value":  "casa-32.png",
+        "PSPath":  "Microsoft.PowerShell.Core\\FileSystem::C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\assets\\casas-comunidad\\recortes\\casa-32.png",
+        "PSParentPath":  "Microsoft.PowerShell.Core\\FileSystem::C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\assets\\casas-comunidad\\recortes",
+        "PSChildName":  "casa-32.png",
+        "PSDrive":  {
+                        "CurrentLocation":  "Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo",
+                        "Name":  "C",
+                        "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                        "Root":  "C:\\",
+                        "Description":  "Programas",
+                        "MaximumSize":  null,
+                        "Credential":  "System.Management.Automation.PSCredential",
+                        "DisplayRoot":  null
+                    },
+        "PSProvider":  {
+                           "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                           "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                           "Name":  "FileSystem",
+                           "PSSnapIn":  "Microsoft.PowerShell.Core",
+                           "ModuleName":  "Microsoft.PowerShell.Core",
+                           "Module":  null,
+                           "Description":  "",
+                           "Capabilities":  52,
+                           "Home":  "C:\\Users\\alexismimundo",
+                           "Drives":  "C D G"
+                       },
+        "PSIsContainer":  false
+    },
+    {
+        "value":  "casa-33.png",
+        "PSPath":  "Microsoft.PowerShell.Core\\FileSystem::C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\assets\\casas-comunidad\\recortes\\casa-33.png",
+        "PSParentPath":  "Microsoft.PowerShell.Core\\FileSystem::C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\assets\\casas-comunidad\\recortes",
+        "PSChildName":  "casa-33.png",
+        "PSDrive":  {
+                        "CurrentLocation":  "Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo",
+                        "Name":  "C",
+                        "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                        "Root":  "C:\\",
+                        "Description":  "Programas",
+                        "MaximumSize":  null,
+                        "Credential":  "System.Management.Automation.PSCredential",
+                        "DisplayRoot":  null
+                    },
+        "PSProvider":  {
+                           "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                           "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                           "Name":  "FileSystem",
+                           "PSSnapIn":  "Microsoft.PowerShell.Core",
+                           "ModuleName":  "Microsoft.PowerShell.Core",
+                           "Module":  null,
+                           "Description":  "",
+                           "Capabilities":  52,
+                           "Home":  "C:\\Users\\alexismimundo",
+                           "Drives":  "C D G"
+                       },
+        "PSIsContainer":  false
+    },
+    {
+        "value":  "casa-34.png",
+        "PSPath":  "Microsoft.PowerShell.Core\\FileSystem::C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\assets\\casas-comunidad\\recortes\\casa-34.png",
+        "PSParentPath":  "Microsoft.PowerShell.Core\\FileSystem::C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\assets\\casas-comunidad\\recortes",
+        "PSChildName":  "casa-34.png",
+        "PSDrive":  {
+                        "CurrentLocation":  "Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo",
+                        "Name":  "C",
+                        "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                        "Root":  "C:\\",
+                        "Description":  "Programas",
+                        "MaximumSize":  null,
+                        "Credential":  "System.Management.Automation.PSCredential",
+                        "DisplayRoot":  null
+                    },
+        "PSProvider":  {
+                           "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                           "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                           "Name":  "FileSystem",
+                           "PSSnapIn":  "Microsoft.PowerShell.Core",
+                           "ModuleName":  "Microsoft.PowerShell.Core",
+                           "Module":  null,
+                           "Description":  "",
+                           "Capabilities":  52,
+                           "Home":  "C:\\Users\\alexismimundo",
+                           "Drives":  "C D G"
+                       },
+        "PSIsContainer":  false
+    },
+    {
+        "value":  "casa-35.png",
+        "PSPath":  "Microsoft.PowerShell.Core\\FileSystem::C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\assets\\casas-comunidad\\recortes\\casa-35.png",
+        "PSParentPath":  "Microsoft.PowerShell.Core\\FileSystem::C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\assets\\casas-comunidad\\recortes",
+        "PSChildName":  "casa-35.png",
+        "PSDrive":  {
+                        "CurrentLocation":  "Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo",
+                        "Name":  "C",
+                        "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                        "Root":  "C:\\",
+                        "Description":  "Programas",
+                        "MaximumSize":  null,
+                        "Credential":  "System.Management.Automation.PSCredential",
+                        "DisplayRoot":  null
+                    },
+        "PSProvider":  {
+                           "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                           "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                           "Name":  "FileSystem",
+                           "PSSnapIn":  "Microsoft.PowerShell.Core",
+                           "ModuleName":  "Microsoft.PowerShell.Core",
+                           "Module":  null,
+                           "Description":  "",
+                           "Capabilities":  52,
+                           "Home":  "C:\\Users\\alexismimundo",
+                           "Drives":  "C D G"
+                       },
+        "PSIsContainer":  false
+    },
+    {
+        "value":  "casa-36.png",
+        "PSPath":  "Microsoft.PowerShell.Core\\FileSystem::C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\assets\\casas-comunidad\\recortes\\casa-36.png",
+        "PSParentPath":  "Microsoft.PowerShell.Core\\FileSystem::C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\assets\\casas-comunidad\\recortes",
+        "PSChildName":  "casa-36.png",
+        "PSDrive":  {
+                        "CurrentLocation":  "Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo",
+                        "Name":  "C",
+                        "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                        "Root":  "C:\\",
+                        "Description":  "Programas",
+                        "MaximumSize":  null,
+                        "Credential":  "System.Management.Automation.PSCredential",
+                        "DisplayRoot":  null
+                    },
+        "PSProvider":  {
+                           "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                           "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                           "Name":  "FileSystem",
+                           "PSSnapIn":  "Microsoft.PowerShell.Core",
+                           "ModuleName":  "Microsoft.PowerShell.Core",
+                           "Module":  null,
+                           "Description":  "",
+                           "Capabilities":  52,
+                           "Home":  "C:\\Users\\alexismimundo",
+                           "Drives":  "C D G"
+                       },
+        "PSIsContainer":  false
+    },
+    {
+        "value":  "casa-37.png",
+        "PSPath":  "Microsoft.PowerShell.Core\\FileSystem::C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\assets\\casas-comunidad\\recortes\\casa-37.png",
+        "PSParentPath":  "Microsoft.PowerShell.Core\\FileSystem::C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\assets\\casas-comunidad\\recortes",
+        "PSChildName":  "casa-37.png",
+        "PSDrive":  {
+                        "CurrentLocation":  "Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo",
+                        "Name":  "C",
+                        "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                        "Root":  "C:\\",
+                        "Description":  "Programas",
+                        "MaximumSize":  null,
+                        "Credential":  "System.Management.Automation.PSCredential",
+                        "DisplayRoot":  null
+                    },
+        "PSProvider":  {
+                           "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                           "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                           "Name":  "FileSystem",
+                           "PSSnapIn":  "Microsoft.PowerShell.Core",
+                           "ModuleName":  "Microsoft.PowerShell.Core",
+                           "Module":  null,
+                           "Description":  "",
+                           "Capabilities":  52,
+                           "Home":  "C:\\Users\\alexismimundo",
+                           "Drives":  "C D G"
+                       },
+        "PSIsContainer":  false
+    },
+    {
+        "value":  "casa-38.png",
+        "PSPath":  "Microsoft.PowerShell.Core\\FileSystem::C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\assets\\casas-comunidad\\recortes\\casa-38.png",
+        "PSParentPath":  "Microsoft.PowerShell.Core\\FileSystem::C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\assets\\casas-comunidad\\recortes",
+        "PSChildName":  "casa-38.png",
+        "PSDrive":  {
+                        "CurrentLocation":  "Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo",
+                        "Name":  "C",
+                        "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                        "Root":  "C:\\",
+                        "Description":  "Programas",
+                        "MaximumSize":  null,
+                        "Credential":  "System.Management.Automation.PSCredential",
+                        "DisplayRoot":  null
+                    },
+        "PSProvider":  {
+                           "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                           "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                           "Name":  "FileSystem",
+                           "PSSnapIn":  "Microsoft.PowerShell.Core",
+                           "ModuleName":  "Microsoft.PowerShell.Core",
+                           "Module":  null,
+                           "Description":  "",
+                           "Capabilities":  52,
+                           "Home":  "C:\\Users\\alexismimundo",
+                           "Drives":  "C D G"
+                       },
+        "PSIsContainer":  false
+    },
+    {
+        "value":  "casa-39.png",
+        "PSPath":  "Microsoft.PowerShell.Core\\FileSystem::C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\assets\\casas-comunidad\\recortes\\casa-39.png",
+        "PSParentPath":  "Microsoft.PowerShell.Core\\FileSystem::C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\assets\\casas-comunidad\\recortes",
+        "PSChildName":  "casa-39.png",
+        "PSDrive":  {
+                        "CurrentLocation":  "Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo",
+                        "Name":  "C",
+                        "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                        "Root":  "C:\\",
+                        "Description":  "Programas",
+                        "MaximumSize":  null,
+                        "Credential":  "System.Management.Automation.PSCredential",
+                        "DisplayRoot":  null
+                    },
+        "PSProvider":  {
+                           "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                           "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                           "Name":  "FileSystem",
+                           "PSSnapIn":  "Microsoft.PowerShell.Core",
+                           "ModuleName":  "Microsoft.PowerShell.Core",
+                           "Module":  null,
+                           "Description":  "",
+                           "Capabilities":  52,
+                           "Home":  "C:\\Users\\alexismimundo",
+                           "Drives":  "C D G"
+                       },
+        "PSIsContainer":  false
+    },
+    {
+        "value":  "casa-40.png",
+        "PSPath":  "Microsoft.PowerShell.Core\\FileSystem::C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\assets\\casas-comunidad\\recortes\\casa-40.png",
+        "PSParentPath":  "Microsoft.PowerShell.Core\\FileSystem::C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\assets\\casas-comunidad\\recortes",
+        "PSChildName":  "casa-40.png",
+        "PSDrive":  {
+                        "CurrentLocation":  "Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo",
+                        "Name":  "C",
+                        "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                        "Root":  "C:\\",
+                        "Description":  "Programas",
+                        "MaximumSize":  null,
+                        "Credential":  "System.Management.Automation.PSCredential",
+                        "DisplayRoot":  null
+                    },
+        "PSProvider":  {
+                           "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                           "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                           "Name":  "FileSystem",
+                           "PSSnapIn":  "Microsoft.PowerShell.Core",
+                           "ModuleName":  "Microsoft.PowerShell.Core",
+                           "Module":  null,
+                           "Description":  "",
+                           "Capabilities":  52,
+                           "Home":  "C:\\Users\\alexismimundo",
+                           "Drives":  "C D G"
+                       },
+        "PSIsContainer":  false
+    },
+    {
+        "value":  "casa-41.png",
+        "PSPath":  "Microsoft.PowerShell.Core\\FileSystem::C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\assets\\casas-comunidad\\recortes\\casa-41.png",
+        "PSParentPath":  "Microsoft.PowerShell.Core\\FileSystem::C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\assets\\casas-comunidad\\recortes",
+        "PSChildName":  "casa-41.png",
+        "PSDrive":  {
+                        "CurrentLocation":  "Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo",
+                        "Name":  "C",
+                        "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                        "Root":  "C:\\",
+                        "Description":  "Programas",
+                        "MaximumSize":  null,
+                        "Credential":  "System.Management.Automation.PSCredential",
+                        "DisplayRoot":  null
+                    },
+        "PSProvider":  {
+                           "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                           "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                           "Name":  "FileSystem",
+                           "PSSnapIn":  "Microsoft.PowerShell.Core",
+                           "ModuleName":  "Microsoft.PowerShell.Core",
+                           "Module":  null,
+                           "Description":  "",
+                           "Capabilities":  52,
+                           "Home":  "C:\\Users\\alexismimundo",
+                           "Drives":  "C D G"
+                       },
+        "PSIsContainer":  false
+    },
+    {
+        "value":  "casa-42.png",
+        "PSPath":  "Microsoft.PowerShell.Core\\FileSystem::C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\assets\\casas-comunidad\\recortes\\casa-42.png",
+        "PSParentPath":  "Microsoft.PowerShell.Core\\FileSystem::C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\assets\\casas-comunidad\\recortes",
+        "PSChildName":  "casa-42.png",
+        "PSDrive":  {
+                        "CurrentLocation":  "Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo",
+                        "Name":  "C",
+                        "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                        "Root":  "C:\\",
+                        "Description":  "Programas",
+                        "MaximumSize":  null,
+                        "Credential":  "System.Management.Automation.PSCredential",
+                        "DisplayRoot":  null
+                    },
+        "PSProvider":  {
+                           "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                           "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                           "Name":  "FileSystem",
+                           "PSSnapIn":  "Microsoft.PowerShell.Core",
+                           "ModuleName":  "Microsoft.PowerShell.Core",
+                           "Module":  null,
+                           "Description":  "",
+                           "Capabilities":  52,
+                           "Home":  "C:\\Users\\alexismimundo",
+                           "Drives":  "C D G"
+                       },
+        "PSIsContainer":  false
+    },
+    {
+        "value":  "casa-43.png",
+        "PSPath":  "Microsoft.PowerShell.Core\\FileSystem::C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\assets\\casas-comunidad\\recortes\\casa-43.png",
+        "PSParentPath":  "Microsoft.PowerShell.Core\\FileSystem::C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\assets\\casas-comunidad\\recortes",
+        "PSChildName":  "casa-43.png",
+        "PSDrive":  {
+                        "CurrentLocation":  "Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo",
+                        "Name":  "C",
+                        "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                        "Root":  "C:\\",
+                        "Description":  "Programas",
+                        "MaximumSize":  null,
+                        "Credential":  "System.Management.Automation.PSCredential",
+                        "DisplayRoot":  null
+                    },
+        "PSProvider":  {
+                           "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                           "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                           "Name":  "FileSystem",
+                           "PSSnapIn":  "Microsoft.PowerShell.Core",
+                           "ModuleName":  "Microsoft.PowerShell.Core",
+                           "Module":  null,
+                           "Description":  "",
+                           "Capabilities":  52,
+                           "Home":  "C:\\Users\\alexismimundo",
+                           "Drives":  "C D G"
+                       },
+        "PSIsContainer":  false
+    },
+    {
+        "value":  "casa-44.png",
+        "PSPath":  "Microsoft.PowerShell.Core\\FileSystem::C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\assets\\casas-comunidad\\recortes\\casa-44.png",
+        "PSParentPath":  "Microsoft.PowerShell.Core\\FileSystem::C:\\Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo\\dist\\assets\\casas-comunidad\\recortes",
+        "PSChildName":  "casa-44.png",
+        "PSDrive":  {
+                        "CurrentLocation":  "Users\\alexismimundo\\Downloads\\la-casa-v77-paquete-completo",
+                        "Name":  "C",
+                        "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                        "Root":  "C:\\",
+                        "Description":  "Programas",
+                        "MaximumSize":  null,
+                        "Credential":  "System.Management.Automation.PSCredential",
+                        "DisplayRoot":  null
+                    },
+        "PSProvider":  {
+                           "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                           "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                           "Name":  "FileSystem",
+                           "PSSnapIn":  "Microsoft.PowerShell.Core",
+                           "ModuleName":  "Microsoft.PowerShell.Core",
+                           "Module":  null,
+                           "Description":  "",
+                           "Capabilities":  52,
+                           "Home":  "C:\\Users\\alexismimundo",
+                           "Drives":  "C D G"
+                       },
+        "PSIsContainer":  false
+    }
+]

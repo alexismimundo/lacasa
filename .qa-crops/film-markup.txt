@@ -1,0 +1,5 @@
+<video id="intro-video" src="assets/videos/Video-landing-2-hd.mp4" poster="assets/videos/Video-landing-2-first.png" preload="auto" muted playsinline aria-label="El niño entra por la ventana">
+<video id="house-film" src="assets/videos/Video-1.mp4" poster="assets/videos/Video-1-poster.jpg" muted loop playsinline preload="auto" aria-hidden="true">
+<video id="closing-interior" src="assets/casa-interior.mp4" poster="assets/casa-interior-poster.jpg" muted loop playsinline preload="none" aria-hidden="true">
+<video id="closing-film" src="assets/salida-video.mp4" poster="assets/salida-inicial.webp" muted playsinline preload="none" aria-hidden="true">
+<video id="reset-film" src="assets/glicinas-reversa.mp4" muted playsinline preload="none">

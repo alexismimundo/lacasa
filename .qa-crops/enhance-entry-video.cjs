@@ -1,0 +1,15 @@
+const fs=require('fs'),path=require('path'),crypto=require('crypto'),{spawnSync}=require('child_process');
+const root=path.resolve(__dirname,'..'),ffmpeg='C:\\Users\\alexismimundo\\AppData\\Local\\Programs\\Stremio\\ffmpeg.exe';
+const source=path.join(root,'dist/assets/entrada-video.mp4'),candidate=path.join(root,'dist/assets/entrada-video-hd.mp4'),backup=path.join(root,'source-materials/entrada-video-before-hd.mp4');
+const images=['entrada-inicial-hq.jpg','entrada-final-hq.jpg'].map(n=>path.join(root,'dist/assets',n));
+const hash=f=>crypto.createHash('sha256').update(fs.readFileSync(f)).digest('hex');
+const before=images.map(hash);
+if(!fs.existsSync(backup))fs.copyFileSync(source,backup,fs.constants.COPYFILE_EXCL);
+const args=['-hide_banner','-y','-i',backup,'-map','0:v:0','-vf','scale=1920:1080:flags=lanczos,unsharp=5:5:0.35:3:3:0','-c:v','libx264','-preset','slow','-crf','16','-pix_fmt','yuv420p','-an','-movflags','+faststart',candidate];
+const result=spawnSync(ffmpeg,args,{encoding:'utf8',timeout:240000});
+fs.writeFileSync(path.join(__dirname,'entry-enhance-encode.log'),result.stderr||String(result.error||''));
+if(result.status!==0)throw Error('Video encoding failed: '+result.status);
+const check=spawnSync(ffmpeg,['-v','error','-i',candidate,'-f','null','-'],{encoding:'utf8',timeout:120000});
+if(check.status!==0||check.stderr.trim())throw Error('Decode failed: '+check.stderr);
+if(images.some((f,i)=>hash(f)!==before[i]))throw Error('Landing image changed');
+fs.writeFileSync(path.join(__dirname,'entry-enhance-result.json'),JSON.stringify({status:'PASS',candidate,backup,filter:'Lanczos 1080p + mild unsharp 0.35; H.264 CRF 16',bytesBefore:fs.statSync(backup).size,bytesAfter:fs.statSync(candidate).size,decode:'PASS',imagesUnchanged:true,imageHashes:before},null,2));

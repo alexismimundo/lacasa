@@ -1,0 +1,15 @@
+{
+  "result": {
+    "result": {
+      "type": "string",
+      "value": "PASS: horizontal drift; tight lines 15.94px / ink 16.00px; local ink proximity; masked logo; reversible depth; lower hint; 390x844"
+    }
+  },
+  "info": {
+    "result": {
+      "type": "string",
+      "value": "PASS: horizontal drift; tight lines 15.94px / ink 16.00px; local ink proximity; masked logo; reversible depth; lower hint; 390x844"
+    }
+  },
+  "errors": []
+}

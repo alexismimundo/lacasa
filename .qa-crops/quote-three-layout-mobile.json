@@ -1,0 +1,15 @@
+{
+  "result": {
+    "result": {
+      "type": "string",
+      "value": "PASS: three complete lines; inline author; lowered position; bounce within bounds; 390x844"
+    }
+  },
+  "info": {
+    "result": {
+      "type": "string",
+      "value": "PASS: three complete lines; inline author; lowered position; bounce within bounds; 390x844"
+    }
+  },
+  "errors": []
+}

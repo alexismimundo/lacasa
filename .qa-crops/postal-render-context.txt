@@ -1,0 +1,8 @@
+ function render(canvas,kind='postal'){
+  if(!layout)return canvas;canvas.width=layout.width;canvas.height=layout.height;const c=canvas.getContext('2d');c.fillStyle=BLUE;c.fillRect(0,0,canvas.width,canvas.height);
+  const [x,y,w,h]=layout.drawing;c.drawImage(drawPigment(),x,y,w,h);
+  const [tx,ty,tw,th]=layout.text;let fontSize=58,lines;
+  do{c.font=fontSize+'px "IBM Plex Mono",monospace';lines=textLines(c,memory.value,tw);if(lines.length*fontSize*1.5<=th)break;fontSize-=2}while(fontSize>22);
+  c.save();c.beginPath();c.rect(tx,ty,tw,th);c.clip();c.fillStyle=PAPER;c.textAlign='center';c.textBaseline='top';lines.forEach((line,i)=>c.fillText(line,tx+tw/2,ty+i*fontSize*1.5));c.restore();
+  if(kind==='cover')c.drawImage(template,0,0);return canvas;
+ }

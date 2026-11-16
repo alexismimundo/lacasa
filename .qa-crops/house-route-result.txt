@@ -1,0 +1,1 @@
+PASS: production JS syntax; all four headings; paired passages stay exactly one viewport apart; dense continuity and reverse samples; reduced-motion vertical fallback; previous sensitivity and manual navigation retained.

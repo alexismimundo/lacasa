@@ -1,0 +1,15 @@
+{
+  "result": {
+    "result": {
+      "type": "string",
+      "value": "PASS: no accelerate button; double accelerates countdown; triple skips without double action; music reset; landing restored; 1280x900"
+    }
+  },
+  "info": {
+    "result": {
+      "type": "string",
+      "value": "PASS: no accelerate button; double accelerates countdown; triple skips without double action; music reset; landing restored; 1280x900"
+    }
+  },
+  "errors": []
+}

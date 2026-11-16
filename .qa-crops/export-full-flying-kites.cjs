@@ -1,0 +1,13 @@
+const fs=require('fs'),path=require('path'),crypto=require('crypto');
+const original=path.join(__dirname,'../barriletes-volando-transparente.png');
+const hash=()=>crypto.createHash('sha256').update(fs.readFileSync(original)).digest('hex');
+fs.writeFileSync(path.join(__dirname,'full-kites-original-hash.txt'),hash());
+const source=fs.readFileSync(path.join(__dirname,'flying-kites-export.html'),'utf8');
+const designs=[['azul',240,390,170,-.37,'azul'],['negro',650,80,70,.27,'negro'],['usuario',1070,530,265,.20,'rosa'],['azul-rombo',1740,180,140,-.21,'azul'],['azul-rombo',330,1180,210,-.18,'azul'],['negro',1570,1070,185,.38,'negro'],['azul',990,1600,155,-.17,'azul'],['negro',1800,1550,105,.22,'negro']];
+let html=source.replace(/const designs=\[[^\n]+;/,'const designs='+JSON.stringify(designs)+';');
+html=html.replace(/const endX=\[[^\n]+;/,"const endX=Math.max(55,Math.min(1990,x+[175,-120,210,-180,120,-160,110,-200][i%8])),endY=Math.min(2000,y+height+240+(i%4)*85);");
+html=html.replace(";if(y>=1024)throw Error('Artwork outside upper half')",'');
+html=html.replace("if(!count||minX===0||maxX===2047||minY===0)","if(!count||minX===0||maxX===2047||minY===0||maxY===2047)");
+html=html.replace("bottomHalf:'fully transparent'","transparentBackground:true").replace("layout:'irregular clusters across upper half, widths 60–265px, varied thread lengths'","layout:'scattered across full square, varied sizes and heights'");
+html=html.replace("return {png:","if(maxY<1900||minY>150||pixels[3]!==0)throw Error('Expected full-height transparent composition');return {png:");
+fs.writeFileSync(path.join(__dirname,'full-flying-kites-export.html'),html);

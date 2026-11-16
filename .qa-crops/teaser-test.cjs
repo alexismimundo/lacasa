@@ -1,0 +1,31 @@
+const fs=require('fs'),path=require('path'),vm=require('vm'),assert=require('assert');
+const root=path.resolve(__dirname,'..'),dist=path.join(root,'dist');
+for(const name of ['continuous/teaser-gate.js','assets/coming-soon/coming-soon.js','assets/coming-soon/teaser-atmosphere.js'])new vm.Script(fs.readFileSync(path.join(dist,name),'utf8'));
+const html=fs.readFileSync(path.join(dist,'index.html'),'utf8');assert(html.includes('src="continuous/teaser-gate.js"'));
+assert(fs.readFileSync(path.join(dist,'assets/coming-soon/coming-soon.js'),'utf8').includes('segundosModoRapido: 7'));
+const grain=html.match(/body:after\{[^}]+\}/)[0];assert(fs.readFileSync(path.join(dist,'assets/coming-soon/style.css'),'utf8').includes(grain.replace('body:after{','body:after{z-index:10;')));
+const test=`<script>window.ready=(async()=>{const wait=ms=>new Promise(r=>setTimeout(r,ms)),a=(v,m)=>{if(!v)throw Error(m)};try{
+await wait(2200);const gate=document.querySelector('#coming-soon-gate');a(gate,'teaser integrated in main index');
+const doc=gate.contentDocument;a(document.documentElement.classList.contains('teaser-pending'),'landing hidden');a(getComputedStyle(document.body).visibility==='hidden','house inaccessible beneath teaser');
+const scene=doc.querySelector('.escena').getBoundingClientRect(),ui=doc.querySelector('.interfaz').getBoundingClientRect();
+a(scene.width<=innerWidth*1.11&&scene.width>Math.min(innerWidth,innerHeight*1.44),'larger centered house');a(Math.abs((scene.left+scene.right)/2-innerWidth/2)<2&&Math.abs((scene.top+scene.bottom)/2-innerHeight/2)<2,'house remains centered');a(Math.abs(ui.top-(innerHeight/2+scene.height*.27))<2,'counter and accelerate raised together');a(ui.bottom<innerHeight,'controls fit viewport');
+a(Number(doc.querySelector('feDisplacementMap').getAttribute('scale'))===1.5,'subtle roughness');
+a(getComputedStyle(doc.querySelector('.escena')).filter.includes('teaser-ink-edge'),'rough edge filter on house');a(getComputedStyle(doc.querySelector('.interfaz')).filter==='none','counter stays sharp');
+a(doc.querySelectorAll('.loop').length===4,'four fire stages');a(doc.querySelector('#entrar').hidden,'entry locked before seven days');a(!doc.querySelector('#adelantar'),'accelerate button removed');
+const grain=getComputedStyle(doc.body,'::after');a(grain.backgroundImage.includes('fractalNoise')&&grain.opacity==='0.15'&&grain.pointerEvents==='none','same grain above teaser');
+const gc=doc.querySelector('#living-grain');const edge=doc.querySelector('feTurbulence'),seed=edge.getAttribute('seed');const first=gc.toDataURL();await wait(200);a(seed!==edge.getAttribute('seed'),'living edge movement');a(Number(doc.querySelector('feGaussianBlur').getAttribute('stdDeviation'))===.7,'small house blur');a(first!==gc.toDataURL(),'animated grain changes');a(getComputedStyle(gc).opacity==='0.6','same animated grain intensity');
+const music=doc.querySelector('#teaser-music');a(music.loop&&music.src.includes('Enfermedad'),'correct looping song');await music.play();a(!music.paused,'music plays');a(!doc.querySelector('#teaser-sound'),'no sound control');
+const base=doc.querySelector('#base');a(base.readyState>=1&&Number.isFinite(base.duration),'base video metadata loaded');
+gate.src=gate.src+'&dia=7';await new Promise(r=>gate.onload=r);await wait(1500);
+ const final=gate.contentDocument;a(final.querySelector('#entrar').hidden,'no entry button after week');a(['dd','hh','mm','ss'].every(id=>final.querySelector('#'+id).textContent==='00'),'counter stays zero');a(document.querySelector('#coming-soon-gate'),'smoke screen held before fade');
+ const finalMusic=final.querySelector('#teaser-music');await wait(5000);a(finalMusic.paused,'teaser music stops on entry');a(!document.querySelector('#coming-soon-gate'),'automatic fade removes teaser');a(!document.documentElement.classList.contains('teaser-pending'),'landing revealed');
+final.dispatchEvent(new KeyboardEvent('keydown',{key:'ArrowDown',bubbles:true}));await wait(150);a(finalMusic.paused&&finalMusic.currentTime===0,'teaser song cannot restart inside house');
+a(sessionStorage.getItem('laCasaTeaserEntered')==='1','entry remembered in session');
+a(!document.querySelector('#landing-legal'),'landing quote removed');
+const gateCode=await(await fetch('continuous/teaser-gate.js')).text();(0,eval)(gateCode);await wait(100);a(document.querySelector('#coming-soon-gate'),'teaser returns even after previous entry');
+document.querySelector('#info').textContent='PASS: quote attributed and animated; zero hold; automatic fade; music stopped; reload gate; '+innerWidth+'x'+innerHeight;
+return document.querySelector('#info').textContent;
+}catch(e){return 'FAIL: '+e.stack}})();</script>`;
+// Isolate the QA session from the visitor's own countdown and entry preference.
+const reset='<script>sessionStorage.setItem("laCasaTeaserEntered","1");localStorage.removeItem("laCasaInicio");</script>';
+fs.writeFileSync(path.join(__dirname,'teaser-browser.html'),html.replace('<head>','<head><base href="../dist/">'+reset).replace('</body>',test+'</body>'));
