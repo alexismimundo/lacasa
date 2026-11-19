@@ -85,7 +85,7 @@
  window.casaRender=function(now,dt){
   const inside=document.body.classList.contains('inhabited')&&!document.body.classList.contains('reentering');
   if(!inside||current<8.02){phraseTime=0;phraseStarted=false;scrollCount=0;scrollDistance=0;dissolve=0}
-  if(inside&&current>=8.02&&current<10.6){
+   if(inside&&current>=8.02&&current<10.6&&!window.casaReview?.active){
    phraseStarted=true;if(!document.hidden)phraseTime+=Math.min(.05,Math.max(0,dt));
    if(scrollBack){if(current<8.6){scrollCount=0;scrollDistance=0;dissolve=0}}
    else if(scrollCount<5){if(target>=8.02)target=current=8.2}
@@ -106,6 +106,6 @@
   flashlight.dataset.phraseTime=phraseTime.toFixed(3);
   if(!inside||p<8.6||p>=12.6)return;
   if(!a.hidden){aContent.style.backgroundColor='#000';mask(now,q);landscape.style.opacity=String(dissolve)}
-  if(!b.hidden){b.style.backgroundColor='rgb(44,72,119)';const t=clamp((p-11.35)/1.25),opacity=Math.sin(Math.PI*t);address.style.opacity=String(opacity);address.style.visibility=opacity>.001?'visible':'hidden';address.style.transform='translate(-50%,calc(-50% + '+(5-t*10).toFixed(3)+'vh))';b.dataset.progress=progress(p,configB).toFixed(4)}
+   if(!b.hidden){b.style.backgroundColor='#B9A3DE';const t=clamp((p-11.35)/1.25),opacity=Math.sin(Math.PI*t);address.style.opacity=String(opacity);address.style.visibility=opacity>.001?'visible':'hidden';address.style.transform='translate(-50%,calc(-50% + '+(5-t*10).toFixed(3)+'vh))';b.dataset.progress=progress(p,configB).toFixed(4)}
  };
 })();

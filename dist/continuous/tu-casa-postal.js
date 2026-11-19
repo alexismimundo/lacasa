@@ -3,23 +3,26 @@
  const api=window.communityPrototype,editor=document.getElementById('tu-casa-editor'),pad=document.getElementById('community-pad'),memory=document.getElementById('tu-memory'),title=document.getElementById('tu-title'),status=document.getElementById('tu-status'),preview=editor.querySelector('.tu-cover canvas'),red=matchMedia('(prefers-reduced-motion:reduce)');
  const BLUE='#2c4877',LILAC='#b9a3de',PAPER='#f4f4f1',template=new Image();
  let layout=null,loadError=false,dirty=true,lastPaint=0,lastPreview=0,frame=0;
- const heading=editor.querySelector('.community-draw-title'),headingText='Dibujá tu casa y escribí algo que te recuerde a ella.',headingWords=[];
+ const heading=editor.querySelector('.community-draw-title'),headingText='Hay casas que siguen viviendo en la forma de recordarlas.',headingWords=[];
  heading.classList.add('memory-phrase');heading.setAttribute('aria-label',headingText);heading.replaceChildren();
- headingText.split(' ').forEach(word=>{const group=document.createElement('span');group.className='ink-word';for(const char of word){const letter=document.createElement('span');letter.className='ink-letter';letter.textContent=char;letter.setAttribute('aria-hidden','true');group.append(letter);inkLetters.push(letter)}heading.append(group,document.createTextNode(' '));headingWords.push(group)});
+ editor.querySelector('.community-draw-layout').prepend(heading);
+ for(const text of ['Hay casas que siguen viviendo','en la forma de recordarlas.']){
+  const line=document.createElement('span');line.className='tu-heading-line';heading.append(line);
+  text.split(' ').forEach(word=>{const group=document.createElement('span');group.className='ink-word';for(const char of word){const letter=document.createElement('span');letter.className='ink-letter';letter.textContent=char;letter.setAttribute('aria-hidden','true');group.append(letter);inkLetters.push(letter)}line.append(group,document.createTextNode(' '));headingWords.push(group)});
+ }
  editor.querySelector('.community-help').hidden=true;
  const form=editor.querySelector('form');form.querySelector('small').hidden=true;title.closest('label').firstChild.textContent='Tu nombre';title.setAttribute('aria-label','Tu nombre');title.placeholder='¿Cómo te llamás?';title.autocomplete='name';title.value='';memory.value='';
  const memoryLabel=memory.closest('label');memoryLabel.firstChild.textContent='Algo que te recuerde a tu casa';memory.setAttribute('aria-label','Escribí algo que te recuerde a tu casa');memory.placeholder='Un olor, una voz, un rincón…';memory.maxLength=280;form.prepend(memoryLabel);form.onsubmit=e=>e.preventDefault();
  const oldPreview=form.querySelector('.tu-memory-preview');oldPreview.classList.remove('tu-memory-preview');oldPreview.hidden=true;
  document.getElementById('tu-story').hidden=true;document.getElementById('tu-save').hidden=true;
  document.getElementById('tu-download').textContent='Descargar mi postal';document.getElementById('tu-order').textContent='Personalizar mi disco';
- const quickDownload=document.createElement('button');quickDownload.type='button';quickDownload.id='tu-download-now';quickDownload.textContent='Ya está · descargar mi dibujo';editor.querySelector('.community-tools').append(quickDownload);quickDownload.onclick=()=>download().catch(()=>{status.textContent='No se pudo descargar. Tu dibujo sigue acá.'});
  const send=document.createElement('button');send.id='tu-send';send.type='button';send.textContent='Enviar mi casa';document.getElementById('tu-order').before(send);
  document.getElementById('tu-skip').textContent='Seguí scrolleando para salir de la casa ↓';
  let exitTouch=null;
  editor.addEventListener('touchstart',e=>{exitTouch=e.touches.length===1&&!e.target.closest('input,textarea,#community-pad')?{y:e.touches[0].clientY}:null},{passive:true});
  editor.addEventListener('touchmove',e=>{if(!exitTouch||e.touches.length!==1||current<15.8)return;const y=e.touches[0].clientY,dy=exitTouch.y-y,edge=dy>0?editor.scrollTop+editor.clientHeight>=editor.scrollHeight-2:editor.scrollTop<=2;exitTouch.y=y;if(edge){e.preventDefault();e.stopPropagation();if(form.contains(document.activeElement))document.activeElement.blur();navigateScroll(dy*2)}else e.stopPropagation()},{passive:false});
  editor.addEventListener('touchend',()=>{exitTouch=null},{passive:true});
- editor.querySelector('.tu-cover figcaption').textContent='Así se ve tu dibujo a través de la portada. El texto queda debajo, oculto por la tapa.';
+ editor.querySelector('.tu-cover figcaption').textContent='Tu portada · vista previa';
  const surface=document.createElement('canvas');surface.className='tu-textured-pad';surface.setAttribute('aria-hidden','true');pad.after(surface);
  const padWrap=document.createElement('div');padWrap.className='tu-pad-wrap';pad.before(padWrap);padWrap.append(pad,surface);
  // Fresh canvas for each page visit, without deleting the saved community archive.
@@ -29,12 +32,36 @@
  const random=()=>{seed=(Math.imul(seed,1664525)+1013904223)>>>0;return seed/4294967296};
  for(let i=0;i<grain.data.length;i+=4){const v=random();grain.data[i+3]=v>.83?Math.round(70+random()*150):v>.5?Math.round(random()*45):0}tc.putImageData(grain,0,0);
  const pigment=document.createElement('canvas');pigment.width=800;pigment.height=500;
- function drawPigment(time=0,live=false){
-  const c=pigment.getContext('2d');c.clearRect(0,0,800,500);c.fillStyle=c.strokeStyle=LILAC;c.lineWidth=3.6;c.lineJoin=c.lineCap='round';
-  const shapes=new Path2D(),paths=api.active?[...api.strokes,{closed:false,points:api.active}]:api.strokes;
-  const point=(p,j,i)=>live&&!red.matches?[p[0]+Math.sin(j*4+i+time)*.28,p[1]+Math.cos(j*3+i+time)*.28]:p;
-  paths.forEach((stroke,i)=>{if(!stroke.closed)return;stroke.points.forEach((p,j)=>{const q=point(p,j,i);j?shapes.lineTo(...q):shapes.moveTo(...q)});shapes.closePath()});c.fill(shapes,'evenodd');
-  paths.forEach((stroke,i)=>{if(stroke.closed)return;c.beginPath();stroke.points.forEach((p,j)=>{const q=point(p,j,i);j?c.lineTo(...q):c.moveTo(...q)});c.stroke()});
+  function drawPigment(time=0,live=false,sourcePaths=null){
+  const c=pigment.getContext('2d');c.clearRect(0,0,800,500);c.fillStyle=c.strokeStyle=LILAC;c.lineJoin=c.lineCap='round';
+   const paths=sourcePaths||(api.active?[...api.strokes,{closed:false,points:api.active}]:api.strokes);
+  const clock=live&&!red.matches?time:0;
+  const noise=value=>{const n=Math.sin(value*127.1+311.7)*43758.5453;return (n-Math.floor(n))*2-1};
+  // Resample by distance, so a slow pointer and a quick gesture have the same grain.
+  paths.forEach((stroke,i)=>{
+   if(stroke.points.length<2)return;
+   const points=[],source=stroke.closed?[...stroke.points,stroke.points[0]]:stroke.points;
+   let distance=0;
+   for(let j=1;j<source.length;j++){
+    const a=source[j-1],b=source[j],length=Math.hypot(b[0]-a[0],b[1]-a[1]),steps=Math.max(1,Math.ceil(length/4));
+    for(let k=0;k<steps;k++){const t=k/steps;points.push([a[0]+(b[0]-a[0])*t,a[1]+(b[1]-a[1])*t,distance+length*t])}distance+=length;
+   }
+   points.push([...source.at(-1),distance]);
+   function trace(pass){c.beginPath();points.forEach(([x,y,d],j)=>{
+    const phase=d*.13+i*2.7,frame=Math.floor(clock*28);
+    const breath=noise(frame*19+i)*.65+noise(d*7+frame*53+i+pass*101)*.45;
+    const dx=Math.sin(phase+pass*2.1)*(.65+pass*.35)+breath,dy=Math.cos(phase*.83+pass*1.7)*(.65+pass*.3)+breath;
+    j?c.lineTo(x+dx,y+dy):c.moveTo(x+dx,y+dy);
+   });if(stroke.closed)c.closePath()}
+   // Each closed shape is painted independently: overlaps add, never punch holes.
+   if(stroke.closed){trace(0);c.fill()}
+   // Several broken pencil strands replace the uniform vector outline.
+   for(let pass=0;pass<4;pass++){
+    trace(pass);c.globalAlpha=pass===0?.82:.34;c.lineWidth=pass===0?3.2:1.1+pass*.35;
+    c.setLineDash(pass===0?[]:[3+pass*2,1.5+pass]);c.lineDashOffset=i+pass*3;c.stroke();
+   }
+   c.globalAlpha=1;c.setLineDash([]);
+  });
   c.globalCompositeOperation='destination-out';c.fillStyle=c.createPattern(texture,'repeat');c.fillRect(0,0,800,500);c.globalCompositeOperation='source-over';return pigment;
  }
  // Largest axis-aligned rectangle fully inside the alpha hole, not its unsafe bounds.
@@ -68,9 +95,9 @@
  function update(){dirty=true;if(layout){render(preview,'cover');lastPreview=performance.now()}}
  function paint(now){
   frame=0;if(editor.hidden||document.hidden)return;
-  if(dirty||api.active||!red.matches&&now-lastPaint>110){
+  if(dirty||api.active||!red.matches&&now-lastPaint>36){
    const r=pad.getBoundingClientRect(),ratio=Math.min(devicePixelRatio||1,2),w=Math.round(r.width*ratio),h=Math.round(r.height*ratio);if(surface.width!==w||surface.height!==h){surface.width=w;surface.height=h}
-   const c=surface.getContext('2d');c.clearRect(0,0,w,h);c.drawImage(drawPigment(Math.floor(now/110),true),0,0,w,h);lastPaint=now;dirty=false;
+   const c=surface.getContext('2d');c.clearRect(0,0,w,h);c.drawImage(drawPigment(now/1000,true),0,0,w,h);lastPaint=now;dirty=false;
   }
   if(api.active&&now-lastPreview>180&&layout){render(preview,'cover');lastPreview=now}
   frame=requestAnimationFrame(paint);
@@ -99,6 +126,6 @@
  const order=document.getElementById('tu-order-dialog');order.innerHTML='<form hidden></form><h2>Personalizá tu disco</h2><canvas class="tu-order-preview" aria-label="Tu dibujo en el calado de la portada"></canvas><p>Tu dibujo queda dentro del calado. Tu recuerdo va debajo, en la postal interior.</p><button type="button" class="tu-order-postal">Descargar postal para mi disco</button><button type="button" class="tu-order-cover">Descargar vista de portada</button><p role="status">El encargo todavía no está conectado a una tienda. No se envían datos ni se realiza un pedido o pago.</p><button type="button" class="tu-order-close">Volver a mi dibujo</button>';
  document.getElementById('tu-order').onclick=()=>{if(!layout||!api.strokes.length){status.textContent='Dibujá tu casa para personalizar el disco.';return}render(order.querySelector('canvas'),'cover');order.showModal()};order.querySelector('.tu-order-close').onclick=()=>order.close();order.querySelector('.tu-order-postal').onclick=()=>download().catch(()=>{});order.querySelector('.tu-order-cover').onclick=()=>download('cover').catch(()=>{});
  template.onload=()=>{try{layout=measureTemplate(template);padWrap.style.aspectRatio='1';update()}catch(error){loadError=true;status.textContent=error.message}};
- template.onerror=()=>{loadError=true;status.textContent='No se pudo cargar la plantilla de la portada.'};template.src='assets/portada%20final.png';
- window.tuCasaPostal=Object.freeze({render,download,update,get layout(){return layout},colors:{blue:BLUE,lilac:LILAC}});
+ template.onerror=()=>{loadError=true;status.textContent='No se pudo cargar la plantilla de la portada.'};template.fetchPriority='high';template.src='assets/portada%20final.png';
+  window.tuCasaPostal=Object.freeze({render,download,update,drawPigment,get layout(){return layout},colors:{blue:BLUE,lilac:LILAC}});
 })();

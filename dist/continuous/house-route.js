@@ -31,5 +31,34 @@
   const retired=Object.freeze([]);
   function skipRetired(phase,direction=1){for(const [start,end] of retired)if(phase>=start&&phase<end)return direction<0?start-.0001:end;return phase}
   function advanceRetired(current,target){for(const [start,end] of retired){if(current>=start&&current<end)return target<current?start-.0001:end;if(current<start&&target>=end)return end;if(current>=end&&target<start)return start-.0001}return current}
-  window.houseRoute=Object.freeze({passages,heading,vector,section,transform,passage,skipRetired,advanceRetired,retired});
+   // A phase also clocks music and artwork, so keep its existing landmarks.
+   // In scroll space, remove the long pinned holds between these full-screen
+   // rooms. Each visible passage instead consumes one viewport of input.
+   const scrollSegments=Object.freeze([
+    [12.6,14.8,.06],[14.8,15.8,1],
+    [15.8,17.3,.06],[17.3,17.9,1],
+    [17.9,19.3,.06],[19.3,19.9,1]
+   ].map(Object.freeze));
+   function scrollPosition(phase){
+    let offset=0;
+    for(const [start,end,length] of scrollSegments){
+     if(phase<start)return phase+offset;
+     if(phase<=end)return start+offset+(phase-start)/(end-start)*length;
+     offset+=length-(end-start);
+    }
+    return phase+offset;
+   }
+   function scrollPhase(position){
+    let offset=0;
+    for(const [start,end,length] of scrollSegments){
+     const from=start+offset;
+     if(position<from)return position-offset;
+     if(position<=from+length)return start+(position-from)/length*(end-start);
+     offset+=length-(end-start);
+    }
+    return position-offset;
+   }
+   function advanceScroll(phase,distance){return scrollPhase(scrollPosition(phase)+distance)}
+   function easeScroll(phase,destination,amount){return scrollPhase(scrollPosition(phase)+(scrollPosition(destination)-scrollPosition(phase))*amount)}
+   window.houseRoute=Object.freeze({passages,heading,vector,section,transform,passage,skipRetired,advanceRetired,retired,scrollPosition,scrollPhase,advanceScroll,easeScroll});
 })();

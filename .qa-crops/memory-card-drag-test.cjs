@@ -1,0 +1,12 @@
+const fs=require('fs'),path=require('path');
+fs.writeFileSync(path.join(__dirname,'memory-card-drag-browser.html'),fs.readFileSync(path.join(__dirname,'../dist/index.html'),'utf8').replace('<head>','<head><base href="../dist/">'));
+let runner=fs.readFileSync(path.join(__dirname,'timed-desktop-runner.cjs'),'utf8');
+runner=runner.replace("const result=await send('Runtime.evaluate',{expression:'window.ready',awaitPromise:true,returnByValue:true});",`const evaluate=async expression=>{const r=await send('Runtime.evaluate',{expression,returnByValue:true});if(r.exceptionDetails)throw Error(JSON.stringify(r.exceptionDetails));return r.result.value};
+await evaluate('casaReview.go("dibujo");E.caja=E.caja.filter(c=>!c.id.startsWith("memoria-recorrido-"));pintarCaja();casaRender(performance.now(),0)');
+await new Promise(r=>setTimeout(r,150));
+const positions=await evaluate('(()=>{const c=[...document.querySelectorAll(".journey-memory-card")].find(c=>!c.hidden),r=c.getBoundingClientRect(),b=document.getElementById("fh-model-box").getBoundingClientRect();return {id:c.dataset.memoryId,x:r.x+r.width/2,y:r.y+r.height/2,bx:b.x+b.width/2,by:b.y+b.height/2}})()');
+await send('Input.dispatchMouseEvent',{type:'mouseMoved',x:positions.x,y:positions.y});await send('Input.dispatchMouseEvent',{type:'mousePressed',x:positions.x,y:positions.y,button:'left',clickCount:1});
+for(let i=1;i<=8;i++)await send('Input.dispatchMouseEvent',{type:'mouseMoved',x:positions.x+(positions.bx-positions.x)*i/8,y:positions.y+(positions.by-positions.y)*i/8,buttons:1,button:'left'});
+await send('Input.dispatchMouseEvent',{type:'mouseReleased',x:positions.bx,y:positions.by,button:'left',clickCount:1});await new Promise(r=>setTimeout(r,150));
+const saved=await evaluate('enCaja('+JSON.stringify(positions.id)+')'),hidden=await evaluate('document.querySelector("[data-memory-id='+positions.id+']").hidden');const result={status:saved&&hidden?'PASS':'FAIL',saved,hidden};`);
+fs.writeFileSync(path.join(__dirname,'memory-card-drag-runner.cjs'),runner);

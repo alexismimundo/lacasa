@@ -1,0 +1,12 @@
+ function hide(){present=false;canvas.style.display='none';document.body.classList.remove('living-cursor-active')}
+ function choose(){
+  document.body.classList.remove('living-cursor-active');
+  // Modal dialogs occupy the browser's top layer, above every body z-index.
+  // Move the one canvas into that layer rather than creating another cursor.
+  const host=[...document.querySelectorAll('dialog[open]')].reverse().find(el=>el.matches(':modal'))||document.body;
+  if(canvas.parentElement!==host)host.append(canvas);
+  if(!target?.isConnected)return false;
+  if(target.closest('input,textarea,select,[contenteditable="true"],iframe')||document.body.classList.contains('casa-sin-cursor'))return false;
+  // Read the existing scene tool before suppressing the native cursor.
+  document.body.classList.remove('living-cursor-active');
+  const native=getComputedStyle(target).cursor,tool=getComputedStyle(document.documentElement).getPropertyValue('--casa-cursor');

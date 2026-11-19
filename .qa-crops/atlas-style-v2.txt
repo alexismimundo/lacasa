@@ -1,0 +1,17 @@
+#community-memory h2{font:300 24px 'IBM Plex Mono',monospace}
+#community-memory p{font:16px/1.7 Georgia,serif;white-space:pre-wrap;overflow-wrap:anywhere}
+#community-memory .community-local{font:10px/1.7 'IBM Plex Mono',monospace}
+.community-gallery{margin-top:24px}
+.community-gallery-track{display:flex;gap:50px;overflow-x:auto;padding:20px 12px 45px;overscroll-behavior-x:contain}
+.community-gallery .community-house{width:220px;height:280px;min-width:220px}
+@media(max-width:700px){.community-draw-layout{grid-template-columns:1fr;gap:18px}#community-draw-step{padding:4vh 6vw 100px}#community-pad{height:34vh}.community-heading{top:10vh}.community-house{width:58vw}.community-track{gap:16vw}.community-caption{bottom:12vh}.community-form textarea{min-height:85px}}
+@media(prefers-reduced-motion:reduce){.community-track{will-change:auto}.community-house:hover img,.community-house:hover svg{transition:none;translate:none}}
+/* Provisional all-direction community atlas, isolated from the journey. */
+#community-atlas{position:fixed;inset:0;box-sizing:border-box;width:100vw;height:100dvh;max-width:none;max-height:none;margin:0;padding:0;border:0;overflow:hidden;background:#f4f4f1;color:#335386;cursor:auto!important}
+#community-atlas::backdrop{background:#f4f4f1}
+#community-atlas [hidden]{display:none}
+#community-atlas .atlas-header{position:absolute;inset:0 0 auto;z-index:3;display:flex;justify-content:space-between;align-items:flex-start;padding:28px 4vw;pointer-events:none;background:linear-gradient(#f4f4f1 65%,transparent)}
+.atlas-header p{margin:0 0 10px;font:10px/1.5 'IBM Plex Mono',monospace;letter-spacing:.12em}
+.atlas-header h2{margin:0;font:300 clamp(24px,3vw,44px)/1.2 'IBM Plex Mono',monospace}
+#community-atlas button{color:inherit;background:none;border:0;font:11px/1.5 'IBM Plex Mono',monospace;cursor:pointer!important}
+#community-atlas .atlas-close{pointer-events:auto;border-bottom:1px solid #33538666;padding:8px 0;margin-left:20px;white-space:nowrap}

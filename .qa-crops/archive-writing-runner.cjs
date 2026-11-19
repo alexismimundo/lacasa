@@ -1,0 +1,38 @@
+const fs=require('fs'),path=require('path'),http=require('http'),{spawn}=require('child_process');
+const root=path.resolve(__dirname,'..'),name=process.argv[2]||'fire-inspect.html',out=process.argv[3]||'fire-inspect';
+const viewport={width:Number(process.argv[4])||1280,height:Number(process.argv[5])||900,deviceScaleFactor:1,mobile:process.argv[6]==='mobile'};
+// Video range streams can otherwise keep the runner alive after its result.
+setTimeout(()=>{fs.writeFileSync(path.join(__dirname,out+'-timeout.txt'),'FAIL: browser runner exceeded 30 seconds');process.exit(1)},30000).unref();
+const rangeServer=http.createServer((req,res)=>{const p=path.join(root,decodeURIComponent(req.url.split('?')[0]));if(!p.startsWith(root)){res.writeHead(403).end();return}try{const size=fs.statSync(p).size;res.setHeader('Content-Type',({'.mp4':'video/mp4','.js':'text/javascript','.css':'text/css','.webp':'image/webp','.html':'text/html'}[path.extname(p)]||'application/octet-stream'));res.setHeader('Accept-Ranges','bytes');if(req.headers.range){const parts=req.headers.range.replace('bytes=','').split('-'),start=Number(parts[0]),end=parts[1]?Math.min(Number(parts[1]),size-1):size-1;res.writeHead(206,{'Content-Range':`bytes ${start}-${end}/${size}`,'Content-Length':end-start+1});fs.createReadStream(p,{start,end}).pipe(res)}else{res.setHeader('Content-Length',size);fs.createReadStream(p).pipe(res)}}catch{res.writeHead(404).end()}});rangeServer.listen(21912,'127.0.0.1');
+const server=http.createServer((req,res)=>{const p=path.join(root,decodeURIComponent(req.url.split('?')[0]));if(!p.startsWith(root)){res.writeHead(403).end();return}fs.readFile(p,(e,b)=>{if(e){res.writeHead(404).end();return}res.setHeader('Content-Type',({'.mp4':'video/mp4','.js':'text/javascript','.css':'text/css','.webp':'image/webp','.html':'text/html'}[path.extname(p)]||'application/octet-stream'));res.end(b)})});
+(async()=>{await new Promise(r=>server.listen(21910,'127.0.0.1',r));const child=spawn('C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',['--headless','--no-sandbox','--disable-gpu','--autoplay-policy=no-user-gesture-required','--remote-debugging-port=21911','--user-data-dir='+path.join(process.env.TEMP,'casa-timed-desktop'),'about:blank'],{stdio:'ignore'});let ws;
+try{let pages;for(let i=0;i<100;i++){try{pages=await(await fetch('http://127.0.0.1:21911/json')).json();break}catch{await new Promise(r=>setTimeout(r,100))}}ws=new WebSocket(pages[0].webSocketDebuggerUrl);await new Promise(r=>ws.onopen=r);let id=0;const pending=new Map(),errors=[];ws.onmessage=e=>{const m=JSON.parse(e.data);if(m.id){const p=pending.get(m.id);pending.delete(m.id);m.error?p.reject(m.error):p.resolve(m.result)}if(m.method==='Runtime.exceptionThrown')errors.push(m.params)};const send=(method,params={})=>new Promise((resolve,reject)=>{const n=++id;pending.set(n,{resolve,reject});ws.send(JSON.stringify({id:n,method,params}))});await send('Runtime.enable');await send('Page.enable');await send('Emulation.setDeviceMetricsOverride',viewport);await send('Page.navigate',{url:'http://127.0.0.1:21910/.qa-crops/'+name});await new Promise(r=>setTimeout(r,1200));const evaluate=async expression=>{const r=await send('Runtime.evaluate',{expression,returnByValue:true});if(r.exceptionDetails)throw Error(JSON.stringify(r.exceptionDetails));return r.result.value};
+ const checks={},samples=[];
+ for(const phase of [17.65,17.8,18.4,19.4,19.55]){
+ await evaluate('casaReview.go("memoria");document.activeElement?.blur();target=current='+phase+';casaRender(performance.now(),0)');
+ await new Promise(r=>setTimeout(r,80));
+ for(const id of ['tu-memory','tu-title']){
+ const point=await evaluate('(()=>{const e=document.getElementById('+JSON.stringify(id)+'),r=e.getBoundingClientRect(),x=(Math.max(2,r.left)+Math.min(innerWidth-2,r.right))/2,y=(Math.max(2,r.top)+Math.min(innerHeight-2,r.bottom))/2;return {x,y,visible:r.bottom>20&&r.top<innerHeight-20}})()');
+ if(!point.visible)continue;
+ const hitBefore=await evaluate('document.elementFromPoint('+point.x+','+point.y+')?.outerHTML.slice(0,400)');
+ await send('Input.dispatchMouseEvent',{type:'mousePressed',x:point.x,y:point.y,button:'left',clickCount:1});await send('Input.dispatchMouseEvent',{type:'mouseReleased',x:point.x,y:point.y,button:'left',clickCount:1});
+ await send('Input.insertText',{text:'Patio de prueba'});
+ samples.push({phase,id,hitBefore,typed:await evaluate('document.activeElement.id==='+JSON.stringify(id)+'&&document.activeElement.value.includes("Patio de prueba")'),debug:await evaluate('({active:document.activeElement.id,hit:document.elementFromPoint('+point.x+','+point.y+')?.outerHTML.slice(0,200)})')});
+ }
+ }
+ checks.writing=samples.length>=6&&samples.every(s=>s.typed);
+ await evaluate('casaReview.go("memoria");document.getElementById("tu-memory").value="La casa del patio y la voz de mi abuela";document.getElementById("tu-title").value="Alexis";document.getElementById("community-clear").click();document.getElementById("tu-add-archive").click()');
+ await new Promise(r=>setTimeout(r,150));
+ checks.opened=await evaluate('document.getElementById("community-atlas").open');
+ checks.latest=await evaluate('(()=>{const e=[...document.querySelectorAll(".atlas-house")].find(e=>e.dataset.cell==="0:0");return e?.textContent.includes("La casa del patio y la voz de mi abuela")&&e.textContent.includes("Alexis")})()');
+ checks.black=await evaluate('getComputedStyle(document.querySelector(".atlas-viewport")).backgroundColor==="rgb(0, 0, 0)"');
+ checks.local=await evaluate('communityPrototype.saved.memory==="La casa del patio y la voz de mi abuela"&&communityPrototype.contributions.length>0');
+ const phaseBefore=await evaluate('target');
+ await send('Input.dispatchMouseEvent',{type:'mouseWheel',x:viewport.width/2,y:viewport.height/2,deltaY:180,deltaX:120});await new Promise(r=>setTimeout(r,100));
+ checks.isolated=await evaluate('target')===phaseBefore;
+ checks.cards=await evaluate('document.querySelectorAll(".atlas-house .archive-card-memory").length>4');
+ await evaluate('communityPrototype.showMemory(communityPrototype.saved)');
+ checks.detail=await evaluate('document.querySelector("#community-memory article").textContent.includes("La casa del patio y la voz de mi abuela")&&!document.querySelector("#community-memory .memoria-ejemplo-imagen")');
+ await evaluate('document.getElementById("community-memory").close();document.getElementById("community-atlas").close();casaReview.go("memoria");document.getElementById("tu-memory").value="Segundo recuerdo";document.getElementById("tu-add-archive").click()');
+ checks.multiple=await evaluate('communityPrototype.contributions.some(e=>e.memory==="Segundo recuerdo")&&communityPrototype.contributions.some(e=>e.memory==="La casa del patio y la voz de mi abuela")');
+ const result={status:Object.values(checks).every(Boolean)?'PASS':'FAIL',checks,samples};const info=await send('Runtime.evaluate',{expression:'document.querySelector("#info")?.textContent',returnByValue:true});const shot=await send('Page.captureScreenshot',{format:'png',captureBeyondViewport:true});fs.writeFileSync(path.join(__dirname,out+'.png'),Buffer.from(shot.data,'base64'));fs.writeFileSync(path.join(__dirname,out+'.json'),JSON.stringify({result,info,errors},null,2));}finally{ws?.close();child.kill();server.close();server.closeAllConnections();rangeServer.close();rangeServer.closeAllConnections()}})().catch(e=>{fs.writeFileSync(path.join(__dirname,out+'-error.txt'),e.stack||JSON.stringify(e));process.exit(1)});

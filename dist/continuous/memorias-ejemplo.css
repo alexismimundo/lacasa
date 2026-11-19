@@ -10,7 +10,7 @@
 .memoria-ejemplo{width:var(--memory-card-width,clamp(48px,8vw,110px))!important;max-width:var(--memory-card-width,clamp(48px,8vw,110px))!important;overflow:visible!important;pointer-events:auto}
 .memoria-ejemplo>.memoria-ejemplo-imagen{pointer-events:auto!important;cursor:zoom-in;touch-action:none}
 .memoria-ejemplo>.memoria-ejemplo-imagen:focus-visible{outline:2px dashed #335386;outline-offset:5px}
-.memoria-lectura{position:fixed;inset:0;width:min(280px,76vw);max-height:85dvh;margin:auto;padding:0;border:0;overflow:visible;background:transparent;color:#335386;z-index:10000;touch-action:none;cursor:grab}
+.memoria-lectura{position:fixed;inset:0;width:min(230px,60vw);max-height:85dvh;margin:auto;padding:0;border:0;overflow:visible;background:transparent;color:#335386;z-index:10000;touch-action:none;cursor:grab}
 .memoria-lectura[open]{animation:memoria-aparecer .38s ease-out both}
 .memoria-lectura[open].memoria-cerrando{animation:memoria-desaparecer .2s ease-in both}
 .memoria-guardada{display:none!important}
@@ -23,3 +23,10 @@ body .caja-ghost,body .guardado-vuela{z-index:10020;pointer-events:none}
 .memoria-lectura>button{position:absolute;right:-12px;top:-16px;width:32px;height:32px;border:1px solid #335386;border-radius:50%;background:#F4F2EA;color:#335386;font:24px/1 Georgia;cursor:pointer}
 /* Production presentation: retain asset diagnostics in code, never on the scene. */
 [data-asset-label],.c2-assets{display:none!important}
+/* One collectible per screen; the box scene retains its original 3D card. */
+.c2-memory,.tu-memory-preview,#tu-house-memory,.salida-memory{display:none!important}
+#journey-memories{position:fixed;inset:0;z-index:70;pointer-events:none}
+#journey-memories .journey-memory-card{position:absolute;margin:0;pointer-events:auto;touch-action:none}
+#journey-memories .journey-memory-card[hidden]{display:none!important}
+@media(max-width:700px){#journey-memories .journey-memory-card{--memory-card-width:48px}}
+@media(max-width:700px){#journey-memories #memory-screen-recuerdo{top:62%!important;left:7%!important}#journey-memories #memory-screen-dibujo{top:72%!important;left:7%!important}}

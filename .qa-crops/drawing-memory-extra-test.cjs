@@ -1,0 +1,14 @@
+const fs=require('fs'),path=require('path');
+let runner=fs.readFileSync(path.join(__dirname,'timed-desktop-runner.cjs'),'utf8');
+runner=runner.replace("const result=await send('Runtime.evaluate',{expression:'window.ready',awaitPromise:true,returnByValue:true});",`const result=await send('Runtime.evaluate',{expression:'window.ready',awaitPromise:true,returnByValue:true});
+ const evaluate=async expression=>(await send('Runtime.evaluate',{expression,returnByValue:true})).result.value;
+ const rect=await evaluate('(()=>{const r=document.getElementById("community-pad").getBoundingClientRect();return {x:r.x+r.width/2,y:r.y+r.height/2}})()');
+ await send('Input.dispatchMouseEvent',{type:'mouseMoved',x:rect.x,y:rect.y});await new Promise(r=>setTimeout(r,150));
+ const pencil=await evaluate('document.getElementById("living-cursor").dataset.kind');if(pencil!=='lapiz')throw Error('Expected pencil cursor: '+pencil);
+ await send('Input.dispatchMouseEvent',{type:'mouseMoved',x:10,y:10});
+ await send('Input.dispatchKeyEvent',{type:'keyDown',key:'ArrowRight',code:'ArrowRight'});await send('Input.dispatchKeyEvent',{type:'keyUp',key:'ArrowRight',code:'ArrowRight'});
+ if(!await evaluate('!document.getElementById("tu-memory-room").hidden'))throw Error('Keyboard must reach memory before climax');
+ await send('Emulation.setEmulatedMedia',{features:[{name:'prefers-reduced-motion',value:'reduce'}]});
+ if(await evaluate('getComputedStyle(document.getElementById("tu-skip")).animationName')!=='none')throw Error('Reduced motion hint');
+ result.extra={pencil,keyboard:'memory room reached',reducedMotion:'hint animation disabled'};`);
+fs.writeFileSync(path.join(__dirname,'drawing-memory-extra-runner.cjs'),runner);

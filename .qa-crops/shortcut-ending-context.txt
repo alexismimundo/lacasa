@@ -1,0 +1,37 @@
+
+> dist\continuous\first-house.js:53:function resetEnding(){
+  dist\continuous\first-house.js:54: endingRun=null;endingBlack.hidden=endingCut.hidden=true;endingCut.style.opacity='0';
+  dist\continuous\first-house.js:55: root.classList.remove('fh-ending-centered');
+  dist\continuous\first-house.js:56:}
+> dist\continuous\first-house.js:57:function updateEnding(p,dt){
+  dist\continuous\first-house.js:58: if(p<6.8){resetEnding();return false}
+  dist\continuous\first-house.js:59: if(p>=7.6)return !!endingRun?.swapped;
+  dist\continuous\first-house.js:60: // Allow the landing composition to register before the cut, without another gesture.
+  dist\continuous\first-house.js:61: if(!endingRun&&(st.flight.landed||p>=6.88))endingRun={elapsed:0,swapped:false,done:false,collected:false};
+  dist\continuous\first-house.js:62: if(!endingRun)return false;
+  dist\continuous\first-house.js:63: if(!document.hidden)endingRun.elapsed+=Math.min(Math.max(dt,0),.05);
+  dist\continuous\first-house.js:64: const t=endingRun.elapsed,duration=reduced()?0:1;
+  dist\continuous\first-house.js:65: if(t>=0){
+  dist\continuous\first-house.js:66:  endingCut.hidden=t>=duration;
+  dist\continuous\first-house.js:67:  let opacity=0;for(const [at,value] of endingCuts){if(at>t)break;opacity=value}
+  dist\continuous\first-house.js:68:  endingCut.style.opacity=String(opacity);
+  dist\continuous\first-house.js:69:    if(!endingRun.swapped&&(duration===0||t>=.5)){
+  dist\continuous\first-house.js:70:   endingRun.swapped=true;endingBlack.hidden=false;root.classList.add('fh-ending-centered');
+  dist\continuous\first-house.js:71:   st.burn=1;syncObjects();save();
+  dist\continuous\first-house.js:72:  }
+  dist\continuous\first-house.js:73:    // Keep the cut, then offer the click-to-save action.
+  dist\continuous\first-house.js:74:   if(t>=duration)endingRun.done=true;
+  dist\continuous\first-house.js:75: }
+  dist\continuous\first-house.js:76: return endingRun.swapped;
+  dist\continuous\first-house.js:77:}
+  dist\continuous\first-house.js:78:const tip=document.createElement('div');tip.id='fh-tooltip';tip.role='tooltip';document.body.append(tip);
+  dist\continuous\first-house.js:79:const dialog=document.createElement('dialog');dialog.id='fh-detail';dialog.innerHTML='<img alt="Envoltorio de hamburguesa"><button type="button">Volver</button>';document.body.append(dialog);Q('button',dialog).onclick=()=>dialog.close();
+  dist\continuous\first-house.js:80:let drag=null,tipTarget=null,robotUntil=0,previousInside=false,lastPersist=0,partyActive=false,albumTime=0,albumWasPlaying=false,lastCurrent=0,macroDwell=0,preloaded=null;
+  dist\continuous\first-house.js:81:// La escena del salón ya está completa y armada detrás de la pared calada desde el principio
+  dist\continuous\first-house.js:82:// (no aparece nadie de a uno): lo que se ve es sólo lo que la persiana va dejando pasar por el
+  dist\continuous\first-house.js:83:// hueco. Una vez levantada del todo, seguir scrolleando hace zoom a TODA la composición (pared +
+  dist\continuous\first-house.js:84:// escena, como un solo grupo) y, a medida que se acerca, la gente se va del cuadro por niveles de
+  dist\continuous\first-house.js:85:// profundidad: primero la más cercana a cámara, después la siguiente, así hasta llegar a las dos
+
+
+

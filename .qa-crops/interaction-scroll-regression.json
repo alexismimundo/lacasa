@@ -1,0 +1,224 @@
+{
+  "result": {
+    "status": "PASS",
+    "checks": {
+      "forward": true,
+      "noPinnedHolds": true,
+      "reversibleMapping": true,
+      "focusedField": true,
+      "reverse": true,
+      "textareaRemainder": true,
+      "dialog": true,
+      "touch": true
+    },
+    "samples": [
+      {
+        "current": 14.810057878448166,
+        "target": 14.895151515151515,
+        "hit": "",
+        "blocked": false,
+        "first": false,
+        "active": false
+      },
+      {
+        "current": 14.925470698029224,
+        "target": 15.028484848484847,
+        "hit": "world",
+        "blocked": false,
+        "first": false,
+        "active": false
+      },
+      {
+        "current": 15.046820495307331,
+        "target": 15.16181818181818,
+        "hit": "",
+        "blocked": false,
+        "first": false,
+        "active": false
+      },
+      {
+        "current": 15.175244009236208,
+        "target": 15.295151515151513,
+        "hit": "world",
+        "blocked": false,
+        "first": false,
+        "active": false
+      },
+      {
+        "current": 15.306581158964882,
+        "target": 15.428484848484846,
+        "hit": "tu-casa-editor",
+        "blocked": false,
+        "first": false,
+        "active": false
+      },
+      {
+        "current": 15.456132771668758,
+        "target": 15.561818181818179,
+        "hit": "community-pad",
+        "blocked": false,
+        "first": false,
+        "active": false
+      },
+      {
+        "current": 15.57913456052801,
+        "target": 15.695151515151512,
+        "hit": "community-pad",
+        "blocked": false,
+        "first": false,
+        "active": false
+      },
+      {
+        "current": 15.708120467894236,
+        "target": 16.512121212121098,
+        "hit": "community-pad",
+        "blocked": false,
+        "first": false,
+        "active": false
+      },
+      {
+        "current": 16.791571840975692,
+        "target": 17.36109090909091,
+        "hit": "",
+        "blocked": false,
+        "first": false,
+        "active": false
+      },
+      {
+        "current": 17.355403090041897,
+        "target": 17.441090909090907,
+        "hit": "",
+        "blocked": false,
+        "first": false,
+        "active": false
+      },
+      {
+        "current": 17.447183219087677,
+        "target": 17.521090909090905,
+        "hit": "tu-status",
+        "blocked": false,
+        "first": false,
+        "active": false
+      },
+      {
+        "current": 17.527111002963558,
+        "target": 17.601090909090903,
+        "hit": "tu-casa-editor",
+        "blocked": false,
+        "first": false,
+        "active": false
+      },
+      {
+        "current": 17.617409649887698,
+        "target": 17.6810909090909,
+        "hit": "tu-memory-room",
+        "blocked": false,
+        "first": false,
+        "active": false
+      },
+      {
+        "current": 17.691308279821023,
+        "target": 17.7610909090909,
+        "hit": "",
+        "blocked": false,
+        "first": false,
+        "active": false
+      },
+      {
+        "current": 17.76876258165856,
+        "target": 17.841090909090898,
+        "hit": "tu-memory",
+        "blocked": false,
+        "first": false,
+        "active": false
+      },
+      {
+        "current": 17.84781909818041,
+        "target": 18.720202020201604,
+        "hit": "tu-memory",
+        "blocked": false,
+        "first": false,
+        "active": false
+      },
+      {
+        "current": 18.963327570495686,
+        "target": 19.3650909090909,
+        "hit": "tu-memory",
+        "blocked": false,
+        "first": false,
+        "active": false
+      },
+      {
+        "current": 19.371175846704887,
+        "target": 19.445090909090897,
+        "hit": "closing-phrase",
+        "blocked": false,
+        "first": false,
+        "active": false
+      },
+      {
+        "current": 19.45110800557639,
+        "target": 19.525090909090896,
+        "hit": "closing-phrase",
+        "blocked": false,
+        "first": false,
+        "active": false
+      },
+      {
+        "current": 19.53118648771811,
+        "target": 19.605090909090894,
+        "hit": "closing-phrase",
+        "blocked": false,
+        "first": false,
+        "active": false
+      },
+      {
+        "current": 19.611151852256256,
+        "target": 19.685090909090892,
+        "hit": "closing-phrase",
+        "blocked": false,
+        "first": false,
+        "active": false
+      },
+      {
+        "current": 19.69111070311034,
+        "target": 19.76509090909089,
+        "hit": "closing-phrase",
+        "blocked": false,
+        "first": false,
+        "active": false
+      },
+      {
+        "current": 19.77118758346695,
+        "target": 19.84509090909089,
+        "hit": "closing-phrase",
+        "blocked": false,
+        "first": false,
+        "active": false
+      },
+      {
+        "current": 19.851152297754485,
+        "target": 19.94181818181815,
+        "hit": "closing-phrase",
+        "blocked": false,
+        "first": false,
+        "active": false
+      },
+      {
+        "current": 19.951785606721245,
+        "target": 20.075151515151482,
+        "hit": "closing-phrase",
+        "blocked": false,
+        "first": false,
+        "active": false
+      }
+    ]
+  },
+  "info": {
+    "result": {
+      "type": "string",
+      "value": "La Casa · prueba 02. El muro se abre, atravesás la ventana y el hueco permanece. Marco, niño, logo y ladrillos usan los PNG originales separados, con sus transparencias y colores intactos. La entrada reproduce el video del niño atravesando la ventana. Antes de entrar, la ventana tapiada espera inmóvil. Podés repetir el cruce sin borrar el papel ni la luz.Las huellas se conservan en este navegador. Suena «Sirens». Podés silenciarla desde el botón de música.VOLVER ↗"
+    }
+  },
+  "errors": []
+}

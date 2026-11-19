@@ -1,7 +1,12 @@
 /* The teaser is isolated so its CSS, IDs and clock cannot collide with the house. */
 (()=>{'use strict';
  const params=new URLSearchParams(location.search);
- if(params.get('vista')==='landing')return;
+ // Old review URLs must not skip coming soon on reload.
+ if(params.has('revision')||params.has('pantalla')){
+  ['revision','pantalla','vista'].forEach(key=>params.delete(key));
+  const clean=new URL(location.href);clean.search=params.toString();try{history.replaceState(null,'',clean)}catch{}
+ }
+ if(params.get('vista')==='landing'&&performance.getEntriesByType('navigation')[0]?.type!=='reload')return;
  document.documentElement.classList.add('teaser-pending');
  const style=document.createElement('style');
  style.textContent='html.teaser-pending{background:#000}html.teaser-pending body{visibility:hidden}#coming-soon-gate{visibility:visible!important;position:fixed;inset:0;width:100%;height:100%;border:0;z-index:2147483647;background:#000}';
@@ -19,7 +24,7 @@
   observer.observe(document.body,{childList:true});document.body.append(frame);
    function enter(event){
    if(event.source!==frame.contentWindow||event.origin!==url.origin||event.data?.type!=='la-casa:teaser-enter')return;
-   window.removeEventListener('message',enter);
+    window.removeEventListener('message',enter);delete window.casaDismissTeaser;
    try{sessionStorage.setItem('laCasaTeaserEntered','1')}catch{}
    const immediate=event.data.immediate||matchMedia('(prefers-reduced-motion:reduce)').matches;
    function reveal(){document.documentElement.classList.remove('teaser-pending');frame.remove()}
@@ -41,6 +46,7 @@
    motion.finished.catch(()=>{}).then(()=>{clearTimeout(swap);reveal();finish();cut.remove()});
   }
   window.addEventListener('message',enter);
+   window.casaDismissTeaser=()=>enter({source:frame.contentWindow,origin:url.origin,data:{type:'la-casa:teaser-enter',immediate:true}});
  }
  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',mount,{once:true});else mount();
 })();

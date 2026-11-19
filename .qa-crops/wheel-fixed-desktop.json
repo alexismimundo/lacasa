@@ -1,0 +1,310 @@
+{
+  "result": {
+    "status": "PASS",
+    "checks": {
+      "forward": true,
+      "focusedField": true,
+      "reverse": true,
+      "textareaRemainder": true,
+      "dialog": true,
+      "touch": true
+    },
+    "samples": [
+      {
+        "current": 15.970388904290887,
+        "target": 16.033333333333335,
+        "hit": "",
+        "blocked": false,
+        "first": false,
+        "active": false
+      },
+      {
+        "current": 16.0678335261176,
+        "target": 16.166666666666668,
+        "hit": "",
+        "blocked": false,
+        "first": false,
+        "active": false
+      },
+      {
+        "current": 16.186700656067874,
+        "target": 16.3,
+        "hit": "",
+        "blocked": false,
+        "first": false,
+        "active": false
+      },
+      {
+        "current": 16.314116321982386,
+        "target": 16.433333333333334,
+        "hit": "",
+        "blocked": false,
+        "first": false,
+        "active": false
+      },
+      {
+        "current": 16.444934201354865,
+        "target": 16.566666666666666,
+        "hit": "",
+        "blocked": false,
+        "first": false,
+        "active": false
+      },
+      {
+        "current": 16.577288470081257,
+        "target": 16.7,
+        "hit": "",
+        "blocked": false,
+        "first": false,
+        "active": false
+      },
+      {
+        "current": 16.71028961272839,
+        "target": 16.833333333333332,
+        "hit": "",
+        "blocked": false,
+        "first": false,
+        "active": false
+      },
+      {
+        "current": 16.84348788740746,
+        "target": 16.966666666666665,
+        "hit": "",
+        "blocked": false,
+        "first": false,
+        "active": false
+      },
+      {
+        "current": 16.983755089140036,
+        "target": 17.099999999999998,
+        "hit": "",
+        "blocked": false,
+        "first": false,
+        "active": false
+      },
+      {
+        "current": 17.1128103219257,
+        "target": 17.23333333333333,
+        "hit": "",
+        "blocked": false,
+        "first": false,
+        "active": false
+      },
+      {
+        "current": 17.244556812348435,
+        "target": 17.366666666666664,
+        "hit": "",
+        "blocked": false,
+        "first": false,
+        "active": false
+      },
+      {
+        "current": 17.377135035161324,
+        "target": 17.499999999999996,
+        "hit": "",
+        "blocked": false,
+        "first": false,
+        "active": false
+      },
+      {
+        "current": 17.510227230745194,
+        "target": 17.63333333333333,
+        "hit": "",
+        "blocked": false,
+        "first": false,
+        "active": false
+      },
+      {
+        "current": 17.64346252478578,
+        "target": 17.766666666666662,
+        "hit": "",
+        "blocked": false,
+        "first": false,
+        "active": false
+      },
+      {
+        "current": 17.776645028786906,
+        "target": 17.899999999999995,
+        "hit": "",
+        "blocked": false,
+        "first": false,
+        "active": false
+      },
+      {
+        "current": 17.909962141742373,
+        "target": 18.033333333333328,
+        "hit": "tu-memory",
+        "blocked": false,
+        "first": false,
+        "active": false
+      },
+      {
+        "current": 18.043288880362198,
+        "target": 18.16666666666666,
+        "hit": "tu-memory",
+        "blocked": false,
+        "first": false,
+        "active": false
+      },
+      {
+        "current": 18.17673052495176,
+        "target": 18.299999999999994,
+        "hit": "tu-memory",
+        "blocked": false,
+        "first": false,
+        "active": false
+      },
+      {
+        "current": 18.30995177571962,
+        "target": 18.433333333333326,
+        "hit": "tu-memory",
+        "blocked": false,
+        "first": false,
+        "active": false
+      },
+      {
+        "current": 18.443461467721885,
+        "target": 18.56666666666666,
+        "hit": "tu-memory",
+        "blocked": false,
+        "first": false,
+        "active": false
+      },
+      {
+        "current": 18.576710465907734,
+        "target": 18.699999999999992,
+        "hit": "tu-memory",
+        "blocked": false,
+        "first": false,
+        "active": false
+      },
+      {
+        "current": 18.70998874649032,
+        "target": 18.833333333333325,
+        "hit": "tu-memory",
+        "blocked": false,
+        "first": false,
+        "active": false
+      },
+      {
+        "current": 18.843410677369537,
+        "target": 18.966666666666658,
+        "hit": "tu-memory",
+        "blocked": false,
+        "first": false,
+        "active": false
+      },
+      {
+        "current": 18.97668979749826,
+        "target": 19.09999999999999,
+        "hit": "tu-memory",
+        "blocked": false,
+        "first": false,
+        "active": false
+      },
+      {
+        "current": 19.110157119114156,
+        "target": 19.233333333333324,
+        "hit": "tu-memory",
+        "blocked": false,
+        "first": false,
+        "active": false
+      },
+      {
+        "current": 19.243323060217172,
+        "target": 19.366666666666656,
+        "hit": "tu-memory",
+        "blocked": false,
+        "first": false,
+        "active": false
+      },
+      {
+        "current": 19.376633428977105,
+        "target": 19.49999999999999,
+        "hit": "closing-phrase",
+        "blocked": false,
+        "first": false,
+        "active": false
+      },
+      {
+        "current": 19.51002329288955,
+        "target": 19.633333333333322,
+        "hit": "closing-phrase",
+        "blocked": false,
+        "first": false,
+        "active": false
+      },
+      {
+        "current": 19.643313742563294,
+        "target": 19.766666666666655,
+        "hit": "closing-phrase",
+        "blocked": false,
+        "first": false,
+        "active": false
+      },
+      {
+        "current": 19.776695507979642,
+        "target": 19.899999999999988,
+        "hit": "closing-phrase",
+        "blocked": false,
+        "first": false,
+        "active": false
+      },
+      {
+        "current": 19.910048532328492,
+        "target": 20.03333333333332,
+        "hit": "closing-phrase",
+        "blocked": false,
+        "first": false,
+        "active": false
+      },
+      {
+        "current": 20.0433898714313,
+        "target": 20.166666666666654,
+        "hit": "closing-phrase",
+        "blocked": false,
+        "first": false,
+        "active": false
+      },
+      {
+        "current": 20.176615463540543,
+        "target": 20.299999999999986,
+        "hit": "closing-phrase",
+        "blocked": false,
+        "first": false,
+        "active": false
+      },
+      {
+        "current": 20.31006111634573,
+        "target": 20.43333333333332,
+        "hit": "closing-phrase",
+        "blocked": false,
+        "first": false,
+        "active": false
+      },
+      {
+        "current": 20.443394987710906,
+        "target": 20.566666666666652,
+        "hit": "closing-phrase",
+        "blocked": false,
+        "first": false,
+        "active": false
+      },
+      {
+        "current": 20.576617545537548,
+        "target": 20.699999999999985,
+        "hit": "closing-phrase",
+        "blocked": false,
+        "first": false,
+        "active": false
+      }
+    ]
+  },
+  "info": {
+    "result": {
+      "type": "string",
+      "value": "La Casa · prueba 02. El muro se abre, atravesás la ventana y el hueco permanece. Marco, niño, logo y ladrillos usan los PNG originales separados, con sus transparencias y colores intactos. La entrada reproduce el video del niño atravesando la ventana. Antes de entrar, la ventana tapiada espera inmóvil. Podés repetir el cruce sin borrar el papel ni la luz.Las huellas se conservan en este navegador. Suena «Sirens». Podés silenciarla desde el botón de música.VOLVER ↗"
+    }
+  },
+  "errors": []
+}

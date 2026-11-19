@@ -96,6 +96,7 @@ header{top:24px;pointer-events:none}header .brand,header #sound{pointer-events:a
 
 /* Continuous fine film grain, independent of camera movement. */
 #living-grain{position:fixed;inset:0;width:100%;height:100%;z-index:140;pointer-events:none;opacity:.6;mix-blend-mode:normal;background:none;animation:none}
+.dialog-living-grain{position:absolute;inset:0;display:block;width:100%;height:100%;z-index:2147483647;pointer-events:none!important;opacity:.6;mix-blend-mode:normal;user-select:none}
 @media(prefers-reduced-motion:reduce){#living-grain{animation:none;will-change:auto}}
 
 #charcoal-ground{position:absolute;inset:0;width:100%;height:100%;z-index:2;pointer-events:none}body.charcoal-drawing #house-cursor i{width:7px;height:7px;background:#282626;border:0;border-radius:30%;box-shadow:0 0 4px #3338}body.charcoal-drawing{user-select:none}
@@ -328,7 +329,7 @@ header #sound{display:none}
 #closing-interior,#closing-window,#closing-still,#closing-film{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 #closing-window{transform-origin:50% 46.2%;will-change:transform;background:#111}
 #closing-film{opacity:0}#closing-still{z-index:1}#closing-final-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:2;opacity:0;transition:opacity 900ms ease-in-out;pointer-events:none}@media(prefers-reduced-motion:reduce){#closing-final-photo{transition:opacity 150ms linear}}
-#closing-phrase{position:absolute;inset:42% 8% auto;margin:0;text-align:center;color:#f4f0e8;font:clamp(26px,4.5vw,64px)/1.12 Georgia,serif;text-shadow:0 2px 20px #0007;z-index:3}
+#closing-phrase{position:absolute;inset:42% 8% auto;margin:0;text-align:center;color:#335386;font:clamp(26px,4.5vw,64px)/1.12 Georgia,serif;text-shadow:none;z-index:3}
 #closing-again{position:absolute;left:50%;bottom:19%;transform:translateX(-50%);z-index:4;border:0;border-bottom:1px solid #335386;background:#f4f4efcc;color:#335386;padding:10px;font:12px 'IBM Plex Mono',monospace}
 body.closing-outside #threshold-menu{opacity:1;visibility:visible;pointer-events:auto;z-index:8}
 body.closing-outside #low-menu-wrap{display:none!important}
@@ -646,7 +647,7 @@ body.resetting #reset-experience,body.resetting #glicina-touch{visibility:hidden
 
  <p id="escondidas" role="status" hidden></p>
  <p id="marca-prototipo">prototipo · imágenes provisionales</p>
-</div><footer><span id="foot">UN MISMO DISCO. DISTINTAS FORMAS DE HABITARLO.</span><button class="plain" id="about">EN CONSTRUCCIÓN +</button></footer><button class="plain" id="replay">REPETIR EL CRUCE ↻</button><aside id="music-player" aria-label="Reproductor de música" inert><button id="player-play" type="button" aria-label="Reproducir Sirens" aria-pressed="false">▶</button><div class="player-track"><span class="player-name">SIRENS <span id="player-status">EN PAUSA</span></span><input id="player-seek" type="range" min="0" max="1000" value="0" step="1" aria-label="Posición de la canción" disabled></div><span id="player-time">0:00</span><button id="player-mute" type="button" aria-label="Silenciar música" aria-pressed="false">SONIDO</button></aside><dialog id="info">La Casa · prueba 02. El muro se abre, atravesás la ventana y el hueco permanece. Marco, niño, logo y ladrillos usan los PNG originales separados, con sus transparencias y colores intactos. La entrada reproduce el video del niño atravesando la ventana. Antes de entrar, la ventana tapiada espera inmóvil. Podés repetir el cruce sin borrar el papel ni la luz.<br><br>Las huellas se conservan en este navegador. Suena «Sirens». Podés silenciarla desde el botón de música.<button class="plain" id="close">VOLVER ↗</button></dialog><nav id="threshold-menu" aria-label="Accesos de La Casa" inert><div id="menu-video-layer"><div class="threshold-line"><div class="threshold-track" style="--duration:410s"><div class="threshold-copy"><span>estoy pensando en volver</span><button type="button" data-menu="album">Escuchar el álbum</button><span>una luz quedó prendida</span><span>todavía</span></div><div class="threshold-copy" aria-hidden="true"><span>estoy pensando en volver</span><button type="button" data-menu="album" tabindex="-1">Escuchar el álbum</button><span>una luz quedó prendida</span><span>todavía</span></div></div></div><div class="threshold-line"><div class="threshold-track" style="--duration:530s"><div class="threshold-copy"><span>entre glicina y laurel</span><button type="button" data-menu="others">Otras casas</button><span>algo sigue conmigo</span><span>archivo sonoro / 2026</span></div><div class="threshold-copy" aria-hidden="true"><span>entre glicina y laurel</span><button type="button" data-menu="others" tabindex="-1">Otras casas</button><span>algo sigue conmigo</span><span>archivo sonoro / 2026</span></div></div></div><div class="threshold-line"><div class="threshold-track" style="--duration:470s"><div class="threshold-copy"><span>esta casa no es mi casa</span><button type="button" data-menu="artist">Sobre La Casa</button><span>una voz detrás de la ventana</span><button type="button" data-menu="sound">Sonido</button></div><div class="threshold-copy" aria-hidden="true"><span>esta casa no es mi casa</span><button type="button" data-menu="artist" tabindex="-1">Sobre La Casa</button><span>una voz detrás de la ventana</span><button type="button" data-menu="sound" tabindex="-1">Sonido</button></div></div></div></div></nav><dialog id="threshold-panel"><button id="menu-panel-close">VOLVER ↗</button><div id="menu-panel-content"></div></dialog><section id="closing-scene" aria-label="Salir por la misma ventana" inert><video id="closing-interior" src="assets/casa-interior.mp4" poster="assets/casa-interior-poster.jpg" muted loop playsinline preload="none" aria-hidden="true"></video><div id="closing-window"><img id="closing-still" src="assets/salida-inicial.webp" alt="La misma ventana, al salir de la casa"><video id="closing-film" src="assets/salida-video.mp4" poster="assets/salida-inicial.webp" muted playsinline preload="none" aria-hidden="true"></video><img id="closing-final-photo" src="assets/salida-final.webp" alt="La ventana transformada, rodeada de glicinas"></div><div id="closing-signature"><div id="closing-title"><img src="assets/logo-la-casa.webp" alt="La casa"></div><p id="closing-artist" aria-label="Alexis Gabriel"><span>ALEXIS</span><span>GABRIEL</span></p></div><button id="closing-window-enter" aria-label="Volver a entrar por la ventana con glicinas" hidden></button><p id="closing-phrase">Algo de esta casa<br>sale con vos.</p><button id="closing-again" hidden>VOLVER A ENTRAR ↗</button></section><button type="button" id="reset-experience">↶ VOLVER AL PRINCIPIO</button><div id="reset-scene" aria-hidden="true" hidden><img id="reset-backdrop" src="assets/salida-final.webp" alt=""><video id="reset-film" src="assets/glicinas-reversa.mp4" muted playsinline preload="none"></video><img id="reset-bricks" src="assets/entrada-inicial-hq.jpg" alt=""><div id="reset-signature"></div></div><p id="reset-status" class="sr-only" role="status" aria-live="polite"></p><script>
+</div><footer><span id="foot">UN MISMO DISCO. DISTINTAS FORMAS DE HABITARLO.</span><button class="plain" id="about">EN CONSTRUCCIÓN +</button></footer><button class="plain" id="replay">REPETIR EL CRUCE ↻</button><aside id="music-player" aria-label="Reproductor de música" inert><button id="player-play" type="button" aria-label="Reproducir La casa" aria-pressed="false">▶</button><div class="player-track"><span class="player-name">LA CASA <span id="player-status">EN PAUSA</span></span><input id="player-seek" type="range" min="0" max="1000" value="0" step="1" aria-label="Posición de la canción" disabled></div><span id="player-time">0:00</span><button id="player-mute" type="button" aria-label="Silenciar música" aria-pressed="false">SONIDO</button></aside><dialog id="info">La Casa · prueba 02. El muro se abre, atravesás la ventana y el hueco permanece. Marco, niño, logo y ladrillos usan los PNG originales separados, con sus transparencias y colores intactos. La entrada reproduce el video del niño atravesando la ventana. Antes de entrar, la ventana tapiada espera inmóvil. Podés repetir el cruce sin borrar el papel ni la luz.<br><br>Las huellas se conservan en este navegador. Suena «Sirens». Podés silenciarla desde el botón de música.<button class="plain" id="close">VOLVER ↗</button></dialog><nav id="threshold-menu" aria-label="Accesos de La Casa" inert><div id="menu-video-layer"><div class="threshold-line"><div class="threshold-track" style="--duration:410s"><div class="threshold-copy"><span>estoy pensando en volver</span><button type="button" data-menu="album">Escuchar el álbum</button><span>una luz quedó prendida</span><span>todavía</span></div><div class="threshold-copy" aria-hidden="true"><span>estoy pensando en volver</span><button type="button" data-menu="album" tabindex="-1">Escuchar el álbum</button><span>una luz quedó prendida</span><span>todavía</span></div></div></div><div class="threshold-line"><div class="threshold-track" style="--duration:530s"><div class="threshold-copy"><span>entre glicina y laurel</span><button type="button" data-menu="others">Otras casas</button><span>algo sigue conmigo</span><span>archivo sonoro / 2026</span></div><div class="threshold-copy" aria-hidden="true"><span>entre glicina y laurel</span><button type="button" data-menu="others" tabindex="-1">Otras casas</button><span>algo sigue conmigo</span><span>archivo sonoro / 2026</span></div></div></div><div class="threshold-line"><div class="threshold-track" style="--duration:470s"><div class="threshold-copy"><span>esta casa no es mi casa</span><button type="button" data-menu="artist">Sobre La Casa</button><span>una voz detrás de la ventana</span><button type="button" data-menu="sound">Sonido</button></div><div class="threshold-copy" aria-hidden="true"><span>esta casa no es mi casa</span><button type="button" data-menu="artist" tabindex="-1">Sobre La Casa</button><span>una voz detrás de la ventana</span><button type="button" data-menu="sound" tabindex="-1">Sonido</button></div></div></div></div></nav><dialog id="threshold-panel"><button id="menu-panel-close">VOLVER ↗</button><div id="menu-panel-content"></div></dialog><section id="closing-scene" aria-label="Salir por la misma ventana" inert><video id="closing-interior" src="assets/casa-interior.mp4" poster="assets/casa-interior-poster.jpg" muted loop playsinline preload="none" aria-hidden="true"></video><div id="closing-window"><img id="closing-still" src="assets/salida-inicial.webp" alt="La misma ventana, al salir de la casa"><video id="closing-film" src="assets/salida-video.mp4" poster="assets/salida-inicial.webp" muted playsinline preload="none" aria-hidden="true"></video><img id="closing-final-photo" src="assets/salida-final.webp" alt="La ventana transformada, rodeada de glicinas"></div><div id="closing-signature"><div id="closing-title"><img src="assets/logo-la-casa.webp" alt="La casa"></div><p id="closing-artist" aria-label="Alexis Gabriel"><span>ALEXIS</span><span>GABRIEL</span></p></div><button id="closing-window-enter" aria-label="Volver a entrar por la ventana con glicinas" hidden></button><p id="closing-phrase">Algo de esta casa<br>sale con vos.</p><button id="closing-again" hidden>VOLVER A ENTRAR ↗</button></section><button type="button" id="reset-experience">↶ VOLVER AL PRINCIPIO</button><div id="reset-scene" aria-hidden="true" hidden><img id="reset-backdrop" src="assets/salida-final.webp" alt=""><video id="reset-film" src="assets/glicinas-reversa.mp4" muted playsinline preload="none"></video><img id="reset-bricks" src="assets/entrada-inicial-hq.jpg" alt=""><div id="reset-signature"></div></div><p id="reset-status" class="sr-only" role="status" aria-live="polite"></p><script>
 const $=id=>document.getElementById(id);let state={visits:0,paper:false,light:false,opened:false};try{state={...state,...JSON.parse(localStorage.getItem('la-casa-umbral')||'{}')}}catch{}const music=new Audio('assets/sirens.mp3');music.loop=true;music.preload='metadata';music.volume=0;let sounding=false,musicChosen=false,fadeId=0,entryMusicComplete=false,entryMusicPending=false;function musicLabel(){$('sound').textContent='MÚSICA: '+(sounding?'SÍ':'NO');$('sound').setAttribute('aria-pressed',String(sounding));updateRadioUI()}function startMusic(){
  if(entryMusicPending)return;
  const run=++fadeId,entry=!entryMusicComplete;entryMusicPending=true;music.volume=0;
@@ -748,6 +749,13 @@ function renderApproach(dt){
  if(cameraCurrent>=1&&cameraTarget===1&&frameAvailable)reachInside();syncHouseFilm(document.body.classList.contains('inhabited')?true:busy||state.opened||cameraTarget>0||cameraCurrent>0);
 }
 function navigateScroll(delta){
+ // The exterior loop owns navigation before any dormant scene interaction can
+ // block it. Reentry is forward-only; dialogs still keep their own scrolling.
+ if(reentryStarted!==null||document.body.classList.contains('closing-outside')){
+  if(resetBusy||document.querySelector('dialog[open]'))return;
+  if(delta>0){if(reentryStarted===null)restartFromWindow();reentryTarget=clampApproach(reentryTarget+delta/1600)}
+  return;
+ }
  if(window.firstHouseBlocks?.()||window.casaBlocksScroll?.()||document.querySelector('#box-inventory[open],#community-memory[open]'))return;
  if(document.body.classList.contains('inhabited')&&current<7.6){
   // Ease into a gentler continuous passage, never pinning the intermediate film.
@@ -763,7 +771,7 @@ function navigateScroll(delta){
  }
  if(memoryStroke)finishMemoryStroke();
  if($('threshold-panel').open||charcoalActive||heldTrace||document.body.classList.contains('building')||busy||$('info').open)return;document.body.classList.remove('hint-visible');
- if(reentryStarted!==null){reentryTarget=clampApproach(reentryTarget+delta/1600);return}
+ if(reentryStarted!==null){if(delta>0)reentryTarget=clampApproach(reentryTarget+delta/1600);return}
  // The completed exterior is a boundary, including momentum left after backing out.
  // Negative scroll must not rewind the closing scene behind the flower landing.
  if(document.body.classList.contains('closing-outside')){
@@ -776,14 +784,15 @@ function navigateScroll(delta){
   cameraTarget=clampApproach(cameraTarget+delta/1600);return;
  }
  if(delta<0&&target<=.001&&current<.08){
-  if(journeyComplete){reverseToFlowerWindow(delta);return}
+  if(journeyComplete)return;
   document.body.classList.remove('inhabited');cameraTarget=clampApproach(1+delta/1600);cameraCurrent=1;return;
  }
  axis='y';sign=1
  const step=delta/Math.max(500,axis==='x'?innerWidth:innerHeight);
- target=Math.max(0,Math.min(journeyLength,window.firstHouseScrollLimit?.(target+step,step)??(target+step)));target=window.houseRoute?.skipRetired(target,step)??target;current=window.houseRoute?.advanceRetired(current,target)??current;powerOnScroll(step);storeTravel();
+ const next=window.houseRoute?.advanceScroll(target,step)??(target+step);
+ target=Math.max(0,Math.min(journeyLength,window.firstHouseScrollLimit?.(next,step)??next));target=window.houseRoute?.skipRetired(target,step)??target;current=window.houseRoute?.advanceRetired(current,target)??current;powerOnScroll(step);storeTravel();
 }
-function tick(time){if(window.houseRoute){target=houseRoute.skipRetired(target,target<current?-1:1);current=houseRoute.advanceRetired(current,target)}let dt=Math.min((time-lastTime)/1000,.05);lastTime=time;current+=(target-current)*(1-Math.exp(-9*dt));renderJourney();renderApproach(dt);renderTraces();renderCharcoal();renderMemoryUmbral(time,dt);renderLowScene(time);renderDailyScene();renderBoxScene(time,dt);renderCutScene();renderBridgeScene(dt);renderSecondScene(dt);if(typeof casaRender==='function')casaRender(time,dt);renderClosingScene();syncJourneyNavigation();syncEntryMusic();requestAnimationFrame(tick)}requestAnimationFrame(tick);
+function tick(time){if(window.houseRoute){target=houseRoute.skipRetired(target,target<current?-1:1);current=houseRoute.advanceRetired(current,target)}let dt=Math.min((time-lastTime)/1000,.05);lastTime=time;const amount=1-Math.exp(-9*dt);current=window.houseRoute?.easeScroll(current,target,amount)??(current+(target-current)*amount);renderJourney();renderApproach(dt);renderTraces();renderCharcoal();renderMemoryUmbral(time,dt);renderLowScene(time);renderDailyScene();renderBoxScene(time,dt);renderCutScene();renderBridgeScene(dt);renderSecondScene(dt);if(typeof casaRender==='function')casaRender(time,dt);renderClosingScene();syncJourneyNavigation();syncEntryMusic();requestAnimationFrame(tick)}requestAnimationFrame(tick);
 window.addEventListener('wheel',e=>{
  if($('threshold-panel').open||e.ctrlKey||$('info').open||e.target.closest('input,textarea,[contenteditable=true],#bridge-paper'))return;
  e.preventDefault();
@@ -1029,9 +1038,20 @@ const grainTile=document.createElement('canvas');grainTile.width=grainTile.heigh
 const grainTileContext=grainTile.getContext('2d'),grainPixels=grainTileContext.createImageData(256,256);
 const grainReduced=matchMedia('(prefers-reduced-motion: reduce)');let grainLast=0;
 function sizeGrain(){grainCanvas.width=Math.ceil(innerWidth);grainCanvas.height=Math.ceil(innerHeight);paintGrain()}
-function paintGrain(){if(!grainContext)return;const d=grainPixels.data;for(let i=0;i<d.length;i+=4){const shade=Math.floor(Math.random()*256);d[i]=d[i+1]=d[i+2]=shade;d[i+3]=48}grainTileContext.putImageData(grainPixels,0,0);grainContext.clearRect(0,0,grainCanvas.width,grainCanvas.height);grainContext.fillStyle=grainContext.createPattern(grainTile,'repeat');grainContext.fillRect(0,0,grainCanvas.width,grainCanvas.height)}
+function paintGrain(){if(!grainContext)return;const d=grainPixels.data;for(let i=0;i<d.length;i+=4){const shade=Math.floor(Math.random()*256);d[i]=d[i+1]=d[i+2]=shade;d[i+3]=48}grainTileContext.putImageData(grainPixels,0,0);grainContext.clearRect(0,0,grainCanvas.width,grainCanvas.height);grainContext.fillStyle=grainContext.createPattern(grainTile,'repeat');grainContext.fillRect(0,0,grainCanvas.width,grainCanvas.height);
+ // Modal dialogs live above every document z-index. Share the same noise tile
+ // with a pointer-transparent canvas inside each open dialog's top layer.
+ document.querySelectorAll('dialog[open]').forEach(dialog=>{
+  let canvas=dialog.querySelector(':scope > .dialog-living-grain');
+  if(!canvas){canvas=document.createElement('canvas');canvas.className='dialog-living-grain';canvas.setAttribute('aria-hidden','true');dialog.append(canvas)}
+  const w=Math.ceil(dialog.clientWidth),h=Math.ceil(dialog.clientHeight);if(canvas.width!==w)canvas.width=w;if(canvas.height!==h)canvas.height=h;
+  const c=canvas.getContext('2d');if(!c)return;c.clearRect(0,0,w,h);c.fillStyle=c.createPattern(grainTile,'repeat');c.fillRect(0,0,w,h);
+ });
+}
 function animateGrain(t){if(!document.hidden&&!grainReduced.matches&&t-grainLast>=80){paintGrain();grainLast=t}requestAnimationFrame(animateGrain)}
 window.addEventListener('resize',sizeGrain);sizeGrain();requestAnimationFrame(animateGrain);
+// Reduced motion still has a static grain layer on newly opened dialogs.
+new MutationObserver(records=>{if(records.some(r=>r.attributeName==='open'))paintGrain()}).observe(document.body,{subtree:true,attributes:true,attributeFilter:['open']});
 
 function loadCollImage(src){return new Promise((resolve,reject)=>{const im=new Image();im.onload=()=>resolve(im);im.onerror=()=>reject(new Error('No se pudo cargar '+src));im.src=src})}
 
@@ -1387,7 +1407,7 @@ function renderSecondScene(dt){return;const actual=((current%journeyLength)+jour
 function playerTime(value){const n=Number.isFinite(value)?Math.max(0,Math.floor(value)):0;return Math.floor(n/60)+':'+String(n%60).padStart(2,'0')}
 function updateRadioUI(){
  const button=$('player-play');if(!button)return;
- const playing=sounding&&!music.paused;button.textContent=playing?'Ⅱ':'▶';button.setAttribute('aria-pressed',String(playing));button.setAttribute('aria-label',(playing?'Pausar':'Reproducir')+' Sirens');
+ const playing=sounding&&!music.paused;button.textContent=playing?'Ⅱ':'▶';button.setAttribute('aria-pressed',String(playing));button.setAttribute('aria-label',(playing?'Pausar':'Reproducir')+' La casa');
  $('player-status').textContent=playing?'SONANDO':'EN PAUSA';
  $('player-mute').textContent=music.muted?'MUDO':'SONIDO';$('player-mute').setAttribute('aria-pressed',String(music.muted));$('player-mute').setAttribute('aria-label',music.muted?'Activar sonido':'Silenciar música');
 }
@@ -1408,6 +1428,7 @@ closingFilm.addEventListener('ended',()=>{closingFinished=true;closingPlaying=fa
 function renderClosingScene(){
  if(resetBusy)return;
  if(reentryStarted!==null){
+  closingRoot.style.transform='none';
   reentryCurrent+=(reentryTarget-reentryCurrent)*.16;if(Math.abs(reentryTarget-reentryCurrent)<.001)reentryCurrent=reentryTarget;
   const t=reentryCurrent,e=t;
   if(t===0&&reentryTarget===0){restoreFlowerExterior();return}
@@ -1417,16 +1438,21 @@ function renderClosingScene(){
   if(t>=1){closingStill.src='assets/salida-inicial.webp';reentryStarted=null;reentryTarget=reentryCurrent=0;busy=false;closingFinished=false;closingPlaying=false;closingVideoReady=false;closingFilm.currentTime=0;closingRoot.classList.remove('active');closingRoot.style.opacity='0';$('closing-final-photo').style.opacity='0';document.body.classList.remove('reentering','closing-present','exit-identity-visible');houseFilm.currentTime=0;memoryActive=false;memoryStarted=performance.now();}
   return;
  }
- const closingPhase=current+4.7;
+ const closingPhase=current+2.7;
  const active=document.body.classList.contains('inhabited')&&closingPhase>22;
  closingRoot.classList.toggle('active',active);closingRoot.inert=!active;document.body.classList.toggle('closing-present',active);
- if(!active){closingRoot.style.opacity='0';closingInterior.pause();closingFilm.pause();closingPlaying=false;document.body.classList.remove('closing-outside','exit-identity-visible');return}
- const entry=lowEase(22,22.6,closingPhase),zoom=lowEase(23.2,25.05,closingPhase),outside=zoom>=.999&&closingFinished;
- closingRoot.style.opacity=String(entry);closingInterior.style.opacity=String(1-lowEase(23.2,23.85,closingPhase));
+ if(!active){closingRoot.style.opacity='0';closingRoot.style.transform='none';closingInterior.pause();closingFilm.pause();closingPlaying=false;document.body.classList.remove('closing-outside','exit-identity-visible');return}
+ // Share the memory room's linear boundary: no crossfade or empty screen.
+ // Begin the camera move immediately on arrival, without a pinned video hold.
+ // Retain the exterior endpoint and playback handoff.
+ const entry=Math.max(0,Math.min(1,(current-19.3)/.6)),zoom=Math.max(0,Math.min(1,(current-19.9)/2.45)),outside=zoom>=.999&&closingFinished;
+ closingRoot.style.transform='translate3d(0,'+((1-entry)*innerHeight)+'px,0)';
+ closingRoot.style.opacity='1';closingInterior.style.opacity=String(1-lowEase(0,.35,zoom));
+ closingInterior.style.transform=memoryReduced.matches?'none':'scale('+Math.exp(-zoom*Math.log(1.15))+')';
  if(closingPhase<24.05&&closingInterior.paused)closingInterior.play().catch(()=>{});else if(closingPhase>=24.05)closingInterior.pause();
  $('closing-window').style.transform='scale('+(memoryReduced.matches?1:Math.exp((1-zoom)*Math.log(10)))+')';
- $('closing-window').style.opacity=String(memoryReduced.matches?lowEase(23.55,24.25,closingPhase):lowEase(23.2,23.8,closingPhase));
- $('closing-phrase').style.opacity=String(lowEase(22.25,22.7,closingPhase)*(1-lowEase(23.15,23.7,closingPhase)));
+ $('closing-window').style.opacity=String(lowEase(0,memoryReduced.matches ? .43 : .25,zoom));
+ $('closing-phrase').style.opacity=String(1-lowEase(0,.3,zoom));
  if(zoom>=.995&&!closingFinished&&!closingPlaying){closingPlaying=true;closingFilm.play().catch(()=>{closingPlaying=false;closingFinished=true})}
  if(zoom<.98&&closingPlaying){closingFilm.pause();closingPlaying=false}
  const showFinal=closingFinished&&closingFinalReady;
@@ -1617,4 +1643,4 @@ renderMemoryUmbral=function(now,dt){
 
 // Shared continuous page: the surface returns to the interior film at the end.
 function continuousPaper(v){return paperReveal(v)*(1-lowEase(21.05,21.85,v))}
-</script><script src="continuous/prefs.js"></script><script src="continuous/house-route.js"></script><script src="continuous/casa.js"></script><script src="continuous/casa2.js"></script><script src="continuous/casa3.js"></script><script src="continuous/fondo.js"></script><script src="continuous/rooms.js"></script><script src="continuous/first-house.js"></script><link rel="stylesheet" href="continuous/community.css"><script src="continuous/community.js"></script><script src="continuous/inventory.js"></script><script src="continuous/floor-plan.js"></script><script src="continuous/light-cuts.js"></script><script src="continuous/visual-interaction.js"></script><link rel="stylesheet" href="continuous/escenas-resto.css"><script src="continuous/escenas-resto.js"></script><script src="continuous/assets-resto.js"></script><link rel="stylesheet" href="continuous/casa2-oscuridad.css"><script src="continuous/casa2-oscuridad.js"></script><link rel="stylesheet" href="continuous/casa3-terrero.css"><script src="continuous/casa3-terrero.js"></script><link rel="stylesheet" href="continuous/tu-casa.css"><script src="continuous/tu-casa.js"></script><script src="continuous/tu-casa-postal.js"></script><link rel="stylesheet" href="continuous/salida-final.css"><script src="continuous/salida-final.js"></script><link rel="stylesheet" href="continuous/memorias-ejemplo.css"><script src="continuous/memorias-ejemplo.js"></script></body></html>
+</script><script src="continuous/prefs.js"></script><script src="continuous/house-route.js"></script><script src="continuous/casa.js"></script><script src="continuous/casa2.js"></script><script src="continuous/casa3.js"></script><script src="continuous/fondo.js"></script><script src="continuous/rooms.js"></script><script src="continuous/first-house.js"></script><link rel="stylesheet" href="continuous/community.css"><script src="continuous/community.js"></script><script src="continuous/inventory.js"></script><script src="continuous/floor-plan.js"></script><script src="continuous/light-cuts.js"></script><script src="continuous/visual-interaction.js"></script><link rel="stylesheet" href="continuous/escenas-resto.css"><script src="continuous/escenas-resto.js"></script><script src="continuous/assets-resto.js"></script><link rel="stylesheet" href="continuous/casa2-oscuridad.css"><script src="continuous/casa2-oscuridad.js"></script><link rel="stylesheet" href="continuous/casa3-terrero.css"><script src="continuous/casa3-terrero.js"></script><link rel="stylesheet" href="continuous/tu-casa.css"><script src="continuous/tu-casa.js"></script><script src="continuous/tu-casa-postal.js"></script><script src="continuous/tu-casa-memory.js"></script><link rel="stylesheet" href="continuous/salida-final.css"><script src="continuous/salida-final.js"></script><link rel="stylesheet" href="continuous/memorias-ejemplo.css"><script src="continuous/memorias-ejemplo.js"></script><link rel="stylesheet" href="continuous/review-navigation.css"><script src="continuous/review-navigation.js"></script></body></html>

@@ -1,0 +1,330 @@
+{
+  "result": {
+    "status": "PASS",
+    "checks": {
+      "visibleControls": true,
+      "drawing": true,
+      "clicks": true,
+      "testedDrawing": true,
+      "testedButtons": true
+    },
+    "samples": [
+      {
+        "phase": 15.4,
+        "points": [
+          {
+            "id": "community-pad",
+            "x": 1010.8800048828125,
+            "y": 423.1875,
+            "hit": true,
+            "inert": false,
+            "drawn": true,
+            "settled": true
+          }
+        ],
+        "debug": {
+          "hit": "<div class=\"community-draw-layout\"><h2 class=\"community-draw-title memory-phrase\" aria-label=\"Hay casas que siguen viviendo en la forma de recordarlas.\" style=\"visibility: visible;\"><span class=\"tu-heading-line\"><span class=\"ink-word\" style=\"transfor",
+          "inert": [
+            "tu-memory-room"
+          ]
+        }
+      },
+      {
+        "phase": 15.9,
+        "points": [
+          {
+            "id": "community-pad",
+            "x": 504,
+            "y": 423.1875,
+            "hit": true,
+            "inert": false,
+            "drawn": true,
+            "settled": true
+          },
+          {
+            "id": "tu-download",
+            "x": 1252.7734375,
+            "y": 350.1875,
+            "hit": true,
+            "inert": false,
+            "clicked": true
+          },
+          {
+            "id": "tu-send",
+            "x": 1252.7734375,
+            "y": 431.1875,
+            "hit": true,
+            "inert": false,
+            "clicked": true
+          },
+          {
+            "id": "tu-order",
+            "x": 1252.7734375,
+            "y": 521.1875,
+            "hit": true,
+            "inert": false,
+            "clicked": true
+          }
+        ],
+        "debug": {
+          "hit": "<div class=\"community-draw-layout\"><h2 class=\"community-draw-title memory-phrase\" aria-label=\"Hay casas que siguen viviendo en la forma de recordarlas.\" style=\"visibility: visible;\"><span class=\"tu-heading-line\"><span class=\"ink-word\" style=\"transfor",
+          "inert": [
+            "tu-memory-room"
+          ]
+        }
+      },
+      {
+        "phase": 16.5,
+        "points": [
+          {
+            "id": "community-pad",
+            "x": 504,
+            "y": 423.1875,
+            "hit": true,
+            "inert": false,
+            "drawn": true,
+            "settled": true
+          },
+          {
+            "id": "tu-download",
+            "x": 1252.7734375,
+            "y": 350.1875,
+            "hit": true,
+            "inert": false,
+            "clicked": true
+          },
+          {
+            "id": "tu-send",
+            "x": 1252.7734375,
+            "y": 431.1875,
+            "hit": true,
+            "inert": false,
+            "clicked": true
+          },
+          {
+            "id": "tu-order",
+            "x": 1252.7734375,
+            "y": 521.1875,
+            "hit": true,
+            "inert": false,
+            "clicked": true
+          }
+        ],
+        "debug": {
+          "hit": "<div class=\"community-draw-layout\"><h2 class=\"community-draw-title memory-phrase\" aria-label=\"Hay casas que siguen viviendo en la forma de recordarlas.\" style=\"visibility: visible;\"><span class=\"tu-heading-line\"><span class=\"ink-word\" style=\"transfor",
+          "inert": [
+            "tu-memory-room"
+          ]
+        }
+      },
+      {
+        "phase": 17.35,
+        "points": [
+          {
+            "id": "community-pad",
+            "x": 504,
+            "y": 348.1875,
+            "hit": true,
+            "inert": false,
+            "drawn": true,
+            "settled": true
+          },
+          {
+            "id": "tu-download",
+            "x": 1252.7734375,
+            "y": 275.1875,
+            "hit": true,
+            "inert": false,
+            "clicked": true
+          },
+          {
+            "id": "tu-send",
+            "x": 1252.7734375,
+            "y": 356.1875,
+            "hit": true,
+            "inert": false,
+            "clicked": true
+          },
+          {
+            "id": "tu-order",
+            "x": 1252.7734375,
+            "y": 446.1875,
+            "hit": true,
+            "inert": false,
+            "clicked": true
+          }
+        ],
+        "debug": {
+          "hit": "<div class=\"community-draw-layout\"><h2 class=\"community-draw-title memory-phrase\" aria-label=\"Hay casas que siguen viviendo en la forma de recordarlas.\" style=\"visibility: visible;\"><span class=\"tu-heading-line\"><span class=\"ink-word\" style=\"transfor",
+          "inert": []
+        }
+      },
+      {
+        "phase": 17.5,
+        "points": [
+          {
+            "id": "community-pad",
+            "x": 504,
+            "y": 163.390625,
+            "hit": true,
+            "inert": false,
+            "drawn": true,
+            "settled": true
+          },
+          {
+            "id": "tu-download",
+            "x": 1252.7734375,
+            "y": 50.1875,
+            "hit": true,
+            "inert": false,
+            "clicked": true
+          },
+          {
+            "id": "tu-send",
+            "x": 1252.7734375,
+            "y": 131.1875,
+            "hit": true,
+            "inert": false,
+            "clicked": true
+          },
+          {
+            "id": "tu-order",
+            "x": 1252.7734375,
+            "y": 221.1875,
+            "hit": true,
+            "inert": false,
+            "clicked": true
+          },
+          {
+            "id": "tu-memory",
+            "x": 720,
+            "y": 865,
+            "hit": true,
+            "inert": false,
+            "clicked": true
+          }
+        ],
+        "debug": {
+          "hit": "<div class=\"community-draw-layout\"><h2 class=\"community-draw-title memory-phrase\" aria-label=\"Hay casas que siguen viviendo en la forma de recordarlas.\" style=\"visibility: visible;\"><span class=\"tu-heading-line\"><span class=\"ink-word\" style=\"transfor",
+          "inert": []
+        }
+      },
+      {
+        "phase": 17.65,
+        "points": [
+          {
+            "id": "community-pad",
+            "x": 504,
+            "y": 50.890625,
+            "hit": true,
+            "inert": false,
+            "drawn": true,
+            "settled": true
+          },
+          {
+            "id": "tu-order",
+            "x": 1252.7734375,
+            "y": 16.09375,
+            "hit": true,
+            "inert": false,
+            "clicked": true
+          },
+          {
+            "id": "tu-memory",
+            "x": 720,
+            "y": 742,
+            "hit": true,
+            "inert": false,
+            "clicked": true
+          }
+        ],
+        "debug": {
+          "hit": "<section id=\"tu-casa-editor\" style=\"transform: translate3d(0px, -525px, 0px); background-color: rgb(244, 244, 241);\"><div class=\"community-draw-layout\"><h2 class=\"community-draw-title memory-phrase\" aria-label=\"Hay casas que siguen viviendo en la for",
+          "inert": []
+        }
+      },
+      {
+        "phase": 17.8,
+        "points": [
+          {
+            "id": "tu-memory",
+            "x": 720,
+            "y": 517,
+            "hit": true,
+            "inert": false,
+            "clicked": true
+          },
+          {
+            "id": "tu-title",
+            "x": 720,
+            "y": 728.59375,
+            "hit": true,
+            "inert": false,
+            "clicked": true
+          }
+        ],
+        "debug": {
+          "hit": "<span class=\"ink-letter\" aria-hidden=\"true\">e</span>",
+          "inert": []
+        }
+      },
+      {
+        "phase": 18.4,
+        "points": [
+          {
+            "id": "tu-memory",
+            "x": 720,
+            "y": 367,
+            "hit": true,
+            "inert": false,
+            "clicked": true
+          },
+          {
+            "id": "tu-title",
+            "x": 720,
+            "y": 578.59375,
+            "hit": true,
+            "inert": false,
+            "clicked": true
+          }
+        ],
+        "debug": {
+          "hit": "<label>Algo que te recuerde a tu casa<div class=\"tu-field-wrap\"><textarea id=\"tu-memory\" maxlength=\"280\" aria-label=\"Escribí algo que te recuerde a tu casa\" placeholder=\"Un olor, una voz, un rincón…\"></textarea><canvas class=\"tu-field-frame\" aria-hid",
+          "inert": []
+        }
+      },
+      {
+        "phase": 19.2,
+        "points": [
+          {
+            "id": "tu-memory",
+            "x": 720,
+            "y": 367,
+            "hit": true,
+            "inert": false,
+            "clicked": true
+          },
+          {
+            "id": "tu-title",
+            "x": 720,
+            "y": 578.59375,
+            "hit": true,
+            "inert": false,
+            "clicked": true
+          }
+        ],
+        "debug": {
+          "hit": "<label>Algo que te recuerde a tu casa<div class=\"tu-field-wrap\"><textarea id=\"tu-memory\" maxlength=\"280\" aria-label=\"Escribí algo que te recuerde a tu casa\" placeholder=\"Un olor, una voz, un rincón…\"></textarea><canvas class=\"tu-field-frame\" aria-hid",
+          "inert": []
+        }
+      }
+    ]
+  },
+  "info": {
+    "result": {
+      "type": "string",
+      "value": "La Casa · prueba 02. El muro se abre, atravesás la ventana y el hueco permanece. Marco, niño, logo y ladrillos usan los PNG originales separados, con sus transparencias y colores intactos. La entrada reproduce el video del niño atravesando la ventana. Antes de entrar, la ventana tapiada espera inmóvil. Podés repetir el cruce sin borrar el papel ni la luz.Las huellas se conservan en este navegador. Suena «Sirens». Podés silenciarla desde el botón de música.VOLVER ↗"
+    }
+  },
+  "errors": []
+}

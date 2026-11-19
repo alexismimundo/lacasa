@@ -1,0 +1,19 @@
+{
+  "result": {
+    "result": {
+      "type": "object",
+      "value": {
+        "status": "PASS",
+        "width": 930,
+        "height": 144,
+        "scale": 3
+      }
+    }
+  },
+  "info": {
+    "result": {
+      "type": "undefined"
+    }
+  },
+  "errors": []
+}

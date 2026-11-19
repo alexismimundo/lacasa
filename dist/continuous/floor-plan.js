@@ -25,7 +25,8 @@
    return seam;
  }
   function noise(value){const n=Math.sin(value*127.1+311.7)*43758.5453;return (n-Math.floor(n))*2-1}
-  function line(x1,y1,x2,y2,seed,time){
+   function line(x1,y1,x2,y2,seed,time,context){
+   const ctx=context||canvas.getContext('2d');
   const length=Math.hypot(x2-x1,y2-y1),steps=Math.max(2,Math.ceil(length/7));
   if(!length)return;
   const nx=-(y2-y1)/length,ny=(x2-x1)/length;
@@ -80,6 +81,7 @@
     }
    }
  }
- const previous=window.casaRender;
+  window.houseGraphiteLine=line;
+  const previous=window.casaRender;
  window.casaRender=function(now,dt){previous(now,dt);render(now)};
 })();

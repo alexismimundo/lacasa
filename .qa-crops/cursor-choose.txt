@@ -1,0 +1,34 @@
+ function choose(){
+  document.body.classList.remove('living-cursor-active');
+  // Modal dialogs occupy the browser's top layer, above every body z-index.
+  // Move the one canvas into that layer rather than creating another cursor.
+  const host=[...document.querySelectorAll('dialog[open]')].reverse().find(el=>el.matches(':modal'))||document.body;
+  if(canvas.parentElement!==host)host.append(canvas);
+  if(!target?.isConnected)return false;
+  if(target.closest('input,textarea,select,[contenteditable="true"],iframe')||document.body.classList.contains('casa-sin-cursor'))return false;
+  // Read the existing scene tool before suppressing the native cursor.
+  document.body.classList.remove('living-cursor-active');
+  const native=getComputedStyle(target).cursor,tool=getComputedStyle(document.documentElement).getPropertyValue('--casa-cursor');
+  let next='flecha';
+  const match=(native.includes('cursor-')?native:tool).match(/cursor-([a-z-]+)\.svg/);
+  if(match){next=match[1]==='mano-abierta'?'abierta':match[1]}
+  // The old scene controller uses "mano" as its default, even on empty paper.
+  // Keep the familiar arrow there; reserve the pointing hand for real actions.
+  if(next==='mano')next='flecha';
+  if(!shapes[next])next='flecha';
+  if(pressed&&(target.closest('[data-guardable],#fh-model-box,.threshold-line')||/grabbing/.test(native)))next='agarre';
+  else if(target.closest('[data-guardable],#fh-model-box')||native==='grab')next='abierta';
+  else if(target.closest('button,a,[role="button"],[data-help]')&&!target.closest('[disabled],[inert]'))next='mano';
+  else if(!match&&native==='pointer')next='mano';
+  // Drawing tools are local to the actual house-drawing surface, never a
+  // scene-wide cursor inherited from the retired notebook or threshold.
+  // Tool artwork is parked until its redesign; only this family is enabled.
+  if(!['flecha','mano','abierta','agarre'].includes(next))next='flecha';
+  if(kind!==next){kind=next;dirty=true}
+  canvas.dataset.kind=kind;
+  document.body.classList.add('living-cursor-active');return true;
+ }
+ function position(){const hot=shapes[kind].hot;canvas.style.transform=`translate3d(${x-hot[0]*scale}px,${y-hot[1]*scale}px,0)`}
+ function draw(now){
+  requestAnimationFrame(draw);
+  if(!present||!fine.matches||document.hidden)return;

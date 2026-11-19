@@ -5,8 +5,42 @@
 .salida-memory{position:absolute;left:61.7%;top:46%;width:11%;max-height:14%;overflow:hidden;padding:5px;color:#335386;background:#F4F2EAbb;transform:rotate(-2deg);box-sizing:border-box}.salida-memory h3{font:italic clamp(7px,.9vw,13px) Georgia;margin:0 0 3px}.salida-memory p{font:clamp(5px,.55vw,9px)/1.3 monospace;margin:0;white-space:pre-wrap;overflow-wrap:anywhere}.salida-echo{position:absolute;inset:2px -1px -2px 1px;color:#B9A3DE;opacity:.7;pointer-events:none}
 #salida-menu{position:fixed;z-index:12;left:5%;right:5%;top:max(66vh,var(--window-bottom,66vh));display:flex;flex-wrap:wrap;justify-content:center;gap:14px 32px;padding:20px 0;color:#335386;font:300 clamp(12px,1.2vw,18px)/1.55 'IBM Plex Mono',monospace}
 #salida-menu button{color:inherit;background:none;border:0;border-bottom:1px solid transparent;padding:5px 0;font:inherit;cursor:pointer}#salida-menu button:hover,#salida-menu button:focus-visible{filter:blur(.4px);text-shadow:1px 0 currentColor,-1px 0 currentColor;border-bottom-color:currentColor;outline:none}
-.salida-final-outside #threshold-menu{visibility:hidden!important;pointer-events:none!important}
+/* Restore the original drifting, navigable rows beneath the exterior window. */
+#salida-menu{display:none!important}
+body.closing-outside #threshold-menu{z-index:60;visibility:visible!important;pointer-events:auto!important;overflow:hidden}
 body.salida-final-outside #closing-window-enter{display:block!important;pointer-events:auto}
 .salida-tracks{list-style:none;padding:0;max-width:650px}.salida-tracks li{display:flex;align-items:center;justify-content:space-between;gap:20px;border-bottom:1px solid #33538633;padding:8px 0}.salida-tracks button{background:none;border:0;padding:5px;color:#335386;font:14px 'IBM Plex Mono',monospace;text-align:left}.salida-tracks button:disabled{opacity:.7}.salida-tracks small{font:10px monospace}#menu-panel-content audio{width:min(100%,500px)}
 @media(max-width:700px){#salida-menu{top:66vh;gap:7px 22px;padding:12px 0;left:7%;right:7%;font-size:12px}.salida-memory{left:59.5%;width:9%}}
 @media(prefers-reduced-motion:reduce){#salida-menu button:hover{filter:none;text-shadow:none}}
+/* Album listening room: one shared transport, not ten overlapping players. */
+#threshold-panel.album-panel{background:#335386;color:#f4f4f1;padding:clamp(80px,12vh,120px) 7vw 8vh}
+#threshold-panel.album-panel #menu-panel-close{color:#f4f4f1;border-color:#f4f4f188}
+#threshold-panel.album-panel h2{color:inherit;font:italic clamp(38px,6vw,70px)/1 Georgia,serif;margin:0 0 12px}
+#threshold-panel.album-panel .album-eyebrow{font:10px/1.6 'IBM Plex Mono',monospace;letter-spacing:.13em;color:#ddd4ee;margin-bottom:30px;padding-right:70px}
+.album-deck{display:grid;grid-template-columns:minmax(130px,.65fr) 1.35fr;align-items:center;gap:clamp(20px,5vw,65px);padding:24px 0 35px;border-top:1px solid #f4f4f166;border-bottom:1px solid #f4f4f166}
+.album-cover{width:100%;max-width:380px;justify-self:center;box-shadow:0 12px 32px #14243e66}
+.album-cover img{display:block;width:100%;height:auto;object-fit:contain;pointer-events:none}
+.album-now>small{font:9px 'IBM Plex Mono',monospace;letter-spacing:.18em;color:#d0bde9}
+#threshold-panel.album-panel .album-now h3{color:inherit;font:italic clamp(26px,4vw,42px)/1.15 Georgia,serif;margin:10px 0}
+#threshold-panel.album-panel .album-now>p{font:11px/1.6 'IBM Plex Mono',monospace;color:#ddd4ee}
+.album-controls{display:flex;align-items:center;gap:15px;margin:22px 0}
+#threshold-panel.album-panel .album-controls button{border:1px solid #f4f4f177;border-radius:50%;background:transparent;color:inherit;width:38px;height:38px;padding:0;font:25px Georgia,serif;cursor:pointer}
+#threshold-panel.album-panel .album-controls [data-album=play]{width:54px;height:54px;background:#f4f4f1;color:#335386;font-size:22px}
+#threshold-panel.album-panel .album-controls [data-album=mute]{margin-left:auto;width:auto;height:auto;border:0;border-radius:0;font:9px 'IBM Plex Mono',monospace}
+.album-progress{display:block;font-size:0}.album-progress input{width:100%;accent-color:#b9a3de;cursor:pointer}
+.album-times{display:flex;justify-content:space-between;font:10px 'IBM Plex Mono',monospace;color:#ddd4ee}
+#threshold-panel.album-panel .album-feedback{font-size:11px;min-height:1em}
+#threshold-panel.album-panel .salida-tracks{max-width:none;margin:24px 0;padding:0}
+#threshold-panel.album-panel .salida-tracks li{padding:0;border-bottom:1px solid #f4f4f133;display:block}
+#threshold-panel.album-panel .salida-tracks button{display:grid;grid-template-columns:35px 1fr 24px;gap:12px;align-items:center;width:100%;padding:14px 10px;color:inherit;font:13px 'IBM Plex Mono',monospace;cursor:pointer}
+#threshold-panel.album-panel .salida-tracks button[aria-current=true]{background:#b9a3de22;color:#e5cfff}
+#threshold-panel.album-panel .salida-tracks button:hover{background:#ffffff0d}
+#threshold-panel.album-panel button:focus-visible{outline:2px solid #b9a3de;outline-offset:4px}
+#threshold-panel.album-panel .album-note{font:10px/1.7 'IBM Plex Mono',monospace;color:#ddd4ee}
+#threshold-panel.album-panel .menu-song{color:inherit;border-color:#f4f4f188}
+#threshold-panel.album-panel,#threshold-panel.about-panel{box-sizing:border-box;inset:0;width:100%;height:100dvh;max-width:none;max-height:none;margin:0;border:0;border-radius:0;overflow:auto;overscroll-behavior:contain}
+#threshold-panel.about-panel #menu-panel-content{max-width:780px}
+#threshold-panel.about-panel #menu-panel-content>p{font:clamp(16px,2vw,20px)/1.7 Georgia,serif;max-width:62ch}
+#threshold-panel.about-panel .about-credits{position:static;display:block;opacity:1;margin:32px 0 0;padding-top:20px;border-top:1px solid #33538655;color:#335386}
+#threshold-panel.about-panel .about-credits p{font:12px/1.7 'IBM Plex Mono',monospace;margin:5px 0}
+@media(max-width:600px){.album-deck{grid-template-columns:1fr;gap:22px}.album-cover{width:min(65vw,260px);margin:0 auto}.album-controls{margin:16px 0}#threshold-panel.album-panel,#threshold-panel.about-panel{padding:90px 22px 45px}.album-now{text-align:center}.album-times{text-align:left}}

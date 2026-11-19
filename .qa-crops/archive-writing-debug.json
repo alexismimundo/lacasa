@@ -1,0 +1,1564 @@
+{
+  "result": {
+    "status": "FAIL",
+    "checks": {
+      "writing": false,
+      "opened": true,
+      "latest": false,
+      "black": true,
+      "local": true,
+      "isolated": true,
+      "cards": true,
+      "detail": true,
+      "multiple": true
+    },
+    "samples": [
+      {
+        "phase": 17.65,
+        "id": "tu-memory",
+        "typed": true,
+        "debug": {
+          "active": "tu-memory",
+          "hit": "<textarea id=\"tu-memory\" maxlength=\"280\" aria-label=\"Escribí algo que te recuerde a tu casa\" placeholder=\"Un olor, una voz, un rincón…\"></textarea>",
+          "ancestors": [
+            {
+              "id": "tu-memory",
+              "cls": "",
+              "transform": "none",
+              "inert": false,
+              "rect": {
+                "x": 370,
+                "y": 607,
+                "width": 700,
+                "height": 270,
+                "top": 607,
+                "right": 1070,
+                "bottom": 877,
+                "left": 370
+              }
+            },
+            {
+              "id": "",
+              "cls": "tu-field-wrap",
+              "transform": "none",
+              "inert": false,
+              "rect": {
+                "x": 370,
+                "y": 607,
+                "width": 700,
+                "height": 270,
+                "top": 607,
+                "right": 1070,
+                "bottom": 877,
+                "left": 370
+              }
+            },
+            {
+              "id": "",
+              "cls": "",
+              "transform": "none",
+              "inert": false,
+              "rect": {
+                "x": 370,
+                "y": 584,
+                "width": 700,
+                "height": 293,
+                "top": 584,
+                "right": 1070,
+                "bottom": 877,
+                "left": 370
+              }
+            },
+            {
+              "id": "",
+              "cls": "community-form tu-memory",
+              "transform": "none",
+              "inert": false,
+              "rect": {
+                "x": 370,
+                "y": 584,
+                "width": 700,
+                "height": 483.1875,
+                "top": 584,
+                "right": 1070,
+                "bottom": 1067.1875,
+                "left": 370
+              }
+            },
+            {
+              "id": "tu-memory-room",
+              "cls": "",
+              "transform": "matrix(1, 0, 0, 1, 0, 375)",
+              "inert": false,
+              "rect": {
+                "x": 0,
+                "y": 375,
+                "width": 1440,
+                "height": 900,
+                "top": 375,
+                "right": 1440,
+                "bottom": 1275,
+                "left": 0
+              }
+            },
+            {
+              "id": "community-journey",
+              "cls": "tu-casa is-visible tu-writing",
+              "transform": "none",
+              "inert": false,
+              "rect": {
+                "x": 0,
+                "y": 0,
+                "width": 1440,
+                "height": 900,
+                "top": 0,
+                "right": 1440,
+                "bottom": 900,
+                "left": 0
+              }
+            },
+            {
+              "id": "",
+              "cls": "resto-momento",
+              "transform": "matrix(1, 0, 0, 1, 0, 0)",
+              "inert": false,
+              "rect": {
+                "x": 0,
+                "y": 0,
+                "width": 1440,
+                "height": 900,
+                "top": 0,
+                "right": 1440,
+                "bottom": 900,
+                "left": 0
+              }
+            },
+            {
+              "id": "resto-provisorio",
+              "cls": "",
+              "transform": "none",
+              "inert": false,
+              "rect": {
+                "x": 0,
+                "y": 0,
+                "width": 1440,
+                "height": 900,
+                "top": 0,
+                "right": 1440,
+                "bottom": 900,
+                "left": 0
+              }
+            },
+            {
+              "id": "",
+              "cls": "visited inhabited casa-instalada recien casa-oscura community-active fondo-tinta-clara",
+              "transform": "none",
+              "inert": false,
+              "rect": {
+                "x": 0,
+                "y": 0,
+                "width": 1440,
+                "height": 900,
+                "top": 0,
+                "right": 1440,
+                "bottom": 900,
+                "left": 0
+              }
+            },
+            {
+              "id": "",
+              "cls": "",
+              "transform": "none",
+              "inert": false,
+              "rect": {
+                "x": 0,
+                "y": 0,
+                "width": 1440,
+                "height": 900,
+                "top": 0,
+                "right": 1440,
+                "bottom": 900,
+                "left": 0
+              }
+            }
+          ]
+        }
+      },
+      {
+        "phase": 17.8,
+        "id": "tu-memory",
+        "typed": true,
+        "debug": {
+          "active": "tu-memory",
+          "hit": "<textarea id=\"tu-memory\" maxlength=\"280\" aria-label=\"Escribí algo que te recuerde a tu casa\" placeholder=\"Un olor, una voz, un rincón…\"></textarea>",
+          "ancestors": [
+            {
+              "id": "tu-memory",
+              "cls": "",
+              "transform": "none",
+              "inert": false,
+              "rect": {
+                "x": 370,
+                "y": 382,
+                "width": 700,
+                "height": 270,
+                "top": 382,
+                "right": 1070,
+                "bottom": 652,
+                "left": 370
+              }
+            },
+            {
+              "id": "",
+              "cls": "tu-field-wrap",
+              "transform": "none",
+              "inert": false,
+              "rect": {
+                "x": 370,
+                "y": 382,
+                "width": 700,
+                "height": 270,
+                "top": 382,
+                "right": 1070,
+                "bottom": 652,
+                "left": 370
+              }
+            },
+            {
+              "id": "",
+              "cls": "",
+              "transform": "none",
+              "inert": false,
+              "rect": {
+                "x": 370,
+                "y": 359,
+                "width": 700,
+                "height": 293,
+                "top": 359,
+                "right": 1070,
+                "bottom": 652,
+                "left": 370
+              }
+            },
+            {
+              "id": "",
+              "cls": "community-form tu-memory",
+              "transform": "none",
+              "inert": false,
+              "rect": {
+                "x": 370,
+                "y": 359,
+                "width": 700,
+                "height": 483.1875,
+                "top": 359,
+                "right": 1070,
+                "bottom": 842.1875,
+                "left": 370
+              }
+            },
+            {
+              "id": "tu-memory-room",
+              "cls": "",
+              "transform": "matrix(1, 0, 0, 1, 0, 150)",
+              "inert": false,
+              "rect": {
+                "x": 0,
+                "y": 150,
+                "width": 1440,
+                "height": 900,
+                "top": 150,
+                "right": 1440,
+                "bottom": 1050,
+                "left": 0
+              }
+            },
+            {
+              "id": "community-journey",
+              "cls": "tu-casa is-visible tu-writing",
+              "transform": "none",
+              "inert": false,
+              "rect": {
+                "x": 0,
+                "y": 0,
+                "width": 1440,
+                "height": 900,
+                "top": 0,
+                "right": 1440,
+                "bottom": 900,
+                "left": 0
+              }
+            },
+            {
+              "id": "",
+              "cls": "resto-momento",
+              "transform": "matrix(1, 0, 0, 1, 0, 0)",
+              "inert": false,
+              "rect": {
+                "x": 0,
+                "y": 0,
+                "width": 1440,
+                "height": 900,
+                "top": 0,
+                "right": 1440,
+                "bottom": 900,
+                "left": 0
+              }
+            },
+            {
+              "id": "resto-provisorio",
+              "cls": "",
+              "transform": "none",
+              "inert": false,
+              "rect": {
+                "x": 0,
+                "y": 0,
+                "width": 1440,
+                "height": 900,
+                "top": 0,
+                "right": 1440,
+                "bottom": 900,
+                "left": 0
+              }
+            },
+            {
+              "id": "",
+              "cls": "visited inhabited casa-instalada recien casa-oscura community-active fondo-tinta-clara",
+              "transform": "none",
+              "inert": false,
+              "rect": {
+                "x": 0,
+                "y": 0,
+                "width": 1440,
+                "height": 900,
+                "top": 0,
+                "right": 1440,
+                "bottom": 900,
+                "left": 0
+              }
+            },
+            {
+              "id": "",
+              "cls": "",
+              "transform": "none",
+              "inert": false,
+              "rect": {
+                "x": 0,
+                "y": 0,
+                "width": 1440,
+                "height": 900,
+                "top": 0,
+                "right": 1440,
+                "bottom": 900,
+                "left": 0
+              }
+            }
+          ]
+        }
+      },
+      {
+        "phase": 17.8,
+        "id": "tu-title",
+        "typed": true,
+        "debug": {
+          "active": "tu-title",
+          "hit": "<input id=\"tu-title\" maxlength=\"60\" autocomplete=\"name\" aria-label=\"Tu nombre\" placeholder=\"¿Cómo te llamás?\">",
+          "ancestors": [
+            {
+              "id": "tu-memory",
+              "cls": "",
+              "transform": "none",
+              "inert": false,
+              "rect": {
+                "x": 370,
+                "y": 382,
+                "width": 700,
+                "height": 270,
+                "top": 382,
+                "right": 1070,
+                "bottom": 652,
+                "left": 370
+              }
+            },
+            {
+              "id": "",
+              "cls": "tu-field-wrap",
+              "transform": "none",
+              "inert": false,
+              "rect": {
+                "x": 370,
+                "y": 382,
+                "width": 700,
+                "height": 270,
+                "top": 382,
+                "right": 1070,
+                "bottom": 652,
+                "left": 370
+              }
+            },
+            {
+              "id": "",
+              "cls": "",
+              "transform": "none",
+              "inert": false,
+              "rect": {
+                "x": 370,
+                "y": 359,
+                "width": 700,
+                "height": 293,
+                "top": 359,
+                "right": 1070,
+                "bottom": 652,
+                "left": 370
+              }
+            },
+            {
+              "id": "",
+              "cls": "community-form tu-memory",
+              "transform": "none",
+              "inert": false,
+              "rect": {
+                "x": 370,
+                "y": 359,
+                "width": 700,
+                "height": 483.1875,
+                "top": 359,
+                "right": 1070,
+                "bottom": 842.1875,
+                "left": 370
+              }
+            },
+            {
+              "id": "tu-memory-room",
+              "cls": "",
+              "transform": "matrix(1, 0, 0, 1, 0, 150)",
+              "inert": false,
+              "rect": {
+                "x": 0,
+                "y": 150,
+                "width": 1440,
+                "height": 900,
+                "top": 150,
+                "right": 1440,
+                "bottom": 1050,
+                "left": 0
+              }
+            },
+            {
+              "id": "community-journey",
+              "cls": "tu-casa is-visible tu-writing",
+              "transform": "none",
+              "inert": false,
+              "rect": {
+                "x": 0,
+                "y": 0,
+                "width": 1440,
+                "height": 900,
+                "top": 0,
+                "right": 1440,
+                "bottom": 900,
+                "left": 0
+              }
+            },
+            {
+              "id": "",
+              "cls": "resto-momento",
+              "transform": "matrix(1, 0, 0, 1, 0, 0)",
+              "inert": false,
+              "rect": {
+                "x": 0,
+                "y": 0,
+                "width": 1440,
+                "height": 900,
+                "top": 0,
+                "right": 1440,
+                "bottom": 900,
+                "left": 0
+              }
+            },
+            {
+              "id": "resto-provisorio",
+              "cls": "",
+              "transform": "none",
+              "inert": false,
+              "rect": {
+                "x": 0,
+                "y": 0,
+                "width": 1440,
+                "height": 900,
+                "top": 0,
+                "right": 1440,
+                "bottom": 900,
+                "left": 0
+              }
+            },
+            {
+              "id": "",
+              "cls": "visited inhabited casa-instalada recien casa-oscura community-active fondo-tinta-clara",
+              "transform": "none",
+              "inert": false,
+              "rect": {
+                "x": 0,
+                "y": 0,
+                "width": 1440,
+                "height": 900,
+                "top": 0,
+                "right": 1440,
+                "bottom": 900,
+                "left": 0
+              }
+            },
+            {
+              "id": "",
+              "cls": "",
+              "transform": "none",
+              "inert": false,
+              "rect": {
+                "x": 0,
+                "y": 0,
+                "width": 1440,
+                "height": 900,
+                "top": 0,
+                "right": 1440,
+                "bottom": 900,
+                "left": 0
+              }
+            }
+          ]
+        }
+      },
+      {
+        "phase": 18.4,
+        "id": "tu-memory",
+        "typed": true,
+        "debug": {
+          "active": "tu-memory",
+          "hit": "<textarea id=\"tu-memory\" maxlength=\"280\" aria-label=\"Escribí algo que te recuerde a tu casa\" placeholder=\"Un olor, una voz, un rincón…\"></textarea>",
+          "ancestors": [
+            {
+              "id": "tu-memory",
+              "cls": "",
+              "transform": "none",
+              "inert": false,
+              "rect": {
+                "x": 370,
+                "y": 232,
+                "width": 700,
+                "height": 270,
+                "top": 232,
+                "right": 1070,
+                "bottom": 502,
+                "left": 370
+              }
+            },
+            {
+              "id": "",
+              "cls": "tu-field-wrap",
+              "transform": "none",
+              "inert": false,
+              "rect": {
+                "x": 370,
+                "y": 232,
+                "width": 700,
+                "height": 270,
+                "top": 232,
+                "right": 1070,
+                "bottom": 502,
+                "left": 370
+              }
+            },
+            {
+              "id": "",
+              "cls": "",
+              "transform": "none",
+              "inert": false,
+              "rect": {
+                "x": 370,
+                "y": 209,
+                "width": 700,
+                "height": 293,
+                "top": 209,
+                "right": 1070,
+                "bottom": 502,
+                "left": 370
+              }
+            },
+            {
+              "id": "",
+              "cls": "community-form tu-memory",
+              "transform": "none",
+              "inert": false,
+              "rect": {
+                "x": 370,
+                "y": 209,
+                "width": 700,
+                "height": 483.1875,
+                "top": 209,
+                "right": 1070,
+                "bottom": 692.1875,
+                "left": 370
+              }
+            },
+            {
+              "id": "tu-memory-room",
+              "cls": "",
+              "transform": "matrix(1, 0, 0, 1, 0, 0)",
+              "inert": false,
+              "rect": {
+                "x": 0,
+                "y": 0,
+                "width": 1440,
+                "height": 900,
+                "top": 0,
+                "right": 1440,
+                "bottom": 900,
+                "left": 0
+              }
+            },
+            {
+              "id": "community-journey",
+              "cls": "tu-casa is-visible tu-writing",
+              "transform": "none",
+              "inert": false,
+              "rect": {
+                "x": 0,
+                "y": 0,
+                "width": 1440,
+                "height": 900,
+                "top": 0,
+                "right": 1440,
+                "bottom": 900,
+                "left": 0
+              }
+            },
+            {
+              "id": "",
+              "cls": "resto-momento",
+              "transform": "matrix(1, 0, 0, 1, 0, 0)",
+              "inert": false,
+              "rect": {
+                "x": 0,
+                "y": 0,
+                "width": 1440,
+                "height": 900,
+                "top": 0,
+                "right": 1440,
+                "bottom": 900,
+                "left": 0
+              }
+            },
+            {
+              "id": "resto-provisorio",
+              "cls": "",
+              "transform": "none",
+              "inert": false,
+              "rect": {
+                "x": 0,
+                "y": 0,
+                "width": 1440,
+                "height": 900,
+                "top": 0,
+                "right": 1440,
+                "bottom": 900,
+                "left": 0
+              }
+            },
+            {
+              "id": "",
+              "cls": "visited inhabited casa-instalada recien casa-oscura community-active fondo-tinta-clara",
+              "transform": "none",
+              "inert": false,
+              "rect": {
+                "x": 0,
+                "y": 0,
+                "width": 1440,
+                "height": 900,
+                "top": 0,
+                "right": 1440,
+                "bottom": 900,
+                "left": 0
+              }
+            },
+            {
+              "id": "",
+              "cls": "",
+              "transform": "none",
+              "inert": false,
+              "rect": {
+                "x": 0,
+                "y": 0,
+                "width": 1440,
+                "height": 900,
+                "top": 0,
+                "right": 1440,
+                "bottom": 900,
+                "left": 0
+              }
+            }
+          ]
+        }
+      },
+      {
+        "phase": 18.4,
+        "id": "tu-title",
+        "typed": true,
+        "debug": {
+          "active": "tu-title",
+          "hit": "<input id=\"tu-title\" maxlength=\"60\" autocomplete=\"name\" aria-label=\"Tu nombre\" placeholder=\"¿Cómo te llamás?\">",
+          "ancestors": [
+            {
+              "id": "tu-memory",
+              "cls": "",
+              "transform": "none",
+              "inert": false,
+              "rect": {
+                "x": 370,
+                "y": 232,
+                "width": 700,
+                "height": 270,
+                "top": 232,
+                "right": 1070,
+                "bottom": 502,
+                "left": 370
+              }
+            },
+            {
+              "id": "",
+              "cls": "tu-field-wrap",
+              "transform": "none",
+              "inert": false,
+              "rect": {
+                "x": 370,
+                "y": 232,
+                "width": 700,
+                "height": 270,
+                "top": 232,
+                "right": 1070,
+                "bottom": 502,
+                "left": 370
+              }
+            },
+            {
+              "id": "",
+              "cls": "",
+              "transform": "none",
+              "inert": false,
+              "rect": {
+                "x": 370,
+                "y": 209,
+                "width": 700,
+                "height": 293,
+                "top": 209,
+                "right": 1070,
+                "bottom": 502,
+                "left": 370
+              }
+            },
+            {
+              "id": "",
+              "cls": "community-form tu-memory",
+              "transform": "none",
+              "inert": false,
+              "rect": {
+                "x": 370,
+                "y": 209,
+                "width": 700,
+                "height": 483.1875,
+                "top": 209,
+                "right": 1070,
+                "bottom": 692.1875,
+                "left": 370
+              }
+            },
+            {
+              "id": "tu-memory-room",
+              "cls": "",
+              "transform": "matrix(1, 0, 0, 1, 0, 0)",
+              "inert": false,
+              "rect": {
+                "x": 0,
+                "y": 0,
+                "width": 1440,
+                "height": 900,
+                "top": 0,
+                "right": 1440,
+                "bottom": 900,
+                "left": 0
+              }
+            },
+            {
+              "id": "community-journey",
+              "cls": "tu-casa is-visible tu-writing",
+              "transform": "none",
+              "inert": false,
+              "rect": {
+                "x": 0,
+                "y": 0,
+                "width": 1440,
+                "height": 900,
+                "top": 0,
+                "right": 1440,
+                "bottom": 900,
+                "left": 0
+              }
+            },
+            {
+              "id": "",
+              "cls": "resto-momento",
+              "transform": "matrix(1, 0, 0, 1, 0, 0)",
+              "inert": false,
+              "rect": {
+                "x": 0,
+                "y": 0,
+                "width": 1440,
+                "height": 900,
+                "top": 0,
+                "right": 1440,
+                "bottom": 900,
+                "left": 0
+              }
+            },
+            {
+              "id": "resto-provisorio",
+              "cls": "",
+              "transform": "none",
+              "inert": false,
+              "rect": {
+                "x": 0,
+                "y": 0,
+                "width": 1440,
+                "height": 900,
+                "top": 0,
+                "right": 1440,
+                "bottom": 900,
+                "left": 0
+              }
+            },
+            {
+              "id": "",
+              "cls": "visited inhabited casa-instalada recien casa-oscura community-active fondo-tinta-clara",
+              "transform": "none",
+              "inert": false,
+              "rect": {
+                "x": 0,
+                "y": 0,
+                "width": 1440,
+                "height": 900,
+                "top": 0,
+                "right": 1440,
+                "bottom": 900,
+                "left": 0
+              }
+            },
+            {
+              "id": "",
+              "cls": "",
+              "transform": "none",
+              "inert": false,
+              "rect": {
+                "x": 0,
+                "y": 0,
+                "width": 1440,
+                "height": 900,
+                "top": 0,
+                "right": 1440,
+                "bottom": 900,
+                "left": 0
+              }
+            }
+          ]
+        }
+      },
+      {
+        "phase": 19.4,
+        "id": "tu-memory",
+        "typed": false,
+        "debug": {
+          "active": "tu-title",
+          "hit": "<img id=\"closing-still\" src=\"assets/salida-inicial.webp\" alt=\"La misma ventana, al salir de la casa\" style=\"opacity: 1;\">",
+          "ancestors": [
+            {
+              "id": "tu-memory",
+              "cls": "",
+              "transform": "none",
+              "inert": false,
+              "rect": {
+                "x": 370,
+                "y": 82,
+                "width": 700,
+                "height": 270,
+                "top": 82,
+                "right": 1070,
+                "bottom": 352,
+                "left": 370
+              }
+            },
+            {
+              "id": "",
+              "cls": "tu-field-wrap",
+              "transform": "none",
+              "inert": false,
+              "rect": {
+                "x": 370,
+                "y": 82,
+                "width": 700,
+                "height": 270,
+                "top": 82,
+                "right": 1070,
+                "bottom": 352,
+                "left": 370
+              }
+            },
+            {
+              "id": "",
+              "cls": "",
+              "transform": "none",
+              "inert": false,
+              "rect": {
+                "x": 370,
+                "y": 59,
+                "width": 700,
+                "height": 293,
+                "top": 59,
+                "right": 1070,
+                "bottom": 352,
+                "left": 370
+              }
+            },
+            {
+              "id": "",
+              "cls": "community-form tu-memory",
+              "transform": "none",
+              "inert": false,
+              "rect": {
+                "x": 370,
+                "y": 59,
+                "width": 700,
+                "height": 483.1875,
+                "top": 59,
+                "right": 1070,
+                "bottom": 542.1875,
+                "left": 370
+              }
+            },
+            {
+              "id": "tu-memory-room",
+              "cls": "",
+              "transform": "matrix(1, 0, 0, 1, 0, -150)",
+              "inert": false,
+              "rect": {
+                "x": 0,
+                "y": -150,
+                "width": 1440,
+                "height": 900,
+                "top": -150,
+                "right": 1440,
+                "bottom": 750,
+                "left": 0
+              }
+            },
+            {
+              "id": "community-journey",
+              "cls": "tu-casa is-visible tu-writing",
+              "transform": "none",
+              "inert": false,
+              "rect": {
+                "x": 0,
+                "y": 0,
+                "width": 1440,
+                "height": 900,
+                "top": 0,
+                "right": 1440,
+                "bottom": 900,
+                "left": 0
+              }
+            },
+            {
+              "id": "",
+              "cls": "resto-momento",
+              "transform": "matrix(1, 0, 0, 1, 0, 0)",
+              "inert": false,
+              "rect": {
+                "x": 0,
+                "y": 0,
+                "width": 1440,
+                "height": 900,
+                "top": 0,
+                "right": 1440,
+                "bottom": 900,
+                "left": 0
+              }
+            },
+            {
+              "id": "resto-provisorio",
+              "cls": "",
+              "transform": "none",
+              "inert": false,
+              "rect": {
+                "x": 0,
+                "y": 0,
+                "width": 1440,
+                "height": 900,
+                "top": 0,
+                "right": 1440,
+                "bottom": 900,
+                "left": 0
+              }
+            },
+            {
+              "id": "",
+              "cls": "visited inhabited casa-instalada recien casa-oscura community-active fondo-tinta-clara closing-present",
+              "transform": "none",
+              "inert": false,
+              "rect": {
+                "x": 0,
+                "y": 0,
+                "width": 1440,
+                "height": 900,
+                "top": 0,
+                "right": 1440,
+                "bottom": 900,
+                "left": 0
+              }
+            },
+            {
+              "id": "",
+              "cls": "",
+              "transform": "none",
+              "inert": false,
+              "rect": {
+                "x": 0,
+                "y": 0,
+                "width": 1440,
+                "height": 900,
+                "top": 0,
+                "right": 1440,
+                "bottom": 900,
+                "left": 0
+              }
+            }
+          ]
+        }
+      },
+      {
+        "phase": 19.4,
+        "id": "tu-title",
+        "typed": true,
+        "debug": {
+          "active": "tu-title",
+          "hit": "<p id=\"closing-phrase\" style=\"opacity: 0;\">Algo de esta casa<br>sale con vos.</p>",
+          "ancestors": [
+            {
+              "id": "tu-memory",
+              "cls": "",
+              "transform": "none",
+              "inert": false,
+              "rect": {
+                "x": 370,
+                "y": 82,
+                "width": 700,
+                "height": 270,
+                "top": 82,
+                "right": 1070,
+                "bottom": 352,
+                "left": 370
+              }
+            },
+            {
+              "id": "",
+              "cls": "tu-field-wrap",
+              "transform": "none",
+              "inert": false,
+              "rect": {
+                "x": 370,
+                "y": 82,
+                "width": 700,
+                "height": 270,
+                "top": 82,
+                "right": 1070,
+                "bottom": 352,
+                "left": 370
+              }
+            },
+            {
+              "id": "",
+              "cls": "",
+              "transform": "none",
+              "inert": false,
+              "rect": {
+                "x": 370,
+                "y": 59,
+                "width": 700,
+                "height": 293,
+                "top": 59,
+                "right": 1070,
+                "bottom": 352,
+                "left": 370
+              }
+            },
+            {
+              "id": "",
+              "cls": "community-form tu-memory",
+              "transform": "none",
+              "inert": false,
+              "rect": {
+                "x": 370,
+                "y": 59,
+                "width": 700,
+                "height": 483.1875,
+                "top": 59,
+                "right": 1070,
+                "bottom": 542.1875,
+                "left": 370
+              }
+            },
+            {
+              "id": "tu-memory-room",
+              "cls": "",
+              "transform": "matrix(1, 0, 0, 1, 0, -150)",
+              "inert": false,
+              "rect": {
+                "x": 0,
+                "y": -150,
+                "width": 1440,
+                "height": 900,
+                "top": -150,
+                "right": 1440,
+                "bottom": 750,
+                "left": 0
+              }
+            },
+            {
+              "id": "community-journey",
+              "cls": "tu-casa is-visible tu-writing",
+              "transform": "none",
+              "inert": false,
+              "rect": {
+                "x": 0,
+                "y": 0,
+                "width": 1440,
+                "height": 900,
+                "top": 0,
+                "right": 1440,
+                "bottom": 900,
+                "left": 0
+              }
+            },
+            {
+              "id": "",
+              "cls": "resto-momento",
+              "transform": "matrix(1, 0, 0, 1, 0, 0)",
+              "inert": false,
+              "rect": {
+                "x": 0,
+                "y": 0,
+                "width": 1440,
+                "height": 900,
+                "top": 0,
+                "right": 1440,
+                "bottom": 900,
+                "left": 0
+              }
+            },
+            {
+              "id": "resto-provisorio",
+              "cls": "",
+              "transform": "none",
+              "inert": false,
+              "rect": {
+                "x": 0,
+                "y": 0,
+                "width": 1440,
+                "height": 900,
+                "top": 0,
+                "right": 1440,
+                "bottom": 900,
+                "left": 0
+              }
+            },
+            {
+              "id": "",
+              "cls": "visited inhabited casa-instalada recien casa-oscura community-active fondo-tinta-clara closing-present",
+              "transform": "none",
+              "inert": false,
+              "rect": {
+                "x": 0,
+                "y": 0,
+                "width": 1440,
+                "height": 900,
+                "top": 0,
+                "right": 1440,
+                "bottom": 900,
+                "left": 0
+              }
+            },
+            {
+              "id": "",
+              "cls": "",
+              "transform": "none",
+              "inert": false,
+              "rect": {
+                "x": 0,
+                "y": 0,
+                "width": 1440,
+                "height": 900,
+                "top": 0,
+                "right": 1440,
+                "bottom": 900,
+                "left": 0
+              }
+            }
+          ]
+        }
+      },
+      {
+        "phase": 19.55,
+        "id": "tu-memory",
+        "typed": false,
+        "debug": {
+          "active": "",
+          "hit": "<img id=\"closing-still\" src=\"assets/salida-inicial.webp\" alt=\"La misma ventana, al salir de la casa\" style=\"opacity: 1;\">",
+          "ancestors": [
+            {
+              "id": "tu-memory",
+              "cls": "",
+              "transform": "none",
+              "inert": false,
+              "rect": {
+                "x": 370,
+                "y": -143,
+                "width": 700,
+                "height": 270,
+                "top": -143,
+                "right": 1070,
+                "bottom": 127,
+                "left": 370
+              }
+            },
+            {
+              "id": "",
+              "cls": "tu-field-wrap",
+              "transform": "none",
+              "inert": false,
+              "rect": {
+                "x": 370,
+                "y": -143,
+                "width": 700,
+                "height": 270,
+                "top": -143,
+                "right": 1070,
+                "bottom": 127,
+                "left": 370
+              }
+            },
+            {
+              "id": "",
+              "cls": "",
+              "transform": "none",
+              "inert": false,
+              "rect": {
+                "x": 370,
+                "y": -166,
+                "width": 700,
+                "height": 293,
+                "top": -166,
+                "right": 1070,
+                "bottom": 127,
+                "left": 370
+              }
+            },
+            {
+              "id": "",
+              "cls": "community-form tu-memory",
+              "transform": "none",
+              "inert": false,
+              "rect": {
+                "x": 370,
+                "y": -166,
+                "width": 700,
+                "height": 483.1875,
+                "top": -166,
+                "right": 1070,
+                "bottom": 317.1875,
+                "left": 370
+              }
+            },
+            {
+              "id": "tu-memory-room",
+              "cls": "",
+              "transform": "matrix(1, 0, 0, 1, 0, -375)",
+              "inert": false,
+              "rect": {
+                "x": 0,
+                "y": -375,
+                "width": 1440,
+                "height": 900,
+                "top": -375,
+                "right": 1440,
+                "bottom": 525,
+                "left": 0
+              }
+            },
+            {
+              "id": "community-journey",
+              "cls": "tu-casa is-visible tu-writing",
+              "transform": "none",
+              "inert": false,
+              "rect": {
+                "x": 0,
+                "y": 0,
+                "width": 1440,
+                "height": 900,
+                "top": 0,
+                "right": 1440,
+                "bottom": 900,
+                "left": 0
+              }
+            },
+            {
+              "id": "",
+              "cls": "resto-momento",
+              "transform": "matrix(1, 0, 0, 1, 0, 0)",
+              "inert": false,
+              "rect": {
+                "x": 0,
+                "y": 0,
+                "width": 1440,
+                "height": 900,
+                "top": 0,
+                "right": 1440,
+                "bottom": 900,
+                "left": 0
+              }
+            },
+            {
+              "id": "resto-provisorio",
+              "cls": "",
+              "transform": "none",
+              "inert": false,
+              "rect": {
+                "x": 0,
+                "y": 0,
+                "width": 1440,
+                "height": 900,
+                "top": 0,
+                "right": 1440,
+                "bottom": 900,
+                "left": 0
+              }
+            },
+            {
+              "id": "",
+              "cls": "visited inhabited casa-instalada recien casa-oscura community-active fondo-tinta-clara closing-present",
+              "transform": "none",
+              "inert": false,
+              "rect": {
+                "x": 0,
+                "y": 0,
+                "width": 1440,
+                "height": 900,
+                "top": 0,
+                "right": 1440,
+                "bottom": 900,
+                "left": 0
+              }
+            },
+            {
+              "id": "",
+              "cls": "",
+              "transform": "none",
+              "inert": false,
+              "rect": {
+                "x": 0,
+                "y": 0,
+                "width": 1440,
+                "height": 900,
+                "top": 0,
+                "right": 1440,
+                "bottom": 900,
+                "left": 0
+              }
+            }
+          ]
+        }
+      },
+      {
+        "phase": 19.55,
+        "id": "tu-title",
+        "typed": false,
+        "debug": {
+          "active": "",
+          "hit": "<img id=\"closing-still\" src=\"assets/salida-inicial.webp\" alt=\"La misma ventana, al salir de la casa\" style=\"opacity: 1;\">",
+          "ancestors": [
+            {
+              "id": "tu-memory",
+              "cls": "",
+              "transform": "none",
+              "inert": false,
+              "rect": {
+                "x": 370,
+                "y": -143,
+                "width": 700,
+                "height": 270,
+                "top": -143,
+                "right": 1070,
+                "bottom": 127,
+                "left": 370
+              }
+            },
+            {
+              "id": "",
+              "cls": "tu-field-wrap",
+              "transform": "none",
+              "inert": false,
+              "rect": {
+                "x": 370,
+                "y": -143,
+                "width": 700,
+                "height": 270,
+                "top": -143,
+                "right": 1070,
+                "bottom": 127,
+                "left": 370
+              }
+            },
+            {
+              "id": "",
+              "cls": "",
+              "transform": "none",
+              "inert": false,
+              "rect": {
+                "x": 370,
+                "y": -166,
+                "width": 700,
+                "height": 293,
+                "top": -166,
+                "right": 1070,
+                "bottom": 127,
+                "left": 370
+              }
+            },
+            {
+              "id": "",
+              "cls": "community-form tu-memory",
+              "transform": "none",
+              "inert": false,
+              "rect": {
+                "x": 370,
+                "y": -166,
+                "width": 700,
+                "height": 483.1875,
+                "top": -166,
+                "right": 1070,
+                "bottom": 317.1875,
+                "left": 370
+              }
+            },
+            {
+              "id": "tu-memory-room",
+              "cls": "",
+              "transform": "matrix(1, 0, 0, 1, 0, -375)",
+              "inert": false,
+              "rect": {
+                "x": 0,
+                "y": -375,
+                "width": 1440,
+                "height": 900,
+                "top": -375,
+                "right": 1440,
+                "bottom": 525,
+                "left": 0
+              }
+            },
+            {
+              "id": "community-journey",
+              "cls": "tu-casa is-visible tu-writing",
+              "transform": "none",
+              "inert": false,
+              "rect": {
+                "x": 0,
+                "y": 0,
+                "width": 1440,
+                "height": 900,
+                "top": 0,
+                "right": 1440,
+                "bottom": 900,
+                "left": 0
+              }
+            },
+            {
+              "id": "",
+              "cls": "resto-momento",
+              "transform": "matrix(1, 0, 0, 1, 0, 0)",
+              "inert": false,
+              "rect": {
+                "x": 0,
+                "y": 0,
+                "width": 1440,
+                "height": 900,
+                "top": 0,
+                "right": 1440,
+                "bottom": 900,
+                "left": 0
+              }
+            },
+            {
+              "id": "resto-provisorio",
+              "cls": "",
+              "transform": "none",
+              "inert": false,
+              "rect": {
+                "x": 0,
+                "y": 0,
+                "width": 1440,
+                "height": 900,
+                "top": 0,
+                "right": 1440,
+                "bottom": 900,
+                "left": 0
+              }
+            },
+            {
+              "id": "",
+              "cls": "visited inhabited casa-instalada recien casa-oscura community-active fondo-tinta-clara closing-present",
+              "transform": "none",
+              "inert": false,
+              "rect": {
+                "x": 0,
+                "y": 0,
+                "width": 1440,
+                "height": 900,
+                "top": 0,
+                "right": 1440,
+                "bottom": 900,
+                "left": 0
+              }
+            },
+            {
+              "id": "",
+              "cls": "",
+              "transform": "none",
+              "inert": false,
+              "rect": {
+                "x": 0,
+                "y": 0,
+                "width": 1440,
+                "height": 900,
+                "top": 0,
+                "right": 1440,
+                "bottom": 900,
+                "left": 0
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "info": {
+    "result": {
+      "type": "string",
+      "value": "La Casa · prueba 02. El muro se abre, atravesás la ventana y el hueco permanece. Marco, niño, logo y ladrillos usan los PNG originales separados, con sus transparencias y colores intactos. La entrada reproduce el video del niño atravesando la ventana. Antes de entrar, la ventana tapiada espera inmóvil. Podés repetir el cruce sin borrar el papel ni la luz.Las huellas se conservan en este navegador. Suena «Sirens». Podés silenciarla desde el botón de música.VOLVER ↗"
+    }
+  },
+  "errors": []
+}

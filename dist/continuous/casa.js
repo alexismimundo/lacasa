@@ -63,7 +63,7 @@ const TEXTOS={
 };
 
 // Canciones del álbum. Por ahora solo hay una pista cargada en la v44.
-const PISTA_ACTUAL={titulo:'Sirens',nota:'pista provisional del prototipo'};
+const PISTA_ACTUAL={titulo:'La casa',nota:'pista provisional del prototipo'};
 const CANCIONES=[
  {casa:'Umbral',titulos:['La casa (intro)']},
  {casa:'Colodrero y A. del Valle',titulos:['2001','Fuego','Mamá']},

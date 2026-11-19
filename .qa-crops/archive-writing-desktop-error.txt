@@ -1,0 +1,3 @@
+Error: {"exceptionId":1,"text":"Uncaught","lineNumber":0,"columnNumber":37,"scriptId":"46","exception":{"type":"object","subtype":"error","className":"SyntaxError","description":"SyntaxError: missing ) after argument list","objectId":"-1242890521423151886.2.2"}}
+    at evaluate (C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\.qa-crops\archive-writing-runner.cjs:9:1009)
+    at async C:\Users\alexismimundo\Downloads\la-casa-v77-paquete-completo\.qa-crops\archive-writing-runner.cjs:26:16

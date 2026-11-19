@@ -55,6 +55,7 @@ function resetEnding(){
  root.classList.remove('fh-ending-centered');
 }
 function updateEnding(p,dt){
+ if(window.casaReview?.active&&p>=6.8&&p<6.88){resetEnding();return false}
  if(p<6.8){resetEnding();return false}
  if(p>=7.6)return !!endingRun?.swapped;
  // Allow the landing composition to register before the cut, without another gesture.
@@ -336,8 +337,8 @@ function positionModelBox(p,dt){
  {
   const popW=Math.min(innerWidth*.84,1120),popH=popW*.67;
   const pop={left:(innerWidth-popW)/2,top:(innerHeight-popH)/2,width:popW,height:popH};
-   const cornerW=Math.min(336,innerWidth*.66),cornerH=cornerW*114/180;
-  const corner={left:innerWidth-18-cornerW,top:innerHeight-14-cornerH,width:cornerW,height:cornerH};
+   const cornerW=p>=12.6?Math.min(180,innerWidth*.32):Math.min(336,innerWidth*.66),cornerH=cornerW*114/180;
+  const corner={left:innerWidth-18-cornerW,top:innerHeight-(p>=12.6&&innerWidth<=700?78:14)-cornerH,width:cornerW,height:cornerH};
   // Cocina → caja → vídeo. Dock before the film fills the screen.
   const shrink=ease(1.85,2.1,p);
   const lerp=(a,b,t)=>a+(b-a)*t;
@@ -593,6 +594,7 @@ const flightWarning=document.createElement('p');flightWarning.className='fh-flig
 // The child camera follows the shared scroll phase in both directions.
 window.firstHouseScrollLimit=(next,step)=>{
  if(!adentro())return next;
+ if(current>=7.6)return next;
  if(fallCamera)return target;
  if(endingRun&&!st.soldiers&&step>0)return 6.9;
  if(step>0&&current>=6.8&&current<7.3&&!endingRun)return Math.min(next,6.9);
@@ -737,7 +739,13 @@ function followFallingKite(dt){
  target=current=fallCamera.start+(6.86-fallCamera.start)*progress;
  if(progress>=1){f.vy=0;f.landed=true;target=current=6.86;fallCamera=null;storeTravel();save()}
 }
-function audio(p,active,dt){const enter=active&&p>4&&p<5,exit=!active||p<4||p>5.05;if(enter&&!partyActive){partyActive=true;albumTime=music.currentTime;albumWasPlaying=sounding&&!music.paused;music.pause();if(cumbia&&sounding&&!music.muted)cumbia.play().catch(()=>{})}else if(partyActive&&exit){partyActive=false;cumbia?.pause();if(sounding&&albumWasPlaying){music.currentTime=albumTime;music.play().catch(()=>{})}}if(partyActive&&!music.paused)music.pause();if(cumbia){cumbia.muted=music.muted||!sounding||document.hidden;cumbia.volume=.45*(1-ease(4.85,5.05,p))}const tv=Q('.tv-video'),tvOn=active&&p>1.2&&p<2&&Q('.kitchen-tv').dataset.channel!=='0';tv.muted=music.muted||!sounding||!tvOn;tv.volume=.55;const desired=tvOn?.12:.55;if(entryMusicComplete&&adentro())music.volume+= (desired-music.volume)*Math.min(1,dt*3);if(partyActive)$('player-status').textContent=cumbia?'LA JODITA':'EN PAUSA';}
+function audio(p,active,dt){
+ // The album stays continuous through the shutter and the salon. Never pause
+ // or restart the shared track to substitute the retired party soundtrack.
+ partyActive=false;if(cumbia&&!cumbia.paused)cumbia.pause();
+ const tv=Q('.tv-video'),tvOn=active&&p>1.2&&p<2&&Q('.kitchen-tv').dataset.channel!=='0';
+ tv.muted=music.muted||!sounding||!tvOn;tv.volume=.55;
+}
 const previous=window.casaRender;
 let lastBoxFrame='';
 window.casaRender=function(now,dt){
@@ -888,6 +896,8 @@ Q('.tv-switch').addEventListener('click',()=>{const n=Number(Q('.kitchen-tv').da
 document.querySelectorAll('.kitchen-door').forEach(el=>{hint(el,el.getAttribute('aria-expanded')==='true'?'Cerrar la puerta':'Abrir la puerta');el.addEventListener('click',()=>hint(el,el.getAttribute('aria-expanded')==='true'?'Cerrar la puerta':'Abrir la puerta'))});
 // Cupboard food stays monochrome and non-interactive.
 window.resetFirstHouse=()=>{fallCamera=null;flightStartedThisVisit=false;resetEnding();st=blank();macroDwell=0;window.laCasaCarry={soldiers:false};save();syncObjects();window.resetKitchen?.()};
+// Review-only jumps clear transient camera locks, never inventory or stored memories.
+window.firstHouseReviewAt=p=>{fallCamera=null;resetEnding();drag=null;flightStartedThisVisit=true;macroDwell=0;if(p===6.86)st.flight={phase:'fallen',time:0,y:245,vy:0,lastHorizontal:0,lastDepth:1,bank:66,landed:true,followed:true,cameraY:190,fallProgress:1,fallStart:6.24};else if(p>=5.4&&p<6.8)st.flight={phase:'flying',time:0,travel:0,y:48,vy:0,sinceClick:0,tension:0,bank:0};};
 const resetOld=$('reset-experience').onclick;$('reset-experience').onclick=async()=>{window.resetFirstHouse();await resetOld()};
 const restartOld=restartFromWindow;restartFromWindow=function(){window.resetFirstHouse();restartOld()};
 // Touch scrolling is navigation except while manipulating an object.

@@ -1,0 +1,42 @@
+
+  dist\continuous\community.js:89:  atlas.setAttribute('aria-labelledby','community-atlas-title');
+> dist\continuous\community.js:90:   atlas.innerHTML='<div class="atlas-minimal-nav"><button type="button" class="atlas-close">Volver</button><h2 id="community-atlas-title">Archivo de casas y recuerdos</h2></div><div class="atlas-viewport" tabindex="0" role="region" aria-label="Lienzo infinito. Arrastrá para recorrerlo; flechas para moverte; más y menos para zoom. Espacio para pausar el movimiento."><div class="atlas-world"></div></div><p class="atlas-archive-note">Arrastrá en cualquier dirección · + / - para acercar<br>Archivo de muestra con personas ficticias y tus aportes locales. No se 
+publica en internet.</p>';
+  dist\continuous\community.js:91:  document.body.append(atlas);
+  dist\continuous\community.js:92:  const viewport=atlas.querySelector('.atlas-viewport'),world=atlas.querySelector('.atlas-world'),cells=new Map(),pointers=new Map();
+> dist\continuous\community.js:93:   const camera={x:0,y:0,zoom:1};let atlasFrame=0,atlasFocus=null,gestureMoved=false,pinch=null,archiveOffset=0;
+  dist\continuous\community.js:94:  const atlasReduced=matchMedia('(prefers-reduced-motion:reduce)');
+  dist\continuous\community.js:95:   let atlasLastTime=0,atlasIdleUntil=0,atlasMotion=0,atlasPaused=true;
+  dist\continuous\community.js:96:  function interruptAtlas(){atlasIdleUntil=performance.now()+3000;atlasMotion=0}
+  dist\continuous\community.js:97:  const limit=(v,a,b)=>Math.max(a,Math.min(b,v));
+  dist\continuous\community.js:98:  function requestAtlas(){if(!atlasFrame&&atlas.open)atlasFrame=requestAnimationFrame(paintAtlas)}
+  dist\continuous\community.js:104:   if(idle){camera.x-=dt*7*atlasMotion;camera.y+=dt*3*atlasMotion}
+> dist\continuous\community.js:105:    const width=viewport.clientWidth,height=viewport.clientHeight,stepX=380,stepY=510;
+  dist\continuous\community.js:106:   const col=Math.floor(-camera.x/stepX),row=Math.floor(-camera.y/stepY);
+  dist\continuous\community.js:107:   const cols=Math.ceil(width/camera.zoom/stepX/2)+1,rows=Math.ceil(height/camera.zoom/stepY/2)+1;
+  dist\continuous\community.js:108:    const archive=archiveEntries(),needed=new Set();
+  dist\continuous\community.js:109:   world.style.transform=`translate(${width/2+camera.x*camera.zoom}px,${height/2+camera.y*camera.zoom}px) scale(${camera.zoom})`;
+  dist\continuous\community.js:110:   for(let y=row-rows;y<=row+rows;y++)for(let x=col-cols;x<=col+cols;x++){
+  dist\continuous\community.js:128:  }
+> dist\continuous\community.js:129:  function zoomAtlas(next,x=viewport.clientWidth/2,y=viewport.clientHeight/2){
+> dist\continuous\community.js:130:   next=limit(next,.5,1.8);const px=x-viewport.clientWidth/2,py=y-viewport.clientHeight/2;
+  dist\continuous\community.js:131:   camera.x+=px/next-px/camera.zoom;camera.y+=py/next-py/camera.zoom;camera.zoom=next;requestAtlas();
+  dist\continuous\community.js:132:  }
+> dist\continuous\community.js:133:   function openAtlas(latest=false){
+> dist\continuous\community.js:134:   if(atlas.open)return;atlasFocus=document.activeElement;
+  dist\continuous\community.js:135:   if(menuPanel.open)menuPanel.close();document.body.classList.remove('menu-panel-open');
+  dist\continuous\community.js:136:   document.body.classList.add('community-atlas-open');atlas.showModal();
+> dist\continuous\community.js:137:    if(latest){archiveOffset=archiveEntries().indexOf(saved);if(archiveOffset<0)archiveOffset=archiveEntries().length-1;camera.x=camera.y=0;camera.zoom=Math.min(1,(innerWidth-36)/300,(innerHeight-180)/400);atlasPaused=true}
+  dist\continuous\community.js:138:    cells.forEach(button=>button.remove());cells.clear();gestureMoved=false;atlasLastTime=0;atlasIdleUntil=performance.now()+1200;
+  dist\continuous\community.js:139:   viewport.focus();paintAtlas();
+  dist\continuous\community.js:140:  }
+> dist\continuous\community.js:141:  atlas.querySelector('.atlas-close').onclick=()=>atlas.close();
+> dist\continuous\community.js:142:  atlas.addEventListener('close',()=>{document.body.classList.remove('community-atlas-open');cancelAnimationFrame(atlasFrame);atlasFrame=0;pointers.clear();pinch=null;viewport.classList.remove('is-dragging');atlasFocus?.focus()});
+  dist\continuous\community.js:143:  viewport.addEventListener('wheel',e=>{e.preventDefault();if(e.ctrlKey||e.metaKey){const r=viewport.getBoundingClientRect();zoomAtlas(camera.zoom*Math.exp(-e.deltaY*.002),e.clientX-r.left,e.clientY-r.top)}else{const unit=e.deltaMode===1?16:e.deltaMode===2?viewport.clientHeight:1;camera.x-=e.deltaX*unit/camera.zoom;camera.y-=e.deltaY*unit/camera.zoom;requestAtlas()}},{passive:false});
+  dist\continuous\community.js:144:  viewport.addEventListener('pointerdown',e=>{
+  dist\continuous\community.js:145:   if(e.button!==0)return;gestureMoved=false;
+  dist\continuous\community.js:146:   pointers.set(e.pointerId,{x:e.clientX,y:e.clientY,startX:e.clientX,startY:e.clientY});
+  dist\continuous\community.js:147:   // Capture on the original house so an unmoved tap still opens its memory.
+
+
+

@@ -1,0 +1,4 @@
+#review-navigation{position:fixed;top:12px;left:50%;transform:translateX(-50%);z-index:200;display:flex;align-items:center;gap:8px;max-width:calc(100vw - 24px);box-sizing:border-box;padding:8px 12px;background:#f4f4f1f2;color:#283b73;border:1px solid #283b7344;box-shadow:0 3px 16px #0002;font:11px/1.4 'IBM Plex Mono',monospace;cursor:auto}
+#review-navigation button,#review-navigation select{color:inherit;background:transparent;border:1px solid #283b7355;padding:6px;font:inherit;cursor:pointer;min-height:32px}
+#review-navigation select{max-width:38vw}#review-navigation output{white-space:nowrap}
+@media(max-width:650px){#review-navigation{gap:5px;padding:6px;flex-wrap:wrap;justify-content:center;width:max-content}#review-navigation>span{display:none}#review-navigation select{max-width:52vw}#review-navigation .review-normal{font-size:9px}}

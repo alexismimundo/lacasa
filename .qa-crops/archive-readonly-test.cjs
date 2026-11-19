@@ -1,0 +1,18 @@
+const fs=require('fs'),path=require('path');
+let source=fs.readFileSync(path.join(__dirname,'archive-popup-test.cjs'),'utf8');
+source=source.replace(' const result={status:',` await new Promise(r=>setTimeout(r,100));
+ checks.clean=await evaluate('!document.querySelector("#community-atlas .atlas-archive-note")&&![...document.querySelectorAll(".atlas-house")].some(e=>e.textContent.includes("fictici")||e.querySelector("small"))');
+ checks.circle=await evaluate('(()=>{const s=getComputedStyle(document.querySelector("#community-atlas .atlas-close"));return s.backgroundColor==="rgb(255, 255, 255)"&&s.borderRadius==="50%"})()');
+ const center=await evaluate('(()=>{const e=[...document.querySelectorAll(".atlas-house")].find(e=>e.dataset.cell==="0:0"),r=e.getBoundingClientRect();return {x:r.x+r.width/2,y:r.y+r.height/2}})()');
+ await send('Input.dispatchMouseEvent',{type:'mouseMoved',x:center.x,y:center.y});
+ checks.noUnderline=await evaluate('[...document.querySelectorAll(".atlas-house span")].every(e=>getComputedStyle(e).textDecorationLine==="none")');
+ await send('Input.dispatchMouseEvent',{type:'mousePressed',x:center.x,y:center.y,button:'left',clickCount:1});await send('Input.dispatchMouseEvent',{type:'mouseReleased',x:center.x,y:center.y,button:'left',clickCount:1});
+ checks.noCardPopup=await evaluate('!document.getElementById("community-memory").open&&[...document.querySelectorAll(".atlas-house")].every(e=>e.tagName==="ARTICLE"&&getComputedStyle(e).userSelect==="none")');
+ const beforePan=await evaluate('document.querySelector(".atlas-world").style.transform');
+ await send('Input.dispatchMouseEvent',{type:'mousePressed',x:center.x,y:center.y,button:'left',clickCount:1});await send('Input.dispatchMouseEvent',{type:'mouseMoved',x:center.x+55,y:center.y+30,button:'left',buttons:1});await send('Input.dispatchMouseEvent',{type:'mouseReleased',x:center.x+55,y:center.y+30,button:'left',clickCount:1});await new Promise(r=>setTimeout(r,80));
+ checks.drag=await evaluate('document.querySelector(".atlas-world").style.transform')!==beforePan;
+ checks.variety=await evaluate('(()=>{const es=communityPrototype.entries;return es.every(e=>communityPrototype.valid(e))&&new Set(es.map(e=>JSON.stringify(e.strokes))).size===18&&es.some(e=>e.strokes.every(s=>!s.closed))&&es.some(e=>e.strokes.some(s=>s.closed))&&es.some(e=>e.strokes.filter(s=>s.closed).length>2)})()');
+ await evaluate('communityPrototype.openAtlas();document.getElementById("community-atlas").close();communityPrototype.openAtlas(false)');
+ const result={status:`);
+source=source.replace("'archive-popup-runner.cjs'","'archive-readonly-runner.cjs'");
+fs.writeFileSync(path.join(__dirname,'archive-readonly-generator.cjs'),source);

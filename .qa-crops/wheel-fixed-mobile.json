@@ -1,0 +1,310 @@
+{
+  "result": {
+    "status": "PASS",
+    "checks": {
+      "forward": true,
+      "focusedField": true,
+      "reverse": true,
+      "textareaRemainder": true,
+      "dialog": true,
+      "touch": true
+    },
+    "samples": [
+      {
+        "current": 15.974998822185007,
+        "target": 16.04218009478673,
+        "hit": "tu-casa-editor",
+        "blocked": false,
+        "first": false,
+        "active": false
+      },
+      {
+        "current": 16.07903963750706,
+        "target": 16.18436018957346,
+        "hit": "tu-casa-editor",
+        "blocked": false,
+        "first": false,
+        "active": false
+      },
+      {
+        "current": 16.205643220800464,
+        "target": 16.326540284360192,
+        "hit": "tu-casa-editor",
+        "blocked": false,
+        "first": false,
+        "active": false
+      },
+      {
+        "current": 16.34160483409719,
+        "target": 16.468720379146923,
+        "hit": "tu-casa-editor",
+        "blocked": false,
+        "first": false,
+        "active": false
+      },
+      {
+        "current": 16.481095693363915,
+        "target": 16.610900473933654,
+        "hit": "tu-casa-editor",
+        "blocked": false,
+        "first": false,
+        "active": false
+      },
+      {
+        "current": 16.62222896070904,
+        "target": 16.753080568720385,
+        "hit": "tu-casa-editor",
+        "blocked": false,
+        "first": false,
+        "active": false
+      },
+      {
+        "current": 16.76417171799557,
+        "target": 16.895260663507116,
+        "hit": "tu-casa-editor",
+        "blocked": false,
+        "first": false,
+        "active": false
+      },
+      {
+        "current": 16.906089296696834,
+        "target": 17.037440758293847,
+        "hit": "tu-casa-editor",
+        "blocked": false,
+        "first": false,
+        "active": false
+      },
+      {
+        "current": 17.048210649108867,
+        "target": 17.17962085308058,
+        "hit": "tu-casa-editor",
+        "blocked": false,
+        "first": false,
+        "active": false
+      },
+      {
+        "current": 17.19036686102831,
+        "target": 17.32180094786731,
+        "hit": "tu-casa-editor",
+        "blocked": false,
+        "first": false,
+        "active": false
+      },
+      {
+        "current": 17.33253724576581,
+        "target": 17.46398104265404,
+        "hit": "",
+        "blocked": false,
+        "first": false,
+        "active": false
+      },
+      {
+        "current": 17.47464315512251,
+        "target": 17.606161137440772,
+        "hit": "",
+        "blocked": false,
+        "first": false,
+        "active": false
+      },
+      {
+        "current": 17.616793088364197,
+        "target": 17.748341232227503,
+        "hit": "",
+        "blocked": false,
+        "first": false,
+        "active": false
+      },
+      {
+        "current": 17.759031158000443,
+        "target": 17.890521327014234,
+        "hit": "",
+        "blocked": false,
+        "first": false,
+        "active": false
+      },
+      {
+        "current": 17.901234823602014,
+        "target": 18.032701421800965,
+        "hit": "",
+        "blocked": false,
+        "first": false,
+        "active": false
+      },
+      {
+        "current": 18.043424501566914,
+        "target": 18.174881516587696,
+        "hit": "",
+        "blocked": false,
+        "first": false,
+        "active": false
+      },
+      {
+        "current": 18.185538254964516,
+        "target": 18.317061611374427,
+        "hit": "",
+        "blocked": false,
+        "first": false,
+        "active": false
+      },
+      {
+        "current": 18.32776161497386,
+        "target": 18.45924170616116,
+        "hit": "",
+        "blocked": false,
+        "first": false,
+        "active": false
+      },
+      {
+        "current": 18.469959300087428,
+        "target": 18.60142180094789,
+        "hit": "",
+        "blocked": false,
+        "first": false,
+        "active": false
+      },
+      {
+        "current": 18.612146546567356,
+        "target": 18.74360189573462,
+        "hit": "",
+        "blocked": false,
+        "first": false,
+        "active": false
+      },
+      {
+        "current": 18.754329549015555,
+        "target": 18.88578199052135,
+        "hit": "",
+        "blocked": false,
+        "first": false,
+        "active": false
+      },
+      {
+        "current": 18.89651082596922,
+        "target": 19.027962085308083,
+        "hit": "",
+        "blocked": false,
+        "first": false,
+        "active": false
+      },
+      {
+        "current": 19.038573042434784,
+        "target": 19.170142180094814,
+        "hit": "",
+        "blocked": false,
+        "first": false,
+        "active": false
+      },
+      {
+        "current": 19.180753332808344,
+        "target": 19.312322274881545,
+        "hit": "",
+        "blocked": false,
+        "first": false,
+        "active": false
+      },
+      {
+        "current": 19.323122040254837,
+        "target": 19.454502369668276,
+        "hit": "closing-still",
+        "blocked": false,
+        "first": false,
+        "active": false
+      },
+      {
+        "current": 19.465142190716463,
+        "target": 19.596682464455007,
+        "hit": "closing-still",
+        "blocked": false,
+        "first": false,
+        "active": false
+      },
+      {
+        "current": 19.607423700584775,
+        "target": 19.73886255924174,
+        "hit": "closing-still",
+        "blocked": false,
+        "first": false,
+        "active": false
+      },
+      {
+        "current": 19.74947856264907,
+        "target": 19.88104265402847,
+        "hit": "closing-still",
+        "blocked": false,
+        "first": false,
+        "active": false
+      },
+      {
+        "current": 19.891774215339357,
+        "target": 20.0232227488152,
+        "hit": "closing-still",
+        "blocked": false,
+        "first": false,
+        "active": false
+      },
+      {
+        "current": 20.033953173149477,
+        "target": 20.16540284360193,
+        "hit": "closing-still",
+        "blocked": false,
+        "first": false,
+        "active": false
+      },
+      {
+        "current": 20.176202980109213,
+        "target": 20.307582938388663,
+        "hit": "closing-still",
+        "blocked": false,
+        "first": false,
+        "active": false
+      },
+      {
+        "current": 20.32568371059312,
+        "target": 20.449763033175394,
+        "hit": "closing-still",
+        "blocked": false,
+        "first": false,
+        "active": false
+      },
+      {
+        "current": 20.46341931745661,
+        "target": 20.591943127962125,
+        "hit": "closing-still",
+        "blocked": false,
+        "first": false,
+        "active": false
+      },
+      {
+        "current": 20.603745368637775,
+        "target": 20.734123222748856,
+        "hit": "closing-still",
+        "blocked": false,
+        "first": false,
+        "active": false
+      },
+      {
+        "current": 20.74533663827829,
+        "target": 20.876303317535587,
+        "hit": "closing-still",
+        "blocked": false,
+        "first": false,
+        "active": false
+      },
+      {
+        "current": 20.88722964917554,
+        "target": 21.01848341232232,
+        "hit": "closing-still",
+        "blocked": false,
+        "first": false,
+        "active": false
+      }
+    ]
+  },
+  "info": {
+    "result": {
+      "type": "string",
+      "value": "La Casa · prueba 02. El muro se abre, atravesás la ventana y el hueco permanece. Marco, niño, logo y ladrillos usan los PNG originales separados, con sus transparencias y colores intactos. La entrada reproduce el video del niño atravesando la ventana. Antes de entrar, la ventana tapiada espera inmóvil. Podés repetir el cruce sin borrar el papel ni la luz.Las huellas se conservan en este navegador. Suena «Sirens». Podés silenciarla desde el botón de música.VOLVER ↗"
+    }
+  },
+  "errors": []
+}

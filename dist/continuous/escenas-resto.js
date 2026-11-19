@@ -7,7 +7,7 @@
   {id:'tu-casa',nombre:'D · Tu casa y la cuadra',inicio:15.8,fin:21.8,rumboEntrada:15.8,fondo:'#F4F2EA',cancion:'La bicicleta',fragmentoAudio:null,memoria:null,assets:[]},
   {id:'salida',nombre:'E · Salida por la ventana',inicio:21.8,fin:26.85,rumboEntrada:21.8,fondo:'#B9A3DE',cancion:'La casa',fragmentoAudio:null,memoria:null,assets:[]}
  ].map(s=>Object.freeze({...s,assets:Object.freeze(s.assets)})));
- const uniones=Object.freeze([[9.6,10.6,10.6],[12,12.6,12.6],[14.8,15.8,15.8],[17.3,17.9,17.9]].map(Object.freeze));
+ const uniones=Object.freeze([[9.6,10.6,10.6],[12,12.6,12.6],[14.8,15.8,15.8],[19.3,19.9,19.9]].map(Object.freeze));
  window.escenasResto=Object.freeze({inicio:8.6,escenas,uniones});
  // Old hidden screens still have narrative audio side effects. Leave their
  // resources registered, but do not execute them in the newly opened interval.
@@ -36,12 +36,12 @@
    const s=escenas[i];let visible=i===index,point={x:0,y:0};
    if(transition){
     const [a,b,at]=transition,raw=(p-a)/(b-a),t=at===10.6||at===12.6||at===15.8?raw*raw*(3-2*raw):raw;
-    const next=at===17.9?-1:escenas.findIndex(s=>s.inicio===at);
-    if(i===index){visible=true;if(at!==17.9)point=houseRoute.vector(-t,at,reduced.matches)}
+    const next=at===19.9?-1:escenas.findIndex(s=>s.inicio===at);
+    if(i===index){visible=true;if(at!==19.9)point=houseRoute.vector(-t,at,reduced.matches)}
     if(i===next){visible=true;point=houseRoute.vector(1-t,at,reduced.matches)}
    }
    // Reuse the existing panorama and closing media instead of masking them.
-   const inherited=s.id==='tu-casa'&&p>=17.9||s.id==='salida'&&p>=21.8;
+   const inherited=s.id==='tu-casa'&&p>=19.9||s.id==='salida'&&p>=21.8;
    el.classList.toggle('resto-heredado',inherited);
    el.hidden=!visible;el.inert=!visible;el.style.transform=houseRoute.transform(point);
   });

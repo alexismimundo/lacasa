@@ -1,0 +1,7 @@
+const fs=require('fs'),path=require('path'),root=path.resolve(__dirname,'..'),source=fs.readFileSync(path.join(root,'dist/index.html'),'utf8');
+const styles=[...source.matchAll(/<style[^>]*>([\s\S]*?)<\/style>/g)].map(m=>m[1]).join('\n');
+const player=source.match(/<aside id="music-player"[\s\S]*?<\/aside>/)[0];
+const html=`<!doctype html><html><head><meta charset="utf-8"><base href="../dist/"><style>${styles}</style><style>html,body{margin:0!important;width:1100px!important;height:240px!important;background:transparent!important;overflow:hidden}#music-player{display:flex!important;visibility:visible!important;opacity:1!important;position:absolute!important;left:20px!important;top:18px!important;bottom:auto!important;width:310px!important;transform:scale(3)!important;transform-origin:top left!important;pointer-events:none!important}</style></head><body class="inhabited">${player}<script>window.ready=(async()=>{await document.fonts.ready;document.getElementById('music-player').inert=false;const r=document.getElementById('music-player').getBoundingClientRect();return {status:'PASS',width:r.width,height:r.height,scale:3}})()</script></body></html>`;
+fs.writeFileSync(path.join(__dirname,'player-transparent-export.html'),html);
+let runner=fs.readFileSync(path.join(__dirname,'timed-desktop-runner.cjs'),'utf8');runner=runner.replace("await send('Page.navigate'","await send('Emulation.setDefaultBackgroundColorOverride',{color:{r:0,g:0,b:0,a:0}});await send('Page.navigate'");
+fs.writeFileSync(path.join(__dirname,'player-transparent-runner.cjs'),runner);

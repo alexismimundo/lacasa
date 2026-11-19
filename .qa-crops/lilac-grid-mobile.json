@@ -1,0 +1,120 @@
+{
+  "result": {
+    "status": "PASS",
+    "checks": {
+      "writing": true,
+      "opened": true,
+      "latest": true,
+      "lilac": true,
+      "local": true,
+      "isolated": true,
+      "cards": true,
+      "detail": true,
+      "multiple": true,
+      "fictional": true,
+      "grid": true,
+      "pigment": true,
+      "pictures": true,
+      "actualGrid": true
+    },
+    "samples": [
+      {
+        "phase": 17.65,
+        "id": "tu-memory",
+        "hitBefore": "<textarea id=\"tu-memory\" maxlength=\"280\" aria-label=\"Escribí algo que te recuerde a tu casa\" placeholder=\"Un olor, una voz, un rincón…\"></textarea>",
+        "typed": true,
+        "debug": {
+          "active": "tu-memory",
+          "hit": "<textarea id=\"tu-memory\" maxlength=\"280\" aria-label=\"Escribí algo que te recuerde a tu casa\" placeholder=\"Un olor, una voz, un rincón…\"></textarea>"
+        }
+      },
+      {
+        "phase": 17.65,
+        "id": "tu-title",
+        "hitBefore": "<input id=\"tu-title\" maxlength=\"60\" autocomplete=\"name\" aria-label=\"Tu nombre\" placeholder=\"¿Cómo te llamás?\">",
+        "typed": true,
+        "debug": {
+          "active": "tu-title",
+          "hit": "<input id=\"tu-title\" maxlength=\"60\" autocomplete=\"name\" aria-label=\"Tu nombre\" placeholder=\"¿Cómo te llamás?\">"
+        }
+      },
+      {
+        "phase": 17.8,
+        "id": "tu-memory",
+        "hitBefore": "<textarea id=\"tu-memory\" maxlength=\"280\" aria-label=\"Escribí algo que te recuerde a tu casa\" placeholder=\"Un olor, una voz, un rincón…\"></textarea>",
+        "typed": true,
+        "debug": {
+          "active": "tu-memory",
+          "hit": "<textarea id=\"tu-memory\" maxlength=\"280\" aria-label=\"Escribí algo que te recuerde a tu casa\" placeholder=\"Un olor, una voz, un rincón…\"></textarea>"
+        }
+      },
+      {
+        "phase": 17.8,
+        "id": "tu-title",
+        "hitBefore": "<input id=\"tu-title\" maxlength=\"60\" autocomplete=\"name\" aria-label=\"Tu nombre\" placeholder=\"¿Cómo te llamás?\">",
+        "typed": true,
+        "debug": {
+          "active": "tu-title",
+          "hit": "<input id=\"tu-title\" maxlength=\"60\" autocomplete=\"name\" aria-label=\"Tu nombre\" placeholder=\"¿Cómo te llamás?\">"
+        }
+      },
+      {
+        "phase": 18.4,
+        "id": "tu-memory",
+        "hitBefore": "<textarea id=\"tu-memory\" maxlength=\"280\" aria-label=\"Escribí algo que te recuerde a tu casa\" placeholder=\"Un olor, una voz, un rincón…\"></textarea>",
+        "typed": true,
+        "debug": {
+          "active": "tu-memory",
+          "hit": "<textarea id=\"tu-memory\" maxlength=\"280\" aria-label=\"Escribí algo que te recuerde a tu casa\" placeholder=\"Un olor, una voz, un rincón…\"></textarea>"
+        }
+      },
+      {
+        "phase": 18.4,
+        "id": "tu-title",
+        "hitBefore": "<input id=\"tu-title\" maxlength=\"60\" autocomplete=\"name\" aria-label=\"Tu nombre\" placeholder=\"¿Cómo te llamás?\">",
+        "typed": true,
+        "debug": {
+          "active": "tu-title",
+          "hit": "<input id=\"tu-title\" maxlength=\"60\" autocomplete=\"name\" aria-label=\"Tu nombre\" placeholder=\"¿Cómo te llamás?\">"
+        }
+      },
+      {
+        "phase": 19.4,
+        "id": "tu-memory",
+        "hitBefore": "<textarea id=\"tu-memory\" maxlength=\"280\" aria-label=\"Escribí algo que te recuerde a tu casa\" placeholder=\"Un olor, una voz, un rincón…\"></textarea>",
+        "typed": true,
+        "debug": {
+          "active": "tu-memory",
+          "hit": "<textarea id=\"tu-memory\" maxlength=\"280\" aria-label=\"Escribí algo que te recuerde a tu casa\" placeholder=\"Un olor, una voz, un rincón…\"></textarea>"
+        }
+      },
+      {
+        "phase": 19.4,
+        "id": "tu-title",
+        "hitBefore": "<input id=\"tu-title\" maxlength=\"60\" autocomplete=\"name\" aria-label=\"Tu nombre\" placeholder=\"¿Cómo te llamás?\">",
+        "typed": true,
+        "debug": {
+          "active": "tu-title",
+          "hit": "<input id=\"tu-title\" maxlength=\"60\" autocomplete=\"name\" aria-label=\"Tu nombre\" placeholder=\"¿Cómo te llamás?\">"
+        }
+      },
+      {
+        "phase": 19.55,
+        "id": "tu-title",
+        "hitBefore": "<input id=\"tu-title\" maxlength=\"60\" autocomplete=\"name\" aria-label=\"Tu nombre\" placeholder=\"¿Cómo te llamás?\">",
+        "typed": true,
+        "debug": {
+          "active": "tu-title",
+          "hit": "<input id=\"tu-title\" maxlength=\"60\" autocomplete=\"name\" aria-label=\"Tu nombre\" placeholder=\"¿Cómo te llamás?\">"
+        }
+      }
+    ]
+  },
+  "info": {
+    "result": {
+      "type": "string",
+      "value": "La Casa · prueba 02. El muro se abre, atravesás la ventana y el hueco permanece. Marco, niño, logo y ladrillos usan los PNG originales separados, con sus transparencias y colores intactos. La entrada reproduce el video del niño atravesando la ventana. Antes de entrar, la ventana tapiada espera inmóvil. Podés repetir el cruce sin borrar el papel ni la luz.Las huellas se conservan en este navegador. Suena «Sirens». Podés silenciarla desde el botón de música.VOLVER ↗"
+    }
+  },
+  "errors": []
+}

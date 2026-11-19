@@ -1,0 +1,2 @@
+217 function abrirCaja(abrir){if(window.casaInventory){window.casaInventory(abrir);return}cajaPanel.hidden=!abrir;caja.classList.toggle('abierta',abrir);$('caja-abrir').setAttribute('aria-expanded',String(abrir))}
+893 // Review-only jumps clear transient camera locks, never inventory or stored memories.

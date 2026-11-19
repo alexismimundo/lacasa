@@ -1,0 +1,23 @@
+ // Stop leftover easing at the visible position before a local interaction.
+ // Do not snap to a phase, capture the pointer, or block the next scroll gesture.
+ function settleInteraction(e){
+   if(!e.target.closest?.('#community-pad,button,input,textarea,select,a'))return;
+   target=current;storeTravel();
+ }
+ root.addEventListener('pointerdown',settleInteraction,{capture:true});
+ root.addEventListener('focusin',settleInteraction);
+ const drawingLabel=document.createElement('p');drawingLabel.className='tu-drawing-label';drawingLabel.textContent='Dibujá tu casa';editor.querySelector('.community-tools').before(drawingLabel);
+ const undo=document.getElementById('community-undo');undo.textContent='↶';undo.title='Deshacer el último trazo';undo.setAttribute('aria-label','Deshacer el último trazo');document.getElementById('community-clear').textContent='Borrar dibujo';
+ const drawingTools=editor.querySelector('.community-tools');drawingTools.setAttribute('aria-label','Controles del dibujo');pad.closest('.tu-pad-wrap').before(drawingTools);
+ const clear=document.getElementById('community-clear');clear.title='Borrar dibujo';clear.setAttribute('aria-label','Borrar dibujo');clear.innerHTML='<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 6h16M9 6V3h6v3M6 6l1 15h10l1-15M10 10v7M14 10v7" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+ pad.closest('.tu-pad-wrap').parentElement.classList.add('tu-drawing-column');
+ cover.querySelector('figcaption').textContent='Vista previa';
+ const frame=document.createElement('canvas');frame.className='tu-cover-frame';frame.setAttribute('aria-hidden','true');cover.append(frame);
+ const fieldFrames=[...form.querySelectorAll('input,textarea')].map(field=>{
+  const wrap=document.createElement('div');wrap.className='tu-field-wrap';field.before(wrap);wrap.append(field);
+  const canvas=document.createElement('canvas');canvas.className='tu-field-frame';canvas.setAttribute('aria-hidden','true');wrap.append(canvas);return {field,canvas};
+ });
+ const divider=document.createElement('canvas');divider.className='tu-memory-divider';divider.setAttribute('aria-hidden','true');root.append(divider);
+ const download=document.getElementById('tu-download'),send=document.getElementById('tu-send'),order=document.getElementById('tu-order');download.textContent='Descargar postal';send.textContent='Compartir en Instagram';order.textContent='Personalizar mi disco';
+ const actionRail=document.createElement('aside');actionRail.className='tu-action-rail';actionRail.setAttribute('aria-label','Opciones de tu postal');actionRail.append(download,send,order);layout.append(actionRail);actions.replaceChildren(status);
+ // Instagram does not expose a browser API for publishing a file directly.

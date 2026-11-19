@@ -1,0 +1,22 @@
+}
+@media(max-width:700px){
+ #tu-casa-editor{padding-left:3vw;padding-right:3vw}
+ .tu-casa .community-draw-layout{--studio-side:29vw;--studio-rail:15vw;column-gap:1.5vw}
+ .tu-casa .community-draw-title{font-size:clamp(17px,4.3vw,28px)}
+ .tu-casa .tu-action-rail{gap:12px}
+ #community-journey.tu-casa .tu-action-rail button{font-size:9px;padding:9px 4px}
+ .tu-casa .community-draw-layout>.community-tools{gap:12px}
+ #community-journey.tu-casa #community-clear{font-size:9px;max-width:100%}
+ .tu-casa .tu-drawing-label,.tu-casa .tu-cover figcaption{font-size:10px;margin-top:14px}
+}
+/* Compact tools above the drawing, straight action buttons and a lower title. */
+#tu-casa-editor{padding-top:clamp(54px,8vh,86px)}
+.tu-casa .tu-drawing-column{position:relative}
+#community-journey.tu-casa .tu-drawing-column>.community-tools{position:absolute;left:0;top:-32px;display:flex;flex-direction:row;flex-wrap:nowrap;align-items:center;justify-content:flex-start;gap:5px;margin:0;width:max-content;height:28px;z-index:4}
+#community-journey.tu-casa .community-tools #community-undo,#community-journey.tu-casa .community-tools #community-clear{display:inline-flex;align-items:center;justify-content:center;box-sizing:border-box;width:27px;height:27px;padding:3px;border:0;background:transparent;color:#2c4877;font-size:20px;line-height:1}
+#community-journey.tu-casa #community-clear svg{width:17px;height:17px}
+#community-journey.tu-casa .community-tools button:hover,#community-journey.tu-casa .community-tools button:focus-visible{background:#d1b5d5!important;color:#000!important}
+.tu-casa .tu-cover canvas.tu-cover-frame{max-width:none;aspect-ratio:auto;border:0;left:-6px;top:-6px;box-sizing:content-box}
+#community-journey.tu-casa .tu-action-rail button,#community-journey.tu-casa .tu-action-rail button:nth-child(2){clip-path:none;border-radius:0;transform:none;background:#335386;color:#f4f4f1;filter:none;transition:background-color .15s,color .15s}
+#community-journey.tu-casa .tu-action-rail button:hover,#community-journey.tu-casa .tu-action-rail button:focus-visible{background:#d1b5d5;color:#000;transform:none;filter:none}
+@media(max-height:650px){#tu-casa-editor{padding-top:34px}.tu-casa .community-draw-layout{--studio-side:min(28vw,38vh)}}

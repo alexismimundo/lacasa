@@ -1,0 +1,22 @@
+{
+  "result": {
+    "result": {
+      "type": "object",
+      "value": {
+        "status": "PASS",
+        "width": 3000,
+        "height": 2000,
+        "screen": [
+          1920,
+          1080
+        ]
+      }
+    }
+  },
+  "info": {
+    "result": {
+      "type": "undefined"
+    }
+  },
+  "errors": []
+}

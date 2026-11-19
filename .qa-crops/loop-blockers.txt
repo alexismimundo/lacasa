@@ -1,0 +1,17 @@
+
+> dist\continuous\first-house.js:180:window.firstHouseBlocks=()=>!!drag||dialog.open;
+  dist\continuous\first-house.js:181:window.firstHousePreload=src=>{if(!src||preloaded===src)return;preloaded=src;preload.src=src;preload.load()};
+  dist\continuous\first-house.js:182:const preload=document.createElement('video');preload.preload='auto';preload.muted=true;
+  dist\continuous\first-house.js:183:const cumbia=A.cumbia?new Audio(A.cumbia):null;if(cumbia){cumbia.loop=true;cumbia.preload='none'}
+> dist\continuous\tu-casa.js:38: form.addEventListener('focusin',lock);form.addEventListener('focusout',()=>queueMicrotask(unlock));pad.addEventListener('pointerdown',lock);['pointerup','pointercancel','lostpointercapture'].forEach(t=>pad.addEventListener(t,()=>queueMicrotask(unlock)));const oldBlock=window.casaBlocksScroll;window.casaBlocksScroll=function(){return 
+editing()||order.open||oldBlock?.()};
+  dist\continuous\tu-casa.js:39: for(const type of ['wheel','touchstart','touchmove','touchend','keydown']){step.addEventListener(type,e=>{if(current<15.8)return;if(e.type==='wheel'){const down=e.deltaY>0,edge=down?step.scrollTop+step.clientHeight>=step.scrollHeight-2:step.scrollTop<=2;if(edge&&!e.target.closest('input,textarea')&&!api.active){if(form.contains(document.activeElement))document.acti
+veElement.blur();if(e.cancelable)e.preventDefault();navigateScroll(e.deltaY)}}if(e.type==='wheel'||e.target.closest('input,textarea,#community-pad'))e.stopPropagation()},{passive:false});order.addEventListener(type,e=>e.stopPropagation(),{passive:true})}
+  dist\continuous\tu-casa.js:40: const prev=window.casaRender;window.casaRender=function(now,dt){if(editing())lock();else lockedPhase=null;prev(now,dt);const inside=document.body.classList.contains('inhabited')&&!document.body.classList.contains('reentering'),d1=inside&&current>=14.8&&current<19.9,d2=false;root.classList.toggle('is-visible',d1);root.inert=!d1||current<15.8||current>=19.3;step.hidd
+en=!d1;root.style.transform='none';root.style.opacity='1';document.body.classList.toggle('community-active',d1);document.body.classList.toggle('neighborhood-active',d2);scene.classList.toggle('resto-heredado',current>=19.9);if(d2){p15.style.transform='none';p15.style.visibility='visible';p15.inert=false;const 
+q=clamp((current-17.6)/4.2);track.style.transform='translate3d('+(-q*Math.max(0,track.scrollWidth-innerWidth))+'px,0,0)';api.positionDistantHouses(q);document.getElementById('p15-lejos').style.filter='none';handlebars.style.transform=red.matches?'none':'translateY('+Math.sin(now/850)*3+'px) rotate('+Math.sin(now/1300)*.65+'deg)';lyric.textContent=q<.45?'Recorramos el barrio':'Toma la bicicleta y 
+vamos juntos a atravesar este vendaval';p15.querySelectorAll('.tu-barrio-layer').forEach((el,i)=>el.style.transform='translateX('+(-q*(i+1)*60)+'px)')}else{short.hidden=true;if(current>=21.8){p15.style.visibility='hidden';p15.inert=true}}if(d1&&!red.matches)pad.style.translate=Math.sin(Math.floor(now/90)*2)*.2+'px '+Math.cos(Math.floor(now/90))*.2+'px';else pad.style.translate='none'};
+  dist\continuous\tu-casa.js:41: window.tuCasa=Object.freeze({renderCover,download,layouts,update,populateWalk,detectCalado});
+
+
+

@@ -1,0 +1,12 @@
+
+  dist\continuous\living-cursors.js:20:  lupa:{hot:[25,25],paths:['M43 25 A18 18 0 1 1 7 25 A18 18 0 1 1 43 25 Z','M37 39 L43 35 L59 52 L53 58 Z']},
+> dist\continuous\living-cursors.js:21:  lapiz:{hot:[8,56],paths:['M8 56 L13 40 L46 7 L57 18 L24 51 Z','M8 56 L13 40 L24 51 Z','M40 13 L51 24']},
+  dist\continuous\living-cursors.js:22:  crayon:{hot:[8,56],paths:['M8 56 L13 40 L46 7 L57 18 L24 51 Z','M8 56 L13 40 L24 51 Z','M36 17 L47 28']},
+  dist\continuous\living-cursors.js:23:  tijera:{hot:[56,6],paths:['M25 47 A9 9 0 1 1 7 47 A9 9 0 1 1 25 47 Z','M45 53 A9 9 0 1 1 27 53 A9 9 0 1 1 45 53 Z','M22 40 L56 6 L29 47','M30 46 L40 14']},
+  dist\continuous\living-cursors.js:50: function hide(){present=false;canvas.style.display='none';document.body.classList.remove('living-cursor-active')}
+> dist\continuous\living-cursors.js:51: function choose(){
+  dist\continuous\living-cursors.js:52:  document.body.classList.remove('living-cursor-active');
+  dist\continuous\living-cursors.js:53:  // Modal dialogs occupy the browser's top layer, above every body z-index.
+
+
+

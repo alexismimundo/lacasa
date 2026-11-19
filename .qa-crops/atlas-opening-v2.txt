@@ -1,0 +1,18 @@
+ // Reuse the same archive in the exterior menu without touching other menu sections.
+ const previousMenu=openMenuSection;
+  openMenuSection=function(section){
+   if(section==='others'&&document.body.classList.contains('closing-outside')){openAtlas();return}
+   previousMenu(section);
+  };
+  // Provisional local atlas: recycle only visible cells instead of an enormous DOM.
+  const atlas=document.createElement('dialog');atlas.id='community-atlas';
+  atlas.setAttribute('aria-labelledby','community-atlas-title');
+  atlas.innerHTML='<div class="atlas-minimal-nav"><button type="button" class="atlas-close">Volver</button><h2 id="community-atlas-title">Otras casas</h2></div><div class="atlas-viewport" tabindex="0" role="region" aria-label="Lienzo infinito. Arrastrá para recorrerlo; flechas para moverte; más y menos para zoom. Espacio para pausar el movimiento."><div class="atlas-world"></div></div>';
+  document.body.append(atlas);
+  const viewport=atlas.querySelector('.atlas-viewport'),world=atlas.querySelector('.atlas-world'),cells=new Map(),pointers=new Map();
+  const camera={x:0,y:0,zoom:1};let atlasFrame=0,atlasFocus=null,gestureMoved=false,pinch=null;
+  const atlasReduced=matchMedia('(prefers-reduced-motion:reduce)');
+  let atlasLastTime=0,atlasIdleUntil=0,atlasMotion=0,atlasPaused=false;
+  function interruptAtlas(){atlasIdleUntil=performance.now()+3000;atlasMotion=0}
+  const limit=(v,a,b)=>Math.max(a,Math.min(b,v));
+  function requestAtlas(){if(!atlasFrame&&atlas.open)atlasFrame=requestAnimationFrame(paintAtlas)}

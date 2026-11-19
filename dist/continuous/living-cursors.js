@@ -4,7 +4,11 @@
  if(document.getElementById('living-cursor'))return;
  const size=32,scale=size/64;
  const canvas=document.createElement('canvas');canvas.id='living-cursor';canvas.setAttribute('aria-hidden','true');
- canvas.style.cssText=`position:fixed;left:0;top:0;width:${size}px;height:${size}px;z-index:2147483647;pointer-events:none;display:none`;
+ canvas.style.cssText=`position:fixed;inset:auto;left:0;top:0;margin:0;padding:0;border:0;background:transparent;overflow:visible;width:${size}px;height:${size}px;z-index:2147483647;pointer-events:none;display:none`;
+ // A manual popover escapes dialog clipping and transformed containing blocks.
+ // It stays non-interactive and never takes focus or dismisses the archive.
+ const topLayer=typeof canvas.showPopover==='function';
+ if(topLayer)canvas.setAttribute('popover','manual');
  document.body.append(canvas);
  const ctx=canvas.getContext('2d'),style=document.createElement('style');
  // Beat scene-specific !important SVG cursors, including the first-house sky.
@@ -53,7 +57,11 @@
   // Modal dialogs occupy the browser's top layer, above every body z-index.
   // Move the one canvas into that layer rather than creating another cursor.
   const host=[...document.querySelectorAll('dialog[open]')].reverse().find(el=>el.matches(':modal'))||document.body;
-  if(canvas.parentElement!==host)host.append(canvas);
+  if(canvas.parentElement!==host){
+   if(topLayer&&canvas.matches(':popover-open'))canvas.hidePopover();
+   host.append(canvas);
+  }
+  if(topLayer&&!canvas.matches(':popover-open'))canvas.showPopover();
   if(!target?.isConnected)return false;
   if(target.closest('input,textarea,select,[contenteditable="true"],iframe')||document.body.classList.contains('casa-sin-cursor'))return false;
   // Read the existing scene tool before suppressing the native cursor.
@@ -74,6 +82,7 @@
   // scene-wide cursor inherited from the retired notebook or threshold.
   // Tool artwork is parked until its redesign; only this family is enabled.
   if(!['flecha','mano','abierta','agarre'].includes(next))next='flecha';
+  if(target.closest('#community-pad')&&!document.getElementById('tu-casa-editor')?.hidden)next='lapiz';
   if(kind!==next){kind=next;dirty=true}
   canvas.dataset.kind=kind;
   document.body.classList.add('living-cursor-active');return true;
@@ -106,7 +115,7 @@
    }
   }
  }
- window.addEventListener('pointermove',e=>{if(e.pointerType==='touch'||!fine.matches){hide();return}x=e.clientX;y=e.clientY;target=e.target;present=true;position()},{passive:true});
+  window.addEventListener('pointermove',e=>{if(e.pointerType==='touch'||!fine.matches){hide();return}x=e.clientX;y=e.clientY;target=e.target;present=true;position()},{passive:true,capture:true});
  window.addEventListener('pointerdown',e=>{if(e.pointerType==='touch'){hide();return}pressed=true;dirty=true},{passive:true,capture:true});
  window.addEventListener('pointerup',()=>{pressed=false;dirty=true},{passive:true,capture:true});
  document.addEventListener('pointerout',e=>{if(!e.relatedTarget)hide()});

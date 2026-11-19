@@ -1,0 +1,7 @@
+211:function initMemoryCard3D(THREE,scene,size,renderer){
+224:function renderMemoryCard(inside,p,dt){
+282:   box3d={renderer,scene,camera,rig,tapa,openQuat,closedQuat,card:initMemoryCard3D(THREE,scene,size,renderer),homeRotation:null,raycaster:new THREE.Raycaster(),pointer:new THREE.Vector2(),lastW:0,lastH:0};
+396:const nextHouse=document.createElement('section');nextHouse.id='fh-next-house';nextHouse.setAttribute('aria-label','Gabriela Mistral 4860');
+397: nextHouse.innerHTML='<h2 aria-label="Gabriela Mistral 4860">Gabriela Mistral 4860</h2><canvas class="fh-next-dark" aria-hidden="true"></canvas>';
+400:for(const word of ['Gabriela','Mistral','4860']){
+757:  renderMemoryCard(inside,p,dt);

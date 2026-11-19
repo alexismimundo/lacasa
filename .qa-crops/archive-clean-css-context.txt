@@ -1,0 +1,65 @@
+/* Exterior header/footer rules must not hide the atlas's own controls. */
+#community-atlas .atlas-header,#community-atlas .atlas-footer{opacity:1!important;visibility:visible!important;transform:none!important}
+body.community-atlas-open #house-cursor{display:none!important}
+@media(max-width:650px){#community-atlas .atlas-header{padding:22px 5vw}.atlas-header h2{max-width:220px;font-size:23px}.atlas-header p{font-size:8px}#community-atlas .atlas-close{font-size:9px;margin-left:10px}.atlas-memory-hint{display:none}#community-atlas .atlas-footer{padding:30px 5vw 18px;align-items:flex-start;flex-direction:column;gap:12px}.atlas-footer small{max-width:90vw}.atlas-controls{align-self:flex-end;gap:10px}}
+@media(prefers-reduced-motion:reduce){.atlas-world{will-change:auto}}
+/* Minimal blue community field: only return and a small title remain. */
+#community-atlas,#community-atlas::backdrop{background:#335386;color:#f4f4f1}
+#community-atlas .atlas-viewport{background:#335386}
+#community-atlas .atlas-house{transform:translate(-50%,-50%) rotate(var(--atlas-turn)) scale(var(--atlas-depth,1));height:175px}
+#community-atlas .atlas-house svg path{fill:#f4f4f1;stroke:#f4f4f1}
+#community-atlas .atlas-house svg path[fill="none"]{fill:none}
+.atlas-minimal-nav{position:absolute;left:28px;top:20px;z-index:3;display:flex;align-items:center;gap:22px;color:#f4f4f1}
+#community-atlas .atlas-minimal-nav .atlas-close{margin:0;padding:8px 0;min-height:44px;border-bottom:1px solid #f4f4f166;font:11px/1.5 'IBM Plex Mono',monospace}
+.atlas-minimal-nav h2{margin:0;font:400 11px/1.5 'IBM Plex Mono',monospace}
+#community-atlas button:focus-visible{outline-color:#f4f4f1}
+@media(max-width:650px){.atlas-minimal-nav{left:20px;top:14px}}
+/* Memory cards, not isolated silhouettes, on an all-direction black archive. */
+#community-atlas,#community-atlas::backdrop,#community-atlas .atlas-viewport{background:#000;color:#f4f4f1}
+#community-atlas .atlas-house,.archive-memory-card{box-sizing:border-box;width:300px;height:400px;padding:22px 22px 18px;background:#f4f4f1 url('../assets/fondo-papel.webp') center/700px;color:#2c4877;border:1px solid #b9a3de;box-shadow:3px 5px 0 #b9a3de55;text-align:left;clip-path:polygon(1% 0,99% 1%,100% 98%,2% 100%,0 35%)}
+#community-atlas .atlas-house{transform:translate(-50%,-50%) rotate(var(--atlas-turn));font:14px/1.5 Georgia,serif}
+#community-atlas .atlas-house .archive-card-art{display:block;height:155px;margin:0 0 12px;border-bottom:1px solid #2c487744}
+#community-atlas .atlas-house .archive-card-art img,#community-atlas .atlas-house .archive-card-art svg{height:145px;width:100%;object-fit:contain}
+#community-atlas .atlas-house svg path{fill:#2c4877;stroke:#2c4877}
+#community-atlas .atlas-house svg path[fill="none"]{fill:none}
+#community-atlas .atlas-house strong{display:block;font:italic 21px/1.2 Georgia,serif;margin-bottom:10px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+#community-atlas .atlas-house .archive-card-memory{display:-webkit-box;-webkit-line-clamp:6;-webkit-box-orient:vertical;overflow:hidden;margin:0;font:14px/1.5 Georgia,serif;white-space:pre-wrap;overflow-wrap:anywhere}
+#community-atlas .atlas-house small{position:absolute;bottom:16px;left:22px;font:9px/1.5 'IBM Plex Mono',monospace}
+#community-atlas .atlas-house.is-newest{border-color:#b9a3de;box-shadow:0 0 0 3px #b9a3de,5px 8px 0 #b9a3de55}
+.atlas-archive-note{position:absolute;bottom:15px;left:25px;right:25px;margin:0;color:#f4f4f1aa;font:10px/1.6 'IBM Plex Mono',monospace;pointer-events:none}
+#community-atlas .atlas-minimal-nav{z-index:20;left:0;top:0;right:0;min-height:64px;padding:10px 24px;box-sizing:border-box;background:linear-gradient(#000 80%,transparent);pointer-events:none}
+#community-atlas .atlas-minimal-nav button{pointer-events:auto}
+#community-atlas .atlas-archive-note{z-index:20;background:#000d;padding:8px}
+#community-memory .archive-memory-card{width:min(340px,80vw);height:auto;min-height:350px;margin:15px auto}
+#community-memory .archive-memory-card>img,#community-memory .archive-memory-card>svg{display:block;width:100%;height:170px;object-fit:contain}
+#community-memory .archive-memory-card p{font:16px/1.6 Georgia,serif;white-space:pre-wrap}
+/* The original memory card's paper, hierarchy, rules and signature footer. */
+#community-atlas,#community-atlas::backdrop,#community-atlas .atlas-viewport{background:#b9a3de;color:#2c4877}
+#community-atlas .atlas-house,#community-memory .archive-memory-card{position:relative;display:flex;flex-direction:column;box-sizing:border-box;width:300px;height:420px;min-height:0;padding:34px 28px 15px;background:#f4f4f1 url('../assets/fondo-papel.webp') center/700px;color:#2c4877;border:0;border-radius:16px;clip-path:none;box-shadow:none;text-align:left;transform:translate(-50%,-50%);overflow:hidden}
+#community-memory .archive-memory-card{width:min(360px,80vw);height:auto;min-height:470px;margin:15px auto;transform:none}
+#community-atlas .atlas-house{position:absolute}
+#community-atlas .atlas-house::before,#community-memory .archive-memory-card::before{content:'⠿';position:absolute;left:17px;top:10px;color:#53699a;font:16px/1 monospace}
+#community-atlas .atlas-house .archive-card-kicker,#community-memory .archive-card-kicker{display:block;flex:none;margin:0 0 16px;padding:0 0 8px;border-bottom:1px solid #2c4877;font:11px/1.3 'IBM Plex Mono',monospace;letter-spacing:.04em}
+#community-atlas .atlas-house strong,#community-memory .archive-memory-card strong{display:block;flex:none;margin:0 0 10px;font:bold italic 24px/1.1 Georgia,serif;white-space:normal;overflow:visible}
+#community-atlas .atlas-house .archive-card-memory,#community-memory .archive-card-memory{display:block;flex:none;height:80px;margin:0 0 12px;overflow:hidden;white-space:pre-wrap;overflow-wrap:anywhere;text-align:center;font:12px/1.4 'IBM Plex Mono',monospace}
+#community-atlas .atlas-house .archive-card-art,#community-memory .archive-card-art{display:block;flex:none;width:130px;height:130px;margin:auto auto 14px;border:0}
+#community-atlas .atlas-house .archive-card-art img,#community-memory .archive-card-art img{display:block;width:100%;height:100%;object-fit:contain;border:0;pointer-events:none}
+#community-atlas .atlas-house .archive-card-footer,#community-memory .archive-card-footer{display:flex;align-items:center;justify-content:space-between;gap:10px;flex:none;margin:0;padding-top:7px;border-top:1px solid #2c487788;font:9px/1.3 'IBM Plex Mono',monospace}
+#community-atlas .atlas-house .archive-card-footer>span,#community-memory .archive-card-footer>span{display:block;margin:0;font:inherit}
+#community-atlas .atlas-house .archive-card-footer .archive-card-brand,#community-memory .archive-card-footer .archive-card-brand{font:bold italic 21px/1 Georgia,serif;white-space:nowrap}
+#community-atlas .atlas-house small,#community-memory .archive-memory-card small{position:static;display:block;margin:6px 0 0;text-align:right;font:7px/1.2 'IBM Plex Mono',monospace;opacity:.65}
+#community-atlas .atlas-house.is-newest{box-shadow:0 0 0 2px #2c4877;outline-offset:5px}
+#community-atlas .atlas-minimal-nav{color:#2c4877;background:linear-gradient(#b9a3de 80%,transparent)}
+#community-atlas .atlas-minimal-nav .atlas-close{border-bottom-color:#2c487777}
+#community-atlas button:focus-visible{outline-color:#2c4877}
+#community-atlas .atlas-archive-note{color:#2c4877;background:#b9a3deed}
+#community-memory .archive-card-memory{height:auto;min-height:80px;overflow:visible}
+#community-memory .archive-card-art{width:180px;height:180px}
+/* Within the journey the archive is a window; the landing keeps full screen. */
+#community-atlas.atlas-popup{inset:0;width:min(1120px,88vw);height:82dvh;max-height:820px;margin:auto;border:1px solid #2c487755;border-radius:12px;box-shadow:0 20px 90px #1115}
+#community-atlas.atlas-popup::backdrop{background:#15121e77}
+#community-atlas.atlas-popup .atlas-minimal-nav{padding:12px 24px;min-height:65px}
+#community-atlas.atlas-popup .atlas-minimal-nav h2{padding-right:40px}
+#community-atlas.atlas-popup .atlas-minimal-nav .atlas-close{position:absolute;right:15px;top:10px;display:flex;align-items:center;justify-content:center;width:44px;height:44px;min-height:44px;margin:0;padding:0;border:0;font:32px/1 Georgia,serif;color:#2c4877}
+#community-atlas.atlas-popup .atlas-close:hover{background:#d1b5d5}
+@media(max-width:650px){#community-atlas.atlas-popup{width:92vw;height:84dvh;max-height:none;border-radius:10px}#community-atlas.atlas-popup .atlas-minimal-nav{padding:12px 16px}#community-atlas.atlas-popup .atlas-minimal-nav h2{max-width:230px;font-size:10px}#community-atlas.atlas-popup .atlas-archive-note{left:10px;right:10px;bottom:10px;font-size:8px}}

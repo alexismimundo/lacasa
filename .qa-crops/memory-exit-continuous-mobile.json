@@ -1,0 +1,71 @@
+{
+  "result": {
+    "result": {
+      "type": "object",
+      "value": {
+        "status": "PASS",
+        "viewport": [
+          390,
+          844
+        ],
+        "samples": [
+          {
+            "p": 19.3001,
+            "top": 843.8593139648438,
+            "bottom": 843.859333395958,
+            "opacity": "1",
+            "phrase": "1",
+            "scale": 10
+          },
+          {
+            "p": 19.36,
+            "top": 759.5999755859375,
+            "bottom": 759.5999984741211,
+            "opacity": "1",
+            "phrase": "1",
+            "scale": 10
+          },
+          {
+            "p": 19.45,
+            "top": 633,
+            "bottom": 633,
+            "opacity": "1",
+            "phrase": "1",
+            "scale": 10
+          },
+          {
+            "p": 19.6,
+            "top": 422,
+            "bottom": 422,
+            "opacity": "1",
+            "phrase": "1",
+            "scale": 10
+          },
+          {
+            "p": 19.75,
+            "top": 211,
+            "bottom": 211,
+            "opacity": "1",
+            "phrase": "1",
+            "scale": 10
+          },
+          {
+            "p": 19.8999,
+            "top": 0.14066660404205322,
+            "bottom": 0.14068603515625,
+            "opacity": "1",
+            "phrase": "1",
+            "scale": 10
+          }
+        ]
+      }
+    }
+  },
+  "info": {
+    "result": {
+      "type": "string",
+      "value": "La Casa · prueba 02. El muro se abre, atravesás la ventana y el hueco permanece. Marco, niño, logo y ladrillos usan los PNG originales separados, con sus transparencias y colores intactos. La entrada reproduce el video del niño atravesando la ventana. Antes de entrar, la ventana tapiada espera inmóvil. Podés repetir el cruce sin borrar el papel ni la luz.Las huellas se conservan en este navegador. Suena «Sirens». Podés silenciarla desde el botón de música.VOLVER ↗"
+    }
+  },
+  "errors": []
+}

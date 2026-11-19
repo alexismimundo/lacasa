@@ -1,0 +1,7 @@
+﻿ function paint(){pad.innerHTML=drawing(strokes).replace(/^.*?<svg[^>]*>|<\/svg>$/g,'')+(active?'<path d="'+path(active)+'" fill="none" stroke="#335386" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>':'');window.dispatchEvent(new Event('community-drawing-change'))}
+   if(section==='others'&&document.body.classList.contains('closing-outside')){openAtlas();return}
+  function openAtlas(){
+  window.addEventListener('resize',requestAtlas);
+ const previousRender=window.casaRender;
+ window.casaRender=function(now,dt){previousRender(now,dt)};
+ window.communityPrototype={closed,drawing,valid,get strokes(){return strokes},get saved(){return saved},get active(){return active},entries,showMemory,populate,positionDistantHouses,save(title,memory){if(!strokes.length)return false;const data={name:'',title,memory,strokes:JSON.parse(JSON.stringify(strokes)),demo:false};localStorage.setItem(KEY,JSON.stringify(data));saved=data;return true}};

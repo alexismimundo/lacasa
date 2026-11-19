@@ -1,0 +1,11 @@
+const fs=require('fs'),path=require('path');
+let source=fs.readFileSync(path.join(__dirname,'archive-writing-test.cjs'),'utf8');
+source=source.replace('checks.black=','checks.lilac=').replace('rgb(0, 0, 0)','rgb(185, 163, 222)');
+source=source.replace(' const result={status:',` checks.fictional=await evaluate('communityPrototype.entries.length>=18&&communityPrototype.entries.every(e=>e.demo&&e.name&&e.title&&e.memory&&!e.memory.includes("pendiente")&&e.strokes.length>4)');
+ checks.grid=await evaluate('(()=>{const cells=[...document.querySelectorAll(".atlas-house")];return cells.every(e=>{const [x,y]=e.dataset.cell.split(":").map(Number);const t=getComputedStyle(e).transform;return parseFloat(e.style.left)===x*380&&parseFloat(e.style.top)===y*510&&e.style.getPropertyValue("--atlas-turn")==="0deg"&&t.startsWith("matrix(1, 0, 0, 1,")})})()');
+ checks.pigment=await evaluate('(()=>{const original=JSON.stringify(communityPrototype.strokes),c=tuCasaPostal.drawPigment(0,false,communityPrototype.entries[0].strokes),d=c.getContext("2d").getImageData(0,0,800,500).data;let ink=false;for(let i=0;i<d.length;i+=4)if(d[i+3]>100&&d[i]===185&&d[i+1]===163&&d[i+2]===222){ink=true;break}return ink&&original===JSON.stringify(communityPrototype.strokes)})()');
+ checks.pictures=await evaluate('[...document.querySelectorAll(".atlas-house .archive-card-art img")].every(e=>e.complete&&e.naturalWidth===400)');
+ checks.actualGrid=await evaluate('(()=>{const cells=[...document.querySelectorAll(".atlas-house")],a=cells.find(e=>e.dataset.cell==="0:0"),b=cells.find(e=>e.dataset.cell==="1:0");return !!a&&!!b&&Math.abs(a.getBoundingClientRect().top-b.getBoundingClientRect().top)<.1&&b.getBoundingClientRect().left>a.getBoundingClientRect().right})()');
+ const result={status:`);
+source=source.replace("'archive-writing-runner.cjs'","'lilac-grid-runner.cjs'");
+fs.writeFileSync(path.join(__dirname,'lilac-grid-generator.cjs'),source);

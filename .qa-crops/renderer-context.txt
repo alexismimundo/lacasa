@@ -1,0 +1,55 @@
+ const surface=document.createElement('canvas');surface.className='tu-textured-pad';surface.setAttribute('aria-hidden','true');pad.after(surface);
+ const padWrap=document.createElement('div');padWrap.className='tu-pad-wrap';pad.before(padWrap);padWrap.append(pad,surface);
+ // Fresh canvas for each page visit, without deleting the saved community archive.
+ document.getElementById('community-clear').click();
+ const texture=document.createElement('canvas');texture.width=texture.height=256;
+ const tc=texture.getContext('2d'),grain=tc.createImageData(256,256);let seed=731;
+ const random=()=>{seed=(Math.imul(seed,1664525)+1013904223)>>>0;return seed/4294967296};
+ for(let i=0;i<grain.data.length;i+=4){const v=random();grain.data[i+3]=v>.83?Math.round(70+random()*150):v>.5?Math.round(random()*45):0}tc.putImageData(grain,0,0);
+ const pigment=document.createElement('canvas');pigment.width=800;pigment.height=500;
+ function drawPigment(time=0,live=false){
+  const c=pigment.getContext('2d');c.clearRect(0,0,800,500);c.fillStyle=c.strokeStyle=LILAC;c.lineWidth=3.6;c.lineJoin=c.lineCap='round';
+  const shapes=new Path2D(),paths=api.active?[...api.strokes,{closed:false,points:api.active}]:api.strokes;
+  const point=(p,j,i)=>live&&!red.matches?[p[0]+Math.sin(j*4+i+time)*.28,p[1]+Math.cos(j*3+i+time)*.28]:p;
+  paths.forEach((stroke,i)=>{if(!stroke.closed)return;stroke.points.forEach((p,j)=>{const q=point(p,j,i);j?shapes.lineTo(...q):shapes.moveTo(...q)});shapes.closePath()});c.fill(shapes,'evenodd');
+  paths.forEach((stroke,i)=>{if(stroke.closed)return;c.beginPath();stroke.points.forEach((p,j)=>{const q=point(p,j,i);j?c.lineTo(...q):c.moveTo(...q)});c.stroke()});
+  c.globalCompositeOperation='destination-out';c.fillStyle=c.createPattern(texture,'repeat');c.fillRect(0,0,800,500);c.globalCompositeOperation='source-over';return pigment;
+ }
+ // Largest axis-aligned rectangle fully inside the alpha hole, not its unsafe bounds.
+ function measureTemplate(image){
+  const size=300,canvas=document.createElement('canvas');canvas.width=canvas.height=size;const c=canvas.getContext('2d',{willReadFrequently:true});c.drawImage(image,0,0,size,size);const d=c.getImageData(0,0,size,size).data;
+  const seen=new Uint8Array(size*size);let hole=null;
+  for(let start=0;start<seen.length;start++){
+   if(seen[start]||d[start*4+3]>24)continue;const queue=[start];seen[start]=1;let border=false,maxY=0;
+   for(let head=0;head<queue.length;head++){const n=queue[head],x=n%size,y=Math.floor(n/size);if(x===0||y===0||x===size-1||y===size-1)border=true;maxY=Math.max(maxY,y);for(const next of [x?n-1:-1,x<size-1?n+1:-1,y?n-size:-1,y<size-1?n+size:-1])if(next>=0&&!seen[next]&&d[next*4+3]<=24){seen[next]=1;queue.push(next)}}
+   if(!border&&(!hole||queue.length>hole.pixels.length))hole={pixels:queue,maxY};
+  }
+  if(!hole||hole.pixels.length<1000)throw Error('No se encontró el calado transparente de la portada.');
+  const mask=new Uint8Array(size*size);hole.pixels.forEach(n=>mask[n]=1);const heights=new Int32Array(size);let best={area:0};
+  for(let y=0;y<size;y++){
+   for(let x=0;x<size;x++)heights[x]=mask[y*size+x]?heights[x]+1:0;
+   const stack=[];for(let x=0;x<=size;x++){const height=x<size?heights[x]:0;while(stack.length&&heights[stack.at(-1)]>height){const top=stack.pop(),h=heights[top],left=stack.length?stack.at(-1)+1:0,w=x-left;if(w*h>best.area)best={area:w*h,x:left,y:y-h+1,w,h}}stack.push(x)}
+  }
+  const width=3000,height=3000,scale=width/size,inset=30;
+  return {width,height,sourceWidth:image.naturalWidth,sourceHeight:image.naturalHeight,drawing:[best.x*scale+inset,best.y*scale+inset,best.w*scale-inset*2,best.h*scale-inset*2],text:[width*.14,(hole.maxY+1)*scale+100,width*.72,height-((hole.maxY+1)*scale+100)-120],holeBottom:(hole.maxY+1)*scale};
+ }
+ function textLines(c,text,width){const lines=[];for(const paragraph of text.split('\n')){let line='';for(const word of paragraph.split(/\s+/)){for(const char of (line?' ':'')+word){if(c.measureText(line+char).width>width&&line){lines.push(line);line=''}line+=char}}lines.push(line)}return lines}
+ function render(canvas,kind='postal'){
+  if(!layout)return canvas;canvas.width=layout.width;canvas.height=layout.height;const c=canvas.getContext('2d');c.fillStyle=BLUE;c.fillRect(0,0,canvas.width,canvas.height);
+  const [x,y,w,h]=layout.drawing,side=Math.min(w,h);c.drawImage(drawPigment(),x+(w-side)/2,y+(h-side)/2,side,side);
+  const [tx,ty,tw,th]=layout.text;let fontSize=58,lines;
+  const caption=memory.value+(title.value.trim()?'\n— '+title.value.trim():'');
+  do{c.font=fontSize+'px "IBM Plex Mono",monospace';lines=textLines(c,caption,tw);if(lines.length*fontSize*1.5<=th)break;fontSize-=2}while(fontSize>22);
+  c.save();c.beginPath();c.rect(tx,ty,tw,th);c.clip();c.fillStyle=PAPER;c.textAlign='center';c.textBaseline='top';lines.forEach((line,i)=>c.fillText(line,tx+tw/2,ty+i*fontSize*1.5));c.restore();
+  if(kind==='cover')c.drawImage(template,0,0,canvas.width,canvas.height);return canvas;
+ }
+ function update(){dirty=true;if(layout){render(preview,'cover');lastPreview=performance.now()}}
+ function paint(now){
+  frame=0;if(editor.hidden||document.hidden)return;
+  if(dirty||api.active||!red.matches&&now-lastPaint>110){
+   const r=pad.getBoundingClientRect(),ratio=Math.min(devicePixelRatio||1,2),w=Math.round(r.width*ratio),h=Math.round(r.height*ratio);if(surface.width!==w||surface.height!==h){surface.width=w;surface.height=h}
+   const c=surface.getContext('2d');c.clearRect(0,0,w,h);c.drawImage(drawPigment(Math.floor(now/110),true),0,0,w,h);lastPaint=now;dirty=false;
+  }
+  if(api.active&&now-lastPreview>180&&layout){render(preview,'cover');lastPreview=now}
+  frame=requestAnimationFrame(paint);
+ }

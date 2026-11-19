@@ -1,0 +1,87 @@
+
+  dist\continuous\first-house.js:201:st.kept.forEach(id=>{if(COSAS[id]&&!enCaja(id))guardar(id,{silencioso:true})});
+  dist\continuous\first-house.js:202:// --- Caja 3D: aparece sola en la pantalla siguiente y queda como acceso en la esquina ---
+> dist\continuous\first-house.js:203:const boxCanvas=document.createElement('canvas');boxCanvas.id='fh-model-box';boxCanvas.style.touchAction='none';boxCanvas.setAttribute('role','button');boxCanvas.setAttribute('aria-label','La caja de zapatillas');boxCanvas.tabIndex=0;document.body.append(boxCanvas);
+  dist\continuous\first-house.js:204:const boxLidHint=document.createElement('span');boxLidHint.id='fh-box-lid-hint';boxLidHint.setAttribute('role','tooltip');boxLidHint.hidden=true;
+  dist\continuous\first-house.js:205:const boxScrollHint=document.createElement('p');boxScrollHint.id='fh-box-scroll-hint';boxScrollHint.textContent='ARRASTRÁ PARA GIRAR · SCROLLEÁ PARA SEGUIR ?';boxScrollHint.hidden=true;document.body.append(boxLidHint,boxScrollHint);
+  dist\continuous\first-house.js:206:boxCanvas.setAttribute('aria-describedby','fh-box-scroll-hint');
+  dist\continuous\first-house.js:207:let boxDropHover=false;
+  dist\continuous\first-house.js:208:window.casaBoxDropHover=(x,y)=>{const r=boxCanvas.getBoundingClientRect(),visible=getComputedStyle(boxCanvas).visibility!=='hidden';boxDropHover=current>=.98&&visible&&Number.isFinite(x)&&Number.isFinite(y)&&x>=r.left-45&&x<=r.right+45&&y>=r.top-45&&y<=r.bottom+45;boxCanvas.classList.toggle('drop-opening',boxDropHover)};
+  dist\continuous\first-house.js:209:let mvRotatable=false,mvPointerMoved=false,box3d=null,boxOpen=false,openAnim=0,wiggleT=0,dragging=false,dragStartX=0,dragStartRotY=0;
+  dist\continuous\first-house.js:210:window.laCasaBoxOpening=0;
+  dist\continuous\first-house.js:211:function initMemoryCard3D(THREE,scene,size,renderer){
+  dist\continuous\first-house.js:212: const group=new THREE.Group();group.name='box-memory-card';group.visible=false;scene.add(group);
+  dist\continuous\first-house.js:329: if(!showBoxHints)boxLidHint.hidden=true;
+  dist\continuous\first-house.js:330:  const mvActive=p>=1.6;
+> dist\continuous\first-house.js:331: boxCanvas.style.visibility=mvActive?'visible':'hidden';
+> dist\continuous\first-house.js:332: boxCanvas.style.pointerEvents=mvActive&&(boxInteractive||p>=2.62)?'auto':'none';
+  dist\continuous\first-house.js:333:  if(!mvActive){boxDropHover=false;boxOpen=false;openAnim=0;mvRotatable=false;dragging=false;window.laCasaBoxOpening=0;return}
+  dist\continuous\first-house.js:334: // The box enters as a solid object, never through an opacity fade.
+> dist\continuous\first-house.js:335: boxCanvas.style.opacity='1';
+  dist\continuous\first-house.js:336: let rect;
+  dist\continuous\first-house.js:337: {
+  dist\continuous\first-house.js:338:  const popW=Math.min(innerWidth*.84,1120),popH=popW*.67;
+  dist\continuous\first-house.js:339:  const pop={left:(innerWidth-popW)/2,top:(innerHeight-popH)/2,width:popW,height:popH};
+  dist\continuous\first-house.js:340:   const cornerW=Math.min(336,innerWidth*.66),cornerH=cornerW*114/180;
+  dist\continuous\first-house.js:341:  const corner={left:innerWidth-18-cornerW,top:innerHeight-14-cornerH,width:cornerW,height:cornerH};
+  dist\continuous\first-house.js:342:  // Cocina ? caja ? vídeo. Dock before the film fills the screen.
+  dist\continuous\first-house.js:343:  const shrink=ease(1.85,2.1,p);
+  dist\continuous\first-house.js:344:  const lerp=(a,b,t)=>a+(b-a)*t;
+  dist\continuous\first-house.js:352: }
+  dist\continuous\first-house.js:353:   const arrival=houseRoute.vector(Math.max(0,Math.min(1,(1.85-p)/.25)),1.6,reduced());
+> dist\continuous\first-house.js:354:  boxCanvas.style.left=(rect.left+arrival.x*innerWidth)+'px';boxCanvas.style.top=(rect.top+arrival.y*innerHeight)+'px';boxCanvas.style.width=rect.width+'px';boxCanvas.style.height=rect.height+'px';
+  dist\continuous\first-house.js:355: if(showBoxHints){boxScrollHint.style.left=(rect.left+arrival.x*innerWidth+rect.width/2)+'px';boxScrollHint.style.top=Math.min(innerHeight-48,rect.top+arrival.y*innerHeight+rect.height*.94)+'px'}
+  dist\continuous\first-house.js:356: mvRotatable=boxInteractive;
+  dist\continuous\first-house.js:357: if(!mvRotatable&&dragging)dragging=false;
+  dist\continuous\first-house.js:358: if(!box3d)return;
+  dist\continuous\first-house.js:359:  // Blend the user's rotation back to the same frontal pose as it docks.
+  dist\continuous\first-house.js:360:   if(p<=1.85||dragging||boxOpen)box3d.homeRotation=null;
+  dist\continuous\first-house.js:361:  else if(p>=2.1){box3d.rig.rotation.y=0;box3d.homeRotation=null}
+  dist\continuous\first-house.js:362:  else{
+  dist\continuous\first-house.js:363:   if(box3d.homeRotation===null)box3d.homeRotation=Math.atan2(Math.sin(box3d.rig.rotation.y),Math.cos(box3d.rig.rotation.y));
+  dist\continuous\first-house.js:753:previous(now,dt);const inside=adentro()&&!document.body.classList.contains('reentering')&&!document.body.classList.contains('closing-outside'),p=current,active=inside&&p>=.95&&p<7.6;
+  dist\continuous\first-house.js:754: if(!inside||p<5.4){steering.x=null;steering.y=48;steering.offset=0;steering.pointer=null;steering.idle=Infinity;steering.lastX=steering.lastY=null}
+> dist\continuous\first-house.js:755: if(inside)positionModelBox(p,dt);else boxCanvas.style.visibility='hidden';
+  dist\continuous\first-house.js:756:
+  dist\continuous\first-house.js:757:  renderMemoryCard(inside,p,dt);
+  dist\continuous\first-house.js:758: if(inside&&box3d){
+  dist\continuous\first-house.js:759:  // The docked shortcut is static. Repaint only after an actual model, lid,
+  dist\continuous\first-house.js:760:  // buffer or aspect change; keep leaf flights and user interaction live.
+  dist\continuous\first-house.js:761:  const r=box3d.rig.rotation,q=box3d.tapa.quaternion;
+  dist\continuous\first-house.js:762:   const frame=[box3d.lastW,box3d.lastH,box3d.camera.aspect,r.x,r.y,r.z,q.x,q.y,q.z,q.w,box3d.card.progress,box3d.card.zoom,box3d.card.group.visible].join(':');
+  dist\continuous\first-house.js:763:  if(frame!==lastBoxFrame){box3d.renderer.render(box3d.scene,box3d.camera);lastBoxFrame=frame}
+  dist\continuous\first-house.js:764: }
+  dist\continuous\casa.js:217:function abrirCaja(abrir){if(window.casaInventory){window.casaInventory(abrir);return}cajaPanel.hidden=!abrir;caja.classList.toggle('abierta',abrir);$('caja-abrir').setAttribute('aria-expanded',String(abrir))}
+  dist\continuous\casa.js:218:$('caja-abrir').onclick=()=>abrirCaja(cajaPanel.hidden);
+> dist\continuous\casa.js:219:function pintarCaja(){
+  dist\continuous\casa.js:220: const ul=$('caja-lista');ul.replaceChildren();
+  dist\continuous\casa.js:221: E.caja.forEach((c,i)=>{const cosa=COSAS[c.id];if(!cosa)return;const li=document.createElement('li');const im=document.createElement('img');im.src=cosa.src;im.alt='';const t=document.createElement('span');t.textContent=c.id==='cartel'&&c.texto?'El cartel: «'+c.texto+'»':cosa.nombre;li.append(im,t);ul.append(li)});
+  dist\continuous\casa.js:222: $('caja-vacia').hidden=E.caja.length>0;$('caja-cuenta').textContent=E.caja.length?String(E.caja.length):'';
+  dist\continuous\casa.js:223: caja.classList.toggle('chamuscada',!!E.chamuscada);
+  dist\continuous\casa.js:224:}
+  dist\continuous\casa.js:225:function sacar(i){E.caja.splice(i,1);guardarEstado();if(pendiente){const p=pendiente;pendiente=null;guardar(p.id,{texto:p.texto,silencioso:false})}else $('caja-aviso').textContent='';pintarCaja();actualizarPieza()}
+> dist\continuous\casa.js:226:function guardar(id,{desde=null,texto='',forzar=false,silencioso=false}={}){
+  dist\continuous\casa.js:227: const cosa=COSAS[id];if(!cosa)return false;
+  dist\continuous\casa.js:228: if(cosa.unica&&enCaja(id)){$('caja-aviso').textContent='Eso ya está en la caja.';return false}
+  dist\continuous\casa.js:229: // Sin límite que administrar: si la caja se llena, lo más viejo se cae.
+  dist\continuous\casa.js:230: if(E.caja.length>=CAPACIDAD_CAJA){const cae=E.caja.shift();$('caja-aviso').textContent='Se cayó de la caja: '+(COSAS[cae.id]?.nombre||'algo').toLowerCase()+'.';caja.classList.add('se-cae');setTimeout(()=>caja.classList.remove('se-cae'),700)}
+  dist\continuous\casa.js:231: E.caja.push({id,texto});E.instruccionVista=true;
+  dist\continuous\casa.js:232: if(fase()>=S.p3.s-.5&&fase()<S.p3.s+S.p3.h)E.piezaLiberada=true;
+  dist\continuous\casa.js:233: guardarEstado();pintarCaja();if(!silencioso)$('caja-aviso').textContent='';
+  dist\continuous\casa.js:234: window.dispatchEvent(new CustomEvent('la-casa:box-receive',{detail:{id}}));
+  dist\continuous\casa.js:235: if(desde&&!reducido())volarALaCaja(desde,cosa.src);
+  dist\continuous\casa.js:246:let arrastre=null;const alGuardarDe=new WeakMap();
+  dist\continuous\casa.js:247:function sobreCaja(x,y){const el=$('fh-model-box')||$('caja-abrir');if(getComputedStyle(el).visibility==='hidden')return false;const r=el.getBoundingClientRect();return x>=r.left&&x<=r.right&&y>=r.top&&y<=r.bottom}
+> dist\continuous\casa.js:248:function hacerGuardable(el,id,opciones={}){
+  dist\continuous\casa.js:249: el.addEventListener('dragstart',e=>e.preventDefault());
+  dist\continuous\casa.js:250: el.dataset.guardable=typeof id==='string'?id:'';el.setAttribute('aria-keyshortcuts','G');
+  dist\continuous\casa.js:251: const actual=()=>typeof id==='function'?id():id;
+  dist\continuous\casa.js:252: alGuardarDe.set(el,()=>{const ok=guardar(actual(),{desde:el,texto:opciones.texto?.()||''});if(ok)opciones.alGuardar?.();return ok});
+  dist\continuous\casa.js:253: el.addEventListener('pointerdown',e=>{
+  dist\continuous\casa.js:254:  if(e.button!==0||el.closest('[inert]'))return;e.preventDefault();e.stopPropagation();const r=el.getBoundingClientRect();
+  dist\continuous\casa.js:255:  arrastre={el,pid:e.pointerId,sx:e.clientX,sy:e.clientY,ox:e.clientX-(r.left+r.width/2),oy:e.clientY-(r.top+r.height/2),movido:false,ghost:null,libre:!!opciones.libre,contenedor:opciones.contenedor,alSoltar:opciones.alSoltar,w:r.width,h:r.height};
+  dist\continuous\casa.js:256:  el.setPointerCapture(e.pointerId);
+  dist\continuous\casa.js:257: });
+
+
+

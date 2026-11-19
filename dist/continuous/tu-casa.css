@@ -20,7 +20,7 @@ body.neighborhood-active #casa-screens #p15{background:#c5d7e2!important;color:#
 @media(max-width:700px){#tu-casa-editor{padding:3vh 6vw 160px}.tu-casa .community-draw-layout{grid-template-columns:1fr;gap:22px}.tu-casa #community-pad{height:29vh}.tu-memory{max-width:100%;transform:rotate(1deg)}.tu-cover{width:min(100%,300px);margin:auto}.tu-memory textarea{min-height:100px}.tu-actions{gap:12px 20px}#community-journey #tu-skip{bottom:85px}#tu-handlebars{left:-10%;width:120%;height:25%}#tu-house-memory{top:23%;right:5%;width:180px}#tu-bike-lyric{top:8%;font-size:27px}}
 @media(prefers-reduced-motion:reduce){#tu-handlebars,#community-pad{transform:none!important;translate:none!important}}
 /* Final postcard editor: lilac worn pigment on the album blue. */
-#community-journey.tu-casa{background:#2c4877;color:#f4f4f1}
+#community-journey.tu-casa{background:#f4f4f1;color:#2c4877}
 [data-escena="tu-casa"]>#community-journey.tu-casa{position:absolute;inset:0;opacity:1;transition:none}
 .tu-casa .community-draw-layout{grid-template-columns:minmax(0,1.6fr) minmax(210px,.8fr);align-items:start}
 .tu-casa .community-draw-layout>div:first-child{grid-row:1/3}
@@ -29,20 +29,20 @@ body.neighborhood-active #casa-screens #p15{background:#c5d7e2!important;color:#
 .tu-casa #community-pad{position:absolute;inset:0;width:100%;height:100%;background:transparent;border:0;touch-action:none;z-index:2;translate:none!important}
 .tu-casa #community-pad path{opacity:0}
 .tu-textured-pad{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:1}
-.tu-casa .tu-memory{grid-column:2;grid-row:2;background:none;box-shadow:none;transform:none;color:#f4f4f1;padding:0}
+.tu-casa .tu-memory{grid-column:2;grid-row:2;background:none;box-shadow:none;transform:none;color:#2c4877;padding:0}
 .tu-casa .tu-memory textarea{font:13px/1.6 'IBM Plex Mono',monospace;background:transparent;color:#f4f4f1;border-color:#b9a3de88;min-height:90px;width:100%;box-sizing:border-box}
-.tu-casa .tu-memory textarea::placeholder{color:#f4f4f1aa}
+.tu-casa .tu-memory textarea::placeholder{color:#2c487799}
 .tu-casa .tu-cover{grid-column:2;grid-row:1;width:min(100%,300px);margin:auto}
 .tu-casa .tu-cover canvas{border:0}
-.tu-casa .tu-cover figcaption{color:#f4f4f1bb}
+.tu-casa .tu-cover figcaption{color:#2c4877bb}
 .tu-casa .community-tools button,.tu-casa .tu-actions button{color:#f4f4f1;background:none;border:0;border-bottom:1px solid #b9a3de88;padding:8px 0;font:12px/1.4 'IBM Plex Mono',monospace}
 .tu-casa [hidden]{display:none!important}
 .tu-casa .tu-actions{display:flex;position:relative;z-index:3;margin-top:22px}
-#community-journey.tu-casa #tu-skip{background:#2c4877;color:#f4f4f1;box-shadow:none;border:0}
+#community-journey.tu-casa #tu-skip{background:#f4f4f1;color:#2c4877;box-shadow:none;border:0}
 .tu-order-preview{display:block;width:min(100%,300px);height:auto;margin:auto}
 @media(max-width:700px){.tu-casa .community-draw-layout{display:flex;flex-direction:column;gap:20px}.tu-casa .community-draw-layout>div:first-child{width:100%}.tu-pad-wrap{width:100%}.tu-casa .tu-memory{width:100%;order:1}.tu-casa .tu-cover{order:2;width:min(65vw,260px)}#tu-casa-editor{padding-bottom:170px}}
 /* Centered square studio; background texture is the shared animated film grain. */
-#community-journey.tu-casa{background:#2c4877}
+#community-journey.tu-casa{background:#f4f4f1}
 body.community-active #living-grain{visibility:visible!important;display:block!important;opacity:.6;z-index:160;pointer-events:none}
 #tu-casa-editor{padding:4vh 5vw 100px}
 .tu-casa .community-draw-layout{display:grid;grid-template-columns:minmax(0,640px);justify-content:center;gap:18px;position:relative;max-width:1200px;margin:auto}
@@ -50,22 +50,162 @@ body.community-active #living-grain{visibility:visible!important;display:block!i
 .tu-casa .community-draw-title{position:relative;z-index:1;text-align:center;max-width:700px;width:100%;margin:0 auto -5px;font:400 clamp(26px,3.5vw,52px)/1.12 Georgia,serif;color:#f4f4f1;text-shadow:none;pointer-events:auto;opacity:1}
 .tu-casa .community-draw-title .ink-word{display:inline-block;white-space:nowrap;margin-inline:.1em;touch-action:pan-y}
 .tu-casa .community-draw-title .ink-letter{--ink-shadow:none}
-#tu-casa-editor .community-draw-title,#tu-casa-editor .community-draw-title *{color:#f4f4f1!important}
-.tu-casa .tu-pad-wrap{position:relative;z-index:2;aspect-ratio:1!important;width:min(100%,40vh,390px);height:auto;margin:0 auto;background:transparent;outline:1px solid #b9a3de88}
+#tu-casa-editor .community-draw-title,#tu-casa-editor .community-draw-title *{color:#2c4877!important}
+.tu-casa .tu-pad-wrap{position:relative;z-index:2;aspect-ratio:1!important;width:min(100%,40vh,390px);height:auto;margin:0 auto;background:#2c4877;outline:1px solid #b9a3de88}
 .tu-casa .community-tools{justify-content:center;display:flex;gap:24px;margin-top:10px}
 .tu-casa .tu-memory{grid-column:1;grid-row:2;width:min(100%,480px);margin:auto;display:grid;grid-template-columns:1fr 160px;gap:14px;align-items:start}
-.tu-casa .tu-memory label{margin:0;color:#f4f4f1;font:11px/1.5 'IBM Plex Mono',monospace}
-.tu-casa .tu-memory textarea,.tu-casa .tu-memory input{background:#f4f4f110;border:1px solid #b9a3de99;color:#f4f4f1;border-radius:0;padding:10px;width:100%;font:13px/1.6 'IBM Plex Mono',monospace;box-sizing:border-box;margin-top:7px}
+.tu-casa .tu-memory label{margin:0;color:#2c4877;font:11px/1.5 'IBM Plex Mono',monospace}
+.tu-casa .tu-memory textarea,.tu-casa .tu-memory input{background:#f4f4f1;border:1px solid #2c487766;color:#2c4877;border-radius:0;padding:10px;width:100%;font:13px/1.6 'IBM Plex Mono',monospace;box-sizing:border-box;margin-top:7px}
 .tu-casa .tu-memory textarea{min-height:88px;resize:vertical}
-.tu-casa .tu-memory input::placeholder{color:#f4f4f199}
+.tu-casa .tu-memory input::placeholder{color:#2c487799}
 .tu-casa .tu-cover{position:absolute;left:calc(50% + 340px);top:155px;width:160px;margin:0;grid-area:auto}
 .tu-casa .tu-cover figcaption{font-size:10px;line-height:1.6}
 .tu-casa .tu-actions{justify-content:center;max-width:680px;margin:18px auto 0;gap:12px 24px;text-align:center}
 .tu-casa .tu-actions #tu-status{margin:0;min-height:18px}
-#community-journey.tu-casa .community-tools button,#community-journey.tu-casa .tu-actions button{color:#f4f4f1;border-bottom-color:#b9a3de99;background:transparent}
+#community-journey.tu-casa .community-tools button,#community-journey.tu-casa .tu-actions button{color:#2c4877;border-bottom-color:#2c487766;background:transparent}
 #community-journey.tu-casa .community-tools{flex-wrap:wrap;gap:10px 20px}
-#community-journey.tu-casa #tu-download-now{flex-basis:100%;width:max-content;max-width:280px;margin:0 auto;padding:10px 18px;background:#f4f4f1;color:#2c4877;border:0;font-size:12px}
+#community-journey.tu-casa #tu-download-now{flex-basis:100%;width:max-content;max-width:280px;margin:0 auto;padding:10px 18px;background:transparent;color:#2c4877;border:1px solid #2c487766;font-size:12px}
 body.closing-present #closing-scene{z-index:55}
 #community-journey.tu-casa #tu-skip{right:50%;transform:translateX(50%);white-space:nowrap;bottom:26px;font-size:11px}
 @media(max-width:1100px){.tu-casa .tu-cover{position:static;grid-column:1;grid-row:3;width:150px;margin:auto}.tu-casa .community-draw-layout{gap:18px}.tu-casa .tu-cover figcaption{text-align:center}}
 @media(max-width:700px){#tu-casa-editor{padding:25px 6vw 130px}.tu-casa .community-draw-layout{display:grid;grid-template-columns:minmax(0,1fr)}.tu-casa .community-draw-title{font-size:clamp(26px,7.5vw,36px)}.tu-casa .tu-pad-wrap{width:min(78vw,330px)}.tu-casa .tu-memory{grid-template-columns:1fr;gap:14px}.tu-casa .tu-cover{width:150px;order:initial}#community-journey.tu-casa #tu-skip{bottom:20px;font-size:10px}}
+/* Two equal work surfaces with an independent, generously spaced heading. */
+#tu-casa-editor{padding:clamp(48px,7vh,90px) 6vw 145px}
+.tu-casa .community-draw-layout{--studio-side:min(32vw,34vh,340px);display:grid;grid-template-columns:repeat(2,var(--studio-side));column-gap:clamp(36px,6vw,90px);row-gap:30px;max-width:1000px;align-items:start}
+.tu-casa .community-draw-title{grid-column:1/-1;grid-row:1;max-width:760px;margin:0 auto clamp(28px,5vh,58px);font-size:clamp(28px,3.1vw,44px);line-height:1.25}
+.tu-casa .community-draw-layout>div:first-child{grid-column:1;grid-row:2;width:100%}
+.tu-casa .tu-pad-wrap{width:100%;margin:0;aspect-ratio:1!important}
+.tu-casa .tu-cover{position:static;grid-column:2;grid-row:2;width:100%;max-width:none;margin:0;order:initial}
+.tu-casa .tu-cover canvas{display:block;width:100%;height:auto;aspect-ratio:1}
+.tu-casa .tu-cover figcaption{text-align:center;margin-top:14px;font-size:10px}
+.tu-casa .community-tools{margin:14px 0 0;gap:12px 24px}
+.tu-casa .tu-memory{grid-column:1/-1;grid-row:3;width:100%;max-width:none;grid-template-columns:minmax(0,1fr) minmax(140px,.55fr);gap:24px;margin:0}
+.tu-casa .tu-actions{margin-top:28px;gap:14px 30px}
+@media(max-width:700px){
+ #tu-casa-editor{padding:48px 7vw 150px}
+ .tu-casa .community-draw-layout{--studio-side:min(76vw,330px);grid-template-columns:var(--studio-side);row-gap:32px;column-gap:0}
+ .tu-casa .community-draw-title{grid-column:1;grid-row:1;margin-bottom:14px;font-size:clamp(26px,7vw,34px);line-height:1.3}
+ .tu-casa .community-draw-layout>div:first-child{grid-column:1;grid-row:2}
+ .tu-casa .tu-cover{grid-column:1;grid-row:3;width:100%}
+ .tu-casa .tu-memory{grid-column:1;grid-row:4;grid-template-columns:1fr;gap:20px}
+ #community-journey.tu-casa #tu-skip{white-space:normal;text-align:center;width:85%;bottom:20px}
+}
+/* Fit the complete studio in the viewport; only the drawing surface is blue. */
+#tu-casa-editor{padding:clamp(18px,4vh,40px) 5vw 90px;overflow:auto}
+.tu-casa .community-draw-layout{--studio-side:min(29vw,31vh,300px);grid-template-columns:repeat(2,var(--studio-side));column-gap:clamp(28px,5vw,70px);row-gap:16px}
+.tu-casa .community-draw-title{font-size:clamp(22px,3.1vw,40px);line-height:1.22;max-width:none;margin:0 auto clamp(12px,2.5vh,28px)}
+.tu-heading-line{display:block;white-space:nowrap}
+.tu-casa .tu-pad-wrap{outline:0;border:0;box-shadow:none}
+.tu-casa .community-tools{margin:6px 0 0}
+.tu-casa .tu-cover figcaption{margin-top:8px}
+.tu-casa .tu-memory{gap:16px}
+.tu-casa .tu-memory textarea{min-height:54px;height:54px;max-height:90px}
+.tu-casa .tu-memory textarea,.tu-casa .tu-memory input{padding:7px;margin-top:5px}
+.tu-casa .tu-actions{margin-top:12px;gap:8px 24px}
+@media(max-width:700px){
+ #tu-casa-editor{padding:28px 5vw 100px}
+ .tu-casa .community-draw-layout{--studio-side:min(40vw,27vh);grid-template-columns:repeat(2,var(--studio-side));column-gap:6vw;row-gap:22px}
+ .tu-casa .community-draw-title{grid-column:1/-1;font-size:clamp(18px,4.5vw,30px);margin-bottom:18px;line-height:1.3}
+ .tu-casa .community-draw-layout>div:first-child{grid-column:1;grid-row:2}
+ .tu-casa .tu-cover{grid-column:2;grid-row:2}
+ .tu-casa .tu-memory{grid-column:1/-1;grid-row:3;grid-template-columns:1fr;gap:12px}
+ .tu-casa .community-tools{gap:4px 12px}
+ #community-journey.tu-casa .community-tools button{font-size:10px;padding:5px 0}
+ .tu-casa .tu-cover figcaption{font-size:9px}
+ .tu-casa .tu-actions{gap:4px 16px;margin-top:14px}
+ #community-journey.tu-casa .tu-actions button{font-size:10px}
+}
+@media(max-height:650px) and (min-width:701px){
+ #tu-casa-editor{padding-top:12px;padding-bottom:65px}
+ .tu-casa .community-draw-layout{--studio-side:25vh;row-gap:8px}
+ .tu-casa .community-draw-title{font-size:24px;margin-bottom:8px}
+ .tu-casa .tu-actions{margin-top:4px}
+}
+/* Drawing room and separate pink memory room. */
+.tu-casa .community-draw-layout{--studio-side:min(32vw,49vh,490px);grid-template-columns:repeat(2,var(--studio-side)) minmax(140px,180px);column-gap:clamp(24px,3vw,48px);max-width:1400px}
+.tu-casa .community-draw-title{grid-column:1/-1;margin-bottom:clamp(20px,4vh,42px)}
+.tu-casa .tu-cover{position:relative}
+.tu-casa .tu-cover-frame{position:absolute;left:-6px;top:-6px;width:calc(100% + 12px);height:auto;aspect-ratio:1;pointer-events:none;z-index:3}
+.tu-casa .tu-action-rail{grid-column:3;grid-row:2;align-self:center;display:flex;flex-direction:column;gap:24px}
+#community-journey.tu-casa .tu-action-rail button{padding:16px 18px;border:0;background:#335386 url('../assets/fondo-papel.webp') center/420px 140px;background-blend-mode:multiply;color:#f4f4f1;font:12px/1.5 var(--casa-ui-font);clip-path:polygon(1% 3%,97% 0,100% 92%,4% 100%);transform:rotate(-2deg);transition:transform .15s}
+#community-journey.tu-casa .tu-action-rail button:nth-child(2){transform:rotate(2deg)}
+#community-journey.tu-casa .tu-action-rail button:hover,#community-journey.tu-casa .tu-action-rail button:focus-visible{transform:rotate(0) translateY(-2px);filter:brightness(1.15)}
+.tu-drawing-label{margin:14px 0 0;text-align:center;font:12px/1.5 var(--casa-ui-font);color:#2c4877}
+.tu-casa .community-tools{margin-top:4px;align-items:center}
+#community-journey.tu-casa #community-undo{font-size:24px;border:0;line-height:1;padding:4px 8px}
+#community-journey.tu-casa #tu-skip{padding:0;border:0;bottom:30px;width:max-content;max-width:90vw;white-space:normal;text-align:center}
+#tu-memory-room{position:absolute;inset:0;padding:5vh 7vw 100px;box-sizing:border-box;overflow:auto;background:#d1b5d5;color:#2c4877}
+#tu-memory-room[hidden]{display:none!important}
+#tu-memory-room .community-draw-title{position:relative;max-width:900px;margin:0 auto 6vh;text-align:center;font:400 clamp(26px,3.1vw,44px)/1.25 Georgia,serif;color:#2c4877}
+#tu-memory-room .tu-memory{display:grid;width:min(700px,90%);margin:auto;gap:22px;grid-template-columns:1fr;background:none;transform:none;box-shadow:none;padding:0}
+#tu-memory-room .tu-memory textarea,#tu-memory-room .tu-memory input{background:#fff;color:#2c4877;border:0;padding:18px;font:16px/1.7 var(--casa-ui-font)}
+#tu-memory-room .tu-memory textarea{height:30vh;min-height:150px;max-height:42vh}
+#tu-memory-room .tu-memory label{font:12px/1.5 var(--casa-ui-font);color:#2c4877}
+.tu-writing #tu-skip{background:none!important}
+@media(max-width:1000px){
+ .tu-casa .community-draw-layout{--studio-side:min(39vw,42vh);grid-template-columns:repeat(2,var(--studio-side));column-gap:5vw}
+ .tu-casa .tu-action-rail{grid-column:1/-1;grid-row:3;flex-direction:row;justify-content:center;gap:12px}
+ #community-journey.tu-casa .tu-action-rail button{font-size:10px;padding:12px;flex:1}
+ .tu-casa .community-draw-title{margin-bottom:22px}
+}
+@media(max-width:700px){
+ .tu-casa .community-draw-layout{--studio-side:min(40vw,36vh)}
+ .tu-casa .tu-action-rail{gap:8px;flex-wrap:wrap}
+ #tu-memory-room{padding:32px 6vw 110px}
+ #tu-memory-room .community-draw-title{font-size:clamp(18px,4.5vw,30px);margin-bottom:40px}
+ #tu-memory-room .tu-memory{width:100%}
+}
+@media(max-height:650px) and (min-width:1001px){.tu-casa .community-draw-layout{--studio-side:42vh}.tu-casa .community-draw-title{margin-bottom:12px}}
+/* Symmetrical side rails keep the two squares centered on the viewport. */
+.tu-casa .community-draw-layout{--studio-side:min(28vw,46vh,430px);--studio-rail:clamp(100px,12vw,175px);display:grid;grid-template-columns:var(--studio-rail) repeat(2,minmax(0,var(--studio-side))) var(--studio-rail);column-gap:clamp(16px,2vw,32px);justify-content:center;max-width:none}
+.tu-casa .community-draw-title{grid-column:1/-1;grid-row:1}
+.tu-casa .community-draw-layout>.tu-drawing-column{grid-column:2;grid-row:2;width:100%;position:relative;align-self:start}
+.tu-casa .tu-cover{position:relative;inset:auto;grid-column:3;grid-row:2;align-self:start;width:100%;margin:0}
+.tu-casa .community-draw-layout>.community-tools{grid-column:1;grid-row:2;align-self:center;display:flex;flex-direction:column;justify-content:center;gap:18px;margin:0}
+.tu-casa .tu-action-rail{grid-column:4;grid-row:2;align-self:center;flex-direction:column;flex-wrap:nowrap;gap:22px}
+.tu-casa .tu-drawing-label,.tu-casa .tu-cover figcaption{display:block;margin:16px 0 0;text-align:center;font:12px/1.5 var(--casa-ui-font);color:#2c4877}
+@media(max-width:1000px){
+ .tu-casa .community-draw-layout{--studio-side:min(28vw,42vh);--studio-rail:12vw;column-gap:2vw}
+ .tu-casa .tu-action-rail{grid-column:4;grid-row:2;flex-direction:column;gap:14px}
+ #community-journey.tu-casa .tu-action-rail button{font-size:10px;padding:10px 6px;flex:none;overflow-wrap:anywhere}
+}
+@media(max-width:700px){
+ #tu-casa-editor{padding-left:3vw;padding-right:3vw}
+ .tu-casa .community-draw-layout{--studio-side:29vw;--studio-rail:15vw;column-gap:1.5vw}
+ .tu-casa .community-draw-title{font-size:clamp(17px,4.3vw,28px)}
+ .tu-casa .tu-action-rail{gap:12px}
+ #community-journey.tu-casa .tu-action-rail button{font-size:9px;padding:9px 4px}
+ .tu-casa .community-draw-layout>.community-tools{gap:12px}
+ #community-journey.tu-casa #community-clear{font-size:9px;max-width:100%}
+ .tu-casa .tu-drawing-label,.tu-casa .tu-cover figcaption{font-size:10px;margin-top:14px}
+}
+/* Compact tools above the drawing, straight action buttons and a lower title. */
+#tu-casa-editor{padding-top:clamp(54px,8vh,86px)}
+.tu-casa .tu-drawing-column{position:relative}
+#community-journey.tu-casa .tu-drawing-column>.community-tools{position:absolute;left:-35px;top:0;display:flex;flex-direction:column;flex-wrap:nowrap;align-items:center;justify-content:flex-start;gap:5px;margin:0;width:27px;height:auto;z-index:4}
+#community-journey.tu-casa .community-tools #community-undo,#community-journey.tu-casa .community-tools #community-clear{display:inline-flex;align-items:center;justify-content:center;box-sizing:border-box;width:27px;height:27px;padding:3px;border:0;background:transparent;color:#2c4877;font-size:20px;line-height:1}
+#community-journey.tu-casa #community-clear svg{width:17px;height:17px}
+#community-journey.tu-casa .community-tools button:hover,#community-journey.tu-casa .community-tools button:focus-visible{background:#d1b5d5!important;color:#000!important}
+.tu-casa .tu-cover canvas.tu-cover-frame{max-width:none;aspect-ratio:auto;border:0;left:-6px;top:-6px;box-sizing:content-box}
+#community-journey.tu-casa .tu-action-rail button,#community-journey.tu-casa .tu-action-rail button:nth-child(2){clip-path:none;border-radius:0;transform:none;background:#335386;color:#f4f4f1;filter:none;transition:background-color .15s,color .15s}
+#community-journey.tu-casa .tu-action-rail button:hover,#community-journey.tu-casa .tu-action-rail button:focus-visible{background:#d1b5d5;color:#000;transform:none;filter:none}
+@media(max-height:650px){#tu-casa-editor{padding-top:34px}.tu-casa .community-draw-layout{--studio-side:min(28vw,38vh)}}
+/* Contiguous vertical rooms and graphite frames around writable paper. */
+#tu-memory-room{overflow:visible;will-change:transform}
+#tu-casa-editor{will-change:transform}
+.tu-field-wrap{position:relative;margin-top:5px}
+#tu-memory-room .tu-field-wrap>input,#tu-memory-room .tu-field-wrap>textarea{display:block;margin:0;width:100%;box-sizing:border-box;resize:none}
+.tu-field-frame{position:absolute;left:-6px;top:-6px;max-width:none;pointer-events:none;z-index:2}
+.tu-memory-divider{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:10}
+.tu-memory-divider[hidden]{display:none}
+#tu-memory-room .ink-word{display:inline-block;white-space:nowrap;margin-inline:.1em}
+#tu-memory-room .ink-letter{color:#2c4877;text-shadow:var(--ink-shadow,none);filter:blur(var(--ink-blur,0px));-webkit-text-stroke:var(--ink-stroke,0px) #2c4877}
+/* Writable paper remains a native focus target while its room is moving. */
+#tu-memory-room .tu-memory{position:relative;z-index:3;gap:16px}
+#tu-memory-room .tu-memory input,#tu-memory-room .tu-memory textarea{touch-action:pan-y;user-select:text;pointer-events:auto}
+#community-journey.tu-casa #tu-add-archive{justify-self:center;min-height:44px;margin:8px 0 0;padding:15px 24px;border:0;border-radius:0;background:#335386;color:#f4f4f1;font:12px/1.5 var(--casa-ui-font);cursor:pointer!important;transition:background-color .15s,color .15s}
+#community-journey.tu-casa #tu-add-archive:hover,#community-journey.tu-casa #tu-add-archive:focus-visible{background:#d1b5d5;color:#000;outline:1px solid #335386;outline-offset:3px}
+#tu-archive-status{margin:0;text-align:center;font:11px/1.5 var(--casa-ui-font)}
+/* The persistent inventory shortcut must not cover incoming form controls. */
+body.community-active #journey-objects{visibility:hidden!important;pointer-events:none!important}
+@media(max-width:700px){#tu-memory-room{padding:36px 7vw 30px}#tu-memory-room .community-draw-title{margin-bottom:24px}#tu-memory-room .tu-memory{gap:12px}#tu-memory-room .tu-memory textarea{height:24vh;min-height:120px}#tu-memory-room .tu-memory input{padding:12px 16px}}

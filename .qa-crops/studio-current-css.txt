@@ -1,0 +1,22 @@
+@media(max-width:700px){#tu-casa-editor{padding:25px 6vw 130px}.tu-casa .community-draw-layout{display:grid;grid-template-columns:minmax(0,1fr)}.tu-casa .community-draw-title{font-size:clamp(26px,7.5vw,36px)}.tu-casa .tu-pad-wrap{width:min(78vw,330px)}.tu-casa .tu-memory{grid-template-columns:1fr;gap:14px}.tu-casa .tu-cover{width:150px;order:initial}#community-journey.tu-casa #tu-skip{bottom:20px;font-size:10px}}
+/* Two equal work surfaces with an independent, generously spaced heading. */
+#tu-casa-editor{padding:clamp(48px,7vh,90px) 6vw 145px}
+.tu-casa .community-draw-layout{--studio-side:min(32vw,34vh,340px);display:grid;grid-template-columns:repeat(2,var(--studio-side));column-gap:clamp(36px,6vw,90px);row-gap:30px;max-width:1000px;align-items:start}
+.tu-casa .community-draw-title{grid-column:1/-1;grid-row:1;max-width:760px;margin:0 auto clamp(28px,5vh,58px);font-size:clamp(28px,3.1vw,44px);line-height:1.25}
+.tu-casa .community-draw-layout>div:first-child{grid-column:1;grid-row:2;width:100%}
+.tu-casa .tu-pad-wrap{width:100%;margin:0;aspect-ratio:1!important}
+.tu-casa .tu-cover{position:static;grid-column:2;grid-row:2;width:100%;max-width:none;margin:0;order:initial}
+.tu-casa .tu-cover canvas{display:block;width:100%;height:auto;aspect-ratio:1}
+.tu-casa .tu-cover figcaption{text-align:center;margin-top:14px;font-size:10px}
+.tu-casa .community-tools{margin:14px 0 0;gap:12px 24px}
+.tu-casa .tu-memory{grid-column:1/-1;grid-row:3;width:100%;max-width:none;grid-template-columns:minmax(0,1fr) minmax(140px,.55fr);gap:24px;margin:0}
+.tu-casa .tu-actions{margin-top:28px;gap:14px 30px}
+@media(max-width:700px){
+ #tu-casa-editor{padding:48px 7vw 150px}
+ .tu-casa .community-draw-layout{--studio-side:min(76vw,330px);grid-template-columns:var(--studio-side);row-gap:32px;column-gap:0}
+ .tu-casa .community-draw-title{grid-column:1;grid-row:1;margin-bottom:14px;font-size:clamp(26px,7vw,34px);line-height:1.3}
+ .tu-casa .community-draw-layout>div:first-child{grid-column:1;grid-row:2}
+ .tu-casa .tu-cover{grid-column:1;grid-row:3;width:100%}
+ .tu-casa .tu-memory{grid-column:1;grid-row:4;grid-template-columns:1fr;gap:20px}
+ #community-journey.tu-casa #tu-skip{white-space:normal;text-align:center;width:85%;bottom:20px}
+}

@@ -7,8 +7,8 @@
 .c2-landscape svg,.c2-horizon svg,.c2-grass svg,.c2-remains svg{width:100%;height:100%;display:block}
 .c2-running-film{display:block;width:100%;height:100%;object-fit:cover;object-position:35% center}
 .c2-night-blue{background-image:url('../assets/fondo-papel.webp');background-size:1600px;background-blend-mode:multiply;background-color:inherit}
-.c2-route-address{position:absolute;left:50%;top:50%;width:85vw;max-width:1100px;margin:0;text-align:center;font:var(--casa-address-weight) var(--casa-address-size)/var(--casa-address-line) var(--casa-ui-font);letter-spacing:var(--casa-address-spacing);color:#B9A3DE;pointer-events:none}
-.c2-route-address .ink-letter{color:#B9A3DE;text-shadow:var(--ink-shadow,none);filter:blur(var(--ink-blur,0px));-webkit-text-stroke:var(--ink-stroke,0px) #B9A3DE}
+.c2-route-address{position:absolute;left:50%;top:50%;width:85vw;max-width:1100px;margin:0;text-align:center;font:var(--casa-address-weight) var(--casa-address-size)/var(--casa-address-line) var(--casa-ui-font);letter-spacing:var(--casa-address-spacing);color:#fff;pointer-events:none}
+.c2-route-address .ink-letter{color:#fff;text-shadow:var(--ink-shadow,none);filter:blur(var(--ink-blur,0px));-webkit-text-stroke:var(--ink-stroke,0px) #fff}
 .c2-running-lyrics{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:max-content;max-width:90%;text-align:center;pointer-events:none;color:#69655f;font-family:'IBM Plex Mono',monospace;font-size:clamp(9px,.92vw,12px);font-weight:300;font-synthesis:none;line-height:1.5;text-shadow:none}
 .c2-running-lyrics p{margin:0}.c2-running-lyrics p+p{margin-top:1.55em}
 .c2-running-lyrics span{display:block;animation:c2-lyric-drift var(--lyric-duration) ease-in-out var(--lyric-delay) infinite alternate}

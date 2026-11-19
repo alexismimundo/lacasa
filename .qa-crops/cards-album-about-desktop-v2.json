@@ -1,0 +1,18 @@
+{
+  "result": {
+    "result": {
+      "type": "object",
+      "value": {
+        "status": "FAIL",
+        "error": "Error: seek works\n    at assert (http://127.0.0.1:21910/.qa-crops/cards-album-about-browser.html:1648:34)\n    at http://127.0.0.1:21910/.qa-crops/cards-album-about-browser.html:1657:155"
+      }
+    }
+  },
+  "info": {
+    "result": {
+      "type": "string",
+      "value": "La Casa · prueba 02. El muro se abre, atravesás la ventana y el hueco permanece. Marco, niño, logo y ladrillos usan los PNG originales separados, con sus transparencias y colores intactos. La entrada reproduce el video del niño atravesando la ventana. Antes de entrar, la ventana tapiada espera inmóvil. Podés repetir el cruce sin borrar el papel ni la luz.Las huellas se conservan en este navegador. Suena «Sirens». Podés silenciarla desde el botón de música.VOLVER ↗"
+    }
+  },
+  "errors": []
+}

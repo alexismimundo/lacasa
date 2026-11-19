@@ -1,0 +1,23 @@
+8 .tu-memory-preview{position:relative;overflow-wrap:anywhere;white-space:pre-wrap}.tu-memory-preview h3{font:italic 23px Georgia;margin:8px 0}.tu-memory-preview p{font:11px/1.7 monospace}.tu-memory-echo{position:absolute;inset:2px -2px -2px 2px;color:#B9A3DE;opacity:.7;pointer-events:none}
+10 .tu-actions{display:flex;flex-wrap:wrap;gap:10px 25px;margin:15px auto;max-width:1300px}.tu-actions #tu-status{flex-basis:100%;font:11px/1.6 monospace;max-width:700px}
+16 #tu-handlebars{position:absolute;z-index:4;bottom:-5%;left:15%;width:70%;height:32%;pointer-events:none}#tu-handlebars svg{width:100%;height:100%}
+17 #tu-bike-lyric{position:absolute;top:5%;left:7%;max-width:85%;font:italic clamp(26px,3vw,45px)/1.2 Georgia;color:#335386;z-index:4;pointer-events:none}
+19 .tu-barrio-layer{position:absolute;inset:15% -10% 20%;pointer-events:none;opacity:.6}.tu-barrio-layer.layer-1{opacity:.35}#p15-retrovisor{display:none!important}
+20 @media(max-width:700px){#tu-casa-editor{padding:3vh 6vw 160px}.tu-casa .community-draw-layout{grid-template-columns:1fr;gap:22px}.tu-casa #community-pad{height:29vh}.tu-memory{max-width:100%;transform:rotate(1deg)}.tu-cover{width:min(100%,300px);margin:auto}.tu-memory textarea{min-height:100px}.tu-actions{gap:12px 20px}#community-journey #tu-skip{bottom:85px}#tu-handlebars{left:-10%;width:120%;height:25%}#tu-house-memory{top:23%;right:5%;width:180px}#tu-bike-lyric{top:8%;font-size:27px}}
+31 .tu-textured-pad{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:1}
+38 .tu-casa .community-tools button,.tu-casa .tu-actions button{color:#f4f4f1;background:none;border:0;border-bottom:1px solid #b9a3de88;padding:8px 0;font:12px/1.4 'IBM Plex Mono',monospace}
+40 .tu-casa .tu-actions{display:flex;position:relative;z-index:3;margin-top:22px}
+46 body.community-active #living-grain{visibility:visible!important;display:block!important;opacity:.6;z-index:160;pointer-events:none}
+50 .tu-casa .community-draw-title{position:relative;z-index:1;text-align:center;max-width:700px;width:100%;margin:0 auto -5px;font:400 clamp(26px,3.5vw,52px)/1.12 Georgia,serif;color:#f4f4f1;text-shadow:none;pointer-events:auto;opacity:1}
+63 .tu-casa .tu-actions{justify-content:center;max-width:680px;margin:18px auto 0;gap:12px 24px;text-align:center}
+64 .tu-casa .tu-actions #tu-status{margin:0;min-height:18px}
+65 #community-journey.tu-casa .community-tools button,#community-journey.tu-casa .tu-actions button{color:#2c4877;border-bottom-color:#2c487766;background:transparent}
+83 .tu-casa .tu-actions{margin-top:28px;gap:14px 30px}
+104 .tu-casa .tu-actions{margin-top:12px;gap:8px 24px}
+115  .tu-casa .tu-actions{gap:4px 16px;margin-top:14px}
+116  #community-journey.tu-casa .tu-actions button{font-size:10px}
+122  .tu-casa .tu-actions{margin-top:4px}
+128 .tu-casa .tu-cover-frame{position:absolute;left:-6px;top:-6px;width:calc(100% + 12px);height:auto;aspect-ratio:1;pointer-events:none;z-index:3}
+144 .tu-writing #tu-skip{background:none!important}
+198 .tu-field-frame{position:absolute;left:-6px;top:-6px;max-width:none;pointer-events:none;z-index:2}
+199 .tu-memory-divider{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:10}

@@ -1,0 +1,40 @@
+ const tc=texture.getContext('2d'),grain=tc.createImageData(256,256);let seed=731;
+ const random=()=>{seed=(Math.imul(seed,1664525)+1013904223)>>>0;return seed/4294967296};
+ for(let i=0;i<grain.data.length;i+=4){const v=random();grain.data[i+3]=v>.83?Math.round(70+random()*150):v>.5?Math.round(random()*45):0}tc.putImageData(grain,0,0);
+ const pigment=document.createElement('canvas');pigment.width=800;pigment.height=500;
+ function drawPigment(time=0,live=false){
+  const c=pigment.getContext('2d');c.clearRect(0,0,800,500);c.fillStyle=c.strokeStyle=LILAC;c.lineJoin=c.lineCap='round';
+  const paths=api.active?[...api.strokes,{closed:false,points:api.active}]:api.strokes;
+  const clock=live&&!red.matches?time*.7:0;
+  // Resample by distance, so a slow pointer and a quick gesture have the same grain.
+  paths.forEach((stroke,i)=>{
+   if(stroke.points.length<2)return;
+   const points=[],source=stroke.closed?[...stroke.points,stroke.points[0]]:stroke.points;
+   let distance=0;
+   for(let j=1;j<source.length;j++){
+    const a=source[j-1],b=source[j],length=Math.hypot(b[0]-a[0],b[1]-a[1]),steps=Math.max(1,Math.ceil(length/4));
+    for(let k=0;k<steps;k++){const t=k/steps;points.push([a[0]+(b[0]-a[0])*t,a[1]+(b[1]-a[1])*t,distance+length*t])}distance+=length;
+   }
+   points.push([...source.at(-1),distance]);
+   function trace(pass){c.beginPath();points.forEach(([x,y,d],j)=>{
+    const phase=d*.13+i*2.7,breath=Math.sin(d*.045+i+clock)*1.35;
+    const dx=Math.sin(phase+pass*2.1)*(.65+pass*.35)+breath,dy=Math.cos(phase*.83+pass*1.7)*(.65+pass*.3)+Math.cos(d*.052+i+clock)*1.1;
+    j?c.lineTo(x+dx,y+dy):c.moveTo(x+dx,y+dy);
+   });if(stroke.closed)c.closePath()}
+   // Each closed shape is painted independently: overlaps add, never punch holes.
+   if(stroke.closed){trace(0);c.fill()}
+   // Several broken pencil strands replace the uniform vector outline.
+   for(let pass=0;pass<4;pass++){
+    trace(pass);c.globalAlpha=pass===0?.55:.26;c.lineWidth=pass===0?3.2:1.1+pass*.35;
+    c.setLineDash(pass===0?[]:[3+pass*2,1.5+pass]);c.lineDashOffset=i+pass*3;c.stroke();
+   }
+   c.globalAlpha=1;c.setLineDash([]);
+  });
+  c.globalCompositeOperation='destination-out';c.fillStyle=c.createPattern(texture,'repeat');c.fillRect(0,0,800,500);c.globalCompositeOperation='source-over';return pigment;
+ }
+ // Largest axis-aligned rectangle fully inside the alpha hole, not its unsafe bounds.
+ function measureTemplate(image){
+  const size=300,canvas=document.createElement('canvas');canvas.width=canvas.height=size;const c=canvas.getContext('2d',{willReadFrequently:true});c.drawImage(image,0,0,size,size);const d=c.getImageData(0,0,size,size).data;
+  const seen=new Uint8Array(size*size);let hole=null;
+  for(let start=0;start<seen.length;start++){
+   if(seen[start]||d[start*4+3]>24)continue;const queue=[start];seen[start]=1;let border=false,maxY=0;

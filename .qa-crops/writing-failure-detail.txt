@@ -1,0 +1,515 @@
+[
+    {
+        "phase":  19.4,
+        "id":  "tu-memory",
+        "typed":  false,
+        "debug":  {
+                      "active":  "tu-title",
+                      "hit":  "\u003cimg id=\"closing-still\" src=\"assets/salida-inicial.webp\" alt=\"La misma ventana, al salir de la casa\" style=\"opacity: 1;\"\u003e",
+                      "ancestors":  [
+                                        {
+                                            "id":  "tu-memory",
+                                            "cls":  "",
+                                            "transform":  "none",
+                                            "inert":  false,
+                                            "rect":  {
+                                                         "x":  370,
+                                                         "y":  82,
+                                                         "width":  700,
+                                                         "height":  270,
+                                                         "top":  82,
+                                                         "right":  1070,
+                                                         "bottom":  352,
+                                                         "left":  370
+                                                     }
+                                        },
+                                        {
+                                            "id":  "",
+                                            "cls":  "tu-field-wrap",
+                                            "transform":  "none",
+                                            "inert":  false,
+                                            "rect":  {
+                                                         "x":  370,
+                                                         "y":  82,
+                                                         "width":  700,
+                                                         "height":  270,
+                                                         "top":  82,
+                                                         "right":  1070,
+                                                         "bottom":  352,
+                                                         "left":  370
+                                                     }
+                                        },
+                                        {
+                                            "id":  "",
+                                            "cls":  "",
+                                            "transform":  "none",
+                                            "inert":  false,
+                                            "rect":  {
+                                                         "x":  370,
+                                                         "y":  59,
+                                                         "width":  700,
+                                                         "height":  293,
+                                                         "top":  59,
+                                                         "right":  1070,
+                                                         "bottom":  352,
+                                                         "left":  370
+                                                     }
+                                        },
+                                        {
+                                            "id":  "",
+                                            "cls":  "community-form tu-memory",
+                                            "transform":  "none",
+                                            "inert":  false,
+                                            "rect":  {
+                                                         "x":  370,
+                                                         "y":  59,
+                                                         "width":  700,
+                                                         "height":  483.1875,
+                                                         "top":  59,
+                                                         "right":  1070,
+                                                         "bottom":  542.1875,
+                                                         "left":  370
+                                                     }
+                                        },
+                                        {
+                                            "id":  "tu-memory-room",
+                                            "cls":  "",
+                                            "transform":  "matrix(1, 0, 0, 1, 0, -150)",
+                                            "inert":  false,
+                                            "rect":  {
+                                                         "x":  0,
+                                                         "y":  -150,
+                                                         "width":  1440,
+                                                         "height":  900,
+                                                         "top":  -150,
+                                                         "right":  1440,
+                                                         "bottom":  750,
+                                                         "left":  0
+                                                     }
+                                        },
+                                        {
+                                            "id":  "community-journey",
+                                            "cls":  "tu-casa is-visible tu-writing",
+                                            "transform":  "none",
+                                            "inert":  false,
+                                            "rect":  {
+                                                         "x":  0,
+                                                         "y":  0,
+                                                         "width":  1440,
+                                                         "height":  900,
+                                                         "top":  0,
+                                                         "right":  1440,
+                                                         "bottom":  900,
+                                                         "left":  0
+                                                     }
+                                        },
+                                        {
+                                            "id":  "",
+                                            "cls":  "resto-momento",
+                                            "transform":  "matrix(1, 0, 0, 1, 0, 0)",
+                                            "inert":  false,
+                                            "rect":  {
+                                                         "x":  0,
+                                                         "y":  0,
+                                                         "width":  1440,
+                                                         "height":  900,
+                                                         "top":  0,
+                                                         "right":  1440,
+                                                         "bottom":  900,
+                                                         "left":  0
+                                                     }
+                                        },
+                                        {
+                                            "id":  "resto-provisorio",
+                                            "cls":  "",
+                                            "transform":  "none",
+                                            "inert":  false,
+                                            "rect":  {
+                                                         "x":  0,
+                                                         "y":  0,
+                                                         "width":  1440,
+                                                         "height":  900,
+                                                         "top":  0,
+                                                         "right":  1440,
+                                                         "bottom":  900,
+                                                         "left":  0
+                                                     }
+                                        },
+                                        {
+                                            "id":  "",
+                                            "cls":  "visited inhabited casa-instalada recien casa-oscura community-active fondo-tinta-clara closing-present",
+                                            "transform":  "none",
+                                            "inert":  false,
+                                            "rect":  {
+                                                         "x":  0,
+                                                         "y":  0,
+                                                         "width":  1440,
+                                                         "height":  900,
+                                                         "top":  0,
+                                                         "right":  1440,
+                                                         "bottom":  900,
+                                                         "left":  0
+                                                     }
+                                        },
+                                        {
+                                            "id":  "",
+                                            "cls":  "",
+                                            "transform":  "none",
+                                            "inert":  false,
+                                            "rect":  {
+                                                         "x":  0,
+                                                         "y":  0,
+                                                         "width":  1440,
+                                                         "height":  900,
+                                                         "top":  0,
+                                                         "right":  1440,
+                                                         "bottom":  900,
+                                                         "left":  0
+                                                     }
+                                        }
+                                    ]
+                  }
+    },
+    {
+        "phase":  19.55,
+        "id":  "tu-memory",
+        "typed":  false,
+        "debug":  {
+                      "active":  "",
+                      "hit":  "\u003cimg id=\"closing-still\" src=\"assets/salida-inicial.webp\" alt=\"La misma ventana, al salir de la casa\" style=\"opacity: 1;\"\u003e",
+                      "ancestors":  [
+                                        {
+                                            "id":  "tu-memory",
+                                            "cls":  "",
+                                            "transform":  "none",
+                                            "inert":  false,
+                                            "rect":  {
+                                                         "x":  370,
+                                                         "y":  -143,
+                                                         "width":  700,
+                                                         "height":  270,
+                                                         "top":  -143,
+                                                         "right":  1070,
+                                                         "bottom":  127,
+                                                         "left":  370
+                                                     }
+                                        },
+                                        {
+                                            "id":  "",
+                                            "cls":  "tu-field-wrap",
+                                            "transform":  "none",
+                                            "inert":  false,
+                                            "rect":  {
+                                                         "x":  370,
+                                                         "y":  -143,
+                                                         "width":  700,
+                                                         "height":  270,
+                                                         "top":  -143,
+                                                         "right":  1070,
+                                                         "bottom":  127,
+                                                         "left":  370
+                                                     }
+                                        },
+                                        {
+                                            "id":  "",
+                                            "cls":  "",
+                                            "transform":  "none",
+                                            "inert":  false,
+                                            "rect":  {
+                                                         "x":  370,
+                                                         "y":  -166,
+                                                         "width":  700,
+                                                         "height":  293,
+                                                         "top":  -166,
+                                                         "right":  1070,
+                                                         "bottom":  127,
+                                                         "left":  370
+                                                     }
+                                        },
+                                        {
+                                            "id":  "",
+                                            "cls":  "community-form tu-memory",
+                                            "transform":  "none",
+                                            "inert":  false,
+                                            "rect":  {
+                                                         "x":  370,
+                                                         "y":  -166,
+                                                         "width":  700,
+                                                         "height":  483.1875,
+                                                         "top":  -166,
+                                                         "right":  1070,
+                                                         "bottom":  317.1875,
+                                                         "left":  370
+                                                     }
+                                        },
+                                        {
+                                            "id":  "tu-memory-room",
+                                            "cls":  "",
+                                            "transform":  "matrix(1, 0, 0, 1, 0, -375)",
+                                            "inert":  false,
+                                            "rect":  {
+                                                         "x":  0,
+                                                         "y":  -375,
+                                                         "width":  1440,
+                                                         "height":  900,
+                                                         "top":  -375,
+                                                         "right":  1440,
+                                                         "bottom":  525,
+                                                         "left":  0
+                                                     }
+                                        },
+                                        {
+                                            "id":  "community-journey",
+                                            "cls":  "tu-casa is-visible tu-writing",
+                                            "transform":  "none",
+                                            "inert":  false,
+                                            "rect":  {
+                                                         "x":  0,
+                                                         "y":  0,
+                                                         "width":  1440,
+                                                         "height":  900,
+                                                         "top":  0,
+                                                         "right":  1440,
+                                                         "bottom":  900,
+                                                         "left":  0
+                                                     }
+                                        },
+                                        {
+                                            "id":  "",
+                                            "cls":  "resto-momento",
+                                            "transform":  "matrix(1, 0, 0, 1, 0, 0)",
+                                            "inert":  false,
+                                            "rect":  {
+                                                         "x":  0,
+                                                         "y":  0,
+                                                         "width":  1440,
+                                                         "height":  900,
+                                                         "top":  0,
+                                                         "right":  1440,
+                                                         "bottom":  900,
+                                                         "left":  0
+                                                     }
+                                        },
+                                        {
+                                            "id":  "resto-provisorio",
+                                            "cls":  "",
+                                            "transform":  "none",
+                                            "inert":  false,
+                                            "rect":  {
+                                                         "x":  0,
+                                                         "y":  0,
+                                                         "width":  1440,
+                                                         "height":  900,
+                                                         "top":  0,
+                                                         "right":  1440,
+                                                         "bottom":  900,
+                                                         "left":  0
+                                                     }
+                                        },
+                                        {
+                                            "id":  "",
+                                            "cls":  "visited inhabited casa-instalada recien casa-oscura community-active fondo-tinta-clara closing-present",
+                                            "transform":  "none",
+                                            "inert":  false,
+                                            "rect":  {
+                                                         "x":  0,
+                                                         "y":  0,
+                                                         "width":  1440,
+                                                         "height":  900,
+                                                         "top":  0,
+                                                         "right":  1440,
+                                                         "bottom":  900,
+                                                         "left":  0
+                                                     }
+                                        },
+                                        {
+                                            "id":  "",
+                                            "cls":  "",
+                                            "transform":  "none",
+                                            "inert":  false,
+                                            "rect":  {
+                                                         "x":  0,
+                                                         "y":  0,
+                                                         "width":  1440,
+                                                         "height":  900,
+                                                         "top":  0,
+                                                         "right":  1440,
+                                                         "bottom":  900,
+                                                         "left":  0
+                                                     }
+                                        }
+                                    ]
+                  }
+    },
+    {
+        "phase":  19.55,
+        "id":  "tu-title",
+        "typed":  false,
+        "debug":  {
+                      "active":  "",
+                      "hit":  "\u003cimg id=\"closing-still\" src=\"assets/salida-inicial.webp\" alt=\"La misma ventana, al salir de la casa\" style=\"opacity: 1;\"\u003e",
+                      "ancestors":  [
+                                        {
+                                            "id":  "tu-memory",
+                                            "cls":  "",
+                                            "transform":  "none",
+                                            "inert":  false,
+                                            "rect":  {
+                                                         "x":  370,
+                                                         "y":  -143,
+                                                         "width":  700,
+                                                         "height":  270,
+                                                         "top":  -143,
+                                                         "right":  1070,
+                                                         "bottom":  127,
+                                                         "left":  370
+                                                     }
+                                        },
+                                        {
+                                            "id":  "",
+                                            "cls":  "tu-field-wrap",
+                                            "transform":  "none",
+                                            "inert":  false,
+                                            "rect":  {
+                                                         "x":  370,
+                                                         "y":  -143,
+                                                         "width":  700,
+                                                         "height":  270,
+                                                         "top":  -143,
+                                                         "right":  1070,
+                                                         "bottom":  127,
+                                                         "left":  370
+                                                     }
+                                        },
+                                        {
+                                            "id":  "",
+                                            "cls":  "",
+                                            "transform":  "none",
+                                            "inert":  false,
+                                            "rect":  {
+                                                         "x":  370,
+                                                         "y":  -166,
+                                                         "width":  700,
+                                                         "height":  293,
+                                                         "top":  -166,
+                                                         "right":  1070,
+                                                         "bottom":  127,
+                                                         "left":  370
+                                                     }
+                                        },
+                                        {
+                                            "id":  "",
+                                            "cls":  "community-form tu-memory",
+                                            "transform":  "none",
+                                            "inert":  false,
+                                            "rect":  {
+                                                         "x":  370,
+                                                         "y":  -166,
+                                                         "width":  700,
+                                                         "height":  483.1875,
+                                                         "top":  -166,
+                                                         "right":  1070,
+                                                         "bottom":  317.1875,
+                                                         "left":  370
+                                                     }
+                                        },
+                                        {
+                                            "id":  "tu-memory-room",
+                                            "cls":  "",
+                                            "transform":  "matrix(1, 0, 0, 1, 0, -375)",
+                                            "inert":  false,
+                                            "rect":  {
+                                                         "x":  0,
+                                                         "y":  -375,
+                                                         "width":  1440,
+                                                         "height":  900,
+                                                         "top":  -375,
+                                                         "right":  1440,
+                                                         "bottom":  525,
+                                                         "left":  0
+                                                     }
+                                        },
+                                        {
+                                            "id":  "community-journey",
+                                            "cls":  "tu-casa is-visible tu-writing",
+                                            "transform":  "none",
+                                            "inert":  false,
+                                            "rect":  {
+                                                         "x":  0,
+                                                         "y":  0,
+                                                         "width":  1440,
+                                                         "height":  900,
+                                                         "top":  0,
+                                                         "right":  1440,
+                                                         "bottom":  900,
+                                                         "left":  0
+                                                     }
+                                        },
+                                        {
+                                            "id":  "",
+                                            "cls":  "resto-momento",
+                                            "transform":  "matrix(1, 0, 0, 1, 0, 0)",
+                                            "inert":  false,
+                                            "rect":  {
+                                                         "x":  0,
+                                                         "y":  0,
+                                                         "width":  1440,
+                                                         "height":  900,
+                                                         "top":  0,
+                                                         "right":  1440,
+                                                         "bottom":  900,
+                                                         "left":  0
+                                                     }
+                                        },
+                                        {
+                                            "id":  "resto-provisorio",
+                                            "cls":  "",
+                                            "transform":  "none",
+                                            "inert":  false,
+                                            "rect":  {
+                                                         "x":  0,
+                                                         "y":  0,
+                                                         "width":  1440,
+                                                         "height":  900,
+                                                         "top":  0,
+                                                         "right":  1440,
+                                                         "bottom":  900,
+                                                         "left":  0
+                                                     }
+                                        },
+                                        {
+                                            "id":  "",
+                                            "cls":  "visited inhabited casa-instalada recien casa-oscura community-active fondo-tinta-clara closing-present",
+                                            "transform":  "none",
+                                            "inert":  false,
+                                            "rect":  {
+                                                         "x":  0,
+                                                         "y":  0,
+                                                         "width":  1440,
+                                                         "height":  900,
+                                                         "top":  0,
+                                                         "right":  1440,
+                                                         "bottom":  900,
+                                                         "left":  0
+                                                     }
+                                        },
+                                        {
+                                            "id":  "",
+                                            "cls":  "",
+                                            "transform":  "none",
+                                            "inert":  false,
+                                            "rect":  {
+                                                         "x":  0,
+                                                         "y":  0,
+                                                         "width":  1440,
+                                                         "height":  900,
+                                                         "top":  0,
+                                                         "right":  1440,
+                                                         "bottom":  900,
+                                                         "left":  0
+                                                     }
+                                        }
+                                    ]
+                  }
+    }
+]

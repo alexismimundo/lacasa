@@ -1,0 +1,1 @@
+17.65 tu-title <dialog id="box-inventory" aria-labelledby="box-inventory-title" open=""><button type="button" class="inventory-close">Volver al recorrido ×</button><h2 id="box-inventory-title">Lo que guardaste en la active=
